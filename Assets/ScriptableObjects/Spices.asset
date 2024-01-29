@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d2414d48b4bc94b8aa2bc4423700a7, type: 3}
   m_Name: Spices
   m_EditorClassIdentifier: 
-  itemName: 
-  itemType: 0
-  itemID: 0
-  itemDescription: 
+  stackable: 0
+  data:
+    itemName: Spices
+    itemType: 2
+    itemID: 1

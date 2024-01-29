@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d2414d48b4bc94b8aa2bc4423700a7, type: 3}
   m_Name: Running Pants
   m_EditorClassIdentifier: 
-  itemName: Running Pants
-  itemType: 3
-  itemID: -1
-  itemDescription: 
+  stackable: 0
+  data:
+    itemName: Running Pants
+    itemType: 3
+    itemID: 2

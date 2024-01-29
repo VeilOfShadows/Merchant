@@ -917,6 +917,7 @@ GameObject:
   - component: {fileID: 812965096}
   - component: {fileID: 812965095}
   - component: {fileID: 812965098}
+  - component: {fileID: 812965099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1016,6 +1017,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &812965099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812965094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907a86446f2392444a7ea1d0f361c990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 11400000, guid: 1080e7cd4fc833b4885179ed11189f3d, type: 2}
+  itemToAdd:
+    item:
+      itemName: Food
+      itemType: 1
+      itemID: 0
+    amount: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
