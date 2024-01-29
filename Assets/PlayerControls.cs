@@ -7,6 +7,7 @@ using UnityEngine.Splines;
 public class PlayerControls : MonoBehaviour
 {
     public SplineContainer roadSpline;
+    public Spline currentRoad;
     //public Rigidbody rb;
     public float speed;
 
@@ -21,8 +22,9 @@ public class PlayerControls : MonoBehaviour
 
     private void Start()
     {
+        currentRoad = roadSpline.Splines[0];
         native = new NativeSpline(roadSpline.Spline);
-        distance = SplineUtility.GetNearestPoint(roadSpline.Spline, transform.position, out float3 nearest, out float t);
+        distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
 
         transform.position = nearest;
 
@@ -47,13 +49,13 @@ public class PlayerControls : MonoBehaviour
 
     public void Move()
     {        
-        native = new NativeSpline(roadSpline.Spline);
-        distance = SplineUtility.GetNearestPoint(roadSpline.Spline, transform.position, out float3 nearest, out float t);
+        native = new NativeSpline(currentRoad);
+        distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
 
         transform.position = nearest;
 
-        forward = Vector3.Normalize(roadSpline.EvaluateTangent(t));
-        up = roadSpline.EvaluateUpVector(t);
+        forward = Vector3.Normalize(currentRoad.EvaluateTangent(t));
+        up = currentRoad.EvaluateUpVector(t);
 
         //var remappedForward = new Vector3(0, 0, 1);
         //var remappedUp = new Vector3(0, 1, 0);
