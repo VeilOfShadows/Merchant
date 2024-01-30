@@ -17,3 +17,4 @@ MonoBehaviour:
     itemName: Running Pants
     itemType: 3
     itemID: 2
+    baseCoinValue: 10

@@ -17,3 +17,4 @@ MonoBehaviour:
     itemName: Food
     itemType: 1
     itemID: 0
+    baseCoinValue: 1

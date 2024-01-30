@@ -17,3 +17,4 @@ MonoBehaviour:
     itemName: Spices
     itemType: 2
     itemID: 1
+    baseCoinValue: 4

@@ -6,8 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Inventory", menuName = "Create/Inventory/New Inventory")]
 public class Inventory : ScriptableObject
 {
-    public InventorySlot[] slots = new InventorySlot[28];
     public ItemDatabase database;
+    public InventorySlot[] slots = new InventorySlot[28];
 
     public void AddItem(Item _item, int _amount) {
         InventorySlot slot = FindItemInInventory(_item);
