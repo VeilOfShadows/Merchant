@@ -27,6 +27,7 @@ public class Item {
     public string itemName;
     public ItemType itemType;
     public int itemID = -1;
+    public int baseCoinValue = -1;
 
     public Item() 
     {
@@ -38,5 +39,6 @@ public class Item {
         itemName = item.name;
         itemType = item.data.itemType;
         itemID = item.data.itemID;
+        baseCoinValue = item.data.baseCoinValue;
     }
 }

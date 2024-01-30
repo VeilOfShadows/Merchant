@@ -7,8 +7,8 @@ public class ItemDatabase : ScriptableObject
 {
     public ItemObject[] items;
 
-    [ContextMenu("Sync Items")]
-    public void SyncItems() {
+    [ContextMenu("Set Item IDs")]
+    public void SetIDs() {
         for (int i = 0; i < items.Length; i++)
         {
             if (items[i].data.itemID != i)
@@ -16,5 +16,16 @@ public class ItemDatabase : ScriptableObject
                 items[i].data.itemID = i;
             }
         }
+    }
+
+    public Item FindItem(ItemObject _item) {
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].data.itemID == _item.data.itemID)
+            {
+                return items[i].data;
+            }
+        }
+        return null;
     }
 }
