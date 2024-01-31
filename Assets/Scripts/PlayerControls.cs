@@ -45,9 +45,13 @@ public class PlayerControls : MonoBehaviour
     {
         //rb.velocity = rb.velocity.magnitude * transform.forward;
         moveHorizontal = Input.GetAxis("Horizontal");
-        if (moveHorizontal != 0)
+        if (moveHorizontal > 0)
         {
             Move();
+        }
+        else if (moveHorizontal < 0)
+        {
+            MoveBackwards();
         }
     }
 
@@ -58,6 +62,8 @@ public class PlayerControls : MonoBehaviour
 
         transform.position = nearest;
 
+        //cart.transform.position = transform.position - (Vector3.forward * 2);
+        
         forward = Vector3.Normalize(currentRoad.EvaluateTangent(t));
         up = currentRoad.EvaluateUpVector(t);
 
@@ -71,6 +77,31 @@ public class PlayerControls : MonoBehaviour
         //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
         cartWheel_L.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
         cartWheel_R.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
+        //rb.AddForce(dir);
+    }
+
+    public void MoveBackwards()
+    {
+        native = new NativeSpline(currentRoad);
+        distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
+
+        transform.position = nearest;
+
+        //cart.transform.position = transform.position - (Vector3.forward * 2);
+
+        forward = Vector3.Normalize(currentRoad.EvaluateTangent(t));
+        up = currentRoad.EvaluateUpVector(t);
+
+        //var remappedForward = new Vector3(0, 0, 1);
+        //var remappedUp = new Vector3(0, 1, 0);
+        axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
+
+        transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
+        transform.Translate(new Vector3(0, 0, (moveHorizontal * (speed/2)) * Time.deltaTime));
+        //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
+        //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
+        cartWheel_L.Rotate(Input.GetAxis("Horizontal") * (wheelSpeed / 2), 0, 0);//Vector3 dir = power * transform.forward;
+        cartWheel_R.Rotate(Input.GetAxis("Horizontal") * (wheelSpeed / 2), 0, 0);//Vector3 dir = power * transform.forward;
         //rb.AddForce(dir);
     }
 }

@@ -57,12 +57,9 @@ public class CartIK : MonoBehaviour
         forward = Vector3.Normalize(currentRoad.EvaluateTangent(t));
         up = currentRoad.EvaluateUpVector(t);
 
-        //var remappedForward = new Vector3(0, 0, 1);
-        //var remappedUp = new Vector3(0, 1, 0);
         axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         transform.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
-        //rb.AddForce(dir);
     }
 }
