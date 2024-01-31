@@ -10,6 +10,9 @@ public class PlayerControls : MonoBehaviour
     public Spline currentRoad;
     //public Rigidbody rb;
     public float speed;
+    public float wheelSpeed;
+    public Transform cartWheel_L;
+    public Transform cartWheel_R;
 
     NativeSpline native;
     float distance;
@@ -63,7 +66,8 @@ public class PlayerControls : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         transform.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
-        //Vector3 dir = power * transform.forward;
+        cartWheel_L.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
+        cartWheel_R.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
         //rb.AddForce(dir);
     }
 }
