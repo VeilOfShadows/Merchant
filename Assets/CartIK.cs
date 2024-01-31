@@ -4,16 +4,12 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class PlayerControls : MonoBehaviour
+public class CartIK : MonoBehaviour
 {
     public SplineContainer roadSpline;
     public Spline currentRoad;
     //public Rigidbody rb;
     public float speed;
-    public float wheelSpeed;
-    public Transform cartWheel_L;
-    public Transform cartWheel_R;
-    public Transform cart;
 
     NativeSpline native;
     float distance;
@@ -52,7 +48,7 @@ public class PlayerControls : MonoBehaviour
     }
 
     public void Move()
-    {        
+    {
         native = new NativeSpline(currentRoad);
         distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
 
@@ -67,10 +63,6 @@ public class PlayerControls : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         transform.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
-        //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-        //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
-        cartWheel_L.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-        cartWheel_R.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
         //rb.AddForce(dir);
     }
 }
