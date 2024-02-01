@@ -18,7 +18,7 @@ public class ItemObject : ScriptableObject
     //public int itemID = -1;
     //[TextArea(10,25)]
     //public string itemDescription;
-    public bool stackable;
+    //public bool stackable;
     public Item data = new Item();
 }
 
@@ -29,6 +29,7 @@ public class Item {
     public int itemID = -1;
     public int baseCoinValue = -1;
     public Sprite uiDisplay;
+    public bool stackable;
 
     public Item() 
     {
@@ -42,5 +43,6 @@ public class Item {
         itemID = item.data.itemID;
         baseCoinValue = item.data.baseCoinValue;
         uiDisplay = item.data.uiDisplay;
+        stackable = item.data.stackable;
     }
 }

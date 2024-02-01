@@ -12,7 +12,7 @@ public class Inventory : ScriptableObject
     public void AddItem(Item _item, int _amount) {
         InventorySlot slot = FindItemInInventory(_item);
 
-        if (!database.items[_item.itemID].stackable || slot == null)
+        if (!database.items[_item.itemID].data.stackable || slot == null)
         {
             SetEmptySlot(_item, _amount);
             return;
@@ -47,6 +47,36 @@ public class Inventory : ScriptableObject
         return null;
     }
 
+    public void SwapItems(InventorySlot item1, InventorySlot item2)
+    {
+        if (item1.item.itemID == -1)
+        {
+            return;
+        }
+
+        if (item1.item.itemID != item2.item.itemID)
+        {
+            //if (item2.CanPlaceInSlot(item1.ItemObject) && item1.CanPlaceInSlot(item2.ItemObject))
+            //{
+                InventorySlot temp = new InventorySlot(item2.item, item2.amount);
+                item2.UpdateSlot(item1.item, item1.amount);
+                item1.UpdateSlot(temp.item, temp.amount);
+            //}
+        }
+        else
+        {
+            if (item2.item.stackable)
+            {
+                if (item2 != item1)
+                {
+                    item2.UpdateSlot(item2.item, item1.amount + item2.amount);
+                    item1.RemoveItem();
+                }
+            }
+
+        }
+    }
+
     [ContextMenu("CLEAR")]
     public void Clear()
     {
@@ -66,13 +96,20 @@ public class Inventory : ScriptableObject
     }
 }
 
+public delegate void SlotUpdated(InventorySlot _slot);
+
 [System.Serializable]
 public class InventorySlot {
     public UserInterface parent; 
     public Item item = new Item();
     public int amount;
     public GameObject slotDisplay;
-public InventorySlot()
+
+    [System.NonSerialized]
+    public SlotUpdated OnAfterUpdate;
+    [System.NonSerialized]
+    public SlotUpdated OnBeforeUpdate;
+    public InventorySlot()
     {
         UpdateSlot(new Item(), 0);
     }
@@ -82,8 +119,12 @@ public InventorySlot()
     }
 
     public void UpdateSlot(Item _item, int _amount) {
+        if (OnBeforeUpdate != null)
+            OnBeforeUpdate.Invoke(this);
         item = _item;
         amount = _amount;
+        if (OnAfterUpdate != null)
+            OnAfterUpdate.Invoke(this);
     }
 
     public void AddAmount(int value)

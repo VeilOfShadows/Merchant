@@ -20,9 +20,11 @@ public class UserInterface : MonoBehaviour
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             inventory.slots[i].parent = this;
+            inventory.slots[i].OnAfterUpdate += OnSlotUpdate;
         }
         CreateSlots();
-        
+        AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
+        AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
     }
 
     public void CreateSlots() {
@@ -45,7 +47,7 @@ public class UserInterface : MonoBehaviour
 
             slotsOnInterface.Add(obj, inventory.slots[i]);
         }
-            slotsOnInterface.UpdateSlotDisplay();
+        slotsOnInterface.UpdateSlotDisplay();
     }
 
     protected void AddEvent(GameObject obj, EventTriggerType type, UnityAction<BaseEventData> action)
@@ -77,6 +79,15 @@ public class UserInterface : MonoBehaviour
         MouseData.slotHoveredOver = null;
     }
 
+    public void OnEnterInterface(GameObject obj)
+    {
+        MouseData.interfaceMouseIsOver = obj.GetComponent<UserInterface>();
+    }
+    public void OnExitInterface(GameObject obj)
+    {
+        MouseData.interfaceMouseIsOver = null;
+    }
+
     public GameObject CreateTempItem(GameObject obj)
     {
         GameObject tempItem = null;
@@ -92,11 +103,6 @@ public class UserInterface : MonoBehaviour
         }
         return tempItem;
     }
-
-    //public void OnDragStart(GameObject obj)
-    //{
-    //    MouseData.tempItemBeingDragged = CreateTempItem(obj);
-    //}
 
     public void OnDrag(GameObject obj)
     {
@@ -125,7 +131,7 @@ public class UserInterface : MonoBehaviour
         if (MouseData.slotHoveredOver)
         {
             InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];
-            //inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);            
+            inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);
         }
     }
 
@@ -138,7 +144,21 @@ public class UserInterface : MonoBehaviour
         transform.GetComponentInParent<Canvas>().sortingOrder = 10;
         canvas = transform.GetComponentInParent<Canvas>();
     }
-
+    private void OnSlotUpdate(InventorySlot _slot)
+    {
+        if (_slot.item.itemID >= 0)
+        {
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.item.uiDisplay;
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+            _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
+        }
+        else
+        {
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
+            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+            _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        }
+    }
 }
  public static class MouseData
     {
@@ -168,4 +188,6 @@ public class UserInterface : MonoBehaviour
                 }
             }
         }
+
+        
     }
