@@ -55,12 +55,23 @@ public class Inventory : ScriptableObject
             slots[i].RemoveItem();
         }
     }
+
+    [ContextMenu("Sync")]
+    public void Sync()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].item = database.FindItem(slots[i].item.itemID);
+        }
+    }
 }
 
 [System.Serializable]
 public class InventorySlot {
+    public UserInterface parent; 
     public Item item = new Item();
     public int amount;
+    public GameObject slotDisplay;
 public InventorySlot()
     {
         UpdateSlot(new Item(), 0);
@@ -84,4 +95,5 @@ public InventorySlot()
     {
         UpdateSlot(new Item(), 0);
     }
+
 }

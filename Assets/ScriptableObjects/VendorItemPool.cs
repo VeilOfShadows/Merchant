@@ -21,7 +21,7 @@ public class VendorItemPool : ScriptableObject
     public void Sync() {
         for (int i = 0; i < vendorItems.Length; i++)
         {
-            vendorItems[i].item = database.FindItem(vendorItems[i].itemObject);
+            vendorItems[i].item = database.FindItemObject(vendorItems[i].itemObject);
         }
     }
 }

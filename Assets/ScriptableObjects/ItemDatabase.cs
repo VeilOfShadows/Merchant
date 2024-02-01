@@ -18,10 +18,22 @@ public class ItemDatabase : ScriptableObject
         }
     }
 
-    public Item FindItem(ItemObject _item) {
+    public Item FindItemObject(ItemObject _item) {
         for (int i = 0; i < items.Length; i++)
         {
             if (items[i].data.itemID == _item.data.itemID)
+            {
+                return items[i].data;
+            }
+        }
+        return null;
+    }
+
+    public Item FindItem(int _itemID)
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].data.itemID == _itemID)
             {
                 return items[i].data;
             }

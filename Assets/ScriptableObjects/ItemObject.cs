@@ -28,6 +28,7 @@ public class Item {
     public ItemType itemType;
     public int itemID = -1;
     public int baseCoinValue = -1;
+    public Sprite uiDisplay;
 
     public Item() 
     {
@@ -40,5 +41,6 @@ public class Item {
         itemType = item.data.itemType;
         itemID = item.data.itemID;
         baseCoinValue = item.data.baseCoinValue;
+        uiDisplay = item.data.uiDisplay;
     }
 }
