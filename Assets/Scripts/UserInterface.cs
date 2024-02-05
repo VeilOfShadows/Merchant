@@ -81,7 +81,6 @@ public class UserInterface : MonoBehaviour
                 inventory.AddItem(inventory.coinItem.data, buyPrice);
             }
         }
-        Debug.Log(slotsOnInterface[obj].item.itemName);
         //MouseData.slotHoveredOver = obj;
     }
     public void OnExit(GameObject obj)

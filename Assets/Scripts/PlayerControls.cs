@@ -45,14 +45,19 @@ public class PlayerControls : MonoBehaviour
     {
         //rb.velocity = rb.velocity.magnitude * transform.forward;
         moveHorizontal = Input.GetAxis("Horizontal");
-        if (moveHorizontal > 0)
+        if (moveHorizontal != 0)
         {
             Move();
         }
-        else if (moveHorizontal < 0)
-        {
-            MoveBackwards();
-        }
+        
+    //    if (moveHorizontal > 0)
+    //    {
+    //        Move();
+    //    }
+    //    else if (moveHorizontal < 0)
+    //    {
+    //        MoveBackwards();
+    //    }
     }
 
     public void Move()
