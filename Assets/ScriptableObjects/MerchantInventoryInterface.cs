@@ -11,6 +11,14 @@ public class MerchantInventoryInterface : UserInterface
         if (playerInventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
         {
             slotsOnInterface[obj].RemoveAmount(1);
+            inventory.AddItem(inventory.coinItem.data, buyPrice);
         }
     }
+
+    public override void OnDragStart(GameObject obj)
+    { }
+    public override void OnDragEnd(GameObject obj)
+    { }
+    public override void OnDrag(GameObject obj)
+    { }
 }

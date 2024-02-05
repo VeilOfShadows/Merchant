@@ -1,11 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using TMPro;
+using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
 {
@@ -13,7 +11,9 @@ public class UserInterface : MonoBehaviour
 
     public Inventory inventory;
     public GameObject inventoryPrefab;
-    public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();   
+    public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
+    public bool inShop;
+    public MerchantInventoryInterface merchantInterface;
 
     private void Start()
     {
@@ -72,6 +72,15 @@ public class UserInterface : MonoBehaviour
 
     public virtual void OnClick(GameObject obj)
     {
+        if (inShop)
+        {
+            int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
+            if (merchantInterface.inventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
+            {
+                slotsOnInterface[obj].RemoveAmount(1);
+                inventory.AddItem(inventory.coinItem.data, buyPrice);
+            }
+        }
         Debug.Log(slotsOnInterface[obj].item.itemName);
         //MouseData.slotHoveredOver = obj;
     }
@@ -105,7 +114,7 @@ public class UserInterface : MonoBehaviour
         return tempItem;
     }
 
-    public void OnDrag(GameObject obj)
+    public virtual void OnDrag(GameObject obj)
     {
         if (MouseData.tempItemBeingDragged != null)
         {
@@ -129,14 +138,17 @@ public class UserInterface : MonoBehaviour
             //slotsOnInterface[obj].RemoveItem();
             return;
         }
-        if (MouseData.slotHoveredOver)
+        if (MouseData.interfaceMouseIsOver == this)
         {
-            InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];
-            inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);
+            if (MouseData.slotHoveredOver)
+            {
+                InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];
+                inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);
+            }
         }
     }
 
-    public void OnDragStart(GameObject obj)
+    public virtual void OnDragStart(GameObject obj)
     {
         MouseData.tempItemBeingDragged = CreateTempItem(obj);
         //HideTooltip();

@@ -25,6 +25,11 @@ public class Inventory : ScriptableObject
 
     public bool AttemptPurchase(Item _item, int buyPrice)
     {
+        if (!_item.tradeable)
+        {
+            return false;
+        }
+
         InventorySlot temp = FindItemInInventory(coinItem.data);
         if (temp == null)
         {

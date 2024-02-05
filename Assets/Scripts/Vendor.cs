@@ -18,6 +18,8 @@ public class Vendor : MonoBehaviour
             cam.SetActive(true);
             playerUI.SetActive(true);
             merchantUI.SetActive(true);
+            playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
+            playerUI.GetComponentInChildren<UserInterface>().inShop = true;
         }
     }
 
@@ -29,6 +31,8 @@ public class Vendor : MonoBehaviour
             cam.SetActive(false);
             playerUI.SetActive(false);
             merchantUI.SetActive(false);
+            playerUI.GetComponentInChildren<UserInterface>().merchantInterface = null;
+            playerUI.GetComponentInChildren<UserInterface>().inShop = false;
         }
     }
 }

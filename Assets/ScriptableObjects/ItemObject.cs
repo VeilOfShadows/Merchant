@@ -30,6 +30,7 @@ public class Item {
     public int baseCoinValue = -1;
     public Sprite uiDisplay;
     public bool stackable;
+    public bool tradeable;
 
     public Item() 
     {
@@ -44,5 +45,6 @@ public class Item {
         baseCoinValue = item.data.baseCoinValue;
         uiDisplay = item.data.uiDisplay;
         stackable = item.data.stackable;
+        tradeable = item.data.tradeable;
     }
 }
