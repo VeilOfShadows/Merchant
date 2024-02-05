@@ -20,5 +20,6 @@ public class VendorInventory : Inventory
                 AddItem(itemPool.vendorItems[i].item, Random.Range(itemPool.vendorItems[i].amountMin, itemPool.vendorItems[i].amountMax));
             }
         }
+        Sync();
     }
 }

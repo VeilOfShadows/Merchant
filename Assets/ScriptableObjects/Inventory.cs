@@ -157,7 +157,14 @@ public class InventorySlot {
 
     public void RemoveAmount(int value)
     {
-        UpdateSlot(item, amount -= value);
+        if ((amount - value) <= 0)
+        {
+            RemoveItem();
+        }
+        else
+        {
+            UpdateSlot(item, amount -= value);
+        }
     }
 
     public void RemoveItem()
