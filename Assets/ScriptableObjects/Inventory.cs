@@ -8,6 +8,7 @@ public class Inventory : ScriptableObject
 {
     public ItemDatabase database;
     public InventorySlot[] slots = new InventorySlot[28];
+    public ItemObject coinItem;
 
     public void AddItem(Item _item, int _amount) {
         InventorySlot slot = FindItemInInventory(_item);
@@ -20,6 +21,24 @@ public class Inventory : ScriptableObject
         }
         slot.AddAmount(_amount);
         //return true;
+    }
+
+    public bool AttemptPurchase(Item _item, int buyPrice)
+    {
+        if (FindItemInInventory(coinItem.data).item == null)
+        {
+            Debug.Log("No coin");
+            return false;
+        }
+        else if (FindItemInInventory(coinItem.data).amount < buyPrice)
+        {
+            Debug.Log("Not enough coin");
+            return false;
+        }
+
+        FindItemInInventory(coinItem.data).RemoveAmount(buyPrice);
+        AddItem(_item, 1);
+        return true;
     }
 
     public InventorySlot SetEmptySlot(Item _item, int _amount)
@@ -123,6 +142,10 @@ public class InventorySlot {
             OnBeforeUpdate.Invoke(this);
         item = _item;
         amount = _amount;
+        //if (amount <= 0)
+        //{
+        //      RemoveItem();
+        //}
         if (OnAfterUpdate != null)
             OnAfterUpdate.Invoke(this);
     }
@@ -130,6 +153,11 @@ public class InventorySlot {
     public void AddAmount(int value)
     {
         UpdateSlot(item, amount += value);
+    }
+
+    public void RemoveAmount(int value)
+    {
+        UpdateSlot(item, amount -= value);
     }
 
     public void RemoveItem()

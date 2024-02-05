@@ -46,8 +46,9 @@ public class UserInterface : MonoBehaviour
             inventory.slots[i].slotDisplay = obj;
 
             slotsOnInterface.Add(obj, inventory.slots[i]);
+            OnSlotUpdate(slotsOnInterface[obj]);
         }
-        slotsOnInterface.UpdateSlotDisplay();
+        //slotsOnInterface.UpdateSlotDisplay();
     }
 
     protected void AddEvent(GameObject obj, EventTriggerType type, UnityAction<BaseEventData> action)
@@ -69,7 +70,7 @@ public class UserInterface : MonoBehaviour
         MouseData.slotHoveredOver = obj;
     }
 
-    public void OnClick(GameObject obj)
+    public virtual void OnClick(GameObject obj)
     {
         Debug.Log(slotsOnInterface[obj].item.itemName);
         //MouseData.slotHoveredOver = obj;
@@ -144,7 +145,7 @@ public class UserInterface : MonoBehaviour
         transform.GetComponentInParent<Canvas>().sortingOrder = 10;
         canvas = transform.GetComponentInParent<Canvas>();
     }
-    private void OnSlotUpdate(InventorySlot _slot)
+    public void OnSlotUpdate(InventorySlot _slot)
     {
         if (_slot.item.itemID >= 0)
         {
@@ -168,26 +169,26 @@ public class UserInterface : MonoBehaviour
         public static Item draggedItem;
     }
 
-    public static class ExtensionMethods
-    {
-        public static void UpdateSlotDisplay(this Dictionary<GameObject, InventorySlot> _slotsOnInterface)
-        {
-            foreach (KeyValuePair<GameObject, InventorySlot> _slot in _slotsOnInterface)
-            {
-                if (_slot.Value.item.itemID >= 0)
-                {
-                    _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.Value.item.uiDisplay;
-                    _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
-                    _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
-                }
-                else
-                {
-                    _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
-                    _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
-                    _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = "";
-                }
-            }
-        }
+    //public static class ExtensionMethods
+    //{
+    //    public static void UpdateSlotDisplay(this Dictionary<GameObject, InventorySlot> _slotsOnInterface)
+    //    {
+    //        foreach (KeyValuePair<GameObject, InventorySlot> _slot in _slotsOnInterface)
+    //        {
+    //            if (_slot.Value.item.itemID >= 0)
+    //            {
+    //                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.Value.item.uiDisplay;
+    //                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+    //                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
+    //            }
+    //            else
+    //            {
+    //                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
+    //                _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+    //                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = "";
+    //            }
+    //        }
+    //    }
 
         
-    }
+    //}
