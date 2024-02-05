@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d2414d48b4bc94b8aa2bc4423700a7, type: 3}
+  m_Name: Running Pants
+  m_EditorClassIdentifier: 
+  stackable: 0
+  data:
+    itemName: Running Pants
+    itemType: 3
+    itemID: 2
+    baseCoinValue: 10
