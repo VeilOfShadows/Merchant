@@ -14,172 +14,285 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: 46fd6c57ae90bb2468edfb5e4cf290e7, type: 2}
   slots:
-  - item:
+  - parent: {fileID: 0}
+    item:
       itemName: Food
       itemType: 1
       itemID: 0
       baseCoinValue: 1
-    amount: 8
-  - item:
+      uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
+      stackable: 1
+    amount: 4
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: Spices
       itemType: 2
       itemID: 1
       baseCoinValue: 4
+      uiDisplay: {fileID: 21300000, guid: ac5a147bfda183d49a12202d584aaaff, type: 3}
+      stackable: 1
     amount: 1
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
-  - item:
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
       itemName: 
       itemType: 0
       itemID: -1
       baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
     amount: 0
+    slotDisplay: {fileID: 0}
+  coinItem: {fileID: 0}
   itemPool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}

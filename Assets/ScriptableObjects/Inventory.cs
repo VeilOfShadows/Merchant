@@ -25,18 +25,19 @@ public class Inventory : ScriptableObject
 
     public bool AttemptPurchase(Item _item, int buyPrice)
     {
-        if (FindItemInInventory(coinItem.data).item == null)
+        InventorySlot temp = FindItemInInventory(coinItem.data);
+        if (temp == null)
         {
             Debug.Log("No coin");
             return false;
         }
-        else if (FindItemInInventory(coinItem.data).amount < buyPrice)
+        else if (temp.amount < buyPrice)
         {
             Debug.Log("Not enough coin");
             return false;
         }
 
-        FindItemInInventory(coinItem.data).RemoveAmount(buyPrice);
+        temp.RemoveAmount(buyPrice);
         AddItem(_item, 1);
         return true;
     }

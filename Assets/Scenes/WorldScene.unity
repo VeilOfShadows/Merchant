@@ -1033,7 +1033,7 @@ Transform:
   m_GameObject: {fileID: 269130360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -119.7, y: 0, z: -219}
+  m_LocalPosition: {x: -172.99, y: 0, z: -210.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1875,7 +1875,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1391332, y: 0.08167282, z: -0.011515007, w: 0.9868328}
-  m_LocalPosition: {x: -121.7, y: 5, z: -231}
+  m_LocalPosition: {x: -174.99, y: 5, z: -222.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4027,7 +4027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1119182096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4455,7 +4455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1334107689
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8966,6 +8966,8 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 4b479e7e71458e6449ba0cf75dddf60d, type: 2}
   pool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}
   cam: {fileID: 1992500812}
+  merchantUI: {fileID: 1119182095}
+  playerUI: {fileID: 1334107688}
 --- !u!54 &1863818969
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9555,7 +9557,7 @@ Transform:
   m_GameObject: {fileID: 2005413157}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1391332, y: 0.08167282, z: -0.011515007, w: 0.9868328}
-  m_LocalPosition: {x: -121.7, y: 5, z: -231}
+  m_LocalPosition: {x: -174.99, y: 5, z: -222.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

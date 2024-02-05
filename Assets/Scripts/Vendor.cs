@@ -7,12 +7,17 @@ public class Vendor : MonoBehaviour
     public VendorInventory inventory;
     public VendorItemPool pool;
     public GameObject cam;
+    public GameObject merchantUI;
+    public GameObject playerUI;
+
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
             Debug.Log("ENTERED");
             cam.SetActive(true);
+            playerUI.SetActive(true);
+            merchantUI.SetActive(true);
         }
     }
 
@@ -22,6 +27,8 @@ public class Vendor : MonoBehaviour
         {
             Debug.Log("ENTERED");
             cam.SetActive(false);
+            playerUI.SetActive(false);
+            merchantUI.SetActive(false);
         }
     }
 }
