@@ -13,7 +13,9 @@ public class RoadJunction : MonoBehaviour
     public List<GameObject> roadSwitchers = new List<GameObject>();
     public PlayerControls playerControls;
     public RoadSwitch defaultRoadSwitch;
-    public CinemachineVirtualCamera cam;
+    public GameObject cam;
+    public GameObject cam2;
+    public CinemachineVirtualCamera camObject;
     //public List<GameObject> cameras = new List<GameObject>();
 
     //public List<int> roads = new List<int>();
@@ -26,13 +28,13 @@ public class RoadJunction : MonoBehaviour
         {
             Debug.Log("SWITCHING ROAD");
             playerControls = other.GetComponent<PlayerControls>();
-            if (CheckDirection(playerControls))
-            {
+            //if (CheckDirection(playerControls))
+            //{
                 for (int i = 0; i < roadSwitchers.Count; i++)
                 {
                     roadSwitchers[i].SetActive(true);                
                 }
-            }
+            //}
         }
     }
 
@@ -40,17 +42,19 @@ public class RoadJunction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (CheckDirection(playerControls))
-            {
+            //if (CheckDirection(playerControls))
+            //{
                 playerControls.currentRoad = defaultRoad.Splines[0];
-                //cam.GetCinemachineComponent<CinemachineTrackedDolly>().m_Path = defaultRoadSwitch.dolly;
-                playerControls = null;
+            //cam2.SetActive(true);
+            //cam.SetActive(false);
+            camObject.GetCinemachineComponent<CinemachineTrackedDolly>().m_Path = defaultRoadSwitch.dolly;
+            playerControls = null;
                 Debug.Log("LEAVING ROAD");
                 for (int i = 0; i < roadSwitchers.Count; i++)
                 {
                     roadSwitchers[i].SetActive(false);
                 }
-            }
+            //}
         }
     }
 
@@ -70,11 +74,11 @@ public class RoadJunction : MonoBehaviour
         playerControls.currentRoad = newRoad;
     }
 
-    public bool CheckDirection(PlayerControls player) {
-        if (player.currentRoad != junctionRoad.Splines[0])
-        {
-            return false;
-        }
-        return true;
-    }
+    //public bool CheckDirection(PlayerControls player) {
+    //    if (player.currentRoad != junctionRoad.Splines[0])
+    //    {
+    //        return false;
+    //    }
+    //    return true;
+    //}
 }

@@ -14,6 +14,7 @@ public class PlayerControls : MonoBehaviour
     public Transform cartWheel_L;
     public Transform cartWheel_R;
     public Transform cart;
+    public GameObject currentCam;
 
     NativeSpline native;
     float distance;
@@ -108,5 +109,15 @@ public class PlayerControls : MonoBehaviour
         cartWheel_L.Rotate(Input.GetAxis("Horizontal") * (wheelSpeed / 2), 0, 0);//Vector3 dir = power * transform.forward;
         cartWheel_R.Rotate(Input.GetAxis("Horizontal") * (wheelSpeed / 2), 0, 0);//Vector3 dir = power * transform.forward;
         //rb.AddForce(dir);
+    }
+
+    public void SetRoad(SplineContainer container, GameObject cam) {
+        cam.SetActive(true);
+        currentCam.SetActive(false);
+        currentCam = cam;
+        roadSpline.GetComponent<RoadParent>().ActivateTriggers();
+        roadSpline = container;
+        currentRoad = roadSpline.Splines[0];
+        roadSpline.GetComponent<RoadParent>().DeactivateTriggers();
     }
 }
