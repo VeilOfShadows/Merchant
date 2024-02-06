@@ -7,13 +7,13 @@ public class RoadTrigger : MonoBehaviour
 {
     public GameObject cam;
     public PlayerControls playerControls;
-    public RoadParent roadParent;
+    public RoadController roadController;
 
     public void OnTriggerEnter(Collider other)
     {        
         if (other.gameObject.layer == 8)
         {
-            playerControls.SetRoad(roadParent.GetComponent<SplineContainer>(), cam);
+            playerControls.SetRoad(roadController.GetComponent<SplineContainer>(), cam);
         }
     }
 }

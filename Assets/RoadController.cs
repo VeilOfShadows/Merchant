@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoadParent : MonoBehaviour
+public class RoadController : MonoBehaviour
 {
     public List<GameObject> triggers = new List<GameObject>();
 

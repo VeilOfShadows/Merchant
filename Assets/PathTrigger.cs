@@ -12,7 +12,7 @@ public class PathTrigger : MonoBehaviour
     public Vector3 pos;
     float moveX = 0f;
     float moveZ = 0f;
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKey(KeyCode.W)) {
@@ -39,25 +39,13 @@ public class PathTrigger : MonoBehaviour
         {
             moveZ = 0f;
         }
-        //if (Input.GetKeyDown(key))
-        //{
-        //    collider.enabled = true;
-        //}
 
-        //if (Input.GetKeyUp(key))
-        //{
-        //    collider.enabled = false;
-        //}
-        pos = new Vector3(moveX, 0f, moveZ);
+        pos.x = moveX;
+        pos.z = moveZ;
         trigger.localPosition = pos;
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        //if (other.gameObject.layer == 8)
-        //{
-        //    Debug.Log(other.name);
-        //    player.SetRoad(other.GetComponentInParent<SplineContainer>());
-        //}
     }
 }
