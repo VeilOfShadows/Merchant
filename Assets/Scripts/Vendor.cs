@@ -9,17 +9,30 @@ public class Vendor : MonoBehaviour
     public GameObject cam;
     public GameObject merchantUI;
     public GameObject playerUI;
+    public GameObject promptCanvas;
 
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
             Debug.Log("ENTERED");
-            cam.SetActive(true);
-            playerUI.SetActive(true);
-            merchantUI.SetActive(true);
-            playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
-            playerUI.GetComponentInChildren<UserInterface>().inShop = true;
+            promptCanvas.SetActive(true);
+        }
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                cam.SetActive(true);
+                playerUI.SetActive(true);
+                merchantUI.SetActive(true);
+                playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
+                playerUI.GetComponentInChildren<UserInterface>().inShop = true;
+                promptCanvas.SetActive(false);
+            }
         }
     }
 
@@ -31,6 +44,7 @@ public class Vendor : MonoBehaviour
             cam.SetActive(false);
             playerUI.SetActive(false);
             merchantUI.SetActive(false);
+            promptCanvas.SetActive(false);
             playerUI.GetComponentInChildren<UserInterface>().merchantInterface = null;
             playerUI.GetComponentInChildren<UserInterface>().inShop = false;
         }
