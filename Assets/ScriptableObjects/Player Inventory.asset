@@ -23,7 +23,7 @@ MonoBehaviour:
       uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
       stackable: 1
       tradeable: 0
-    amount: 32
+    amount: 42
     slotDisplay: {fileID: 0}
   - parent: {fileID: 0}
     item:
@@ -34,18 +34,18 @@ MonoBehaviour:
       uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
       stackable: 1
       tradeable: 1
-    amount: 7
+    amount: 8
     slotDisplay: {fileID: 0}
   - parent: {fileID: 0}
     item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-    amount: 0
+      itemName: Berry
+      itemType: 1
+      itemID: 4
+      baseCoinValue: 1
+      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
+      stackable: 1
+      tradeable: 1
+    amount: 15
     slotDisplay: {fileID: 0}
   - parent: {fileID: 0}
     item:

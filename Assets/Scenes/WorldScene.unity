@@ -343,8 +343,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126040978}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0016318302, y: -0.7446321, z: 0.0018204744, w: 0.66747063}
-  m_LocalPosition: {x: -200.08017, y: 2.97046, z: -161.44777}
+  m_LocalRotation: {x: 0.0046796254, y: -0.8050886, z: 0.0063522155, w: 0.59310216}
+  m_LocalPosition: {x: -197.29791, y: 3.97046, z: -66.228165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2987,8 +2987,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07801245, y: -0.62224543, z: 0.062522076, w: 0.77641207}
-  m_LocalPosition: {x: -396.74463, y: 4.0004144, z: -318.928}
+  m_LocalRotation: {x: 0.077897444, y: -0.62230337, z: 0.062437978, w: 0.77638394}
+  m_LocalPosition: {x: -396.74442, y: 4.0004144, z: -318.92712}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3838,67 +3838,67 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: -75.35875, y: 0, z: -52.320023}
+  - position: {x: -75.35875, y: 1, z: -52.320023}
     roll: 0
-  - position: {x: -71.249466, y: 0, z: -52.61235}
+  - position: {x: -71.249466, y: 1, z: -52.61235}
     roll: 0
-  - position: {x: -65.43938, y: 0, z: -55.5356}
+  - position: {x: -65.43938, y: 1, z: -55.5356}
     roll: 0
-  - position: {x: -62.127335, y: 0, z: -60.664566}
+  - position: {x: -62.127335, y: 1, z: -60.664566}
     roll: 0
-  - position: {x: -60.383224, y: 0, z: -65.846664}
+  - position: {x: -60.383224, y: 1, z: -65.846664}
     roll: 0
-  - position: {x: -59.037735, y: 0, z: -72.995316}
+  - position: {x: -59.037735, y: 1, z: -72.995316}
     roll: 0
-  - position: {x: -56.850662, y: 0, z: -81.594986}
+  - position: {x: -56.850662, y: 1, z: -81.594986}
     roll: 0
-  - position: {x: -57.101303, y: 0, z: -88.192245}
+  - position: {x: -57.101303, y: 1, z: -88.192245}
     roll: 0
-  - position: {x: -60.137924, y: 0, z: -94.99263}
+  - position: {x: -60.137924, y: 1, z: -94.99263}
     roll: 0
-  - position: {x: -63.174545, y: 0, z: -101.793015}
+  - position: {x: -63.174545, y: 1, z: -101.793015}
     roll: 0
-  - position: {x: -66.21117, y: 0, z: -108.5934}
+  - position: {x: -66.21117, y: 1, z: -108.5934}
     roll: 0
-  - position: {x: -69.24779, y: 0, z: -115.39378}
+  - position: {x: -69.24779, y: 1, z: -115.39378}
     roll: 0
-  - position: {x: -72.28441, y: 0, z: -122.19417}
+  - position: {x: -72.28441, y: 1, z: -122.19417}
     roll: 0
-  - position: {x: -75.32103, y: 0, z: -128.99455}
+  - position: {x: -75.32103, y: 1, z: -128.99455}
     roll: 0
-  - position: {x: -76.18111, y: 0, z: -135.79494}
+  - position: {x: -76.18111, y: 1, z: -135.79494}
     roll: 0
-  - position: {x: -75.56114, y: 0, z: -142.59532}
+  - position: {x: -75.56114, y: 1, z: -142.59532}
     roll: 0
-  - position: {x: -74.94118, y: 0, z: -149.3957}
+  - position: {x: -74.94118, y: 1, z: -149.3957}
     roll: 0
-  - position: {x: -73.7408, y: 0, z: -156.19609}
+  - position: {x: -74.16551, y: 1, z: -156.19609}
     roll: 0
-  - position: {x: -70.8282, y: 0, z: -162.99648}
+  - position: {x: -72.69347, y: 1, z: -162.99648}
     roll: 0
-  - position: {x: -66.493576, y: 0, z: -169.79686}
+  - position: {x: -69.08086, y: 1, z: -170.35558}
     roll: 0
-  - position: {x: -61.549515, y: 0, z: -176.59724}
+  - position: {x: -63.340836, y: 1, z: -177.45534}
     roll: 0
-  - position: {x: -57.388992, y: 0, z: -182.75917}
+  - position: {x: -57.388992, y: 1, z: -182.75917}
     roll: 0
-  - position: {x: -48.236923, y: 0, z: -186.83162}
+  - position: {x: -48.236923, y: 1, z: -186.83162}
     roll: 0
-  - position: {x: -41.116287, y: 0, z: -187.27647}
+  - position: {x: -41.116287, y: 1, z: -187.27647}
     roll: 0
-  - position: {x: -33.99565, y: 0, z: -186.96675}
+  - position: {x: -33.99565, y: 1, z: -186.96675}
     roll: 0
-  - position: {x: -26.875015, y: 0, z: -185.46724}
+  - position: {x: -26.875015, y: 1, z: -185.46724}
     roll: 0
-  - position: {x: -19.75438, y: 0, z: -182.80687}
+  - position: {x: -19.75438, y: 1, z: -182.80687}
     roll: 0
-  - position: {x: -12.633743, y: 0, z: -179.9724}
+  - position: {x: -12.633743, y: 1, z: -179.9724}
     roll: 0
-  - position: {x: -5.5131073, y: 0, z: -176.61559}
+  - position: {x: -5.5131073, y: 1, z: -176.61559}
     roll: 0
-  - position: {x: 1.6075287, y: 0, z: -172.27208}
+  - position: {x: 1.6075287, y: 1, z: -172.27208}
     roll: 0
-  - position: {x: 8.728165, y: 0, z: -167.81248}
+  - position: {x: 8.728165, y: 1, z: -167.81248}
     roll: 0
 --- !u!4 &473360841
 Transform:
@@ -5625,7 +5625,7 @@ GameObject:
   - component: {fileID: 868185980}
   - component: {fileID: 868185979}
   m_Layer: 0
-  m_Name: Road1
+  m_Name: Southleaf Meadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6396,7 +6396,7 @@ GameObject:
   - component: {fileID: 868830452}
   - component: {fileID: 868830451}
   m_Layer: 0
-  m_Name: Lumberjack Road
+  m_Name: Thistlewood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8446,7 +8446,7 @@ GameObject:
   - component: {fileID: 1252769424}
   - component: {fileID: 1252769423}
   m_Layer: 0
-  m_Name: Lumberjack Road (1)
+  m_Name: Thistlewood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8824,7 +8824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 2113023762}
-  m_PathPosition: 214.28958
+  m_PathPosition: 214.2928
   m_PositionUnits: 1
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2
@@ -9912,7 +9912,7 @@ GameObject:
   - component: {fileID: 1371338777}
   - component: {fileID: 1371338776}
   m_Layer: 0
-  m_Name: StartRoad
+  m_Name: Willowberry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10597,17 +10597,143 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -0.6206144
+        z: -2.0590286
       TangentOut:
         x: 0
         y: 0
-        z: 0.6206144
+        z: 2.0414987
       Rotation:
         value:
-          x: -5.1772325e-10
-          y: 0.69470656
-          z: -5.360462e-10
-          w: 0.7192932
+          x: 0.0001528858
+          y: 0.7049051
+          z: -0.0001518645
+          w: 0.7093015
+    - Position:
+        x: -332.39722
+        y: -0.005256653
+        z: -271.2505
+      TangentIn:
+        x: -0
+        y: -0
+        z: -1.9786763
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.8910263
+      Rotation:
+        value:
+          x: 0.0001445185
+          y: 0.74723834
+          z: -0.00016103622
+          w: 0.66455615
+    - Position:
+        x: -326.9492
+        y: -0.005256653
+        z: -272.42114
+      TangentIn:
+        x: -0
+        y: -0
+        z: -2.129989
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.8974092
+      Rotation:
+        value:
+          x: 0
+          y: 0.74497366
+          z: 0
+          w: 0.667094
+    - Position:
+        x: -316.63846
+        y: -0.005256653
+        z: -272.51117
+      TangentIn:
+        x: -0
+        y: -0
+        z: -3.5447912
+      TangentOut:
+        x: 0
+        y: 0
+        z: 3.7930841
+      Rotation:
+        value:
+          x: 0
+          y: 0.6853418
+          z: 0
+          w: 0.7282216
+    - Position:
+        x: -304.93195
+        y: -0.005256653
+        z: -270.98032
+      TangentIn:
+        x: -0
+        y: -0
+        z: -3.5813825
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.9941375
+      Rotation:
+        value:
+          x: 3.5346801e-12
+          y: 0.673729
+          z: -3.2225787e-12
+          w: 0.73897856
+    - Position:
+        x: -296.69238
+        y: -0.005256653
+        z: -270.5301
+      TangentIn:
+        x: -0
+        y: -0
+        z: -2.58553
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.2928398
+      Rotation:
+        value:
+          x: -6.2952534e-12
+          y: 0.68989414
+          z: 5.9994436e-12
+          w: 0.7239102
+    - Position:
+        x: -290.20868
+        y: -0.005256653
+        z: -270.25998
+      TangentIn:
+        x: -0
+        y: -0
+        z: -2.0907907
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.9559191
+      Rotation:
+        value:
+          x: 4.5227207e-12
+          y: 0.6975047
+          z: -4.41216e-12
+          w: 0.71658015
+    - Position:
+        x: -284.53
+        y: -0.005256653
+        z: -270.19
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.56791115
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.56791115
+      Rotation:
+        value:
+          x: 0
+          y: 0.7027368
+          z: 0
+          w: 0.71144986
     m_MetaData:
     - Mode: 0
       Tension: 0.5
@@ -10668,6 +10794,20 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
     - Mode: 4
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
@@ -11148,7 +11288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 473360840}
-  m_PathPosition: 15.975992
+  m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2
@@ -13306,8 +13446,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748261484}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07801245, y: -0.62224543, z: 0.062522076, w: 0.77641207}
-  m_LocalPosition: {x: -308.7238, y: 3.9708743, z: -105.94615}
+  m_LocalRotation: {x: 0.077897444, y: -0.62230337, z: 0.062437978, w: 0.77638394}
+  m_LocalPosition: {x: -308.72357, y: 3.9708743, z: -105.94527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16282,7 +16422,7 @@ MonoBehaviour:
   m_Waypoints:
   - position: {x: -281.6931, y: 1, z: -185.10585}
     roll: 0
-  - position: {x: -267.49573, y: 1, z: -193.35823}
+  - position: {x: -267.49573, y: 1.21, z: -193.35823}
     roll: 0
   - position: {x: -252.44623, y: 1, z: -202.68546}
     roll: 0
