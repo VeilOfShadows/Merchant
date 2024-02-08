@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1a865bb92f2564dacd54ad9d3bd5ea, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  nodeLinks:
+  - baseNodeGUID: e6dcefbe-4258-4be4-9646-be7f110d6c1e
+    portName: Next
+    targetNodeGUID: e6dcefbe-4258-4be4-9646-be7f110d6c1e
+  - baseNodeGUID: e6dcefbe-4258-4be4-9646-be7f110d6c1e
+    portName: yse
+    targetNodeGUID: 77d89fb5-43b6-4513-950b-dd842728cfa5
+  dialogueNodeData:
+  - nodeGUID: e6dcefbe-4258-4be4-9646-be7f110d6c1e
+    dialogueText: Does this work like I think it does?
+    position: {x: 217, y: 177}
+  - nodeGUID: 77d89fb5-43b6-4513-950b-dd842728cfa5
+    dialogueText: Fuck no
+    position: {x: 536, y: 37}
