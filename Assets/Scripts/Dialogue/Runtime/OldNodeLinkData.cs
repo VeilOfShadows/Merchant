@@ -5,7 +5,7 @@ using UnityEngine;
 
 //Will hold data about connections between two nodes
 [Serializable]
-public class NodeLinkData
+public class OldNodeLinkData
 {
     public string baseNodeGUID;
     public string portName;

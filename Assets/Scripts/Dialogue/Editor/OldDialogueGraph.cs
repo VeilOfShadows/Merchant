@@ -6,15 +6,15 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using System;
 
-public class DialogueGraph : EditorWindow
+public class OldDialogueGraph : EditorWindow
 {
-    private DialogueGraphView _graphView;
+    private OldDialogueGraphView _graphView;
     private string _fileName = "New Narrative";
 
-    [MenuItem("Graph/Dialogue Graph")]
+    [MenuItem("Graph/OLD/Dialogue Graph")]
     public static void OpenDialogueGraphWindow()
     { 
-        var window = GetWindow<DialogueGraph>();
+        var window = GetWindow<OldDialogueGraph>();
         window.titleContent = new GUIContent("Dialogue Graph");
     }
 
@@ -26,7 +26,7 @@ public class DialogueGraph : EditorWindow
 
     private void ConstructGraphView() 
     {
-        _graphView = new DialogueGraphView
+        _graphView = new OldDialogueGraphView
         {
             name = "Dialogue Graph"
         };
@@ -65,7 +65,7 @@ public class DialogueGraph : EditorWindow
             return;
         }
 
-        var saveUtility = GraphSaveUtility.GetInstance(_graphView);
+        var saveUtility = OldGraphSaveUtility.GetInstance(_graphView);
         if (save) 
         {
             saveUtility.SaveGraph(_fileName);

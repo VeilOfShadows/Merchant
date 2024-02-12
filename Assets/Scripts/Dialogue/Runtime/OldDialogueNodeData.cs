@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class DialogueNodeData
+public class OldDialogueNodeData
 {
     public string nodeGUID;
     public string dialogueText;

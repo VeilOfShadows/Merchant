@@ -8,10 +8,10 @@ using System;
 using UnityEditor.Rendering;
 using System.Linq;
 
-public class DialogueGraphView : GraphView
+public class OldDialogueGraphView : GraphView
 {
     public readonly Vector2 defaultNodeSize = new Vector2(150, 200);
-    public DialogueGraphView() 
+    public OldDialogueGraphView() 
     {
         styleSheets.Add(Resources.Load<StyleSheet>("DialogueGraph"));
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
@@ -40,14 +40,14 @@ public class DialogueGraphView : GraphView
         return compatiblePorts;
     }
 
-    private Port GeneratePort(DialogueNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
+    private Port GeneratePort(OldDialogueNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
     { 
         return node.InstantiatePort(Orientation.Horizontal, portDirection, capacity, typeof(float));
     }
 
-    private DialogueNode GenerateEntryPointNode()
+    private OldDialogueNode GenerateEntryPointNode()
     {
-        var node = new DialogueNode
+        var node = new OldDialogueNode
         {
             title = "START",
             GUID = Guid.NewGuid().ToString(),
@@ -71,9 +71,9 @@ public class DialogueGraphView : GraphView
         AddElement(CreateDialogueNode(nodeName));
     }
 
-    public DialogueNode CreateDialogueNode(string nodeName)
+    public OldDialogueNode CreateDialogueNode(string nodeName)
     {
-        var dialogueNode = new DialogueNode
+        var dialogueNode = new OldDialogueNode
         {
             title = nodeName,
             dialogueText = nodeName,
@@ -106,7 +106,7 @@ public class DialogueGraphView : GraphView
         return dialogueNode;
     }
 
-    public void AddChoicePort(DialogueNode dialogueNode, string overriddenPortName = "") 
+    public void AddChoicePort(OldDialogueNode dialogueNode, string overriddenPortName = "") 
     {
         var generatedPort = GeneratePort(dialogueNode, Direction.Output);
 
@@ -137,7 +137,7 @@ public class DialogueGraphView : GraphView
         dialogueNode.RefreshPorts();
     }
 
-    private void RemovePort(DialogueNode dialogueNode, Port generatedPort)
+    private void RemovePort(OldDialogueNode dialogueNode, Port generatedPort)
     {
         var targetEdge = edges.ToList()
                 .Where(x=>x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);

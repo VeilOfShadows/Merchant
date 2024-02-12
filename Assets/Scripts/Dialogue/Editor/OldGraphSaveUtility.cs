@@ -11,17 +11,17 @@ using UnityEditor.Graphs;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GraphSaveUtility
+public class OldGraphSaveUtility
 {
-    private DialogueGraphView _targetGraphView;
-    private DialogueContainer _containerCache;
+    private OldDialogueGraphView _targetGraphView;
+    private OldDialogueContainer _containerCache;
 
     private List<UnityEditor.Experimental.GraphView.Edge> edges => _targetGraphView.edges.ToList();
-    private List<DialogueNode> nodes => _targetGraphView.nodes.ToList().Cast<DialogueNode>().ToList();
+    private List<OldDialogueNode> nodes => _targetGraphView.nodes.ToList().Cast<OldDialogueNode>().ToList();
 
-    public static GraphSaveUtility GetInstance(DialogueGraphView targetGraphView)
+    public static OldGraphSaveUtility GetInstance(OldDialogueGraphView targetGraphView)
     {
-        return new GraphSaveUtility
+        return new OldGraphSaveUtility
         {
             _targetGraphView = targetGraphView
         };
@@ -35,15 +35,15 @@ public class GraphSaveUtility
             return;
         }
 
-        var dialogueContainer = ScriptableObject.CreateInstance<DialogueContainer>();
+        var dialogueContainer = ScriptableObject.CreateInstance<OldDialogueContainer>();
 
         var connectedPorts = edges.Where(x=>x.input.node != null).ToArray();
         for (var i = 0; i < connectedPorts.Length; i++)
         {
-            var outputNode = connectedPorts[i].output.node as DialogueNode;
-            var inputNode = connectedPorts[i].input.node as DialogueNode;
+            var outputNode = connectedPorts[i].output.node as OldDialogueNode;
+            var inputNode = connectedPorts[i].input.node as OldDialogueNode;
 
-            dialogueContainer.nodeLinks.Add(new NodeLinkData
+            dialogueContainer.nodeLinks.Add(new OldNodeLinkData
             {
                 baseNodeGUID = outputNode.GUID,
                 portName = connectedPorts[i].output.portName,
@@ -53,7 +53,7 @@ public class GraphSaveUtility
 
         foreach (var dialogueNode in nodes.Where(node=>!node.entryPoint))
         {
-            dialogueContainer.dialogueNodeData.Add(new DialogueNodeData
+            dialogueContainer.dialogueNodeData.Add(new OldDialogueNodeData
             {
                 nodeGUID = dialogueNode.GUID,
                 dialogueText = dialogueNode.dialogueText,
@@ -72,7 +72,7 @@ public class GraphSaveUtility
 
     public void LoadGraph(string fileName)
     {
-        _containerCache = Resources.Load<DialogueContainer>(fileName);
+        _containerCache = Resources.Load<OldDialogueContainer>(fileName);
 
         if (_containerCache == null)
         {

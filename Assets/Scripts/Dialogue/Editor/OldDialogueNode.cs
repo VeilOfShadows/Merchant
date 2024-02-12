@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
 
-public class DialogueNode : Node
+public class OldDialogueNode : Node
 {
     public string GUID;
 
