@@ -11,18 +11,23 @@ public class DialogueNodeSingleChoice : DialogueNode
 
         dialogueType = DialogueType.SingleChoice;
 
-        choices.Add("Next dialogue");
+        DialogueChoiceSaveData choiceData = new DialogueChoiceSaveData()
+        {
+            text = "Next Dialogue"
+        };
+
+        choices.Add(choiceData);
     }
 
     public override void Draw()
     {
         base.Draw();
 
-        foreach (string choice in choices) 
+        foreach (DialogueChoiceSaveData choice in choices) 
         {
-            Port choicePort = this.CreatePort(choice);
+            Port choicePort = this.CreatePort(choice.text);
 
-            choicePort.portName = choice;
+            choicePort.userData = choice;
 
             outputContainer.Add(choicePort);
 

@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor.Experimental.GraphView;
 using System.Drawing;
+using System;
 
 public class DialogueNode : Node
 {
+    public string ID { get; set; }
     public string dialogueName { get; set; }
-    public List<string> choices { get; set; }
+    public List<DialogueChoiceSaveData> choices { get; set; }
     public string dialogueText { get; set; }
     public DialogueType dialogueType { get; set; }
     public Group group { get; set; }
@@ -18,8 +20,9 @@ public class DialogueNode : Node
     UnityEngine.Color defaultBackgroundColour;
 
     public virtual void Initialise(DialogueGraphView dialogueGraphView, Vector2 position) {
+        ID = Guid.NewGuid().ToString();
         dialogueName = "Dialogue Name";
-        choices = new List<string>();
+        choices = new List<DialogueChoiceSaveData>();
         dialogueText = "Type here.....";
 
         graphView = dialogueGraphView;
@@ -97,7 +100,6 @@ public class DialogueNode : Node
         extensionContainer.Add(customDataContainer);
     }
 
-
     public void DisconnectAllPorts()
     {
         DisconnectInputPorts();
@@ -128,6 +130,7 @@ public class DialogueNode : Node
     {
         mainContainer.style.backgroundColor = color;
     }
+
     public void ResetStyle()
     {
         mainContainer.style.backgroundColor = defaultBackgroundColour;

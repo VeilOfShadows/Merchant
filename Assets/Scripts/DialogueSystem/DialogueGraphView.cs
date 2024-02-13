@@ -52,7 +52,7 @@ public class DialogueGraphView : GraphView
         OnElementsDeleted();
         OnGroupElementsAdded();
         OnGroupElementsRemoved();
-
+        OnGraphViewChanged();
         AddStyles();
     }
 
@@ -368,10 +368,49 @@ public class DialogueGraphView : GraphView
         }
     }
 
+    void OnGraphViewChanged() 
+    {
+        graphViewChanged = (changes) =>
+        {
+            if (changes.edgesToCreate != null)
+            {
+                foreach (Edge edge in changes.edgesToCreate)
+                {
+                    DialogueNode nextNode = (DialogueNode) edge.input.node;
+
+                    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)edge.output.userData;
+
+                    choiceData.nodeID = nextNode.ID;
+                }
+            }
+
+            if (changes.elementsToRemove != null)
+            {
+                Type edgeType = typeof(Edge);
+
+                foreach (GraphElement element in changes.elementsToRemove)
+                {
+                    if (element.GetType() != edgeType)
+                    {
+                        continue;
+                    }
+
+                    Edge edge = (Edge) element;
+
+                    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData) edge.output.userData;
+
+                    choiceData.nodeID = "";
+                }
+            }
+
+            return changes;
+        };
+    }
+
     public GraphElement CreateGroup(string title, Vector2 localMousePosition)
     {
         Group group = new Group()
-        {
+        {            
             title = title
         };
 
