@@ -8,8 +8,10 @@ using UnityEditor.UIElements;
 
 public class DialogueGraphEditorWindow : EditorWindow
 {
+    DialogueGraphView graphView;
     string defaultFileName = "Type here...";
     Button saveButton;
+    TextField fileNameTextField;
 
     //Open the graph editor window through the toolbar at the top of unity
     [MenuItem("Graph/Dialogue Graph")]
@@ -26,7 +28,7 @@ public class DialogueGraphEditorWindow : EditorWindow
 
     private void AddGraphView()
     {
-        DialogueGraphView graphView = new DialogueGraphView(this);
+        graphView = new DialogueGraphView(this);
 
         graphView.StretchToParentSize();
 
@@ -37,14 +39,25 @@ public class DialogueGraphEditorWindow : EditorWindow
     {
         Toolbar toolbar = new Toolbar();
 
-        TextField fileNameTextField = DialogueElementUtility.CreateTextField(defaultFileName, "File Name:");
+        fileNameTextField = DialogueElementUtility.CreateTextField(defaultFileName, "File Name:");
 
-        saveButton = DialogueElementUtility.CreateButton("Save");
-
+        saveButton = DialogueElementUtility.CreateButton("Save", () => Save() );
         toolbar.Add(fileNameTextField);
         toolbar.Add(saveButton);
 
         rootVisualElement.Add(toolbar);
+    }
+
+    private void Save()
+    {
+        if (string.IsNullOrEmpty(fileNameTextField.value))
+        {
+            EditorUtility.DisplayDialog("Invalid file name.", "Please ensure that the file name you have typed in is valid.", "Ok");
+
+            return;
+        }
+        DialogueIOUtility.Initialize(graphView, fileNameTextField.value);
+        DialogueIOUtility.Save();
     }
 
     public void EnableSaving()

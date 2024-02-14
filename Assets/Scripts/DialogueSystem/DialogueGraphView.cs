@@ -14,10 +14,11 @@ public class DialogueGraphView : GraphView
     DialogueGraphEditorWindow editorWindow;
     DialogueSearchWindow searchWindow;
     SerializableDictionary<string, DialogueNodeErrorData> ungroupedNodes;
+    SerializableDictionary<string, DialogueGroupErrorData> groups;
     SerializableDictionary<Group, SerializableDictionary<string, DialogueNodeErrorData>> groupedNodes;
 
     int repeatedNamesAmount;
-    int RepeatedNamesAmount
+    public int RepeatedNamesAmount
     {
         get 
         { 
@@ -43,6 +44,7 @@ public class DialogueGraphView : GraphView
         editorWindow = dialogueGraphEditorWindow;
 
         ungroupedNodes = new SerializableDictionary<string, DialogueNodeErrorData>();
+        groups = new SerializableDictionary<string, DialogueGroupErrorData>();
         groupedNodes = new SerializableDictionary<Group, SerializableDictionary<string, DialogueNodeErrorData>>();
 
         AddManipulators();
@@ -52,10 +54,13 @@ public class DialogueGraphView : GraphView
         OnElementsDeleted();
         OnGroupElementsAdded();
         OnGroupElementsRemoved();
+        OnGroupRenamed();
         OnGraphViewChanged();
+
         AddStyles();
     }
 
+    #region Utilities
     private void AddSearchWindow()
     {
         if (searchWindow == null)
@@ -108,7 +113,17 @@ public class DialogueGraphView : GraphView
 
         return compatiblePorts;
     }
+    private void AddGridBackground()
+    {
+        GridBackground gridBackground = new GridBackground();
+        gridBackground.StretchToParentSize();
 
+        //Insert(position, element) places the element at that position on the canvas. Used for re-ordering overlapping visuals
+        Insert(0, gridBackground);
+    }
+#endregion
+
+    #region Manipulators
     //Adds a set of manipulators for you to interact with the editor window
     private void AddManipulators()
     {
@@ -140,17 +155,11 @@ public class DialogueGraphView : GraphView
 
         return contextualMenuManipulator;
     }
+    #endregion
 
+    #region Creation
     //Adds a custom grid background to the window
-    private void AddGridBackground()
-    {
-        GridBackground gridBackground = new GridBackground();
-        gridBackground.StretchToParentSize();
 
-        //Insert(position, element) places the element at that position on the canvas. Used for re-ordering overlapping visuals
-        Insert(0, gridBackground);
-    }
-    
     public DialogueNode CreateNode(DialogueType dialogueType, Vector2 position)
     {
         //if (nodeT)
@@ -171,11 +180,88 @@ public class DialogueGraphView : GraphView
        //AddElement(node);
     }
 
+    public GraphElement CreateGroup(string title, Vector2 localMousePosition)
+    {
+        DialogueGroup group = new DialogueGroup(title, localMousePosition);
+
+        AddGroup(group);
+
+        AddElement(group);
+
+        foreach (GraphElement selectedElement in selection)
+        {
+            if (!(selectedElement is DialogueNode))
+            {
+                continue;
+            }
+
+            DialogueNode node = (DialogueNode) selectedElement;
+
+            group.AddElement(node);
+        }
+
+        return group;
+    }
+
+    private void AddGroup(DialogueGroup group)
+    {
+        string groupName = group.title;
+
+        if (!groups.ContainsKey(groupName))
+        {
+            DialogueGroupErrorData groupErrorData = new DialogueGroupErrorData();
+
+            groupErrorData.groups.Add(group);
+
+            groups.Add(groupName, groupErrorData);
+
+            return;
+        }
+
+        List<DialogueGroup> groupsList = groups[groupName].groups;
+
+        groupsList.Add(group);
+
+        Color errorColour = groups[groupName].errorData.color;
+
+        group.SetErrorStyle(errorColour);
+
+        if (groupsList.Count == 2)
+        {
+            groupsList[0].SetErrorStyle(errorColour);
+        }
+    }
+
+    private void RemoveGroup(DialogueGroup group)
+    {
+        string oldGroupName = group.oldTitle;
+
+        List<DialogueGroup> groupsList = groups[oldGroupName].groups;
+
+        groupsList.Remove(group);
+
+        group.ResetStyle();
+
+        if (groupsList.Count == 1)
+        {
+            groupsList[0].ResetStyle();
+        }
+        
+        if (groupsList.Count == 0)
+        {
+            groups.Remove(oldGroupName);
+        }
+    }
+    #endregion
+
+    #region Callbacks
     void OnElementsDeleted() {
         deleteSelection = (operationName, askUser) =>
         {
+            Type groupType = typeof(DialogueGroup);
             Type edgeType = typeof(Edge);
 
+            List<DialogueGroup> groupsToDelete = new List<DialogueGroup>();
             List<DialogueNode> nodesToDelete = new List<DialogueNode>();
             List<Edge> edgesToDelete = new List<Edge>();
 
@@ -187,6 +273,15 @@ public class DialogueGraphView : GraphView
 
                     continue;
                 }
+                
+                if (element.GetType() != groupType)
+                {
+                    continue;
+                }
+
+                DialogueGroup group = (DialogueGroup) element;
+
+                groupsToDelete.Add(group);
 
                 if (element.GetType() == edgeType)
                 {
@@ -199,6 +294,30 @@ public class DialogueGraphView : GraphView
             }
 
             DeleteElements(edgesToDelete);
+
+            foreach (DialogueGroup group in groupsToDelete)
+            {
+                List<DialogueNode> groupNodes = new List<DialogueNode>();
+
+                foreach (GraphElement groupElement in group.containedElements)
+                {
+                    if (!(groupElement is DialogueNode))
+                    {
+
+                        continue;
+                    }
+
+                    DialogueNode groupNode = (DialogueNode)groupElement;
+
+                    groupNodes.Add(groupNode);
+                }
+
+                group.RemoveElements(groupNodes);
+
+                RemoveGroup(group);
+
+                RemoveElement(group);
+            }
 
             foreach (DialogueNode node in nodesToDelete)
             {
@@ -226,9 +345,11 @@ public class DialogueGraphView : GraphView
                     continue;
                 }
 
+                DialogueGroup nodeGroup = (DialogueGroup) group;
                 DialogueNode node = (DialogueNode)element;
+                
                 RemoveUngroupedNode(node);
-                AddGroupedNode(node, group);
+                AddGroupedNode(node, nodeGroup);
             }
 
         };
@@ -247,13 +368,83 @@ public class DialogueGraphView : GraphView
 
                 DialogueNode node = (DialogueNode)element;
 
+                if (string.IsNullOrEmpty(element.title))
+                {
+                    if (!string.IsNullOrEmpty(group.title))
+                    {
+                        ++RepeatedNamesAmount;
+                    }
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(group.title))
+                    {
+                        --RepeatedNamesAmount;
+                    }
+                }
+
                 RemoveGroupedNode(node, group);
                 AddUngroupedNode(node);
             }
         };
     }
 
-    public void AddGroupedNode(DialogueNode node, Group group)
+    void OnGroupRenamed() 
+    {
+        groupTitleChanged = (group, newTitle) =>
+        { 
+            DialogueGroup dialogueGroup = (DialogueGroup) group;
+
+            RemoveGroup(dialogueGroup);
+
+            dialogueGroup.oldTitle = newTitle;
+
+            AddGroup(dialogueGroup);
+        };
+    }
+    
+    void OnGraphViewChanged() 
+    {
+        graphViewChanged = (changes) =>
+        {
+            if (changes.edgesToCreate != null)
+            {
+                foreach (Edge edge in changes.edgesToCreate)
+                {
+                    DialogueNode nextNode = (DialogueNode) edge.input.node;
+
+                    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)edge.output.userData;
+
+                    choiceData.nodeID = nextNode.ID;
+                }
+            }
+
+            if (changes.elementsToRemove != null)
+            {
+                Type edgeType = typeof(Edge);
+
+                foreach (GraphElement element in changes.elementsToRemove)
+                {
+                    if (element.GetType() != edgeType)
+                    {
+                        continue;
+                    }
+
+                    Edge edge = (Edge) element;
+
+                    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData) edge.output.userData;
+
+                    choiceData.nodeID = "";
+                }
+            }
+
+            return changes;
+        };
+    }
+    #endregion
+
+    #region Elements
+    public void AddGroupedNode(DialogueNode node, DialogueGroup group)
     {
         string nodeName = node.dialogueName;
 
@@ -367,58 +558,7 @@ public class DialogueGraphView : GraphView
             ungroupedNodes.Remove(nodeName);
         }
     }
-
-    void OnGraphViewChanged() 
-    {
-        graphViewChanged = (changes) =>
-        {
-            if (changes.edgesToCreate != null)
-            {
-                foreach (Edge edge in changes.edgesToCreate)
-                {
-                    DialogueNode nextNode = (DialogueNode) edge.input.node;
-
-                    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)edge.output.userData;
-
-                    choiceData.nodeID = nextNode.ID;
-                }
-            }
-
-            if (changes.elementsToRemove != null)
-            {
-                Type edgeType = typeof(Edge);
-
-                foreach (GraphElement element in changes.elementsToRemove)
-                {
-                    if (element.GetType() != edgeType)
-                    {
-                        continue;
-                    }
-
-                    Edge edge = (Edge) element;
-
-                    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData) edge.output.userData;
-
-                    choiceData.nodeID = "";
-                }
-            }
-
-            return changes;
-        };
-    }
-
-    public GraphElement CreateGroup(string title, Vector2 localMousePosition)
-    {
-        Group group = new Group()
-        {            
-            title = title
-        };
-
-        group.SetPosition(new Rect(localMousePosition, Vector2.zero));
-
-        return group;
-    }
-    
+    #endregion
     //Adds specified style sheet which is used for changing the appearance of the grid
     private void AddStyles()
     {

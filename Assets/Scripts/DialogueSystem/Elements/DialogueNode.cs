@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using UnityEditor.Experimental.GraphView;
 using System.Drawing;
 using System;
+using System.Linq;
 
 public class DialogueNode : Node
 {
@@ -13,7 +14,7 @@ public class DialogueNode : Node
     public List<DialogueChoiceSaveData> choices { get; set; }
     public string dialogueText { get; set; }
     public DialogueType dialogueType { get; set; }
-    public Group group { get; set; }
+    public DialogueGroup group { get; set; }
 
     public DialogueGraphView graphView;
 
@@ -47,6 +48,21 @@ public class DialogueNode : Node
         //Set the title of the dialogue node
         TextField dialogueNameTextField = DialogueElementUtility.CreateTextField(dialogueName, null, callback =>
         {
+            if (string.IsNullOrEmpty(callback.newValue))
+            {
+                if (!string.IsNullOrEmpty(dialogueName))
+                {
+                    ++graphView.RepeatedNamesAmount;
+                }
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(dialogueName))
+                {
+                    --graphView.RepeatedNamesAmount;
+                }
+            }
+
             if (group == null)
             {
                 graphView.RemoveUngroupedNode(this);
@@ -58,7 +74,7 @@ public class DialogueNode : Node
                 return;
             }
 
-            Group currentGroup = group;
+            DialogueGroup currentGroup = (DialogueGroup) group;
 
             graphView.RemoveGroupedNode(this, group);
 
@@ -88,7 +104,10 @@ public class DialogueNode : Node
 
         Foldout textFoldout = DialogueElementUtility.CreateFoldout("Dialogue Text");
 
-        TextField textTextField = DialogueElementUtility.CreateTextArea(dialogueText);
+        TextField textTextField = DialogueElementUtility.CreateTextArea(dialogueText, null, callback =>
+        {
+            dialogueText = callback.newValue;
+        });
 
         textTextField.AddToClassList("ds-node__textfield");
         textTextField.AddToClassList("ds-node__quote-textfield");
@@ -126,6 +145,12 @@ public class DialogueNode : Node
         }
     }
 
+
+    public bool IsStartingNode() {
+        Port inputPort = (Port) inputContainer.Children().First();
+
+        return !inputPort.connected;
+    }
     public void SetErrorStyle(UnityEngine.Color color)
     {
         mainContainer.style.backgroundColor = color;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class DialogueChoiceSaveData
-{ 
-    public string text { get; set; }
-    public string nodeID { get; set; }
+{
+    [field: SerializeField] public string text { get; set; }
+    [field: SerializeField]public string nodeID { get; set; }
 }
