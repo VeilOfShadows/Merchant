@@ -143,7 +143,7 @@ public class DialogueGraphView : GraphView
     IManipulator CreateNodeContextualMenu(string actionTitle, DialogueType dialogueType) 
     {
         ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator(
-            menuEvent => menuEvent.menu.AppendAction(actionTitle, actionEvent => AddElement(CreateNode(dialogueType, GetLocalMousePosition(actionEvent.eventInfo.localMousePosition)))));
+            menuEvent => menuEvent.menu.AppendAction(actionTitle, actionEvent => AddElement(CreateNode("DialogueName", dialogueType, GetLocalMousePosition(actionEvent.eventInfo.localMousePosition)))));
 
         return contextualMenuManipulator;
     }
@@ -160,7 +160,7 @@ public class DialogueGraphView : GraphView
     #region Creation
     //Adds a custom grid background to the window
 
-    public DialogueNode CreateNode(DialogueType dialogueType, Vector2 position)
+    public DialogueNode CreateNode(string nodeName, DialogueType dialogueType, Vector2 position, bool shouldDraw = true)
     {
         //if (nodeT)
         //{
@@ -171,8 +171,12 @@ public class DialogueGraphView : GraphView
 
         //DialogueNode node = new DialogueNode();
 
-        node.Initialise(this, position);
-        node.Draw();
+        node.Initialise(nodeName, this, position);
+
+        if (shouldDraw)
+        {
+            node.Draw();
+        }
 
         AddUngroupedNode(node);
 
@@ -559,6 +563,18 @@ public class DialogueGraphView : GraphView
         }
     }
     #endregion
+    
+    public void ClearGraph() 
+    {
+        graphElements.ForEach(graphElement => RemoveElement(graphElement));
+
+        groups.Clear();
+        groupedNodes.Clear();
+        ungroupedNodes.Clear();
+
+        RepeatedNamesAmount = 0;
+    }
+
     //Adds specified style sheet which is used for changing the appearance of the grid
     private void AddStyles()
     {

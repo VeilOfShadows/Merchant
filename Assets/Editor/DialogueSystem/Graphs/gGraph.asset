@@ -17,10 +17,13 @@ MonoBehaviour:
   - <ID>k__BackingField: 456b9059-8e8a-40b9-81fd-4ca5816c57d0
     <name>k__BackingField: Grouptest
     <position>k__BackingField: {x: 851, y: 347}
+  - <ID>k__BackingField: b89df3a2-60a0-41ad-adf3-ff39fe96789c
+    <name>k__BackingField: Resolutions
+    <position>k__BackingField: {x: 1248, y: 299}
   <nodes>k__BackingField:
   - <ID>k__BackingField: 9c87bb41-eead-4b93-9d50-d74b5922cdf7
-    <name>k__BackingField: a
-    <text>k__BackingField: v
+    <name>k__BackingField: box1
+    <text>k__BackingField: text1
     <choices>k__BackingField:
     - <text>k__BackingField: Next Dialogue
       <nodeID>k__BackingField: 3737f4e5-51f1-4828-9763-b223d28a09d1
@@ -33,21 +36,12 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Next Dialogue
       <nodeID>k__BackingField: 
-    <groupID>k__BackingField: 
+    <groupID>k__BackingField: b89df3a2-60a0-41ad-adf3-ff39fe96789c
     <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 1278, y: 356}
-  - <ID>k__BackingField: ddef1828-6c15-4ff0-8e89-d10dbe082bf1
-    <name>k__BackingField: resolutionb
-    <text>k__BackingField: 2
-    <choices>k__BackingField:
-    - <text>k__BackingField: Next Dialogue
-      <nodeID>k__BackingField: 
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 1242, y: 593}
+    <position>k__BackingField: {x: 1273, y: 358}
   - <ID>k__BackingField: 3737f4e5-51f1-4828-9763-b223d28a09d1
     <name>k__BackingField: choice
-    <text>k__BackingField: wd
+    <text>k__BackingField: choice text
     <choices>k__BackingField:
     - <text>k__BackingField: choice1
       <nodeID>k__BackingField: 767950d0-902e-4957-975e-24000afcb49b
@@ -56,11 +50,19 @@ MonoBehaviour:
     <groupID>k__BackingField: 456b9059-8e8a-40b9-81fd-4ca5816c57d0
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 876, y: 406}
+  - <ID>k__BackingField: ddef1828-6c15-4ff0-8e89-d10dbe082bf1
+    <name>k__BackingField: resolution2
+    <text>k__BackingField: 2
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: b89df3a2-60a0-41ad-adf3-ff39fe96789c
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 1337, y: 579}
   <oldGroupNames>k__BackingField:
   - Grouptest
+  - Resolutions
   <oldUngroupedNodeNames>k__BackingField:
-  - a
-  - resolution1
-  - resolutionb
+  - box1
   <oldGroupedNodeNames>k__BackingField:
     list: []

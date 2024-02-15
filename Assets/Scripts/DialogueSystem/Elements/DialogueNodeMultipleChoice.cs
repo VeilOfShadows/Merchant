@@ -7,9 +7,9 @@ using UnityEngine.UIElements;
 
 public class DialogueNodeMultipleChoice : DialogueNode
 {
-    public override void Initialise(DialogueGraphView dialogueGraphView, Vector2 position)
+    public override void Initialise(string nodeName, DialogueGraphView dialogueGraphView, Vector2 position)
     {
-        base.Initialise(dialogueGraphView, position);
+        base.Initialise(nodeName, dialogueGraphView, position);
 
         dialogueType = DialogueType.MultipleChoice;
 

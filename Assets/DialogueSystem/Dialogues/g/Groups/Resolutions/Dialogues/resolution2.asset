@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: resolutionb
+  m_Name: resolution2
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: resolutionb
+  <dialogueName>k__BackingField: resolution2
   <text>k__BackingField: 2
   <choices>k__BackingField: []
   <dialogueType>k__BackingField: 0

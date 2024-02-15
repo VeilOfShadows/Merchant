@@ -5,13 +5,14 @@ using UnityEditor;
 using System;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using System.IO;
 
 public class DialogueGraphEditorWindow : EditorWindow
 {
     DialogueGraphView graphView;
     string defaultFileName = "Type here...";
     Button saveButton;
-    TextField fileNameTextField;
+    static TextField fileNameTextField;
 
     //Open the graph editor window through the toolbar at the top of unity
     [MenuItem("Graph/Dialogue Graph")]
@@ -42,10 +43,48 @@ public class DialogueGraphEditorWindow : EditorWindow
         fileNameTextField = DialogueElementUtility.CreateTextField(defaultFileName, "File Name:");
 
         saveButton = DialogueElementUtility.CreateButton("Save", () => Save() );
+        Button loadButton = DialogueElementUtility.CreateButton("Load", () => Load() );
+        Button clearButton = DialogueElementUtility.CreateButton("Clear", () => Clear() );
+        Button resetButton = DialogueElementUtility.CreateButton("Reset", () => ResetGraph() );
+
         toolbar.Add(fileNameTextField);
         toolbar.Add(saveButton);
+        toolbar.Add(loadButton);
+        toolbar.Add(clearButton);
+        toolbar.Add(resetButton);
 
         rootVisualElement.Add(toolbar);
+    }
+
+    private void Load()
+    {
+        string filePath = EditorUtility.OpenFilePanel("Dialogue Graphs", "Assets/Editor/DialogueSystem/Graphs", "asset");
+
+        if (string.IsNullOrEmpty(filePath))
+        {
+            return;
+        }
+
+        Clear();
+
+        DialogueIOUtility.Initialize(graphView, Path.GetFileNameWithoutExtension(filePath));
+        DialogueIOUtility.Load();
+    }
+
+    private void ResetGraph()
+    {
+        Clear();
+
+        UpdateFileName(defaultFileName);
+    }
+
+    public static void UpdateFileName(string newFileName) {
+        fileNameTextField.value = newFileName;
+    }
+
+    private void Clear()
+    {
+        graphView.ClearGraph();
     }
 
     private void Save()

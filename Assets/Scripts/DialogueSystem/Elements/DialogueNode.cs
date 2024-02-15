@@ -20,9 +20,9 @@ public class DialogueNode : Node
 
     UnityEngine.Color defaultBackgroundColour;
 
-    public virtual void Initialise(DialogueGraphView dialogueGraphView, Vector2 position) {
+    public virtual void Initialise(string nodeName, DialogueGraphView dialogueGraphView, Vector2 position) {
         ID = Guid.NewGuid().ToString();
-        dialogueName = "Dialogue Name";
+        dialogueName = nodeName;
         choices = new List<DialogueChoiceSaveData>();
         dialogueText = "Type here.....";
 

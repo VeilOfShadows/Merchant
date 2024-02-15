@@ -52,14 +52,14 @@ public class DialogueSearchWindow : ScriptableObject, ISearchWindowProvider
         {
             case DialogueType.SingleChoice:
                 {
-                    DialogueNodeSingleChoice singleChoiceNode = (DialogueNodeSingleChoice) graphView.CreateNode(DialogueType.SingleChoice, localMousePosition);
+                    DialogueNodeSingleChoice singleChoiceNode = (DialogueNodeSingleChoice) graphView.CreateNode("DialogueName", DialogueType.SingleChoice, localMousePosition);
                     
                     graphView.AddElement(singleChoiceNode);
                     return true;
                 }
             case DialogueType.MultipleChoice:
                 {
-                    DialogueNodeMultipleChoice multipleChoiceNode = (DialogueNodeMultipleChoice) graphView.CreateNode(DialogueType.MultipleChoice, localMousePosition);
+                    DialogueNodeMultipleChoice multipleChoiceNode = (DialogueNodeMultipleChoice) graphView.CreateNode("DialogueName", DialogueType.MultipleChoice, localMousePosition);
 
                     graphView.AddElement(multipleChoiceNode); 
                     return true;
