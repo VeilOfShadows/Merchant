@@ -279,6 +279,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 161390123}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &103480713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103480715}
+  - component: {fileID: 103480714}
+  m_Layer: 0
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &103480714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103480713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71b41ba76ee9b346881a51f12ccbe7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueContainer: {fileID: 11400000, guid: 6a3ab87974a317a42ae918cb50d1d4e2, type: 2}
+  dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
+  dialogue: {fileID: 11400000, guid: 1796c150a9fc42148ac23b5c422156e0, type: 2}
+  groupedDialogues: 0
+  startingDialoguesOnly: 0
+  selectedDialogueGroupIndex: 0
+  selectedDialogueIndex: 2
+--- !u!4 &103480715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103480713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -381.62106, y: 8.784563, z: -313.70642}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &112940405
 GameObject:
   m_ObjectHideFlags: 0
@@ -17796,3 +17847,4 @@ SceneRoots:
   - {fileID: 1022184807}
   - {fileID: 1929503618}
   - {fileID: 1674814032}
+  - {fileID: 103480715}

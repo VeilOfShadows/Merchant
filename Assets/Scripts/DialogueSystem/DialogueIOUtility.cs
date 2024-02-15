@@ -80,44 +80,7 @@ public static class DialogueIOUtility
         LoadNodesConnections();
     }
 
-    private static void LoadNodesConnections()
-    {
-        foreach (KeyValuePair<string, DialogueNode> loadedNode in loadedNodes)
-        {
-            foreach (Port choicePort in loadedNode.Value.outputContainer.Children())
-            {
-                DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)choicePort.userData;
-
-                if (string.IsNullOrEmpty(choiceData.nodeID))
-                {
-                    continue;
-                }
-
-                DialogueNode nextNode = loadedNodes[choiceData.nodeID];
-
-                Port nextNodeInputPort = (Port)nextNode.inputContainer.Children().First();
-
-                Edge edge = choicePort.ConnectTo(nextNodeInputPort);
-
-                graphView.AddElement(edge);
-
-                loadedNode.Value.RefreshPorts();
-            }
-        }
-    }
-
-    private static void LoadGroups(List<DialogueGroupSaveData> groups)
-    {
-        foreach (DialogueGroupSaveData groupData in groups)
-        {
-            DialogueGroup group = (DialogueGroup)graphView.CreateGroup(groupData.name, groupData.position);
-
-            group.ID = groupData.ID;
-
-            loadedGroups.Add(group.ID, group);
-        }
-    }
-
+    #region Load Methods
     private static void LoadNodes(List<DialogueNodeSaveData> nodes)
     {
         foreach (DialogueNodeSaveData nodeData in nodes)
@@ -150,8 +113,47 @@ public static class DialogueIOUtility
         }
     }
 
+    private static void LoadGroups(List<DialogueGroupSaveData> groups)
+    {
+        foreach (DialogueGroupSaveData groupData in groups)
+        {
+            DialogueGroup group = (DialogueGroup)graphView.CreateGroup(groupData.name, groupData.position);
+
+            group.ID = groupData.ID;
+
+            loadedGroups.Add(group.ID, group);
+        }
+    }
+
+    private static void LoadNodesConnections()
+    {
+        foreach (KeyValuePair<string, DialogueNode> loadedNode in loadedNodes)
+        {
+            foreach (Port choicePort in loadedNode.Value.outputContainer.Children())
+            {
+                DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)choicePort.userData;
+
+                if (string.IsNullOrEmpty(choiceData.nodeID))
+                {
+                    continue;
+                }
+
+                DialogueNode nextNode = loadedNodes[choiceData.nodeID];
+
+                Port nextNodeInputPort = (Port)nextNode.inputContainer.Children().First();
+
+                Edge edge = choicePort.ConnectTo(nextNodeInputPort);
+
+                graphView.AddElement(edge);
+
+                loadedNode.Value.RefreshPorts();
+            }
+        }
+    }
+    #endregion
+
     #region Save Methods
-    private static void SaveNodeToScriptableObject(DialogueNode node, DialogueContainerSO dialogueContainer)
+    public static void SaveNodeToScriptableObject(DialogueNode node, DialogueContainerSO dialogueContainer)
     {
 
         DialogueSO dialogue;
@@ -174,7 +176,7 @@ public static class DialogueIOUtility
 
         SaveAsset(dialogue);
     }
-    private static void SaveNodes(DialogueGraphSaveDataSO graphData, DialogueContainerSO dialogueContainer)
+    public static void SaveNodes(DialogueGraphSaveDataSO graphData, DialogueContainerSO dialogueContainer)
     {
         SerializableDictionary<string, List<string>> groupedNodeNames = new SerializableDictionary<string, List<string>>();
         List<string> ungroupedNodeNames = new List<string>();
@@ -200,7 +202,7 @@ public static class DialogueIOUtility
         UpdateOldUngroupedNodes(ungroupedNodeNames, graphData);
     }
 
-    private static void UpdateOldGroupedNodes(SerializableDictionary<string, List<string>> currentGroupedNodeNames, DialogueGraphSaveDataSO graphData)
+    public static void UpdateOldGroupedNodes(SerializableDictionary<string, List<string>> currentGroupedNodeNames, DialogueGraphSaveDataSO graphData)
     {
         if (graphData.oldGroupedNodeNames != null && graphData.oldGroupedNodeNames.Count != 0)
         {
@@ -223,7 +225,7 @@ public static class DialogueIOUtility
         graphData.oldGroupedNodeNames = new SerializableDictionary<string, List<string>>();
     }
 
-    private static void UpdateOldUngroupedNodes(List<string> currentUngroupedNodeNames, DialogueGraphSaveDataSO graphData)
+    public static void UpdateOldUngroupedNodes(List<string> currentUngroupedNodeNames, DialogueGraphSaveDataSO graphData)
     {
         if (graphData.oldUngroupedNodeNames != null && graphData.oldUngroupedNodeNames.Count != 0)
         {
@@ -238,12 +240,12 @@ public static class DialogueIOUtility
         graphData.oldUngroupedNodeNames = new List<string>(currentUngroupedNodeNames);
     }
 
-    private static void RemoveAsset(string path, string assetName)
+    public static void RemoveAsset(string path, string assetName)
     {
         AssetDatabase.DeleteAsset($"{path}/{assetName}.asset");
     }
 
-    private static void UpdateDialoguesChoicesConnections()
+    public static void UpdateDialoguesChoicesConnections()
     {
         foreach (DialogueNode node in nodes)
         {
@@ -264,7 +266,7 @@ public static class DialogueIOUtility
             }
         }
     }
-    private static List<DialogueChoiceData> ConvertNodeChoicesToDialogueChoices(List<DialogueChoiceSaveData> nodeChoices)
+    public static List<DialogueChoiceData> ConvertNodeChoicesToDialogueChoices(List<DialogueChoiceSaveData> nodeChoices)
     {
         List<DialogueChoiceData> dialogueChoices = new List<DialogueChoiceData>();
 
@@ -280,7 +282,7 @@ public static class DialogueIOUtility
         return dialogueChoices;
     }
 
-    private static void SaveNodeToGraph(DialogueNode node, DialogueGraphSaveDataSO graphData)
+    public static void SaveNodeToGraph(DialogueNode node, DialogueGraphSaveDataSO graphData)
     {
         List<DialogueChoiceSaveData> choices = CloneNodeChoices(node.choices);
 
@@ -316,7 +318,7 @@ public static class DialogueIOUtility
         return choices;
     }
 
-    private static void SaveGroups(DialogueGraphSaveDataSO graphData, DialogueContainerSO dialogueContainer)
+    public static void SaveGroups(DialogueGraphSaveDataSO graphData, DialogueContainerSO dialogueContainer)
     {
         List<string> groupNames = new List<string>();
         foreach (DialogueGroup group in groups)
@@ -329,8 +331,8 @@ public static class DialogueIOUtility
 
         UpdateOldGroups(groupNames, graphData);
     }
-    
-    private static void SaveGroupToScriptableObject(DialogueGroup group, DialogueContainerSO dialogueContainer)
+
+    public static void SaveGroupToScriptableObject(DialogueGroup group, DialogueContainerSO dialogueContainer)
     {
         string groupName = group.title;
 
@@ -347,8 +349,8 @@ public static class DialogueIOUtility
 
         createdDialogueGroups.Add(group.ID, dialogueGroup);
     }
-    
-    private static void SaveGroupToGraph(DialogueGroup group, DialogueGraphSaveDataSO graphData)
+
+    public static void SaveGroupToGraph(DialogueGroup group, DialogueGraphSaveDataSO graphData)
     {
         DialogueGroupSaveData groupData = new DialogueGroupSaveData()
         {
@@ -359,8 +361,8 @@ public static class DialogueIOUtility
 
         graphData.groups.Add(groupData);
     }
-    
-    private static void SaveAsset(UnityEngine.Object asset)
+
+    public static void SaveAsset(UnityEngine.Object asset)
     {
         EditorUtility.SetDirty(asset);
 
@@ -368,7 +370,7 @@ public static class DialogueIOUtility
         AssetDatabase.Refresh();
     }
 
-    private static void UpdateOldGroups(List<string> currentGroupNames, DialogueGraphSaveDataSO graphData)
+    public static void UpdateOldGroups(List<string> currentGroupNames, DialogueGraphSaveDataSO graphData)
     {
         if (graphData.oldGroupNames != null && graphData.oldGroupNames.Count != 0)
         {
@@ -383,13 +385,13 @@ public static class DialogueIOUtility
         graphData.oldGroupNames = new List<string>(currentGroupNames);
     }
 
-    private static void RemoveFolder(string fullPath)
+    public static void RemoveFolder(string fullPath)
     {
         FileUtil.DeleteFileOrDirectory($"{fullPath}.meta");
         FileUtil.DeleteFileOrDirectory($"{fullPath}/");
     }
 
-    private static void GetElementsFromGraphView()
+    public static void GetElementsFromGraphView()
     {
         Type groupType = typeof(DialogueGroup);
         graphView.graphElements.ForEach(graphElement =>
@@ -412,7 +414,7 @@ public static class DialogueIOUtility
         });
     }
 
-    private static void CreateStaticFolders()
+    public static void CreateStaticFolders()
     {
         CreateFolder("Assets/Editor/DialogueSystem", "Graphs");
 
@@ -425,8 +427,8 @@ public static class DialogueIOUtility
         CreateFolder(containerFolderPath, "Groups");
         CreateFolder($"{containerFolderPath}/Global", "Dialogues");
     }
-    
-    private static void CreateFolder(string path, string folderName)
+
+    public static void CreateFolder(string path, string folderName)
     {
         if (AssetDatabase.IsValidFolder($"{path}/{folderName}"))
         {
@@ -435,8 +437,8 @@ public static class DialogueIOUtility
 
         AssetDatabase.CreateFolder(path, folderName);
     }
-    
-    private static T CreateAsset<T>(string path, string assetName) where T:ScriptableObject
+
+    public static T CreateAsset<T>(string path, string assetName) where T:ScriptableObject
     {
         //string fullPath = $"{path}/{assetName}.asset";
 
@@ -465,7 +467,7 @@ public static class DialogueIOUtility
         return asset;
     }
 
-    private static T LoadAsset<T>(string path, string assetName) where T : ScriptableObject
+    public static T LoadAsset<T>(string path, string assetName) where T : ScriptableObject
     {
         string fullPath = $"{path}/{assetName}.asset";
 
