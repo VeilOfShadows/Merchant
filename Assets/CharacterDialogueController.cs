@@ -10,7 +10,7 @@ public class CharacterDialogueController : MonoBehaviour
     //public DialogueNodeSaveData currentDialogue;
     public DialogueSO lastDialogue;
 
-     void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -42,6 +42,7 @@ public class CharacterDialogueController : MonoBehaviour
                 lastDialogue = currentDialogue;
                 currentDialogue = ReturnNextDialogue(lastDialogue);
             }
+
             if (currentDialogue == null)
             {
                 Debug.Log("There is no more dialogue.");
@@ -70,5 +71,20 @@ public class CharacterDialogueController : MonoBehaviour
             return null;
         }
         return dialogueToCheck.choices[0].nextDialogue;
+    }
+
+    public DialogueSO FindStartingDialogue()
+    {
+        for (int i = 0; i < dialogue.dialogueContainer.ungroupedDialogues.Count; i++)
+        {
+            if (dialogue.dialogueContainer.ungroupedDialogues[i].isStartingDialogue)
+            {
+                //Debug.Log(dialogue.dialogueContainer.ungroupedDialogues[i].name);
+                currentDialogue = dialogue.dialogueContainer.ungroupedDialogues[i];
+                return currentDialogue;
+            }
+        }
+        Debug.Log("ERROR: No starting dialogue in DialogueSO");
+        return null;
     }
 }
