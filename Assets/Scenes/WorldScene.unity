@@ -314,9 +314,9 @@ RectTransform:
   - {fileID: 1721121645}
   m_Father: {fileID: 828593112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -90}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86894503
@@ -458,9 +458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71b41ba76ee9b346881a51f12ccbe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 11400000, guid: 02910ed2ff92a9e4e82519cd5dc5c93c, type: 2}
+  dialogueContainer: {fileID: 11400000, guid: 5b038836d4ce2434fa76ecd71cf43f01, type: 2}
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
-  dialogue: {fileID: 11400000, guid: 17024874a38009046915c379bde61c2d, type: 2}
+  dialogue: {fileID: 11400000, guid: dc4c58be1dc48bc4f9a94fcd8130018b, type: 2}
   groupedDialogues: 0
   startingDialoguesOnly: 0
   selectedDialogueGroupIndex: 0
@@ -473,12 +473,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103480713}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -381.62106, y: 8.784563, z: -313.70642}
+  m_LocalRotation: {x: -0, y: -0.7455309, z: -0, w: 0.66647106}
+  m_LocalPosition: {x: -14.219414, y: 8.894563, z: 28.244125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1577404426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &103480716
 MonoBehaviour:
@@ -564,9 +564,9 @@ RectTransform:
   - {fileID: 1873100762}
   m_Father: {fileID: 828593112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -450}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123502725
@@ -962,9 +962,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 4b479e7e71458e6449ba0cf75dddf60d, type: 2}
   pool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}
+  vendorDialogueController: {fileID: 0}
   cam: {fileID: 1745615611}
-  merchantUI: {fileID: 1119182095}
-  playerUI: {fileID: 1334107688}
   promptCanvas: {fileID: 0}
 --- !u!1001 &141336621
 PrefabInstance:
@@ -2633,6 +2632,10 @@ MonoBehaviour:
       tradeable: 0
     amount: 1
     slotDisplay: {fileID: 0}
+  inRangeOfShop: 0
+  currentVendor: {fileID: 0}
+  playerUI: {fileID: 1334107688}
+  merchantUI: {fileID: 1119182095}
 --- !u!65 &269130362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2663,7 +2666,7 @@ Transform:
   m_GameObject: {fileID: 269130360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -403.13, y: 0, z: -345.75}
+  m_LocalPosition: {x: -405.68, y: 0, z: -343.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2864,9 +2867,9 @@ RectTransform:
   - {fileID: 1294586068}
   m_Father: {fileID: 828593112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -270}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &279210365
@@ -4269,9 +4272,9 @@ RectTransform:
   - {fileID: 1292816308}
   m_Father: {fileID: 1617963968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -175}
   m_SizeDelta: {x: 480, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &437571623
@@ -4906,9 +4909,9 @@ RectTransform:
   - {fileID: 1087276698}
   m_Father: {fileID: 828593112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -360}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &546014037
@@ -6391,6 +6394,10 @@ MonoBehaviour:
       tradeable: 0
     amount: 1
     slotDisplay: {fileID: 0}
+  inRangeOfShop: 0
+  currentVendor: {fileID: 0}
+  playerUI: {fileID: 0}
+  merchantUI: {fileID: 0}
 --- !u!4 &827735007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4559169480896555847, guid: 921ba8c526411074b9694e3fccb927f1,
@@ -8259,9 +8266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 4b479e7e71458e6449ba0cf75dddf60d, type: 2}
   pool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}
+  vendorDialogueController: {fileID: 0}
   cam: {fileID: 1138030718}
-  merchantUI: {fileID: 1119182095}
-  playerUI: {fileID: 1334107688}
   promptCanvas: {fileID: 0}
 --- !u!1001 &927515201
 PrefabInstance:
@@ -9588,9 +9594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 4b479e7e71458e6449ba0cf75dddf60d, type: 2}
   pool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}
+  vendorDialogueController: {fileID: 0}
   cam: {fileID: 1427514876}
-  merchantUI: {fileID: 1119182095}
-  playerUI: {fileID: 1334107688}
   promptCanvas: {fileID: 0}
 --- !u!1001 &1211735071
 PrefabInstance:
@@ -12618,9 +12623,9 @@ RectTransform:
   - {fileID: 2025237525}
   m_Father: {fileID: 828593112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -180}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1385356068
@@ -13737,9 +13742,9 @@ RectTransform:
   - {fileID: 1886260238}
   m_Father: {fileID: 1617963968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -35}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1530401854
@@ -13958,7 +13963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1549359725
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14188,7 +14193,7 @@ PrefabInstance:
     - target: {fileID: 2763672626335216884, guid: faa232351140d09468c55b9d5a0ec242,
         type: 3}
       propertyPath: m_Name
-      value: Ashmore Merchant (1)
+      value: Willowberry Merchant
       objectReference: {fileID: 0}
     - target: {fileID: 3247474872940375630, guid: faa232351140d09468c55b9d5a0ec242,
         type: 3}
@@ -14249,6 +14254,10 @@ PrefabInstance:
     - {fileID: -4807356282813230547, guid: faa232351140d09468c55b9d5a0ec242, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3247474872940375630, guid: faa232351140d09468c55b9d5a0ec242,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 103480715}
     - targetCorrespondingSourceObject: {fileID: 3247474872940375630, guid: faa232351140d09468c55b9d5a0ec242,
         type: 3}
       insertIndex: -1
@@ -14345,9 +14354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 4b479e7e71458e6449ba0cf75dddf60d, type: 2}
   pool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}
+  vendorDialogueController: {fileID: 103480716}
   cam: {fileID: 1416168031}
-  merchantUI: {fileID: 1119182095}
-  playerUI: {fileID: 1334107688}
   promptCanvas: {fileID: 1308155987}
 --- !u!4 &1590242881 stripped
 Transform:
@@ -16269,9 +16277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 4b479e7e71458e6449ba0cf75dddf60d, type: 2}
   pool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}
+  vendorDialogueController: {fileID: 0}
   cam: {fileID: 1992500812}
-  merchantUI: {fileID: 1119182095}
-  playerUI: {fileID: 1334107688}
   promptCanvas: {fileID: 0}
 --- !u!54 &1863818969
 Rigidbody:
@@ -20041,4 +20048,3 @@ SceneRoots:
   - {fileID: 1022184807}
   - {fileID: 1929503618}
   - {fileID: 1674814032}
-  - {fileID: 103480715}

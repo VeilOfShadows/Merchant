@@ -5,6 +5,7 @@ using TMPro;
 
 public class DialogueUIManager : MonoBehaviour
 {
+    public static DialogueUIManager instance;
     public CharacterDialogueController dialogueController;
     public DialogueSO currentDialogue;
     public TextMeshProUGUI dialogueText;
@@ -12,17 +13,25 @@ public class DialogueUIManager : MonoBehaviour
     public GameObject dialoguePanel;
     public DialogueChoicePanel dialogueChoicePanel;
 
-    private void Update()
+    private void Awake()
     {
-        if(Input.GetKeyDown(KeyCode.M)) 
+        if (instance == null)
         {
-            StartDialogue();
+            instance = this;
         }
     }
 
-    public void StartDialogue() {
+    private void Update()
+    {
+        //if(Input.GetKeyDown(KeyCode.M)) 
+        //{
+        //    StartDialogue();
+        //}
+    }
+
+    public void StartDialogue(CharacterDialogueController activeDialogue) {
         dialoguePanel.SetActive(true);
-        currentDialogue = dialogueController.FindStartingDialogue();
+        currentDialogue = activeDialogue.FindStartingDialogue();
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
         SetDialogueText(currentDialogue.text);
     }
