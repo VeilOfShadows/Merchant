@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -26,6 +27,36 @@ public static class DialogueElementUtility
         };
 
         return button;
+    }
+    
+    public static ObjectField CreateObjectField(EventCallback<ChangeEvent<UnityEngine.Object>> onValueChanged = null)
+    {
+        ObjectField objectField = new ObjectField()
+        {
+            label = "Scriptable Object",
+            objectType = typeof(ScriptableObject)
+        };
+
+        if (onValueChanged != null)
+        {
+            objectField.RegisterValueChangedCallback(onValueChanged);
+        }
+
+        return objectField;
+    }
+    public static PopupField<string> CreatePopupField(EventCallback<ChangeEvent<string>> onValueChanged = null)
+    {
+        PopupField<string> popupField = new PopupField<string>()
+        { 
+            label = "Method Name"
+        };
+
+        if (onValueChanged != null)
+        {
+            popupField.RegisterValueChangedCallback(onValueChanged);
+        }
+
+        return popupField;
     }
 
     public static Port CreatePort(this DialogueNode node, string portName = "", Orientation orientation = Orientation.Horizontal, Direction direction = Direction.Output, Port.Capacity capacity = Port.Capacity.Single)

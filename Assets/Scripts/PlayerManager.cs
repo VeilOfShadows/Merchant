@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
 
+    public PlayerSOConnections so;
+
     [Header("Inventory")]
     public Inventory playerInventory;
     public InventorySlot itemToAdd;
@@ -27,6 +29,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void TEST() {
+        Debug.Log("AAAAAHAHHHH");
+    }
     private void Update()
     {
         if (inRangeOfShop)

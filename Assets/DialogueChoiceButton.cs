@@ -31,6 +31,15 @@ public class DialogueChoiceButton : MonoBehaviour
             dialogueUIManager.EndDialogue();
             return;
         }
-        dialogueUIManager.NextDialogue(nextDialogue);
+
+        if (nextDialogue.so != null)
+        {
+            PlayerManager.instance.so.OpenShop();
+        }
+        else
+        {
+            dialogueUIManager.NextDialogue(nextDialogue);
+        }
+
     }
 }

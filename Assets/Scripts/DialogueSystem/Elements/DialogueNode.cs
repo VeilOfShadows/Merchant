@@ -6,6 +6,8 @@ using UnityEditor.Experimental.GraphView;
 using System.Drawing;
 using System;
 using System.Linq;
+using UnityEditor.UIElements;
+using UnityEngine.Networking.PlayerConnection;
 
 public class DialogueNode : Node
 {
@@ -15,10 +17,13 @@ public class DialogueNode : Node
     public string dialogueText { get; set; }
     public DialogueType dialogueType { get; set; }
     public DialogueGroup group { get; set; }
+    public ScriptableObject connector { get; set; }
+    public string methodName { get; set; }
 
     public DialogueGraphView graphView;
 
     public bool isStartingNode = false;
+
 
     UnityEngine.Color defaultBackgroundColour;
 
@@ -106,6 +111,59 @@ public class DialogueNode : Node
 
         Foldout textFoldout = DialogueElementUtility.CreateFoldout("Dialogue Text");
 
+        PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+        {
+            methodName = callback.newValue;
+        });
+
+        ObjectField test = DialogueElementUtility.CreateObjectField(callback =>
+        {
+            //if (callback.newValue is ScriptableObject so)
+            //{
+            connector = (ScriptableObject)callback.newValue;
+            var methods = connector.GetType().GetMethods().Select(m => m.Name).ToList();
+
+            methodField.label = "Method Field";
+            methodField.choices = methods;
+            //}
+        });
+        if (connector != null)
+        {
+            test.value = connector;
+            var methods = connector.GetType().GetMethods().Select(m => m.Name).ToList();
+
+            methodField.label = "Method Field";
+            methodField.choices = methods;
+
+            methodField.value = methodName;
+        }
+        //test.RegisterValueChangedCallback(evt =>
+        //{
+        //    if (evt.newValue is ScriptableObject so)
+        //    {
+        //        var methods = so.GetType().GetMethods().Select(m => m.Name).ToList();
+
+        //        methodField.label = "Method Field";
+        //        methodField.choices = methods;
+        //        connector = (ScriptableObject)test.value;
+        //        //monoBehaviour = (MonoBehaviour) test.value;
+        //        //Debug.Log(monoBehaviour);
+        //    }
+        //});
+
+        //methodField.RegisterValueChangedCallback(evt =>
+        //{
+        //    methodName = methodField.value;
+        //    //Debug.Log(classAction);
+        //    //if (evt.newValue is GetType())
+        //    //{
+        //    //    var methods = monoBehaviour.GetType().GetMethods().Select(m => m.Name).ToList();
+
+        //    //    methodField.label = "Method Field";
+        //    //    methodField.choices = methods;
+        //    //}
+        //});
+
         TextField textTextField = DialogueElementUtility.CreateTextArea(dialogueText, null, callback =>
         {
             dialogueText = callback.newValue;
@@ -115,8 +173,9 @@ public class DialogueNode : Node
         textTextField.AddToClassList("ds-node__quote-textfield");
 
         textFoldout.Add(textTextField);
-
         customDataContainer.Add(textFoldout);
+        extensionContainer.Add(test);
+        extensionContainer.Add(methodField);
 
         extensionContainer.Add(customDataContainer);
     }

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: pGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: p
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: a2739537-c434-40d7-85b6-7644b12a244d
+    <name>k__BackingField: first
+    <text>k__BackingField: Welcome to the shop
+    <choices>k__BackingField:
+    - <text>k__BackingField: hello
+      <nodeID>k__BackingField: 0a99f2b2-faeb-4985-bbed-b1a4c8c55177
+    - <text>k__BackingField: Shop pls
+      <nodeID>k__BackingField: e8e97411-ce04-440c-9c92-e805fc5521d2
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 95, y: 232}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+  - <ID>k__BackingField: 0a99f2b2-faeb-4985-bbed-b1a4c8c55177
+    <name>k__BackingField: hello
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 526, y: 138}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+  - <ID>k__BackingField: e8e97411-ce04-440c-9c92-e805fc5521d2
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 510, y: 382}
+    <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+      type: 2}
+    <methodName>k__BackingField: OpenShop
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - first
+  - hello
+  - DialogueName
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

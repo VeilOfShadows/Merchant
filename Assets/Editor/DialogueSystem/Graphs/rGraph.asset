@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: rGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: r
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 557a08a6-9d7f-4932-b41a-ab815535b8f9
+    <name>k__BackingField: hku
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: b234c2d3-7a58-45b2-9073-d49ea2abd5ff
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 233, y: 245}
+  - <ID>k__BackingField: b234c2d3-7a58-45b2-9073-d49ea2abd5ff
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 673, y: 246}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - hku
+  - DialogueName
+  <oldGroupedNodeNames>k__BackingField:
+    list: []
