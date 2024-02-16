@@ -39,6 +39,13 @@ public class PlayerManager : MonoBehaviour
                 DialogueUIManager.instance.StartDialogue(currentVendor.vendorDialogueController);
                 currentVendor.EnterShop();
             }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                //inRangeOfShop = false;
+                ExitShop();
+                DialogueUIManager.instance.EndDialogue();
+                currentVendor.ExitShop();
+            }
         }
     }
 

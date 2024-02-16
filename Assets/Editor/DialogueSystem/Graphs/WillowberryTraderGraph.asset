@@ -17,76 +17,100 @@ MonoBehaviour:
   <nodes>k__BackingField:
   - <ID>k__BackingField: a2911518-9789-46ee-87ce-b60361af01d0
     <name>k__BackingField: Introduction
-    <text>k__BackingField: Ahh, a traveller! We don't see many of you around here,
-      people tend to stick to their villages. What can I do for you?
+    <text>k__BackingField: Welcome stranger. What brings you to these parts?
     <choices>k__BackingField:
-    - <text>k__BackingField: You don't see many travellers?
+    - <text>k__BackingField: I am a merchant, in search of trade opportunities.
       <nodeID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
-    - <text>k__BackingField: What is this place?
-      <nodeID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
-    - <text>k__BackingField: Do you have any wares?
-      <nodeID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 453, y: 295}
+    <position>k__BackingField: {x: 249, y: -191}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
   - <ID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
-    <name>k__BackingField: NoTravellers
-    <text>k__BackingField: That is the sad truth... Danger looms large throughout
-      this region. Best be sticking to the main roads where it's safe!
+    <name>k__BackingField: IAmAMerchant
+    <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
+      times. I would offer to trade but our supplies have depleted since the Lakeview
+      bridge collapsed.
     <choices>k__BackingField:
-    - <text>k__BackingField: Do you have any wares?
-      <nodeID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
+    - <text>k__BackingField: What is the Lakeview bridge?
+      <nodeID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
+    - <text>k__BackingField: What is this place?
+      <nodeID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1267, y: 120}
+    <position>k__BackingField: {x: 936, y: -198}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+  - <ID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
+    <name>k__BackingField: LakeviewBridge
+    <text>k__BackingField: Lakeview is the larger town to the east. We used to get
+      a steady supply of grain from them until goblins destroyed the shortest route
+      to us.
+    <choices>k__BackingField:
+    - <text>k__BackingField: I could maybe help with the bridge?
+      <nodeID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1626, y: -323}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+  - <ID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
+    <name>k__BackingField: Insist
+    <text>k__BackingField: 'Really? We''ve just met, I cannot ask for a favour so
+      soon! '
+    <choices>k__BackingField:
+    - <text>k__BackingField: Please, I insist
+      <nodeID>k__BackingField: 71b5b6dd-bda7-42c8-ae61-1bd00eb89dde
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2315, y: -449}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+  - <ID>k__BackingField: 71b5b6dd-bda7-42c8-ae61-1bd00eb89dde
+    <name>k__BackingField: Lumberjack
+    <text>k__BackingField: Oh thank you! There is a lumberjack to the north east
+      who might be able to help you. Follow the main road east and a dirt path should
+      break off north through the forest.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 2976, y: -426}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
   - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
     <name>k__BackingField: WhereAreWe
-    <text>k__BackingField: This is the village of Willowberry. It isn't the most
-      grand but we make do with what we have. We are mainly foragers but we get most
-      of our building supplies from the local lumberjack.
+    <text>k__BackingField: This is the quaint little village of Willowberry. The
+      lands are fertile here so we are mainly farmers and shepherds.
     <choices>k__BackingField:
-    - <text>k__BackingField: Where can I find this lumberjack?
-      <nodeID>k__BackingField: 71b5b6dd-bda7-42c8-ae61-1bd00eb89dde
-    - <text>k__BackingField: Do you have any wares?
-      <nodeID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
+    - <text>k__BackingField: Do you have anything to trade?
+      <nodeID>k__BackingField: 2dfc7ca3-fcb8-4ddc-82ad-dbe5d599f6b9
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1265, y: 370}
+    <position>k__BackingField: {x: 1626, y: -87}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
-  - <ID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
-    <name>k__BackingField: ShopOpen
-    <text>k__BackingField: Type here.....
+  - <ID>k__BackingField: 2dfc7ca3-fcb8-4ddc-82ad-dbe5d599f6b9
+    <name>k__BackingField: shop
+    <text>k__BackingField: I do indeed!
     <choices>k__BackingField:
     - <text>k__BackingField: Next Dialogue
       <nodeID>k__BackingField: 
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 2101, y: 689}
+    <position>k__BackingField: {x: 2356, y: 9}
     <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
       type: 2}
     <methodName>k__BackingField: OpenShop
-  - <ID>k__BackingField: 71b5b6dd-bda7-42c8-ae61-1bd00eb89dde
-    <name>k__BackingField: DialogueName
-    <text>k__BackingField: He is in the woods to the east of here.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Next Dialogue
-      <nodeID>k__BackingField: 
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 1996, y: 339}
-    <so>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - Introduction
-  - NoTravellers
+  - IAmAMerchant
+  - LakeviewBridge
+  - Insist
+  - Lumberjack
   - WhereAreWe
-  - ShopOpen
-  - DialogueName
+  - shop
   <oldGroupedNodeNames>k__BackingField:
     list: []

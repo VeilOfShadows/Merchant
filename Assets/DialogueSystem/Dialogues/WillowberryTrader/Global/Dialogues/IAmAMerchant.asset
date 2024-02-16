@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: NoTravellers
+  m_Name: IAmAMerchant
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: NoTravellers
-  <text>k__BackingField: That is the sad truth... Danger looms large throughout this
-    region. Best be sticking to the main roads where it's safe!
+  <dialogueName>k__BackingField: IAmAMerchant
+  <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
+    times. I would offer to trade but our supplies have depleted since the Lakeview
+    bridge collapsed.
   <choices>k__BackingField: []
   <choiceResults>k__BackingField:
     list: []

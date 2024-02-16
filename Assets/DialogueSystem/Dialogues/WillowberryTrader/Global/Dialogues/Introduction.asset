@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Introduction
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: Introduction
-  <text>k__BackingField: Ahh, a traveller! We don't see many of you around here,
-    people tend to stick to their villages. What can I do for you?
+  <text>k__BackingField: Welcome stranger. What brings you to these parts?
   <choices>k__BackingField: []
   <choiceResults>k__BackingField:
     list: []

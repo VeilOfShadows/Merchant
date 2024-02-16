@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: ShopOpen
+  m_Name: shop
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: ShopOpen
-  <text>k__BackingField: Type here.....
+  <dialogueName>k__BackingField: shop
+  <text>k__BackingField: I do indeed!
   <choices>k__BackingField: []
   <choiceResults>k__BackingField:
     list: []

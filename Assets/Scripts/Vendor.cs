@@ -29,6 +29,7 @@ public class Vendor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerManager.instance.currentVendor = null;
             PlayerManager.instance.inRangeOfShop = false;
             ExitShop();            
         }
@@ -46,7 +47,6 @@ public class Vendor : MonoBehaviour
     public void ExitShop()
     { 
         cam.SetActive(false);
-        PlayerManager.instance.currentVendor = null;
         PlayerManager.instance.ExitShop();
         promptCanvas.SetActive(true);
     }
