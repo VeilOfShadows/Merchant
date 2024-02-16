@@ -29,16 +29,13 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void TEST() {
-        Debug.Log("AAAAAHAHHHH");
-    }
     private void Update()
     {
         if (inRangeOfShop)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                inRangeOfShop = false;
+                //inRangeOfShop = false;
                 DialogueUIManager.instance.StartDialogue(currentVendor.vendorDialogueController);
                 currentVendor.EnterShop();
             }
@@ -53,7 +50,7 @@ public class PlayerManager : MonoBehaviour
 
         playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
         playerUI.GetComponentInChildren<UserInterface>().inShop = true;
-
+        DialogueUIManager.instance.EndDialogue();
     }
 
     public void ExitShop()

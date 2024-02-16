@@ -458,9 +458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71b41ba76ee9b346881a51f12ccbe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 11400000, guid: d9d08eb2f5de67d41b07771da73c7d14, type: 2}
+  dialogueContainer: {fileID: 11400000, guid: 5b038836d4ce2434fa76ecd71cf43f01, type: 2}
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
-  dialogue: {fileID: 11400000, guid: aa61f4280f75d9749a7972c72311ec33, type: 2}
+  dialogue: {fileID: 11400000, guid: dc4c58be1dc48bc4f9a94fcd8130018b, type: 2}
   groupedDialogues: 0
   startingDialoguesOnly: 0
   selectedDialogueGroupIndex: 0

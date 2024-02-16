@@ -25,20 +25,24 @@ MonoBehaviour:
     - <text>k__BackingField: What is this place?
       <nodeID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
     - <text>k__BackingField: Do you have any wares?
-      <nodeID>k__BackingField: 
+      <nodeID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 453, y: 295}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
   - <ID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
     <name>k__BackingField: NoTravellers
     <text>k__BackingField: That is the sad truth... Danger looms large throughout
       this region. Best be sticking to the main roads where it's safe!
     <choices>k__BackingField:
     - <text>k__BackingField: Do you have any wares?
-      <nodeID>k__BackingField: 
+      <nodeID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1267, y: 120}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
   - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
     <name>k__BackingField: WhereAreWe
     <text>k__BackingField: This is the village of Willowberry. It isn't the most
@@ -46,16 +50,43 @@ MonoBehaviour:
       of our building supplies from the local lumberjack.
     <choices>k__BackingField:
     - <text>k__BackingField: Where can I find this lumberjack?
-      <nodeID>k__BackingField: 
+      <nodeID>k__BackingField: 71b5b6dd-bda7-42c8-ae61-1bd00eb89dde
     - <text>k__BackingField: Do you have any wares?
-      <nodeID>k__BackingField: 
+      <nodeID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1265, y: 370}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+  - <ID>k__BackingField: 27513306-ace3-4ffa-91f0-7f0d24d3b8db
+    <name>k__BackingField: ShopOpen
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 2101, y: 689}
+    <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+      type: 2}
+    <methodName>k__BackingField: OpenShop
+  - <ID>k__BackingField: 71b5b6dd-bda7-42c8-ae61-1bd00eb89dde
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: He is in the woods to the east of here.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 1996, y: 339}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - Introduction
   - NoTravellers
   - WhereAreWe
+  - ShopOpen
+  - DialogueName
   <oldGroupedNodeNames>k__BackingField:
     list: []

@@ -29,6 +29,8 @@ public class DialogueChoiceButton : MonoBehaviour
         if (isEnd)
         {
             dialogueUIManager.EndDialogue();
+            PlayerManager.instance.ExitShop();
+            PlayerManager.instance.currentVendor.ExitShop();
             return;
         }
 

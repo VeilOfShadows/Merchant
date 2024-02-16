@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: WhereAreWe
+  m_Name: DialogueName
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: WhereAreWe
-  <text>k__BackingField: This is the village of Willowberry. It isn't the most grand
-    but we make do with what we have. We are mainly foragers but we get most of our
-    building supplies from the local lumberjack.
+  <dialogueName>k__BackingField: DialogueName
+  <text>k__BackingField: He is in the woods to the east of here.
   <choices>k__BackingField: []
   <choiceResults>k__BackingField:
     list: []
