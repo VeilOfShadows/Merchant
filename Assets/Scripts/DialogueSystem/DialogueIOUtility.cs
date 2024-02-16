@@ -93,8 +93,7 @@ public static class DialogueIOUtility
             node.dialogueText = nodeData.text;
             node.connector = nodeData.so;
             node.methodName = nodeData.methodName;
-            Debug.Log(node.connector);
-            Debug.Log(node.methodName);
+            node.quest = nodeData.quest;
 
             node.Draw();
 
@@ -178,7 +177,7 @@ public static class DialogueIOUtility
         nodeChoices.Add(ConvertNodeChoicesToDialogueChoices(node.choices), dialogue);
 
         //dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, node.IsStartingNode());
-        dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, dialogue.dialogueType, node.IsStartingNode(),node.connector, node.methodName);
+        dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, dialogue.dialogueType, node.IsStartingNode(),node.connector, node.methodName, node.quest);
 
         createdDialogues.Add(node.ID, dialogue);
 
@@ -305,6 +304,7 @@ public static class DialogueIOUtility
             position = node.GetPosition().position,
             so = node.connector,
             methodName = node.methodName,
+            quest = node.quest,
         };
 
         graphData.nodes.Add(nodeData);

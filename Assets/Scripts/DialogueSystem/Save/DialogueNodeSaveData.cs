@@ -14,5 +14,6 @@ public class DialogueNodeSaveData
     [field: SerializeField]public Vector2 position { get; set; }
     [field: SerializeField] public ScriptableObject so { get; set; }
     [field: SerializeField] public string methodName { get; set; }
+    [field: SerializeField] public QuestSO quest { get; set; }
 
 }

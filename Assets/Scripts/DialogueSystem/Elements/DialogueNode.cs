@@ -19,6 +19,7 @@ public class DialogueNode : Node
     public DialogueGroup group { get; set; }
     public ScriptableObject connector { get; set; }
     public string methodName { get; set; }
+    public QuestSO quest { get; set; }
 
     public DialogueGraphView graphView;
 
@@ -116,7 +117,7 @@ public class DialogueNode : Node
             methodName = callback.newValue;
         });
 
-        ObjectField test = DialogueElementUtility.CreateObjectField(callback =>
+        ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Method Connector", callback =>
         {
             //if (callback.newValue is ScriptableObject so)
             //{
@@ -127,9 +128,10 @@ public class DialogueNode : Node
             methodField.choices = methods;
             //}
         });
+
         if (connector != null)
         {
-            test.value = connector;
+            connectorSOObject.value = connector;
             var methods = connector.GetType().GetMethods().Select(m => m.Name).ToList();
 
             methodField.label = "Method Field";
@@ -137,6 +139,15 @@ public class DialogueNode : Node
 
             methodField.value = methodName;
         }
+
+        ObjectField questObjectField = DialogueElementUtility.CreateQuestObjectField("Quest", callback =>
+        {
+            //if (callback.newValue is ScriptableObject so)
+            //{
+            quest = (QuestSO)callback.newValue;
+            
+            //}
+        });
         //test.RegisterValueChangedCallback(evt =>
         //{
         //    if (evt.newValue is ScriptableObject so)
@@ -174,8 +185,9 @@ public class DialogueNode : Node
 
         textFoldout.Add(textTextField);
         customDataContainer.Add(textFoldout);
-        extensionContainer.Add(test);
+        extensionContainer.Add(connectorSOObject);
         extensionContainer.Add(methodField);
+        extensionContainer.Add(questObjectField);
 
         extensionContainer.Add(customDataContainer);
     }

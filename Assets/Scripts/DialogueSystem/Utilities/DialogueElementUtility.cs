@@ -29,11 +29,11 @@ public static class DialogueElementUtility
         return button;
     }
     
-    public static ObjectField CreateObjectField(EventCallback<ChangeEvent<UnityEngine.Object>> onValueChanged = null)
+    public static ObjectField CreateObjectField(string _label,EventCallback<ChangeEvent<UnityEngine.Object>> onValueChanged = null)
     {
         ObjectField objectField = new ObjectField()
         {
-            label = "Scriptable Object",
+            label = _label,
             objectType = typeof(ScriptableObject)
         };
 
@@ -44,6 +44,23 @@ public static class DialogueElementUtility
 
         return objectField;
     }
+
+    public static ObjectField CreateQuestObjectField(string _label, EventCallback<ChangeEvent<UnityEngine.Object>> onValueChanged = null)
+    {
+        ObjectField objectField = new ObjectField()
+        {
+            label = _label,
+            objectType = typeof(QuestSO)
+        };
+
+        if (onValueChanged != null)
+        {
+            objectField.RegisterValueChangedCallback(onValueChanged);
+        }
+
+        return objectField;
+    }
+
     public static PopupField<string> CreatePopupField(EventCallback<ChangeEvent<string>> onValueChanged = null)
     {
         PopupField<string> popupField = new PopupField<string>()

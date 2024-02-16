@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: Lumberjack
+  m_Name: DialogueName
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: Lumberjack
-  <text>k__BackingField: Oh thank you! There is a lumberjack to the north east who
-    might be able to help you. Follow the main road east and a dirt path should break
-    off north through the forest.
+  <dialogueName>k__BackingField: DialogueName
+  <text>k__BackingField: Type here.....
   <choices>k__BackingField: []
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1
   <so>k__BackingField: {fileID: 0}
   <methodname>k__BackingField: 
-  <quest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
-    type: 2}
+  <quest>k__BackingField: {fileID: 0}

@@ -26,6 +26,7 @@ MonoBehaviour:
     <position>k__BackingField: {x: 249, y: -191}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
     <name>k__BackingField: IAmAMerchant
     <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
@@ -41,6 +42,7 @@ MonoBehaviour:
     <position>k__BackingField: {x: 936, y: -198}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
     <name>k__BackingField: LakeviewBridge
     <text>k__BackingField: Lakeview is the larger town to the east. We used to get
@@ -54,6 +56,7 @@ MonoBehaviour:
     <position>k__BackingField: {x: 1626, y: -323}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
     <name>k__BackingField: Insist
     <text>k__BackingField: 'Really? We''ve just met, I cannot ask for a favour so
@@ -66,6 +69,45 @@ MonoBehaviour:
     <position>k__BackingField: {x: 2315, y: -449}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
+    <name>k__BackingField: WhereAreWe
+    <text>k__BackingField: This is the quaint little village of Willowberry. The
+      lands are fertile here so we are mainly farmers and shepherds.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Do you have anything to trade?
+      <nodeID>k__BackingField: 2dfc7ca3-fcb8-4ddc-82ad-dbe5d599f6b9
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1626, y: -87}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 2dfc7ca3-fcb8-4ddc-82ad-dbe5d599f6b9
+    <name>k__BackingField: shop
+    <text>k__BackingField: I do indeed!
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 2356, y: 9}
+    <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+      type: 2}
+    <methodName>k__BackingField: OpenShop
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 80aa228b-966c-4074-8214-5fac2541e506
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: a2911518-9789-46ee-87ce-b60361af01d0
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: -164, y: -151}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 71b5b6dd-bda7-42c8-ae61-1bd00eb89dde
     <name>k__BackingField: Lumberjack
     <text>k__BackingField: Oh thank you! There is a lumberjack to the north east
@@ -79,38 +121,17 @@ MonoBehaviour:
     <position>k__BackingField: {x: 2976, y: -426}
     <so>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 
-  - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
-    <name>k__BackingField: WhereAreWe
-    <text>k__BackingField: This is the quaint little village of Willowberry. The
-      lands are fertile here so we are mainly farmers and shepherds.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Do you have anything to trade?
-      <nodeID>k__BackingField: 2dfc7ca3-fcb8-4ddc-82ad-dbe5d599f6b9
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1626, y: -87}
-    <so>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
-  - <ID>k__BackingField: 2dfc7ca3-fcb8-4ddc-82ad-dbe5d599f6b9
-    <name>k__BackingField: shop
-    <text>k__BackingField: I do indeed!
-    <choices>k__BackingField:
-    - <text>k__BackingField: Next Dialogue
-      <nodeID>k__BackingField: 
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 2356, y: 9}
-    <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+    <quest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
-    <methodName>k__BackingField: OpenShop
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - Introduction
   - IAmAMerchant
   - LakeviewBridge
   - Insist
-  - Lumberjack
   - WhereAreWe
   - shop
+  - DialogueName
+  - Lumberjack
   <oldGroupedNodeNames>k__BackingField:
     list: []

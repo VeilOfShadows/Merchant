@@ -12,8 +12,11 @@ public class DialogueSO : ScriptableObject
     [field: SerializeField]public bool isStartingDialogue { get; set; }
     [field: SerializeField]public ScriptableObject so { get; set; }
     [field: SerializeField]public string methodname { get; set; }
+    [field: SerializeField]public QuestSO quest { get; set; }
 
-    public void Initialize(string _dialogueName, string _text, List<DialogueChoiceData> _choices, SerializableDictionary<List<DialogueChoiceData>, DialogueSO> _choiceResults, DialogueType _dialogueType, bool _isStartingDialogue, ScriptableObject _so, string _methodName) 
+    public void Initialize(string _dialogueName, string _text, List<DialogueChoiceData> _choices, SerializableDictionary<List<DialogueChoiceData>,
+        DialogueSO> _choiceResults, DialogueType _dialogueType, bool _isStartingDialogue, ScriptableObject _so,
+        string _methodName, QuestSO _quest) 
     {
         dialogueName = _dialogueName;
         text = _text;
@@ -23,5 +26,6 @@ public class DialogueSO : ScriptableObject
         isStartingDialogue = _isStartingDialogue;
         so = _so;
         methodname = _methodName;
+        quest = _quest;
     }
 }

@@ -18,6 +18,7 @@ MonoBehaviour:
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 1
+  <isStartingDialogue>k__BackingField: 0
   <so>k__BackingField: {fileID: 0}
   <methodname>k__BackingField: 
+  <quest>k__BackingField: {fileID: 0}
