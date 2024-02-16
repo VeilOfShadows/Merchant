@@ -5,9 +5,9 @@ using UnityEngine;
 public class CharacterDialogue : MonoBehaviour
 {
     /* Dialogue Scriptable Objects */
-    [SerializeField] private DialogueContainerSO dialogueContainer;
-    [SerializeField] private DialogueGroupSO dialogueGroup;
-    [SerializeField] private DialogueSO dialogue;
+    [SerializeField] public DialogueContainerSO dialogueContainer;
+    [SerializeField] public DialogueGroupSO dialogueGroup;
+    [SerializeField] public DialogueSO dialogue;
 
     /* Filters */
     [SerializeField] private bool groupedDialogues;

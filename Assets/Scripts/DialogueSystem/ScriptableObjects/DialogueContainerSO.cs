@@ -60,4 +60,5 @@ public class DialogueContainerSO : ScriptableObject
 
         return ungroupedDialogueNames;
     }
+
 }

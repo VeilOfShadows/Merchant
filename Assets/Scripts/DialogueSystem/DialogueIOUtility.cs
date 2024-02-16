@@ -169,8 +169,12 @@ public static class DialogueIOUtility
 
             dialogueContainer.ungroupedDialogues.Add(dialogue);
         }
+        SerializableDictionary<List<DialogueChoiceData>, DialogueSO> nodeChoices = new SerializableDictionary<List<DialogueChoiceData>, DialogueSO> ();
 
-        dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), node.dialogueType, node.IsStartingNode());
+        nodeChoices.Add(ConvertNodeChoicesToDialogueChoices(node.choices), dialogue);
+
+        //dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, node.IsStartingNode());
+        dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, dialogue.dialogueType, node.IsStartingNode());
 
         createdDialogues.Add(node.ID, dialogue);
 

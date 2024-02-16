@@ -289,6 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 103480715}
   - component: {fileID: 103480714}
+  - component: {fileID: 103480716}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -308,13 +309,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71b41ba76ee9b346881a51f12ccbe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 11400000, guid: 6a3ab87974a317a42ae918cb50d1d4e2, type: 2}
+  dialogueContainer: {fileID: 11400000, guid: a4f43540575566248ad20dd5de72a878, type: 2}
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
-  dialogue: {fileID: 11400000, guid: 1796c150a9fc42148ac23b5c422156e0, type: 2}
+  dialogue: {fileID: 11400000, guid: 7d99246e158b0844db3885c1e592fdbe, type: 2}
   groupedDialogues: 0
   startingDialoguesOnly: 0
   selectedDialogueGroupIndex: 0
-  selectedDialogueIndex: 2
+  selectedDialogueIndex: 0
 --- !u!4 &103480715
 Transform:
   m_ObjectHideFlags: 0
@@ -330,6 +331,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &103480716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103480713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecfe70a26e3e945499210dee82c4edc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 103480714}
+  graph: {fileID: 11400000, guid: 71b8b464d2b10134b9752d2d6beba7f3, type: 2}
+  currentDialogue: {fileID: 0}
+  lastDialogue: {fileID: 0}
 --- !u!1 &112940405
 GameObject:
   m_ObjectHideFlags: 0

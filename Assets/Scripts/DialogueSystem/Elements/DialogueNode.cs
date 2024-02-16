@@ -18,6 +18,8 @@ public class DialogueNode : Node
 
     public DialogueGraphView graphView;
 
+    public bool isStartingNode = false;
+
     UnityEngine.Color defaultBackgroundColour;
 
     public virtual void Initialise(string nodeName, DialogueGraphView dialogueGraphView, Vector2 position) {
