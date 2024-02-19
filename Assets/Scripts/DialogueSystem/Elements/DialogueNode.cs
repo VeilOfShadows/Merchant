@@ -17,9 +17,7 @@ public class DialogueNode : Node
     public string dialogueText { get; set; }
     public DialogueType dialogueType { get; set; }
     public DialogueGroup group { get; set; }
-    public ScriptableObject connector { get; set; }
-    public string methodName { get; set; }
-    public QuestSO quest { get; set; }
+    //public QuestSO quest { get; set; }
 
     public DialogueGraphView graphView;
 
@@ -112,47 +110,47 @@ public class DialogueNode : Node
 
         Foldout textFoldout = DialogueElementUtility.CreateFoldout("Dialogue Text");
 
-        PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
-        {
-            methodName = callback.newValue;
-        });
+        //PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+        //{
+        //    methodName = callback.newValue;
+        //});
 
-        ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Method Connector", callback =>
-        {
-            //if (callback.newValue is ScriptableObject so)
-            //{
-            connector = (ScriptableObject)callback.newValue;
-            var methods = connector.GetType().GetMethods().Select(m => m.Name).ToList();
+        //ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Method Connector", callback =>
+        //{
+        //    //if (callback.newValue is ScriptableObject so)
+        //    //{
+        //    connector = (ScriptableObject)callback.newValue;
+        //    var methods = connector.GetType().GetMethods().Select(m => m.Name).ToList();
 
-            methodField.label = "Method Field";
-            methodField.choices = methods;
-            //}
-        });
+        //    methodField.label = "Method Field";
+        //    methodField.choices = methods;
+        //    //}
+        //});
 
-        if (connector != null)
-        {
-            connectorSOObject.value = connector;
-            var methods = connector.GetType().GetMethods().Select(m => m.Name).ToList();
+        //if (connector != null)
+        //{
+        //    connectorSOObject.value = connector;
+        //    var methods = connector.GetType().GetMethods().Select(m => m.Name).ToList();
 
-            methodField.label = "Method Field";
-            methodField.choices = methods;
+        //    methodField.label = "Method Field";
+        //    methodField.choices = methods;
 
-            methodField.value = methodName;
-        }
+        //    methodField.value = methodName;
+        //}
 
-        ObjectField questObjectField = DialogueElementUtility.CreateQuestObjectField("Quest", callback =>
-        {
-            //if (callback.newValue is ScriptableObject so)
-            //{
-            quest = (QuestSO)callback.newValue;
+        //ObjectField questObjectField = DialogueElementUtility.CreateQuestObjectField("Quest", callback =>
+        //{
+        //    //if (callback.newValue is ScriptableObject so)
+        //    //{
+        //    quest = (QuestSO)callback.newValue;
             
-            //}
-        });
+        //    //}
+        //});
 
-        if (quest != null)
-        {
-            questObjectField.value = quest;
-        }
+        //if (quest != null)
+        //{
+        //    questObjectField.value = quest;
+        //}       
 
         //test.RegisterValueChangedCallback(evt =>
         //{
@@ -191,9 +189,9 @@ public class DialogueNode : Node
 
         textFoldout.Add(textTextField);
         customDataContainer.Add(textFoldout);
-        extensionContainer.Add(connectorSOObject);
-        extensionContainer.Add(methodField);
-        extensionContainer.Add(questObjectField);
+        //extensionContainer.Add(connectorSOObject);
+        //extensionContainer.Add(methodField);
+        //extensionContainer.Add(questObjectField);
 
         extensionContainer.Add(customDataContainer);
     }

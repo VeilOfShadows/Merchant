@@ -38,19 +38,139 @@ public class DialogueNodeMultipleChoice : DialogueNode
             choices.Add(choiceData);
 
             Port choicePort = CreateChoicePort(choiceData);
+            PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+            {
+                choiceData.methodName = callback.newValue;
+            });
 
+            ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Function Object", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choiceData.functionObject = (ScriptableObject)callback.newValue;
+                var methods = choiceData.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+                methodField.label = "Method Name";
+                methodField.choices = methods;
+                //}
+            });
+
+            if (choiceData.functionObject != null)
+            {
+                connectorSOObject.value = choiceData.functionObject;
+                var methods = choiceData.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+                methodField.label = "Method Name";
+                methodField.choices = methods;
+
+                methodField.value = choiceData.methodName;
+            }
+
+            ObjectField questStartObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Pick-up", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choiceData.questStartingPoint = (QuestSO)callback.newValue;
+
+                //}
+            });
+
+            if (choiceData.questStartingPoint != null)
+            {
+                questStartObjectField.value = choiceData.questStartingPoint;
+            }
+
+            ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choiceData.questHandinPoint = (QuestSO)callback.newValue;
+
+                //}
+            });
+
+            if (choiceData.questHandinPoint != null)
+            {
+                questHandInObjectField.value = choiceData.questHandinPoint;
+            }
             outputContainer.Add(choicePort);
+
+            outputContainer.Add(connectorSOObject);
+            outputContainer.Add(methodField);
+            outputContainer.Add(questStartObjectField);
+            outputContainer.Add(questHandInObjectField);
         });
 
         addChoiceButton.AddToClassList("ds-node__button");
         mainContainer.Insert(1, addChoiceButton);
 
+        
+
         //Create a set of choices and a button to delete them
         foreach (DialogueChoiceSaveData choice in choices)
         {
             Port choicePort = CreateChoicePort(choice);
+            PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+            {
+                choice.methodName = callback.newValue;
+            });
+
+            ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Function Object", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choice.functionObject = (ScriptableObject)callback.newValue;
+                var methods = choice.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+                methodField.label = "Method Name";
+                methodField.choices = methods;
+                //}
+            });
+
+            if (choice.functionObject != null)
+            {
+                connectorSOObject.value = choice.functionObject;
+                var methods = choice.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+                methodField.label = "Method Name";
+                methodField.choices = methods;
+
+                methodField.value = choice.methodName;
+            }
+
+            ObjectField questStartObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Pick-up", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choice.questStartingPoint = (QuestSO)callback.newValue;
+
+                //}
+            });
+
+            if (choice.questStartingPoint != null)
+            {
+                questStartObjectField.value = choice.questStartingPoint;
+            }
+
+            ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choice.questHandinPoint = (QuestSO)callback.newValue;
+
+                //}
+            });
+
+            if (choice.questHandinPoint != null)
+            {
+                questHandInObjectField.value = choice.questHandinPoint;
+            }
 
             outputContainer.Add(choicePort);
+            outputContainer.Add(connectorSOObject);
+            outputContainer.Add(methodField);
+            outputContainer.Add(questStartObjectField);
+            outputContainer.Add(questHandInObjectField);
 
         }
         RefreshExpandedState();

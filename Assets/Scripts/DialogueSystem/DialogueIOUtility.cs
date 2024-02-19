@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.Rendering.Universal;
@@ -91,9 +92,6 @@ public static class DialogueIOUtility
             node.ID = nodeData.ID;
             node.choices = choices;
             node.dialogueText = nodeData.text;
-            node.connector = nodeData.so;
-            node.methodName = nodeData.methodName;
-            node.quest = nodeData.quest;
 
             node.Draw();
 
@@ -132,25 +130,53 @@ public static class DialogueIOUtility
     {
         foreach (KeyValuePair<string, DialogueNode> loadedNode in loadedNodes)
         {
-            foreach (Port choicePort in loadedNode.Value.outputContainer.Children())
+            //Debug.Log(loadedNode.Value.outputContainer.childCount);
+
+            //Loop through children of the output container, if the element is a Port, loade choice data
+            foreach (var element in loadedNode.Value.outputContainer.Children())
             {
-                DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)choicePort.userData;
-
-                if (string.IsNullOrEmpty(choiceData.nodeID))
+                if (element is Port)
                 {
-                    continue;
+                    Port choicePort = (Port)element;
+                    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)choicePort.userData;
+
+                    if (string.IsNullOrEmpty(choiceData.nodeID))
+                    {
+                        continue;
+                    }
+
+                    DialogueNode nextNode = loadedNodes[choiceData.nodeID];
+
+                    Port nextNodeInputPort = (Port)nextNode.inputContainer.Children().First();
+
+                    UnityEditor.Experimental.GraphView.Edge edge = choicePort.ConnectTo(nextNodeInputPort);
+
+                    graphView.AddElement(edge);
+
+                    loadedNode.Value.RefreshPorts();
                 }
-
-                DialogueNode nextNode = loadedNodes[choiceData.nodeID];
-
-                Port nextNodeInputPort = (Port)nextNode.inputContainer.Children().First();
-
-                Edge edge = choicePort.ConnectTo(nextNodeInputPort);
-
-                graphView.AddElement(edge);
-
-                loadedNode.Value.RefreshPorts();
             }
+
+            //foreach (Port choicePort in loadedNode.Value.outputContainer.Children())
+            //{
+            //    Debug.Log("yes");
+            //    DialogueChoiceSaveData choiceData = (DialogueChoiceSaveData)choicePort.userData;
+
+            //    if (string.IsNullOrEmpty(choiceData.nodeID))
+            //    {
+            //        continue;
+            //    }
+
+            //    DialogueNode nextNode = loadedNodes[choiceData.nodeID];
+
+            //    Port nextNodeInputPort = (Port)nextNode.inputContainer.Children().First();
+
+            //    Edge edge = choicePort.ConnectTo(nextNodeInputPort);
+
+            //    graphView.AddElement(edge);
+
+            //    loadedNode.Value.RefreshPorts();
+            //}
         }
     }
     #endregion
@@ -177,7 +203,7 @@ public static class DialogueIOUtility
         nodeChoices.Add(ConvertNodeChoicesToDialogueChoices(node.choices), dialogue);
 
         //dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, node.IsStartingNode());
-        dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, dialogue.dialogueType, node.IsStartingNode(),node.connector, node.methodName, node.quest);
+        dialogue.Initialize(node.dialogueName, node.dialogueText, ConvertNodeChoicesToDialogueChoices(node.choices), nodeChoices, dialogue.dialogueType, node.IsStartingNode());
 
         createdDialogues.Add(node.ID, dialogue);
 
@@ -280,9 +306,14 @@ public static class DialogueIOUtility
         foreach (DialogueChoiceSaveData nodeChoice in nodeChoices)
         {
             DialogueChoiceData choiceData = new DialogueChoiceData()
-            { 
+            {
                 text = nodeChoice.text,
+                functionObject = nodeChoice.functionObject,
+                methodName = nodeChoice.methodName,
+                questStartingPoint = nodeChoice.questStartingPoint,
+                questHandinPoint = nodeChoice.questHandinPoint,
             };
+            Debug.Log(choiceData.questStartingPoint);
 
             dialogueChoices.Add(choiceData);
         }
@@ -302,9 +333,9 @@ public static class DialogueIOUtility
             groupID = node.group?.ID,
             dialogueType = node.dialogueType,
             position = node.GetPosition().position,
-            so = node.connector,
-            methodName = node.methodName,
-            quest = node.quest,
+            //so = node.connector,
+            //methodName = node.methodName,
+            //quest = node.quest,
         };
 
         graphData.nodes.Add(nodeData);
@@ -319,7 +350,11 @@ public static class DialogueIOUtility
             DialogueChoiceSaveData choiceData = new DialogueChoiceSaveData()
             {
                 text = choice.text,
-                nodeID = choice.nodeID
+                nodeID = choice.nodeID,
+                functionObject = choice.functionObject,
+                methodName = choice.methodName,
+                questStartingPoint = choice.questStartingPoint,
+                questHandinPoint = choice.questHandinPoint,
             };
 
             choices.Add(choiceData);

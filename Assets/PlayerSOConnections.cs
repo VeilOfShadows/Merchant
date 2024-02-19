@@ -14,10 +14,12 @@ public class PlayerSOConnections : ScriptableObject
 
     public void OpenShop() {
         //methodName = "OpenShop;
-        DialogueFunctionManager.instance.OpenShop();
+        //DialogueFunctionManager.instance.OpenShop();
     }
 
     public void AcceptQuest() {
-        DialogueFunctionManager.instance.AcceptQuest();
+        //DialogueFunctionManager.instance.AcceptQuest();
     }
+
+    public void HandInQuest() { }
 }

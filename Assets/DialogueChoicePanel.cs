@@ -17,15 +17,16 @@ public class DialogueChoicePanel : MonoBehaviour
         {
             buttons[i].gameObject.SetActive(true);
 
-            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, CheckForFunctions(currentDialogue));
+            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, CheckForFunctions(currentDialogue, currentDialogue.choices[i].functionObject), currentDialogue.choices[i].methodName, currentDialogue.choices[i].questStartingPoint, currentDialogue.choices[i].questHandinPoint);
         }
     }
 
-    public bool CheckForFunctions(DialogueSO _currentDialogue) {
-        if (_currentDialogue.so != null)
+    public bool CheckForFunctions(DialogueSO _currentDialogue, ScriptableObject connector = null) {
+        if (connector != null)
         {
             return true;
         }
         return false;
     }
+
 }

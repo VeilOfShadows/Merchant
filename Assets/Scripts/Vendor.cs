@@ -21,6 +21,7 @@ public class Vendor : MonoBehaviour
         if (other.CompareTag("Player")) {
             PlayerManager.instance.inRangeOfShop = true;
             PlayerManager.instance.currentVendor = this;
+            PlayerManager.instance.merchantInventory.inventory = inventory;
             promptCanvas.SetActive(true);
         }
     }
@@ -30,6 +31,7 @@ public class Vendor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerManager.instance.currentVendor = null;
+            PlayerManager.instance.merchantInventory.inventory = null;
             PlayerManager.instance.inRangeOfShop = false;
             ExitShop();            
         }

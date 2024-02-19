@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: IAmAMerchant
+  m_Name: test
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: IAmAMerchant
-  <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
-    times. I would offer to trade but our supplies have depleted since the Lakeview
-    bridge collapsed.
+  <dialogueName>k__BackingField: test
+  <text>k__BackingField: second
   <choices>k__BackingField:
-  - <text>k__BackingField: What is the Lakeview bridge?
-    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 2bba676d17c95e4499dc94cb7b493ba0,
+  - <text>k__BackingField: pickup
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: e64a1afaef8421544bc89f84319c3529,
       type: 2}
-    <functionObject>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
-    <questStartingPoint>k__BackingField: {fileID: 0}
+    <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+      type: 2}
+    <methodName>k__BackingField: AcceptQuest
+    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+      type: 2}
     <questHandinPoint>k__BackingField: {fileID: 0}
-  - <text>k__BackingField: What is this place?
-    <nextDialogue>k__BackingField: {fileID: 11400000, guid: a9a39db1c189cde4e8513f3e8035e244,
+  - <text>k__BackingField: Without pickup
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: e64a1afaef8421544bc89f84319c3529,
       type: 2}
     <functionObject>k__BackingField: {fileID: 0}
     <methodName>k__BackingField: 

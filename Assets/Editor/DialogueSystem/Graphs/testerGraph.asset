@@ -10,62 +10,73 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
-  m_Name: LumberjackGraph
+  m_Name: testerGraph
   m_EditorClassIdentifier: 
-  <fileName>k__BackingField: Lumberjack
+  <fileName>k__BackingField: tester
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: 2b0af28a-4d54-4376-9e3e-664db1ab3c82
-    <name>k__BackingField: Welcome
-    <text>k__BackingField: Welcome to Lumberjack
+  - <ID>k__BackingField: 71130e08-0212-439a-91c3-300ba9965906
+    <name>k__BackingField: start
+    <text>k__BackingField: first
     <choices>k__BackingField:
     - <text>k__BackingField: Next Dialogue
-      <nodeID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
+      <nodeID>k__BackingField: 13ef4351-79b4-46c4-9f6b-deba10abbdc7
       <functionObject>k__BackingField: {fileID: 0}
       <methodName>k__BackingField: 
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 210, y: 393}
+    <position>k__BackingField: {x: 231, y: 136}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
-    <name>k__BackingField: Quest
-    <text>k__BackingField: Depends on how much wood you need. My brother in Lakeview
-      is a builder, he should be able to sort the repairs. Go find him
+  - <ID>k__BackingField: 13ef4351-79b4-46c4-9f6b-deba10abbdc7
+    <name>k__BackingField: test
+    <text>k__BackingField: second
     <choices>k__BackingField:
-    - <text>k__BackingField: Thank you
-      <nodeID>k__BackingField: 
+    - <text>k__BackingField: pickup
+      <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
       <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
         type: 2}
       <methodName>k__BackingField: AcceptQuest
-      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Without pickup
+      <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
+      <functionObject>k__BackingField: {fileID: 0}
+      <methodName>k__BackingField: 
+      <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1641, y: 313}
+    <position>k__BackingField: {x: 637, y: 161}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
+  - <ID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
     <name>k__BackingField: DialogueName
-    <text>k__BackingField: I can supply the wood but it'll cost you
+    <text>k__BackingField: hmmm
     <choices>k__BackingField:
-    - <text>k__BackingField: How much?
-      <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
+    - <text>k__BackingField: hand in
+      <nodeID>k__BackingField: 
       <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
         type: 2}
       <methodName>k__BackingField: HandInQuest
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
+    - <text>k__BackingField: end
+      <nodeID>k__BackingField: 
+      <functionObject>k__BackingField: {fileID: 0}
+      <methodName>k__BackingField: 
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 896, y: 382}
+    <position>k__BackingField: {x: 1340, y: 172}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
-  - Welcome
-  - Quest
+  - start
+  - test
   - DialogueName
   <oldGroupedNodeNames>k__BackingField:
     list: []

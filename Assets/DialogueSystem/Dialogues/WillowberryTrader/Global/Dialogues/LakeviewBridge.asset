@@ -16,11 +16,15 @@ MonoBehaviour:
   <text>k__BackingField: Lakeview is the larger town to the east. We used to get
     a steady supply of grain from them until goblins destroyed the shortest route
     to us.
-  <choices>k__BackingField: []
+  <choices>k__BackingField:
+  - <text>k__BackingField: I could maybe help with the bridge?
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 7a0ba604f576e5f4eb4f31c679391446,
+      type: 2}
+    <functionObject>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
   <isStartingDialogue>k__BackingField: 0
-  <so>k__BackingField: {fileID: 0}
-  <methodname>k__BackingField: 
-  <quest>k__BackingField: {fileID: 0}

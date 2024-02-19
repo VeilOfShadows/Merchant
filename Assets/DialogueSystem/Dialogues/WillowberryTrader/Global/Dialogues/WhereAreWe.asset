@@ -15,11 +15,15 @@ MonoBehaviour:
   <dialogueName>k__BackingField: WhereAreWe
   <text>k__BackingField: This is the quaint little village of Willowberry. The lands
     are fertile here so we are mainly farmers and shepherds.
-  <choices>k__BackingField: []
+  <choices>k__BackingField:
+  - <text>k__BackingField: Do you have anything to trade?
+    <nextDialogue>k__BackingField: {fileID: 0}
+    <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+      type: 2}
+    <methodName>k__BackingField: OpenShop
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
   <isStartingDialogue>k__BackingField: 0
-  <so>k__BackingField: {fileID: 0}
-  <methodname>k__BackingField: 
-  <quest>k__BackingField: {fileID: 0}

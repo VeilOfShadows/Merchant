@@ -489,6 +489,10 @@ MonoBehaviour:
   currentDialogue: {fileID: 0}
   isEnd: 0
   hasFunction: 0
+  hasQuestHandin: 0
+  pickupQuest: {fileID: 0}
+  handinQuest: {fileID: 0}
+  functionName: 
 --- !u!1 &103480713
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,13 +523,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71b41ba76ee9b346881a51f12ccbe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 11400000, guid: 5b038836d4ce2434fa76ecd71cf43f01, type: 2}
+  dialogueContainer: {fileID: 11400000, guid: cab41cd6b890834468d36f764e6ba503, type: 2}
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
-  dialogue: {fileID: 11400000, guid: dc4c58be1dc48bc4f9a94fcd8130018b, type: 2}
+  dialogue: {fileID: 11400000, guid: e64a1afaef8421544bc89f84319c3529, type: 2}
   groupedDialogues: 0
   startingDialoguesOnly: 0
   selectedDialogueGroupIndex: 0
-  selectedDialogueIndex: 0
+  selectedDialogueIndex: 2
 --- !u!4 &103480715
 Transform:
   m_ObjectHideFlags: 0
@@ -741,6 +745,10 @@ MonoBehaviour:
   currentDialogue: {fileID: 0}
   isEnd: 0
   hasFunction: 0
+  hasQuestHandin: 0
+  pickupQuest: {fileID: 0}
+  handinQuest: {fileID: 0}
+  functionName: 
 --- !u!4 &125815683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4128534393214143926, guid: c279447596db3a241a432dad1ce3f806,
@@ -2743,6 +2751,7 @@ MonoBehaviour:
     slotDisplay: {fileID: 0}
   inRangeOfShop: 0
   currentVendor: {fileID: 0}
+  merchantInventory: {fileID: 1919823305}
   playerUI: {fileID: 1334107688}
   merchantUI: {fileID: 1119182095}
 --- !u!65 &269130362
@@ -2775,7 +2784,7 @@ Transform:
   m_GameObject: {fileID: 269130360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -405.68, y: 0, z: -343.05}
+  m_LocalPosition: {x: -409.32, y: 0, z: -330.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2869,6 +2878,10 @@ MonoBehaviour:
   currentDialogue: {fileID: 0}
   isEnd: 0
   hasFunction: 0
+  hasQuestHandin: 0
+  pickupQuest: {fileID: 0}
+  handinQuest: {fileID: 0}
+  functionName: 
 --- !u!114 &273473706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3711,8 +3724,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.049511697, y: -0.81627595, z: 0.0707586, w: 0.5711702}
-  m_LocalPosition: {x: -394.32462, y: 4.0000343, z: -341.29828}
+  m_LocalRotation: {x: 0.055355538, y: -0.75749904, z: 0.064784385, w: 0.6472511}
+  m_LocalPosition: {x: -397.2533, y: 3.999878, z: -331.1192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5311,6 +5324,10 @@ MonoBehaviour:
   currentDialogue: {fileID: 0}
   isEnd: 0
   hasFunction: 0
+  hasQuestHandin: 0
+  pickupQuest: {fileID: 0}
+  handinQuest: {fileID: 0}
+  functionName: 
 --- !u!4 &564104237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3247474872940375630, guid: faa232351140d09468c55b9d5a0ec242,
@@ -6819,6 +6836,7 @@ MonoBehaviour:
     slotDisplay: {fileID: 0}
   inRangeOfShop: 0
   currentVendor: {fileID: 0}
+  merchantInventory: {fileID: 0}
   playerUI: {fileID: 0}
   merchantUI: {fileID: 0}
 --- !u!4 &827735007 stripped
@@ -10412,7 +10430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 2113023762}
-  m_PathPosition: 191.40454
+  m_PathPosition: 202.01476
   m_PositionUnits: 1
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2
@@ -12847,6 +12865,10 @@ MonoBehaviour:
   currentDialogue: {fileID: 0}
   isEnd: 0
   hasFunction: 0
+  hasQuestHandin: 0
+  pickupQuest: {fileID: 0}
+  handinQuest: {fileID: 0}
+  functionName: 
 --- !u!114 &1385048407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16046,8 +16068,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748261484}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.049511697, y: -0.81627595, z: 0.0707586, w: 0.5711702}
-  m_LocalPosition: {x: -306.30377, y: 3.9704943, z: -128.31642}
+  m_LocalRotation: {x: 0.055355538, y: -0.75749904, z: 0.064784385, w: 0.6472511}
+  m_LocalPosition: {x: -309.23245, y: 3.9703379, z: -118.137344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16397,7 +16419,7 @@ Transform:
   m_GameObject: {fileID: 1784995023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -405.08002, y: 0.5, z: -345.22}
+  m_LocalPosition: {x: -408.72003, y: 0.5, z: -332.93002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17615,7 +17637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 286635694}
-  inventory: {fileID: 11400000, guid: 4b479e7e71458e6449ba0cf75dddf60d, type: 2}
+  inventory: {fileID: 0}
   inventoryPrefab: {fileID: 753976122579873344, guid: 25c1a85b0587b70488a3a712274c5df7,
     type: 3}
   inShop: 0
@@ -19460,8 +19482,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41c4a13f204f2e4b9f1a60e1f010794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b, type: 2}
   activeQuestList: []
   completedQuestList: []
+  handinQuestList: []
 --- !u!4 &2074016067
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class DialogueFunctionManager : MonoBehaviour
         { instance = this; }
     }
 
-    public void Activate(string test = "")
+    public void Activate(string test)
     {
         //test = DialogueUIManager.instance.currentDialogue.methodname;
         Debug.Log(test);
@@ -22,13 +22,16 @@ public class DialogueFunctionManager : MonoBehaviour
 
     public void OpenShop()
     {
-        Debug.Log("Shop;");
         PlayerManager.instance.EnterShop();
     }
 
-    public void AcceptQuest()
+    public void AcceptQuest(QuestSO quest)
     {
-        Debug.Log("quest");
-        PlayerQuestManager.instance.AcceptQuest(DialogueUIManager.instance.currentDialogue.quest);
+        PlayerQuestManager.instance.AcceptQuest(quest);
+    }
+
+    public void HandInQuest(QuestSO quest)
+    {
+        PlayerQuestManager.instance.HandInQuest(quest);
     }
 }

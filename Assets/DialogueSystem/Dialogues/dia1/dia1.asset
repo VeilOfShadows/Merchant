@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
-  m_Name: Lumberjack
+  m_Name: dia1
   m_EditorClassIdentifier: 
-  <fileName>k__BackingField: Lumberjack
+  <fileName>k__BackingField: dia1
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
-  - {fileID: 11400000, guid: 04bdd2b85baeb8940956670e1fcee3da, type: 2}
-  - {fileID: 11400000, guid: 0da61880e6c1ed748918b23c3cc2a626, type: 2}
-  - {fileID: 11400000, guid: e192f5b0f9d303f4885c324c5d97b584, type: 2}
+  - {fileID: 11400000, guid: 8a16d89a99757654db31b6c9ba109d35, type: 2}

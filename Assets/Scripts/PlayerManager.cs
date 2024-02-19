@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     [Header("Shop Details")]
     public bool inRangeOfShop = false;
     public Vendor currentVendor;
+    public MerchantInventoryInterface merchantInventory;
 
     [Header("UI")]
     public GameObject playerUI;

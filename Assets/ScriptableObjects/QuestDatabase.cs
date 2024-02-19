@@ -19,6 +19,17 @@ public class QuestDatabase : ScriptableObject
         }
     }
 
+    [ContextMenu("Clear Completion")]
+    public void ClearCompletion()
+    {
+        for (int i = 0; i < quests.Length; i++)
+        {
+            quests[i].questAccepted = false;
+            quests[i].readyForHandIn = false;
+            quests[i].questComplete = false;
+        }
+    }
+
     //public Item FindItemObject(QuestSO _item)
     //{
     //    for (int i = 0; i < items.Length; i++)
