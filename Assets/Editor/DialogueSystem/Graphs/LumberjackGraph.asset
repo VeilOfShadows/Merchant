@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: LumberjackGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: Lumberjack
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 2b0af28a-4d54-4376-9e3e-664db1ab3c82
+    <name>k__BackingField: Welcome
+    <text>k__BackingField: Welcome to Lumberjack
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 210, y: 393}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: I can supply the wood but it'll cost you
+    <choices>k__BackingField:
+    - <text>k__BackingField: How much?
+      <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 896, y: 382}
+    <so>k__BackingField: {fileID: 0}
+    <methodName>k__BackingField: 
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
+    <name>k__BackingField: Quest
+    <text>k__BackingField: Depends on how much wood you need. My brother in Lakeview
+      is a builder, he should be able to sort the repairs. Go find him
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1641, y: 313}
+    <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+      type: 2}
+    <methodName>k__BackingField: AcceptQuest
+    <quest>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+      type: 2}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - Welcome
+  - DialogueName
+  - Quest
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

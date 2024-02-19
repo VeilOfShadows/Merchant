@@ -119,8 +119,9 @@ MonoBehaviour:
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 0
     <position>k__BackingField: {x: 2976, y: -426}
-    <so>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
+    <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+      type: 2}
+    <methodName>k__BackingField: AcceptQuest
     <quest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
   <oldGroupNames>k__BackingField: []

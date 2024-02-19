@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: Lumberjack
+  m_Name: Quest
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: Lumberjack
-  <text>k__BackingField: Oh thank you! There is a lumberjack to the north east who
-    might be able to help you. Follow the main road east and a dirt path should break
-    off north through the forest.
+  <dialogueName>k__BackingField: Quest
+  <text>k__BackingField: Depends on how much wood you need. My brother in Lakeview
+    is a builder, he should be able to sort the repairs. Go find him
   <choices>k__BackingField: []
   <choiceResults>k__BackingField:
     list: []
@@ -24,5 +23,5 @@ MonoBehaviour:
   <so>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
     type: 2}
   <methodname>k__BackingField: AcceptQuest
-  <quest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+  <quest>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
     type: 2}

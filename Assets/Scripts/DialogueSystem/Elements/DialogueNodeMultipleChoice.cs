@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -85,6 +87,7 @@ public class DialogueNodeMultipleChoice : DialogueNode
         {
             choiceData.text = callback.newValue;
         });
+
 
         choiceTextField.AddToClassList("ds-node__textfield");
         choiceTextField.AddToClassList("ds-node__choice-textfield");

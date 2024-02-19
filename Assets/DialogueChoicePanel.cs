@@ -16,9 +16,16 @@ public class DialogueChoicePanel : MonoBehaviour
         for (int i = 0; i < amount; i++) 
         {
             buttons[i].gameObject.SetActive(true);
-            Debug.Log("TEST");
 
-            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue);
+            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, CheckForFunctions(currentDialogue));
         }
+    }
+
+    public bool CheckForFunctions(DialogueSO _currentDialogue) {
+        if (_currentDialogue.so != null)
+        {
+            return true;
+        }
+        return false;
     }
 }

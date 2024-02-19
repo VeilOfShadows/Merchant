@@ -148,6 +148,12 @@ public class DialogueNode : Node
             
             //}
         });
+
+        if (quest != null)
+        {
+            questObjectField.value = quest;
+        }
+
         //test.RegisterValueChangedCallback(evt =>
         //{
         //    if (evt.newValue is ScriptableObject so)

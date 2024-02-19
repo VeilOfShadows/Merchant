@@ -13,6 +13,11 @@ public class PlayerSOConnections : ScriptableObject
     //}
 
     public void OpenShop() {
-        PlayerManager.instance.EnterShop();
+        //methodName = "OpenShop;
+        DialogueFunctionManager.instance.OpenShop();
+    }
+
+    public void AcceptQuest() {
+        DialogueFunctionManager.instance.AcceptQuest();
     }
 }
