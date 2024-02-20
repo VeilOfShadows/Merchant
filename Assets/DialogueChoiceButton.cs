@@ -39,7 +39,19 @@ public class DialogueChoiceButton : MonoBehaviour
             {
                 Debug.Log("Quest is available");
 
-                //gameObject.SetActive(false);
+                if (PlayerQuestManager.instance.CheckIfQuestCompleted(pickupQuest))
+                {
+                    Debug.Log("Quest already completed");
+                    gameObject.SetActive(false);
+                    return;
+                }
+                
+                if (PlayerQuestManager.instance.CheckIfQuestHandedIn(pickupQuest))
+                {
+                    Debug.Log("Quest already completed");
+                    gameObject.SetActive(false);
+                    return;
+                }
                 return;
             }
         }

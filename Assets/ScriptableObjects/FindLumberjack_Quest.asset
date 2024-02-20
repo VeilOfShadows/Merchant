@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67d3ad99b714fc24b8969d6dd4ac0382, type: 3}
-  m_Name: FindLumberjack
+  m_Name: FindLumberjack_Quest
   m_EditorClassIdentifier: 
   questID: 0
   questName: Lumberjack Quest
   questDescription: Go to the lumberjack
   questAccepted: 1
-  readyForHandIn: 0
-  questComplete: 0
+  readyForHandIn: 1
+  questComplete: 1
