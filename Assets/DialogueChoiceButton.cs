@@ -9,22 +9,20 @@ public class DialogueChoiceButton : MonoBehaviour
     public DialogueSO nextDialogue;
     public DialogueSO currentDialogue;
     public bool isEnd = false;
-    //public bool hasFunction =/* fals*/e;
     public DialogueActions action;
     public bool hasQuestHandin = false;
     public QuestSO pickupQuest;
     public QuestSO handinQuest;
-    //public string functionName;
+    public DialogueContainerSO dialogueAfterCompletion;
 
-    public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _handinQuest)
+    public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
         isEnd = false;
-        //hasFunction = function;
         nextDialogue = nextDialogueSO;
         action = _action;
-        //functionName = _functionName;
         pickupQuest = _pickupQuest;
         handinQuest = _handinQuest;
+        dialogueAfterCompletion = _dialogueAfterCompletion;
 
         if (nextDialogue == null)
         {
@@ -37,18 +35,14 @@ public class DialogueChoiceButton : MonoBehaviour
         {
             if (!PlayerQuestManager.instance.CheckQuestAvailable(pickupQuest))
             {
-                Debug.Log("Quest is available");
-
                 if (PlayerQuestManager.instance.CheckIfQuestCompleted(pickupQuest))
                 {
-                    Debug.Log("Quest already completed");
                     gameObject.SetActive(false);
                     return;
                 }
                 
                 if (PlayerQuestManager.instance.CheckIfQuestHandedIn(pickupQuest))
                 {
-                    Debug.Log("Quest already completed");
                     gameObject.SetActive(false);
                     return;
                 }
@@ -60,10 +54,8 @@ public class DialogueChoiceButton : MonoBehaviour
         {
             if (!PlayerQuestManager.instance.CheckQuestAvailable(handinQuest))
             {
-                Debug.Log("Quest is available");
                 if (!PlayerQuestManager.instance.CheckIfQuestCompleted(handinQuest))
                 {
-                    Debug.Log("Quest Not Completed");
                     gameObject.SetActive(false);
                 }
                 return;
@@ -74,6 +66,10 @@ public class DialogueChoiceButton : MonoBehaviour
     public void ActivateButton()
     {
         DialogueFunctionManager.instance.Activate(action, pickupQuest, handinQuest);
+        if (dialogueAfterCompletion != null)
+        {
+            dialogueUIManager.dialogueController.dialogue.dialogueContainer = dialogueAfterCompletion;
+        }
         //switch (action)
         //{
         //    case DialogueActions.None:

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: Introduction
+  m_Name: DialogueName
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: Introduction
-  <text>k__BackingField: Welcome stranger. What brings you to these parts?
+  <dialogueName>k__BackingField: DialogueName
+  <text>k__BackingField: Type here.....
   <choices>k__BackingField:
-  - <text>k__BackingField: I am a merchant, in search of trade opportunities.
-    <nextDialogue>k__BackingField: {fileID: 11400000, guid: c097a55111dbb174592689e1110c53b1,
-      type: 2}
+  - <text>k__BackingField: Welcome
+    <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0

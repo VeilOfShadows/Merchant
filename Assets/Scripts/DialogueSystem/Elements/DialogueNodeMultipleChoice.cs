@@ -103,13 +103,26 @@ public class DialogueNodeMultipleChoice : DialogueNode
             {
                 questHandInObjectField.value = choiceData.questHandinPoint;
             }
-            outputContainer.Add(choicePort);
 
-            //outputContainer.Add(connectorSOObject);
-            //outputContainer.Add(methodField);
+            ObjectField nextDialogue = DialogueElementUtility.CreateDialogueObjectField("Next Dialogue", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choiceData.dialogueAfterCompletion = (DialogueContainerSO)callback.newValue;
+
+                //}
+            });
+
+            if (choiceData.dialogueAfterCompletion != null)
+            {
+                nextDialogue.value = choiceData.dialogueAfterCompletion;
+            }
+
+            outputContainer.Add(choicePort);
             outputContainer.Add(questStartObjectField);
             outputContainer.Add(questHandInObjectField);
             outputContainer.Add(actionField);
+            outputContainer.Add(nextDialogue);
         });
 
         addChoiceButton.AddToClassList("ds-node__button");
@@ -186,12 +199,25 @@ public class DialogueNodeMultipleChoice : DialogueNode
                 questHandInObjectField.value = choice.questHandinPoint;
             }
 
+            ObjectField nextDialogue = DialogueElementUtility.CreateDialogueObjectField("Next Dialogue", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choice.dialogueAfterCompletion = (DialogueContainerSO)callback.newValue;
+
+                //}
+            });
+
+            if (choice.dialogueAfterCompletion != null)
+            {
+                nextDialogue.value = choice.dialogueAfterCompletion;
+            }
+
             outputContainer.Add(choicePort);
-            //outputContainer.Add(connectorSOObject);
-            //outputContainer.Add(methodField);
             outputContainer.Add(actionField);
             outputContainer.Add(questStartObjectField);
             outputContainer.Add(questHandInObjectField);
+            outputContainer.Add(nextDialogue);
 
         }
         RefreshExpandedState();

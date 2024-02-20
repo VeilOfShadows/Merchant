@@ -18,9 +18,7 @@ MonoBehaviour:
   <choices>k__BackingField:
   - <text>k__BackingField: Please, I insist
     <nextDialogue>k__BackingField: {fileID: 0}
-    <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-      type: 2}
-    <methodName>k__BackingField: AcceptQuest
+    <action>k__BackingField: 2
     <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
     <questHandinPoint>k__BackingField: {fileID: 0}

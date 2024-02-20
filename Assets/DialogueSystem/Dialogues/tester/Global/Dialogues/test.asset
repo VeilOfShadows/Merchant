@@ -22,12 +22,14 @@ MonoBehaviour:
     <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
     <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   - <text>k__BackingField: Without pickup
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: e64a1afaef8421544bc89f84319c3529,
       type: 2}
     <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0

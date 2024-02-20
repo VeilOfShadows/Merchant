@@ -18,9 +18,7 @@ MonoBehaviour:
   <choices>k__BackingField:
   - <text>k__BackingField: Do you have anything to trade?
     <nextDialogue>k__BackingField: {fileID: 0}
-    <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-      type: 2}
-    <methodName>k__BackingField: OpenShop
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

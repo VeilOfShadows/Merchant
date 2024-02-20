@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: Tester2Graph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: Tester2
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 57a105ca-9c5d-405d-85de-d84828c43336
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: Welcome
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 908, y: 329}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 35be0db6-9d5b-4031-b5d4-4fdaaf6bf229
+    <name>k__BackingField: Dia
+    <text>k__BackingField: second dialogue
+    <choices>k__BackingField:
+    - <text>k__BackingField: Next Dialogue
+      <nodeID>k__BackingField: 57a105ca-9c5d-405d-85de-d84828c43336
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 0
+    <position>k__BackingField: {x: 607, y: 397}
+    <quest>k__BackingField: {fileID: 0}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - DialogueName
+  - Dia
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

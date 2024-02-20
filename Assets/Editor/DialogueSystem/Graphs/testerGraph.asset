@@ -24,6 +24,7 @@ MonoBehaviour:
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 0
     <position>k__BackingField: {x: 231, y: 136}
@@ -38,11 +39,13 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
       <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     - <text>k__BackingField: Without pickup
       <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 637, y: 161}
@@ -57,16 +60,20 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 11400000, guid: 7e951d98a4fb55f4b9bf8e2bf28e77c3,
+        type: 2}
     - <text>k__BackingField: end
       <nodeID>k__BackingField: 
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     - <text>k__BackingField: Shop
       <nodeID>k__BackingField: 
       <action>k__BackingField: 1
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1340, y: 172}

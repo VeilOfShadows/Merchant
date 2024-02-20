@@ -309,10 +309,9 @@ public static class DialogueIOUtility
             {
                 text = nodeChoice.text,
                 action = nodeChoice.action,
-                //functionObject = nodeChoice.functionObject,
-                //methodName = nodeChoice.methodName,
                 questStartingPoint = nodeChoice.questStartingPoint,
                 questHandinPoint = nodeChoice.questHandinPoint,
+                dialogueAfterCompletion = nodeChoice.dialogueAfterCompletion,
             };
             Debug.Log(choiceData.questStartingPoint);
 
@@ -333,10 +332,7 @@ public static class DialogueIOUtility
             text = node.dialogueText,
             groupID = node.group?.ID,
             dialogueType = node.dialogueType,
-            position = node.GetPosition().position,
-            //so = node.connector,
-            //methodName = node.methodName,
-            //quest = node.quest,
+            position = node.GetPosition().position,            
         };
 
         graphData.nodes.Add(nodeData);
@@ -353,10 +349,9 @@ public static class DialogueIOUtility
                 text = choice.text,
                 nodeID = choice.nodeID,
                 action = choice.action,
-                //functionObject = choice.functionObject,
-                //methodName = choice.methodName,
                 questStartingPoint = choice.questStartingPoint,
                 questHandinPoint = choice.questHandinPoint,
+                dialogueAfterCompletion = choice.dialogueAfterCompletion,
             };
 
             choices.Add(choiceData);

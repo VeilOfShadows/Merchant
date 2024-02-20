@@ -25,8 +25,8 @@ public class QuestDatabase : ScriptableObject
         for (int i = 0; i < quests.Length; i++)
         {
             quests[i].questAccepted = false;
-            quests[i].readyForHandIn = false;
-            quests[i].questComplete = false;
+            quests[i].questCompleted = false;
+            quests[i].questHandedIn = false;
         }
     }
 

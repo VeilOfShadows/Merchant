@@ -35,7 +35,7 @@ public class PlayerQuestManager : MonoBehaviour
             return;
         }
 
-        if (questToAccept.questComplete)
+        if (questToAccept.questHandedIn)
         {
             Debug.Log("Quest already Completed");
             return;
@@ -50,43 +50,55 @@ public class PlayerQuestManager : MonoBehaviour
 
     public void CompleteQuest(QuestSO quest)
     { 
-        activeQuestList.Remove(quest);
         completedQuestList.Add(quest);
-        quest.readyForHandIn = true;
+        activeQuestList.Remove(quest);
+        quest.questCompleted = true;
     }
 
     public void HandInQuest(QuestSO quest)
     {
         Debug.Log(quest);
-        completedQuestList.Remove(quest);
         handinQuestList.Add(quest);
-        quest.questComplete = true;
+        completedQuestList.Remove(quest);
+        quest.questHandedIn = true;
     }
 
     public bool CheckIfQuestActive(QuestSO questToCheck)
     {
-        if (activeQuestList.Contains(questToCheck))
+        if (questToCheck.questAccepted)
         {
             return true;
         }
+        //if (activeQuestList.Contains(questToCheck))
+        //{
+        //    return true;
+        //}
         return false;
     }
     
     public bool CheckIfQuestCompleted(QuestSO questToCheck)
     {
-        if (completedQuestList.Contains(questToCheck))
+        if (questToCheck.questCompleted)
         {
             return true;
         }
+        //if (completedQuestList.Contains(questToCheck))
+        //{
+        //    return true;
+        //}
         return false;
     }
 
     public bool CheckIfQuestHandedIn(QuestSO questToCheck)
     {
-        if (handinQuestList.Contains(questToCheck))
+        if (questToCheck.questHandedIn)
         {
             return true;
         }
+        //if (handinQuestList.Contains(questToCheck))
+        //{
+        //    return true;
+        //}
         return false;
     }
 

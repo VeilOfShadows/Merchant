@@ -10,6 +10,6 @@ public class QuestSO : ScriptableObject
     [TextArea(10,25)]
     public string questDescription;
     public bool questAccepted = false;
-    public bool readyForHandIn = false;
-    public bool questComplete = false;
+    public bool questCompleted = false;
+    public bool questHandedIn = false;
 }

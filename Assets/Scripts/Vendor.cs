@@ -21,17 +21,24 @@ public class Vendor : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
-            if (questToComplete != null)
-            {
-                if (PlayerQuestManager.instance.CheckIfQuestActive(questToComplete))
-                { 
-                    PlayerQuestManager.instance.CompleteQuest(questToComplete);
-                }
-            }
             PlayerManager.instance.inRangeOfShop = true;
             PlayerManager.instance.currentVendor = this;
             PlayerManager.instance.merchantInventory.inventory = inventory;
             promptCanvas.SetActive(true);
+
+            if (questToComplete != null)
+            {
+                if (PlayerQuestManager.instance.CheckIfQuestActive(questToComplete))
+                {
+                    if (!PlayerQuestManager.instance.CheckIfQuestCompleted(questToComplete))
+                    {
+                        if (!PlayerQuestManager.instance.CheckIfQuestHandedIn(questToComplete))
+                        {
+                            PlayerQuestManager.instance.CompleteQuest(questToComplete);
+                        }
+                    }
+                }
+            }
         }
     }
 

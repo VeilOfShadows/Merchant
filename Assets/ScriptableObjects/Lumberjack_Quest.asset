@@ -16,4 +16,5 @@ MonoBehaviour:
   questName: Lumberjack
   questDescription: Find the Lakeview builder, he will arrange  the bridge repairs.
   questAccepted: 0
+  readyForHandIn: 0
   questComplete: 0

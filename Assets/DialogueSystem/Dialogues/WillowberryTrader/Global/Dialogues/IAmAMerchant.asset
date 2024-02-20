@@ -20,15 +20,13 @@ MonoBehaviour:
   - <text>k__BackingField: What is the Lakeview bridge?
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 2bba676d17c95e4499dc94cb7b493ba0,
       type: 2}
-    <functionObject>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
   - <text>k__BackingField: What is this place?
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: a9a39db1c189cde4e8513f3e8035e244,
       type: 2}
-    <functionObject>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

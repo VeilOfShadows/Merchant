@@ -21,8 +21,7 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: I am a merchant, in search of trade opportunities.
       <nodeID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -37,14 +36,12 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: What is the Lakeview bridge?
       <nodeID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     - <text>k__BackingField: What is this place?
       <nodeID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -59,8 +56,7 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: I could maybe help with the bridge?
       <nodeID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -73,8 +69,7 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Next Dialogue
       <nodeID>k__BackingField: a2911518-9789-46ee-87ce-b60361af01d0
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -88,9 +83,7 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Do you have anything to trade?
       <nodeID>k__BackingField: 
-      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-        type: 2}
-      <methodName>k__BackingField: OpenShop
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -104,9 +97,7 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Please, I insist
       <nodeID>k__BackingField: 
-      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-        type: 2}
-      <methodName>k__BackingField: AcceptQuest
+      <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
       <questHandinPoint>k__BackingField: {fileID: 0}

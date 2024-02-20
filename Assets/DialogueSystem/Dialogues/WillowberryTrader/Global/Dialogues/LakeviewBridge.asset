@@ -20,8 +20,7 @@ MonoBehaviour:
   - <text>k__BackingField: I could maybe help with the bridge?
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 7a0ba604f576e5f4eb4f31c679391446,
       type: 2}
-    <functionObject>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

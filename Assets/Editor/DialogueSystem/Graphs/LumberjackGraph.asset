@@ -21,13 +21,12 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Next Dialogue
       <nodeID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 210, y: 393}
+    <position>k__BackingField: {x: 719, y: -77}
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
     <name>k__BackingField: DialogueName
@@ -35,15 +34,13 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: How much?
       <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
-      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-        type: 2}
-      <methodName>k__BackingField: HandInQuest
+      <action>k__BackingField: 3
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 896, y: 382}
+    <position>k__BackingField: {x: 1405, y: -88}
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
     <name>k__BackingField: Quest
@@ -52,15 +49,13 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 
-      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-        type: 2}
-      <methodName>k__BackingField: AcceptQuest
+      <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
         type: 2}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1641, y: 313}
+    <position>k__BackingField: {x: 2150, y: -157}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:

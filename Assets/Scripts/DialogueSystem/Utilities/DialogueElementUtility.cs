@@ -81,6 +81,22 @@ public static class DialogueElementUtility
         return objectField;
     }
 
+    public static ObjectField CreateDialogueObjectField(string _label, EventCallback<ChangeEvent<UnityEngine.Object>> onValueChanged = null)
+    {
+        ObjectField objectField = new ObjectField()
+        {
+            label = _label,
+            objectType = typeof(DialogueContainerSO)
+        };
+
+        if (onValueChanged != null)
+        {
+            objectField.RegisterValueChangedCallback(onValueChanged);
+        }
+
+        return objectField;
+    }
+
     public static ObjectField CreateQuestObjectField(string _label, EventCallback<ChangeEvent<UnityEngine.Object>> onValueChanged = null)
     {
         ObjectField objectField = new ObjectField()
