@@ -17,16 +17,18 @@ MonoBehaviour:
   <choices>k__BackingField:
   - <text>k__BackingField: hand in
     <nextDialogue>k__BackingField: {fileID: 0}
-    <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-      type: 2}
-    <methodName>k__BackingField: HandInQuest
+    <action>k__BackingField: 3
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
   - <text>k__BackingField: end
     <nextDialogue>k__BackingField: {fileID: 0}
-    <functionObject>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: Shop
+    <nextDialogue>k__BackingField: {fileID: 0}
+    <action>k__BackingField: 1
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

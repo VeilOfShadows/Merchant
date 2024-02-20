@@ -15,10 +15,19 @@ public class Vendor : MonoBehaviour
     public GameObject cam;    
     public GameObject promptCanvas;
 
+    public QuestSO questToComplete;
+
     #region Triggers
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
+            if (questToComplete != null)
+            {
+                if (PlayerQuestManager.instance.CheckIfQuestActive(questToComplete))
+                { 
+                    PlayerQuestManager.instance.CompleteQuest(questToComplete);
+                }
+            }
             PlayerManager.instance.inRangeOfShop = true;
             PlayerManager.instance.currentVendor = this;
             PlayerManager.instance.merchantInventory.inventory = inventory;
@@ -33,7 +42,8 @@ public class Vendor : MonoBehaviour
             PlayerManager.instance.currentVendor = null;
             PlayerManager.instance.merchantInventory.inventory = null;
             PlayerManager.instance.inRangeOfShop = false;
-            ExitShop();            
+            ExitShop(); 
+            DialogueUIManager.instance.EndDialogue();
         }
     }
     #endregion

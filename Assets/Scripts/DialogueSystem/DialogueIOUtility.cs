@@ -308,8 +308,9 @@ public static class DialogueIOUtility
             DialogueChoiceData choiceData = new DialogueChoiceData()
             {
                 text = nodeChoice.text,
-                functionObject = nodeChoice.functionObject,
-                methodName = nodeChoice.methodName,
+                action = nodeChoice.action,
+                //functionObject = nodeChoice.functionObject,
+                //methodName = nodeChoice.methodName,
                 questStartingPoint = nodeChoice.questStartingPoint,
                 questHandinPoint = nodeChoice.questHandinPoint,
             };
@@ -351,8 +352,9 @@ public static class DialogueIOUtility
             {
                 text = choice.text,
                 nodeID = choice.nodeID,
-                functionObject = choice.functionObject,
-                methodName = choice.methodName,
+                action = choice.action,
+                //functionObject = choice.functionObject,
+                //methodName = choice.methodName,
                 questStartingPoint = choice.questStartingPoint,
                 questHandinPoint = choice.questHandinPoint,
             };

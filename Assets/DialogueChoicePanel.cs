@@ -17,7 +17,7 @@ public class DialogueChoicePanel : MonoBehaviour
         {
             buttons[i].gameObject.SetActive(true);
 
-            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, CheckForFunctions(currentDialogue, currentDialogue.choices[i].functionObject), currentDialogue.choices[i].methodName, currentDialogue.choices[i].questStartingPoint, currentDialogue.choices[i].questHandinPoint);
+            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, currentDialogue.choices[i].action, currentDialogue.choices[i].questStartingPoint, currentDialogue.choices[i].questHandinPoint);
         }
     }
 

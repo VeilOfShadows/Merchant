@@ -29,6 +29,22 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 0
     <position>k__BackingField: {x: 210, y: 393}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: I can supply the wood but it'll cost you
+    <choices>k__BackingField:
+    - <text>k__BackingField: How much?
+      <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
+      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
+        type: 2}
+      <methodName>k__BackingField: HandInQuest
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+        type: 2}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 896, y: 382}
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
     <name>k__BackingField: Quest
     <text>k__BackingField: Depends on how much wood you need. My brother in Lakeview
@@ -46,26 +62,10 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1641, y: 313}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
-    <name>k__BackingField: DialogueName
-    <text>k__BackingField: I can supply the wood but it'll cost you
-    <choices>k__BackingField:
-    - <text>k__BackingField: How much?
-      <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
-      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-        type: 2}
-      <methodName>k__BackingField: HandInQuest
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
-        type: 2}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 896, y: 382}
-    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - Welcome
-  - Quest
   - DialogueName
+  - Quest
   <oldGroupedNodeNames>k__BackingField:
     list: []

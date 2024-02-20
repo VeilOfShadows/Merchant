@@ -38,33 +38,43 @@ public class DialogueNodeMultipleChoice : DialogueNode
             choices.Add(choiceData);
 
             Port choicePort = CreateChoicePort(choiceData);
-            PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+            //PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+            //{
+            //    choiceData.methodName = callback.newValue;
+            //});
+
+            PopupField<DialogueActions> actionField = DialogueElementUtility.CreateActionField(callback =>
             {
-                choiceData.methodName = callback.newValue;
+                choiceData.action = callback.newValue;
             });
 
-            ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Function Object", callback =>
+            if (choiceData.action != DialogueActions.None)
             {
-                //if (callback.newValue is ScriptableObject so)
-                //{
-                choiceData.functionObject = (ScriptableObject)callback.newValue;
-                var methods = choiceData.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
-
-                methodField.label = "Method Name";
-                methodField.choices = methods;
-                //}
-            });
-
-            if (choiceData.functionObject != null)
-            {
-                connectorSOObject.value = choiceData.functionObject;
-                var methods = choiceData.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
-
-                methodField.label = "Method Name";
-                methodField.choices = methods;
-
-                methodField.value = choiceData.methodName;
+                actionField.value = choiceData.action;
             }
+
+            //ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Function Object", callback =>
+            //{
+            //    //if (callback.newValue is ScriptableObject so)
+            //    //{
+            //    choiceData.functionObject = (ScriptableObject)callback.newValue;
+            //    var methods = choiceData.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+            //    methodField.label = "Method Name";
+            //    methodField.choices = methods;
+            //    //}
+            //});
+
+            //if (choiceData.functionObject != null)
+            //{
+            //    connectorSOObject.value = choiceData.functionObject;
+            //    var methods = choiceData.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+            //    methodField.label = "Method Name";
+            //    methodField.choices = methods;
+
+            //    methodField.value = choiceData.methodName;
+            //}
 
             ObjectField questStartObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Pick-up", callback =>
             {
@@ -95,10 +105,11 @@ public class DialogueNodeMultipleChoice : DialogueNode
             }
             outputContainer.Add(choicePort);
 
-            outputContainer.Add(connectorSOObject);
-            outputContainer.Add(methodField);
+            //outputContainer.Add(connectorSOObject);
+            //outputContainer.Add(methodField);
             outputContainer.Add(questStartObjectField);
             outputContainer.Add(questHandInObjectField);
+            outputContainer.Add(actionField);
         });
 
         addChoiceButton.AddToClassList("ds-node__button");
@@ -110,32 +121,41 @@ public class DialogueNodeMultipleChoice : DialogueNode
         foreach (DialogueChoiceSaveData choice in choices)
         {
             Port choicePort = CreateChoicePort(choice);
-            PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+            //PopupField<string> methodField = DialogueElementUtility.CreatePopupField(callback =>
+            //{
+            //    choice.methodName = callback.newValue;
+            //});
+
+            //ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Function Object", callback =>
+            //{
+            //    //if (callback.newValue is ScriptableObject so)
+            //    //{
+            //    choice.functionObject = (ScriptableObject)callback.newValue;
+            //    var methods = choice.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+            //    methodField.label = "Method Name";
+            //    methodField.choices = methods;
+            //    //}
+            //});
+
+            //if (choice.functionObject != null)
+            //{
+            //    connectorSOObject.value = choice.functionObject;
+            //    var methods = choice.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
+
+            //    methodField.label = "Method Name";
+            //    methodField.choices = methods;
+
+            //    methodField.value = choice.methodName;
+            //}
+            PopupField<DialogueActions> actionField = DialogueElementUtility.CreateActionField(callback =>
             {
-                choice.methodName = callback.newValue;
+                choice.action = callback.newValue;
             });
 
-            ObjectField connectorSOObject = DialogueElementUtility.CreateObjectField("Function Object", callback =>
+            if (choice.action != DialogueActions.None)
             {
-                //if (callback.newValue is ScriptableObject so)
-                //{
-                choice.functionObject = (ScriptableObject)callback.newValue;
-                var methods = choice.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
-
-                methodField.label = "Method Name";
-                methodField.choices = methods;
-                //}
-            });
-
-            if (choice.functionObject != null)
-            {
-                connectorSOObject.value = choice.functionObject;
-                var methods = choice.functionObject.GetType().GetMethods().Select(m => m.Name).ToList();
-
-                methodField.label = "Method Name";
-                methodField.choices = methods;
-
-                methodField.value = choice.methodName;
+                actionField.value = choice.action;
             }
 
             ObjectField questStartObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Pick-up", callback =>
@@ -167,8 +187,9 @@ public class DialogueNodeMultipleChoice : DialogueNode
             }
 
             outputContainer.Add(choicePort);
-            outputContainer.Add(connectorSOObject);
-            outputContainer.Add(methodField);
+            //outputContainer.Add(connectorSOObject);
+            //outputContainer.Add(methodField);
+            outputContainer.Add(actionField);
             outputContainer.Add(questStartObjectField);
             outputContainer.Add(questHandInObjectField);
 

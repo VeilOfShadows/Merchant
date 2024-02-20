@@ -18,17 +18,14 @@ MonoBehaviour:
   - <text>k__BackingField: pickup
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: e64a1afaef8421544bc89f84319c3529,
       type: 2}
-    <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-      type: 2}
-    <methodName>k__BackingField: AcceptQuest
+    <action>k__BackingField: 2
     <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
     <questHandinPoint>k__BackingField: {fileID: 0}
   - <text>k__BackingField: Without pickup
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: e64a1afaef8421544bc89f84319c3529,
       type: 2}
-    <functionObject>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

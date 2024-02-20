@@ -57,12 +57,22 @@ public class PlayerQuestManager : MonoBehaviour
 
     public void HandInQuest(QuestSO quest)
     {
+        Debug.Log(quest);
         completedQuestList.Remove(quest);
         handinQuestList.Add(quest);
         quest.questComplete = true;
     }
+
+    public bool CheckIfQuestActive(QuestSO questToCheck)
+    {
+        if (activeQuestList.Contains(questToCheck))
+        {
+            return true;
+        }
+        return false;
+    }
     
-    public bool CheckIfQuestReady(QuestSO questToCheck)
+    public bool CheckIfQuestCompleted(QuestSO questToCheck)
     {
         if (completedQuestList.Contains(questToCheck))
         {
@@ -71,7 +81,7 @@ public class PlayerQuestManager : MonoBehaviour
         return false;
     }
 
-    public bool CheckIfQuestCompleted(QuestSO questToCheck)
+    public bool CheckIfQuestHandedIn(QuestSO questToCheck)
     {
         if (handinQuestList.Contains(questToCheck))
         {

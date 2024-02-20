@@ -488,11 +488,10 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   currentDialogue: {fileID: 0}
   isEnd: 0
-  hasFunction: 0
+  action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   handinQuest: {fileID: 0}
-  functionName: 
 --- !u!1 &103480713
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,11 +743,10 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   currentDialogue: {fileID: 0}
   isEnd: 0
-  hasFunction: 0
+  action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   handinQuest: {fileID: 0}
-  functionName: 
 --- !u!4 &125815683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4128534393214143926, guid: c279447596db3a241a432dad1ce3f806,
@@ -1036,6 +1034,7 @@ MonoBehaviour:
   vendorDialogueController: {fileID: 0}
   cam: {fileID: 1745615611}
   promptCanvas: {fileID: 0}
+  questToComplete: {fileID: 0}
 --- !u!1001 &141336621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2877,11 +2876,10 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   currentDialogue: {fileID: 0}
   isEnd: 0
-  hasFunction: 0
+  action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   handinQuest: {fileID: 0}
-  functionName: 
 --- !u!114 &273473706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4878,6 +4876,7 @@ MonoBehaviour:
   vendorDialogueController: {fileID: 2134226488}
   cam: {fileID: 48844107}
   promptCanvas: {fileID: 1607742284}
+  questToComplete: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b, type: 2}
 --- !u!1001 &497854500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5323,11 +5322,10 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   currentDialogue: {fileID: 0}
   isEnd: 0
-  hasFunction: 0
+  action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   handinQuest: {fileID: 0}
-  functionName: 
 --- !u!4 &564104237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3247474872940375630, guid: faa232351140d09468c55b9d5a0ec242,
@@ -8710,6 +8708,7 @@ MonoBehaviour:
   vendorDialogueController: {fileID: 0}
   cam: {fileID: 1138030718}
   promptCanvas: {fileID: 0}
+  questToComplete: {fileID: 0}
 --- !u!1001 &927515201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12864,11 +12863,10 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   currentDialogue: {fileID: 0}
   isEnd: 0
-  hasFunction: 0
+  action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   handinQuest: {fileID: 0}
-  functionName: 
 --- !u!114 &1385048407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14653,6 +14651,7 @@ MonoBehaviour:
   vendorDialogueController: {fileID: 103480716}
   cam: {fileID: 1416168031}
   promptCanvas: {fileID: 1308155987}
+  questToComplete: {fileID: 0}
 --- !u!4 &1590242881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6875279526462084054, guid: 950aba45967a14a43a46463a4d3d3004,
@@ -16859,6 +16858,7 @@ MonoBehaviour:
   vendorDialogueController: {fileID: 0}
   cam: {fileID: 1992500812}
   promptCanvas: {fileID: 0}
+  questToComplete: {fileID: 0}
 --- !u!54 &1863818969
 Rigidbody:
   m_ObjectHideFlags: 0

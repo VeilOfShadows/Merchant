@@ -18,8 +18,7 @@ MonoBehaviour:
   - <text>k__BackingField: Next Dialogue
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 603e3314c0a3d494da62670188068f11,
       type: 2}
-    <functionObject>k__BackingField: {fileID: 0}
-    <methodName>k__BackingField: 
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

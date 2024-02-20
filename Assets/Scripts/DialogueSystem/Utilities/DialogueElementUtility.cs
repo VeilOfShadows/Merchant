@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -28,7 +30,41 @@ public static class DialogueElementUtility
 
         return button;
     }
-    
+
+    public static PopupField<DialogueActions> CreateActionField(EventCallback<ChangeEvent<DialogueActions>> onValueChanged = null)
+    {
+        List<DialogueActions> enumValues = Enum.GetValues(typeof(DialogueActions)).Cast<DialogueActions>().ToList();
+
+        PopupField<DialogueActions> actionField = new PopupField<DialogueActions>()
+        {
+            label = "Function",
+            choices = enumValues
+        };
+
+        if (onValueChanged != null)
+        {
+            actionField.RegisterValueChangedCallback(onValueChanged);
+        }
+
+        return actionField;
+    }
+    public static EnumField CreateEnumField(string _label, EventCallback<ChangeEvent<Enum>> onValueChanged = null)
+    {
+        EnumField enumField = new EnumField()
+        {
+            label = _label,
+            
+            //objectType = typeof(ScriptableObject)
+        };
+
+        if (onValueChanged != null)
+        {
+            enumField.RegisterValueChangedCallback(onValueChanged);
+        }
+
+        return enumField;
+    }
+
     public static ObjectField CreateObjectField(string _label,EventCallback<ChangeEvent<UnityEngine.Object>> onValueChanged = null)
     {
         ObjectField objectField = new ObjectField()

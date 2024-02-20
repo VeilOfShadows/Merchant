@@ -9,18 +9,20 @@ public class DialogueChoiceButton : MonoBehaviour
     public DialogueSO nextDialogue;
     public DialogueSO currentDialogue;
     public bool isEnd = false;
-    public bool hasFunction = false;
+    //public bool hasFunction =/* fals*/e;
+    public DialogueActions action;
     public bool hasQuestHandin = false;
     public QuestSO pickupQuest;
     public QuestSO handinQuest;
-    public string functionName;
+    //public string functionName;
 
-    public void Setup(string text, DialogueSO nextDialogueSO, bool function, string _functionName, QuestSO _pickupQuest, QuestSO _handinQuest)
+    public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _handinQuest)
     {
         isEnd = false;
-        hasFunction = function;
+        //hasFunction = function;
         nextDialogue = nextDialogueSO;
-        functionName = _functionName;
+        action = _action;
+        //functionName = _functionName;
         pickupQuest = _pickupQuest;
         handinQuest = _handinQuest;
 
@@ -33,22 +35,25 @@ public class DialogueChoiceButton : MonoBehaviour
 
         if (pickupQuest != null)
         {
-            if (PlayerQuestManager.instance.CheckQuestAvailable(pickupQuest))
+            if (!PlayerQuestManager.instance.CheckQuestAvailable(pickupQuest))
             {
-                Debug.Log("Quest is unavailable");
+                Debug.Log("Quest is available");
 
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
                 return;
             }
         }
 
         if (handinQuest != null)
         {
-            if (PlayerQuestManager.instance.CheckQuestAvailable(handinQuest))
+            if (!PlayerQuestManager.instance.CheckQuestAvailable(handinQuest))
             {
-                Debug.Log("Quest is unavailable");
-
-                gameObject.SetActive(false);
+                Debug.Log("Quest is available");
+                if (!PlayerQuestManager.instance.CheckIfQuestCompleted(handinQuest))
+                {
+                    Debug.Log("Quest Not Completed");
+                    gameObject.SetActive(false);
+                }
                 return;
             }
         }
@@ -56,32 +61,58 @@ public class DialogueChoiceButton : MonoBehaviour
 
     public void ActivateButton()
     {
-        if (hasFunction)
-        {
-            if (pickupQuest != null)
-            {
-                DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
+        DialogueFunctionManager.instance.Activate(action, pickupQuest, handinQuest);
+        //switch (action)
+        //{
+        //    case DialogueActions.None:
+        //        break;
+        //    case DialogueActions.OpenShop:
+        //        DialogueFunctionManager.instance.HandInQuest(handinQuest);
+        //        break;
+        //    case DialogueActions.AcceptQuest:
+        //        DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
+        //        break;
+        //    case DialogueActions.HandInQuest:
+        //        DialogueFunctionManager.instance.HandInQuest(handinQuest);
+        //        break;
+        //    default:
+        //        break;
+        //}
+        //if (hasFunction)
+        //{
+        //    if (pickupQuest != null)
+        //    {
+        //        DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
 
-                //DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
-            }
-            else if (handinQuest != null)
-            {
-                DialogueFunctionManager.instance.HandInQuest(handinQuest);
-            }
-            else
-            {
-                DialogueFunctionManager.instance.Activate(functionName);
-            }
-        }
+        //        //DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
+        //    }
+            
+        //    if (handinQuest != null)
+        //    {
+        //        DialogueFunctionManager.instance.HandInQuest(handinQuest);
+        //    }
+
+        //    else
+        //    {
+        //        //DialogueFunctionManager.instance.Activate(functionName);
+        //    }
+        //}
 
         if (isEnd)
         {
+            if (action != DialogueActions.OpenShop)
+            {
+                PlayerManager.instance.ExitShop();
+                PlayerManager.instance.currentVendor.ExitShop();
+            }
+
             dialogueUIManager.EndDialogue();
-            PlayerManager.instance.ExitShop();
-            PlayerManager.instance.currentVendor.ExitShop();
+
             return;
         }
-        
-        dialogueUIManager.NextDialogue(nextDialogue);
+        else
+        {
+            dialogueUIManager.NextDialogue(nextDialogue);
+        }        
     }
 }

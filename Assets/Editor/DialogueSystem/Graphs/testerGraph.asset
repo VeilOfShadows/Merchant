@@ -21,8 +21,7 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Next Dialogue
       <nodeID>k__BackingField: 13ef4351-79b4-46c4-9f6b-deba10abbdc7
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -35,16 +34,13 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: pickup
       <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
-      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-        type: 2}
-      <methodName>k__BackingField: AcceptQuest
+      <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
       <questHandinPoint>k__BackingField: {fileID: 0}
     - <text>k__BackingField: Without pickup
       <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -57,16 +53,18 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: hand in
       <nodeID>k__BackingField: 
-      <functionObject>k__BackingField: {fileID: 11400000, guid: c341383b935c02e4db1709298fef0084,
-        type: 2}
-      <methodName>k__BackingField: HandInQuest
+      <action>k__BackingField: 3
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
     - <text>k__BackingField: end
       <nodeID>k__BackingField: 
-      <functionObject>k__BackingField: {fileID: 0}
-      <methodName>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Shop
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 1
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
