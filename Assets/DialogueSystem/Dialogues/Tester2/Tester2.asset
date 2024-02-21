@@ -18,3 +18,6 @@ MonoBehaviour:
   <ungroupedDialogues>k__BackingField:
   - {fileID: 11400000, guid: 0fc9c7ce11d89474da02fc03f972bdc6, type: 2}
   - {fileID: 11400000, guid: f5038118448796e418373e59d04f5a6d, type: 2}
+  <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+    type: 2}
+  <prerequisiteQuestProgressionRequirement>k__BackingField: 2

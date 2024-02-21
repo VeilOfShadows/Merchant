@@ -60,8 +60,7 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 11400000, guid: 7e951d98a4fb55f4b9bf8e2bf28e77c3,
-        type: 2}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     - <text>k__BackingField: end
       <nodeID>k__BackingField: 
       <action>k__BackingField: 0

@@ -523,7 +523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71b41ba76ee9b346881a51f12ccbe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 11400000, guid: 5b038836d4ce2434fa76ecd71cf43f01, type: 2}
+  dialogueContainer: {fileID: 0}
+  dialogueContainers:
+  - {fileID: 11400000, guid: cab41cd6b890834468d36f764e6ba503, type: 2}
+  - {fileID: 11400000, guid: 7e951d98a4fb55f4b9bf8e2bf28e77c3, type: 2}
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
   dialogue: {fileID: 11400000, guid: 6ed4a0f4e29ccd34981a85723028bcb3, type: 2}
   groupedDialogues: 0
@@ -10480,6 +10483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 11400000, guid: 26c0e914bb35a1940a099847b0a9bb01, type: 2}
+  dialogueContainers: []
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
   dialogue: {fileID: 11400000, guid: 04bdd2b85baeb8940956670e1fcee3da, type: 2}
   groupedDialogues: 0
@@ -20737,6 +20741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 11400000, guid: 26c0e914bb35a1940a099847b0a9bb01, type: 2}
+  dialogueContainers: []
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
   dialogue: {fileID: 11400000, guid: 04bdd2b85baeb8940956670e1fcee3da, type: 2}
   groupedDialogues: 0
@@ -20867,6 +20872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temp: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b, type: 2}
+  progression: 0
   activeQuestList: []
   completedQuestList: []
   handinQuestList: []
@@ -21750,6 +21756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 11400000, guid: 26c0e914bb35a1940a099847b0a9bb01, type: 2}
+  dialogueContainers: []
   dialogueGroup: {fileID: 11400000, guid: d98eab298efa0ec4788cca1148216fe4, type: 2}
   dialogue: {fileID: 11400000, guid: 04bdd2b85baeb8940956670e1fcee3da, type: 2}
   groupedDialogues: 0

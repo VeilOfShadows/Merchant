@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum QuestProgression { 
+    Default,
+    NotAccepted,
+    Accepted,
+    Completed,
+    HandedIn
+}
+
 public class PlayerQuestManager : MonoBehaviour
 {
     public static PlayerQuestManager instance;
 
     public QuestSO temp;
+    public QuestProgression progression;
 
     public List<QuestSO> activeQuestList = new List<QuestSO>();
     public List<QuestSO> completedQuestList = new List<QuestSO>();
@@ -110,5 +119,59 @@ public class PlayerQuestManager : MonoBehaviour
         if (handinQuestList.Contains(questToCheck))
         { return false; }
         return true;
+    }
+
+    public bool FindAvailableDialogues(QuestSO questToCheck, QuestProgression _progression) {
+
+        progression = _progression;
+
+        switch (progression)
+        {
+            case QuestProgression.Default:
+                break;
+            case QuestProgression.NotAccepted:
+                if (CheckQuestAvailable(questToCheck))
+                {
+                    Debug.Log("Quest not accepted. Returning True");
+                    progression = QuestProgression.Default;
+                    return true;
+                }
+                break;
+            case QuestProgression.Accepted:
+                if (CheckIfQuestActive(questToCheck))
+                {
+                    Debug.Log("Quest accepted. Returning True");
+                    progression = QuestProgression.Default;
+                    return true;
+                }
+                break;
+
+            case QuestProgression.Completed:
+                if (CheckIfQuestCompleted(questToCheck))
+                {
+                    Debug.Log("Quest completed. Returning True");
+                    progression = QuestProgression.Default;
+                    return true;
+                }
+                break;
+
+            case QuestProgression.HandedIn:
+                if (CheckIfQuestHandedIn(questToCheck))
+                {
+                    Debug.Log("Quest handed in. Returning True");
+                    progression = QuestProgression.Default;
+                    return true;
+                }
+                break;
+
+            default:
+                break;
+        }
+
+        Debug.Log("Quest not accepted. Returning false");
+
+        progression = QuestProgression.Default;
+
+        return false;
     }
 }

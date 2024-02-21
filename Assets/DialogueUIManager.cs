@@ -30,6 +30,7 @@ public class DialogueUIManager : MonoBehaviour
     }
 
     public void StartDialogue(CharacterDialogueController activeDialogue) {
+        activeDialogue.dialogue.SelectDialogues();
         dialoguePanel.SetActive(true);
         currentDialogue = activeDialogue.FindStartingDialogue();
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);

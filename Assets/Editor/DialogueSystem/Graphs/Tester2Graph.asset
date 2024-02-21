@@ -17,7 +17,7 @@ MonoBehaviour:
   <nodes>k__BackingField:
   - <ID>k__BackingField: 57a105ca-9c5d-405d-85de-d84828c43336
     <name>k__BackingField: DialogueName
-    <text>k__BackingField: Type here.....
+    <text>k__BackingField: ttt
     <choices>k__BackingField:
     - <text>k__BackingField: Welcome
       <nodeID>k__BackingField: 

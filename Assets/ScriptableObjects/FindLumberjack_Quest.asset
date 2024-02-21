@@ -15,6 +15,6 @@ MonoBehaviour:
   questID: 0
   questName: Lumberjack Quest
   questDescription: Go to the lumberjack
-  questAccepted: 0
+  questAccepted: 1
   questCompleted: 0
   questHandedIn: 0

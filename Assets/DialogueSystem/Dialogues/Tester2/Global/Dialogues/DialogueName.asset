@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: Type here.....
+  <text>k__BackingField: ttt
   <choices>k__BackingField:
   - <text>k__BackingField: Welcome
     <nextDialogue>k__BackingField: {fileID: 0}
