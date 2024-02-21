@@ -22,3 +22,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ed4a0f4e29ccd34981a85723028bcb3, type: 2}
   - {fileID: 11400000, guid: a9a39db1c189cde4e8513f3e8035e244, type: 2}
   - {fileID: 11400000, guid: 7a0ba604f576e5f4eb4f31c679391446, type: 2}
+  <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+    type: 2}
+  <prerequisiteQuestProgressionRequirement>k__BackingField: 1
