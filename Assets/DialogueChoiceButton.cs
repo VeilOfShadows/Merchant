@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
+using System;
 
 public class DialogueChoiceButton : MonoBehaviour
 {
@@ -14,6 +16,9 @@ public class DialogueChoiceButton : MonoBehaviour
     public QuestSO pickupQuest;
     public QuestSO handinQuest;
     public DialogueContainerSO dialogueAfterCompletion;
+    public TextMeshProUGUI textObject;
+    Tween textTween;
+    public float textSpeed;
 
     public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
@@ -29,7 +34,14 @@ public class DialogueChoiceButton : MonoBehaviour
             isEnd = true;
             //GetComponentInChildren<TextMeshProUGUI>().text = "End";            
         }
-        GetComponentInChildren<TextMeshProUGUI>().text = text;
+        SetDialogueText(text);
+        //DOTween.Complete(textTween);
+        //string newText = "";
+        //textTween = DOTween.To(() => newText, x => newText = x, text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
+        //{
+            //SetDialogueText(newText);
+        //}); 
+        //GetComponentInChildren<TextMeshProUGUI>().text = text;
 
         if (pickupQuest != null)
         {
@@ -37,13 +49,13 @@ public class DialogueChoiceButton : MonoBehaviour
             {
                 if (PlayerQuestManager.instance.CheckIfQuestCompleted(pickupQuest))
                 {
-                    gameObject.SetActive(false);
+                    transform.parent.gameObject.SetActive(false);
                     return;
                 }
                 
                 if (PlayerQuestManager.instance.CheckIfQuestHandedIn(pickupQuest))
                 {
-                    gameObject.SetActive(false);
+                    transform.parent.gameObject.SetActive(false);
                     return;
                 }
                 return;
@@ -56,11 +68,16 @@ public class DialogueChoiceButton : MonoBehaviour
             {
                 if (!PlayerQuestManager.instance.CheckIfQuestCompleted(handinQuest))
                 {
-                    gameObject.SetActive(false);
+                    transform.parent.gameObject.SetActive(false);
                 }
                 return;
             }
         }
+    }
+
+    private void SetDialogueText(string newText)
+    {
+        textObject.text = newText;
     }
 
     public void ActivateButton()
@@ -122,5 +139,19 @@ public class DialogueChoiceButton : MonoBehaviour
         {
             dialogueUIManager.NextDialogue(nextDialogue);
         }        
+    }
+
+    public void Hover()
+    {
+        DOTween.Complete(textTween);
+        RectTransform rect = this.GetComponent<RectTransform>();
+        rect.DOAnchorPosX(-30, .3f);
+    }
+
+    public void Leave()
+    {
+        DOTween.Complete(textTween);
+        RectTransform rect = this.GetComponent<RectTransform>();
+        rect.DOAnchorPosX(0, .3f);
     }
 }

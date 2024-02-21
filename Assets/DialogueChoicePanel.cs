@@ -10,12 +10,12 @@ public class DialogueChoicePanel : MonoBehaviour
     {
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].gameObject.SetActive(false);
+            buttons[i].transform.parent.gameObject.SetActive(false);
         }
 
         for (int i = 0; i < amount; i++) 
         {
-            buttons[i].gameObject.SetActive(true);
+            buttons[i].transform.parent.gameObject.SetActive(true);
 
             buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, currentDialogue.choices[i].action, currentDialogue.choices[i].questStartingPoint, currentDialogue.choices[i].questHandinPoint, currentDialogue.choices[i].dialogueAfterCompletion);
         }
