@@ -15,6 +15,7 @@ public class PlayerControls : MonoBehaviour
     public Transform cartWheel_R;
     public Transform cart;
     public GameObject currentCam;
+    public TimeManager timeManager;
 
     NativeSpline native;
     float distance;
@@ -62,7 +63,8 @@ public class PlayerControls : MonoBehaviour
     }
 
     public void Move()
-    {        
+    {
+        timeManager.Advance(Time.deltaTime);
         native = new NativeSpline(currentRoad);
         distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
 

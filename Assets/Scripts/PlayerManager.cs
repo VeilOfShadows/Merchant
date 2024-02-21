@@ -22,6 +22,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject playerUI;
     public GameObject merchantUI;
 
+    public GameObject playerCartFire;
+
     private void Awake()
     {
         if (instance == null)
