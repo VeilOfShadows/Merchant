@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class DialogueUIManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class DialogueUIManager : MonoBehaviour
 
     public GameObject dialoguePanel;
     public DialogueChoicePanel dialogueChoicePanel;
+    Tween textTween;
+    public float textSpeed;
 
     private void Awake()
     {
@@ -34,7 +37,13 @@ public class DialogueUIManager : MonoBehaviour
         dialoguePanel.SetActive(true);
         currentDialogue = activeDialogue.FindStartingDialogue();
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
-        SetDialogueText(currentDialogue.text);
+
+        DOTween.Complete(textTween);
+        string text = "";
+        textTween = DOTween.To(() => text, x=> text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(()=>
+        { 
+            SetDialogueText(text);            
+        });
     }
 
     public void EndDialogue()
@@ -51,6 +60,7 @@ public class DialogueUIManager : MonoBehaviour
 
     public void SetDialogueText(string text)
     {
+        
         dialogueText.text = text;
     }
 }

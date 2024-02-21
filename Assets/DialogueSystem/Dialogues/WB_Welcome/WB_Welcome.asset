@@ -19,8 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2abf4e91f81e9124a8cef91338f68108, type: 2}
   - {fileID: 11400000, guid: 515de0700aa5a414c996110eb823d52c, type: 2}
   - {fileID: 11400000, guid: bb04a73d4e26d0445a2c538d7944e377, type: 2}
-  - {fileID: 11400000, guid: 65f4e61e15acdce4aa201b45255eb94c, type: 2}
   - {fileID: 11400000, guid: a50d2c495259e9440a4f8e46291d835a, type: 2}
   - {fileID: 11400000, guid: 3a7312502acf2904cb3cb2ac969b096c, type: 2}
-  <prerequisiteQuest>k__BackingField: {fileID: 0}
-  <prerequisiteQuestProgressionRequirement>k__BackingField: 0
+  <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+    type: 2}
+  <prerequisiteQuestProgressionRequirement>k__BackingField: 1

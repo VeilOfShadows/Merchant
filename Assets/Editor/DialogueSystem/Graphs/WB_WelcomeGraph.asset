@@ -67,20 +67,6 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1626, y: -323}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 80aa228b-966c-4074-8214-5fac2541e506
-    <name>k__BackingField: DialogueName
-    <text>k__BackingField: Type here.....
-    <choices>k__BackingField:
-    - <text>k__BackingField: Next Dialogue
-      <nodeID>k__BackingField: a2911518-9789-46ee-87ce-b60361af01d0
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: -164, y: -151}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
     <name>k__BackingField: WhereAreWe
     <text>k__BackingField: This is the quaint little village of Willowberry. The
@@ -88,7 +74,7 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Do you have anything to trade?
       <nodeID>k__BackingField: 
-      <action>k__BackingField: 0
+      <action>k__BackingField: 1
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
@@ -117,7 +103,6 @@ MonoBehaviour:
   - Introduction
   - IAmAMerchant
   - LakeviewBridge
-  - DialogueName
   - WhereAreWe
   - Insist
   <oldGroupedNodeNames>k__BackingField:

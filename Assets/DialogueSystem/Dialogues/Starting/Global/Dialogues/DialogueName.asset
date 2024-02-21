@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: Type here.....
+  <text>k__BackingField: first
   <choices>k__BackingField:
-  - <text>k__BackingField: Next Dialogue
-    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 2abf4e91f81e9124a8cef91338f68108,
+  - <text>k__BackingField: next
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 0f56ef4062e921b4bace34ee8e3ac771,
       type: 2}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: end
+    <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}

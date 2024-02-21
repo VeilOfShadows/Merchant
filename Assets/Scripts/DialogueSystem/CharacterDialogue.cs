@@ -21,6 +21,11 @@ public class CharacterDialogue : MonoBehaviour
     public void SelectDialogues() {
         for (int i = 0; i < dialogueContainers.Count; i++)
         {
+            if (dialogueContainers[i].prerequisiteQuestProgressionRequirement == QuestProgression.DEBUGFORCE)
+            {
+                dialogueContainer = dialogueContainers[i];
+                return;
+            }
             //if (dialogueContainers[i].prerequisiteQuest == null)
             //{
             //    dialogueContainer = dialogueContainers[i];

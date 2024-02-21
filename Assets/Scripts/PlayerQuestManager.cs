@@ -7,7 +7,8 @@ public enum QuestProgression {
     NotAccepted,
     Accepted,
     Completed,
-    HandedIn
+    HandedIn,
+    DEBUGFORCE
 }
 
 public class PlayerQuestManager : MonoBehaviour
@@ -163,6 +164,9 @@ public class PlayerQuestManager : MonoBehaviour
                     return true;
                 }
                 break;
+
+            case QuestProgression.DEBUGFORCE:
+                return true;
 
             default:
                 break;
