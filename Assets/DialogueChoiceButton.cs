@@ -19,6 +19,7 @@ public class DialogueChoiceButton : MonoBehaviour
     public TextMeshProUGUI textObject;
     Tween textTween;
     public float textSpeed;
+    public AudioSource audioSource;
 
     public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
@@ -146,6 +147,7 @@ public class DialogueChoiceButton : MonoBehaviour
         DOTween.Complete(textTween);
         RectTransform rect = this.GetComponent<RectTransform>();
         rect.DOAnchorPosX(-30, .3f);
+        audioSource.Play();
     }
 
     public void Leave()
