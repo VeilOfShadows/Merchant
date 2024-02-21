@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UserInterface : MonoBehaviour
 {
     public Canvas canvas;
-
+    Tween growTween;
     public Inventory inventory;
     public GameObject inventoryPrefab;
     public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
@@ -68,6 +69,8 @@ public class UserInterface : MonoBehaviour
     public void OnEnter(GameObject obj)
     {
         MouseData.slotHoveredOver = obj;
+        growTween.Complete();
+        growTween = obj.transform.DOScale(1.2f, .3f);
     }
 
     public virtual void OnClick(GameObject obj)
@@ -86,6 +89,8 @@ public class UserInterface : MonoBehaviour
     public void OnExit(GameObject obj)
     {
         MouseData.slotHoveredOver = null;
+        growTween.Complete();
+        growTween = obj.transform.DOScale(1, .3f);
     }
 
     public void OnEnterInterface(GameObject obj)

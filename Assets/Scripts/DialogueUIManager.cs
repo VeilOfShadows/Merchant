@@ -10,11 +10,14 @@ public class DialogueUIManager : MonoBehaviour
     public CharacterDialogueController dialogueController;
     public DialogueSO currentDialogue;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI npcNameText;
 
     public GameObject dialoguePanel;
     public DialogueChoicePanel dialogueChoicePanel;
     Tween textTween;
     public float textSpeed;
+    public AudioSource textAudioSource;
+    public float minTimeBetweenSounds;
 
     private void Awake()
     {
@@ -38,11 +41,25 @@ public class DialogueUIManager : MonoBehaviour
         currentDialogue = activeDialogue.FindStartingDialogue();
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
 
-        DOTween.Kill(textTween);
+        minTimeBetweenSounds = Random.Range(.08f, .1f);
+        float lastSoundTime = -minTimeBetweenSounds;
+
+        npcNameText.text = activeDialogue.dialogue.dialogueContainer.npcName;
+
+        //DOTween.Kill(textTween);
+        if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
+        {
+            textTween.Kill();
+        }
         string text = "";
-        textTween = DOTween.To(() => text, x=> text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(()=>
-        { 
-            SetDialogueText(text);            
+        textTween = DOTween.To(() => text, x => text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
+        {
+            if (Time.time - lastSoundTime >= minTimeBetweenSounds)
+            {
+                textAudioSource.Play();
+                lastSoundTime = Time.time;
+            }
+            SetDialogueText(text);
         });
     }
 
@@ -56,6 +73,9 @@ public class DialogueUIManager : MonoBehaviour
         currentDialogue = nextDialogue;
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
 
+        minTimeBetweenSounds = Random.Range(.08f, .1f);
+        float lastSoundTime = -minTimeBetweenSounds;
+
         //DOTween.Kill(textTween);
         if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
         {
@@ -64,6 +84,11 @@ public class DialogueUIManager : MonoBehaviour
         string text = "";
         textTween = DOTween.To(() => text, x => text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
         {
+            if (Time.time - lastSoundTime >= minTimeBetweenSounds)
+            {
+                textAudioSource.Play();
+                lastSoundTime = Time.time;
+            }
             SetDialogueText(text);
         });
         //SetDialogueText(currentDialogue.text);
@@ -71,7 +96,6 @@ public class DialogueUIManager : MonoBehaviour
 
     public void SetDialogueText(string text)
     {
-        
         dialogueText.text = text;
     }
 }
