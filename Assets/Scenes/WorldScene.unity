@@ -17976,6 +17976,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c961d9f1dd5774db5a119ee0c7c625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHour: 12
+  currentMinute: 0
+  targetHour: 12
+  targetMinute: 0
+  startHours: 0
+  startMinutes: 0
+  timeToAdd: 50
+  tweenSpeed: 0.4
+  timeSpeed: 20
+  clockMaster: {fileID: 2107496083}
 --- !u!4 &1847574931
 Transform:
   m_ObjectHideFlags: 0
@@ -18612,7 +18622,7 @@ PrefabInstance:
     - target: {fileID: 1610641770167746907, guid: a663f32db7f588b46ac94e587979d908,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1610641770167746907, guid: a663f32db7f588b46ac94e587979d908,
         type: 3}
@@ -18622,7 +18632,7 @@ PrefabInstance:
     - target: {fileID: 1610641770167746907, guid: a663f32db7f588b46ac94e587979d908,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1610641770167746907, guid: a663f32db7f588b46ac94e587979d908,
         type: 3}
@@ -18677,7 +18687,7 @@ PrefabInstance:
     - target: {fileID: 1610641770167746907, guid: a663f32db7f588b46ac94e587979d908,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1610641770167746907, guid: a663f32db7f588b46ac94e587979d908,
         type: 3}
@@ -21241,6 +21251,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70cf0fb2a13a39544b0d278b44373fd6, type: 3}
+--- !u!224 &2107496083 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9017663073921865199, guid: a663f32db7f588b46ac94e587979d908,
+    type: 3}
+  m_PrefabInstance: {fileID: 1889715698}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2113023761
 GameObject:
   m_ObjectHideFlags: 0
