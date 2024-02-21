@@ -15,37 +15,39 @@ MonoBehaviour:
   <fileName>k__BackingField: Lumberjack
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: 2b0af28a-4d54-4376-9e3e-664db1ab3c82
-    <name>k__BackingField: Welcome
-    <text>k__BackingField: Welcome to Lumberjack
-    <choices>k__BackingField:
-    - <text>k__BackingField: Next Dialogue
-      <nodeID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 0
-    <position>k__BackingField: {x: 719, y: -77}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
     <name>k__BackingField: DialogueName
-    <text>k__BackingField: I can supply the wood but it'll cost you
+    <text>k__BackingField: Yeah but it'll cost you. How much wood do you need?
     <choices>k__BackingField:
-    - <text>k__BackingField: How much?
+    - <text>k__BackingField: Enough to repair Lakeview Bridge
       <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
       <action>k__BackingField: 3
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1405, y: -88}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 7b8886c6-0c5d-491d-b0b4-8c0793fd340b
+    <name>k__BackingField: Start
+    <text>k__BackingField: How can I help?
+    <choices>k__BackingField:
+    - <text>k__BackingField: I was told you could provide me with wood?
+      <nodeID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 741, y: -88}
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
     <name>k__BackingField: Quest
-    <text>k__BackingField: Depends on how much wood you need. My brother in Lakeview
-      is a builder, he should be able to sort the repairs. Go find him
+    <text>k__BackingField: Hmm ok. My brother in Lakeview is a builder. if you find
+      him, he might be able to help organise a lumber order for repairs.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 
@@ -53,14 +55,15 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
         type: 2}
       <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 2150, y: -157}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
-  - Welcome
   - DialogueName
+  - Start
   - Quest
   <oldGroupedNodeNames>k__BackingField:
     list: []

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Quest
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: Quest
-  <text>k__BackingField: Depends on how much wood you need. My brother in Lakeview
-    is a builder, he should be able to sort the repairs. Go find him
+  <text>k__BackingField: Hmm ok. My brother in Lakeview is a builder. if you find
+    him, he might be able to help organise a lumber order for repairs.
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}
@@ -22,6 +22,7 @@ MonoBehaviour:
     <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
       type: 2}
     <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0

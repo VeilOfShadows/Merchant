@@ -14,6 +14,7 @@ public class RoadTrigger : MonoBehaviour
         if (other.gameObject.layer == 8)
         {
             playerControls.SetRoad(roadController.GetComponent<SplineContainer>(), cam);
+            RoadNameDisplay.instance.Display(roadController.roadName);
         }
     }
 }

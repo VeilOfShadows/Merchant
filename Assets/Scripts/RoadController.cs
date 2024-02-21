@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoadController : MonoBehaviour
 {
+    public string roadName;
     public List<GameObject> triggers = new List<GameObject>();
 
     public void ActivateTriggers()

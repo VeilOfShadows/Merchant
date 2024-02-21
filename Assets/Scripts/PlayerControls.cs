@@ -16,6 +16,7 @@ public class PlayerControls : MonoBehaviour
     public Transform cart;
     public GameObject currentCam;
     public TimeManager timeManager;
+    public bool canControl;
 
     NativeSpline native;
     float distance;
@@ -45,11 +46,14 @@ public class PlayerControls : MonoBehaviour
     }
     private void Update()
     {
-        //rb.velocity = rb.velocity.magnitude * transform.forward;
-        moveHorizontal = Input.GetAxis("Horizontal");
-        if (moveHorizontal != 0)
-        {
-            Move();
+        if (canControl)
+        { 
+            //rb.velocity = rb.velocity.magnitude * transform.forward;
+            moveHorizontal = Input.GetAxis("Horizontal");
+            if (moveHorizontal != 0)
+            {
+                Move();
+            }
         }
         
     //    if (moveHorizontal > 0)
@@ -81,6 +85,32 @@ public class PlayerControls : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         transform.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
+        //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
+        //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
+        cartWheel_L.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
+        cartWheel_R.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
+        //rb.AddForce(dir);
+    }
+
+    public void TutorialMove()
+    {
+        //timeManager.Advance(Time.deltaTime);
+        native = new NativeSpline(currentRoad);
+        distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
+
+        transform.position = nearest;
+
+        //cart.transform.position = transform.position - (Vector3.forward * 2);
+
+        forward = Vector3.Normalize(currentRoad.EvaluateTangent(t));
+        up = currentRoad.EvaluateUpVector(t);
+
+        //var remappedForward = new Vector3(0, 0, 1);
+        //var remappedUp = new Vector3(0, 1, 0);
+        axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
+
+        transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
+        transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
         //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
         cartWheel_L.Rotate(Input.GetAxis("Horizontal") * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
