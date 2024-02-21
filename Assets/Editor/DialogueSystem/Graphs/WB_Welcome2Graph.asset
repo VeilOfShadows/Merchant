@@ -16,11 +16,11 @@ MonoBehaviour:
   <groups>k__BackingField: []
   <nodes>k__BackingField:
   - <ID>k__BackingField: 17e72cdb-3401-4878-8288-33dc82013e8f
-    <name>k__BackingField: DialogueName
+    <name>k__BackingField: start
     <text>k__BackingField: Ahh it's you again! How can I help?
     <choices>k__BackingField:
     - <text>k__BackingField: Where was the lumberjack again?
-      <nodeID>k__BackingField: 
+      <nodeID>k__BackingField: 1ccdc5f0-1821-45b2-a9c7-d1520d6fa0f5
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
@@ -35,8 +35,29 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1497, y: -286}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 1ccdc5f0-1821-45b2-a9c7-d1520d6fa0f5
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: He is in Thistlewood forest to the east.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Do you have anything to trade?
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 1
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2277, y: -286}
+    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
+  - start
   - DialogueName
   <oldGroupedNodeNames>k__BackingField:
     list: []

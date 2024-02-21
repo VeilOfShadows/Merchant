@@ -38,7 +38,7 @@ public class DialogueUIManager : MonoBehaviour
         currentDialogue = activeDialogue.FindStartingDialogue();
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
 
-        DOTween.Complete(textTween);
+        DOTween.Kill(textTween);
         string text = "";
         textTween = DOTween.To(() => text, x=> text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(()=>
         { 
@@ -55,7 +55,18 @@ public class DialogueUIManager : MonoBehaviour
     {
         currentDialogue = nextDialogue;
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
-        SetDialogueText(currentDialogue.text);
+
+        //DOTween.Kill(textTween);
+        if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
+        {
+            textTween.Kill();
+        }
+        string text = "";
+        textTween = DOTween.To(() => text, x => text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
+        {
+            SetDialogueText(text);
+        });
+        //SetDialogueText(currentDialogue.text);
     }
 
     public void SetDialogueText(string text)

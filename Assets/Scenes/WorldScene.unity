@@ -3101,7 +3101,7 @@ Transform:
   m_GameObject: {fileID: 269130360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -489.48, y: 0, z: -399.96}
+  m_LocalPosition: {x: -406.38, y: 0, z: -341.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3121,7 +3121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a049974766ee7f24bafec78fd0e3bb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadSpline: {fileID: 462265615}
+  roadSpline: {fileID: 1371338777}
   currentRoad:
     m_EditModeType: 1
     m_Knots: []
@@ -3135,14 +3135,15 @@ MonoBehaviour:
       m_Data: []
     m_ObjectData:
       m_Data: []
+  roadName: 
   speed: 3
   wheelSpeed: 1.2
   cartWheel_L: {fileID: 2125795599}
   cartWheel_R: {fileID: 184471130}
   cart: {fileID: 438320557}
-  currentCam: {fileID: 293647477}
+  currentCam: {fileID: 1385356068}
   timeManager: {fileID: 1847574930}
-  canControl: 0
+  canControl: 1
 --- !u!114 &269130365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4058,8 +4059,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07324974, y: 0.020764612, z: -0.0015254319, w: 0.9970963}
-  m_LocalPosition: {x: -491.65314, y: 4, z: -411.99585}
+  m_LocalRotation: {x: 0.04704971, y: -0.801343, z: 0.06358513, w: 0.5929525}
+  m_LocalPosition: {x: -396.00162, y: 4.0000014, z: -336.41483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5433,7 +5434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &442814226
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7408,7 +7409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62.73, y: 6.61}
+  m_AnchoredPosition: {x: -62.73, y: 26.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &592289584 stripped
@@ -9012,6 +9013,7 @@ MonoBehaviour:
       m_Data: []
     m_ObjectData:
       m_Data: []
+  roadName: 
   speed: 5
   wheelSpeed: 0
   cartWheel_L: {fileID: 0}
@@ -17126,9 +17128,10 @@ Animation:
   m_GameObject: {fileID: 1484725924}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 25c122c40684df443b0a350de15627d6, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: 25c122c40684df443b0a350de15627d6, type: 2}
+  - {fileID: 7400000, guid: a0e9e74cdddbf7f46b849b77f847d7e0, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -17183,6 +17186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda47eaa36d3d824aa4ec65201af97f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerControls: {fileID: 269130364}
   anim: {fileID: 1484725927}
   textObject: {fileID: 442814227}
   roadName: 
@@ -18162,7 +18166,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1292816309}
   dialoguePanel: {fileID: 1549359724}
   dialogueChoicePanel: {fileID: 828593116}
-  textSpeed: 1.8
+  textSpeed: 2
 --- !u!114 &1549220753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19744,8 +19748,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712468052}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07324974, y: 0.020764612, z: -0.0015254319, w: 0.9970963}
-  m_LocalPosition: {x: -403.6323, y: 3.97046, z: -199.01399}
+  m_LocalRotation: {x: 0.04704971, y: -0.801343, z: 0.06358513, w: 0.5929525}
+  m_LocalPosition: {x: -307.98077, y: 3.9704614, z: -123.43297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20772,7 +20776,7 @@ Transform:
   m_GameObject: {fileID: 1784995023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -491.09003, y: 0.5, z: -398.48}
+  m_LocalPosition: {x: -407.99002, y: 0.5, z: -340.08002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21284,7 +21288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 127669042}
-  m_PathPosition: 0
+  m_PathPosition: 196.56874
   m_PositionUnits: 1
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2
@@ -23085,6 +23089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5287833011840561857, guid: b8c10d372c761044191388aa67b8287a,
         type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287833011840561857, guid: b8c10d372c761044191388aa67b8287a,
+        type: 3}
       propertyPath: VelocityModule.x.minScalar
       value: -3
       objectReference: {fileID: 0}
@@ -23102,6 +23111,16 @@ PrefabInstance:
         type: 3}
       propertyPath: VelocityModule.z.minMaxState
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287833011840561857, guid: b8c10d372c761044191388aa67b8287a,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287833011840561857, guid: b8c10d372c761044191388aa67b8287a,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5287833011840561857, guid: b8c10d372c761044191388aa67b8287a,
         type: 3}
@@ -23744,7 +23763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1988443022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26747,6 +26766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 841502992721517887, guid: 29d08910dc479e64aa473a74b2e319d1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 841502992721517887, guid: 29d08910dc479e64aa473a74b2e319d1,
         type: 3}

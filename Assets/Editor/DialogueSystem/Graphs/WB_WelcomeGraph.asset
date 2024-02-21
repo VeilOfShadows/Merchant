@@ -85,8 +85,8 @@ MonoBehaviour:
   - <ID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
     <name>k__BackingField: Insist
     <text>k__BackingField: That would be an incredible favour. Take the road east
-      and then north through the forest. There is a lumberjack there who could supply
-      you with wood.
+      and then north through Thistlewood forest. There is a lumberjack there who
+      could supply you with wood.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 

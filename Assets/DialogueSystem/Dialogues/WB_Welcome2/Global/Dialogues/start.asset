@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: DialogueName
+  m_Name: start
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: He is in Thistlewood forest to the east.
+  <dialogueName>k__BackingField: start
+  <text>k__BackingField: Ahh it's you again! How can I help?
   <choices>k__BackingField:
-  - <text>k__BackingField: Thank you
-    <nextDialogue>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: Where was the lumberjack again?
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: d7946c6d1beccf34cba441d4be5d9c34,
+      type: 2}
     <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
@@ -30,4 +31,4 @@ MonoBehaviour:
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1

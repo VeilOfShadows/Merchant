@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour
 {
     public SplineContainer roadSpline;
     public Spline currentRoad;
+    public string roadName;
     //public Rigidbody rb;
     public float speed;
     public float wheelSpeed;
@@ -143,7 +144,9 @@ public class PlayerControls : MonoBehaviour
         //rb.AddForce(dir);
     }
 
-    public void SetRoad(SplineContainer container, GameObject cam) {
+    public void SetRoad(SplineContainer container, GameObject cam, string _roadName) {
+        
+        roadName = _roadName;
         cam.SetActive(true);
         currentCam.SetActive(false);
         currentCam = cam;
@@ -151,5 +154,6 @@ public class PlayerControls : MonoBehaviour
         roadSpline = container;
         currentRoad = roadSpline.Splines[0];
         roadSpline.GetComponent<RoadController>().DeactivateTriggers();
+        RoadNameDisplay.instance.Display(roadName);
     }
 }
