@@ -46,6 +46,30 @@
 	border-color: #27292C;
 }
 
+.ds-node__foldouttext_textfield > .unity-text-field__input
+{
+	background-color: #1D1D1E;
+	border-color: #27292C;
+	border-radius: 4px;
+	max-width: 240px;
+	min-width: 160px;
+	padding: 8px;
+	flex-wrap: wrap;
+	white-space: normal;
+}
+
+.ds-node__foldouttext_textfield__hidden > .unity-text-field__input
+{
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.ds-node__foldouttext_textfield__hidden > .unity-text-field__input:focus
+{
+	background-color: #1D1D1E;
+	border-color: #27292C;
+}
+
 .ds-node__filename-textfield > .unity-text-field__input
 {
 	max-width: 1000px;

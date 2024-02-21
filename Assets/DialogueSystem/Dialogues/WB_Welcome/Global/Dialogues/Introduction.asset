@@ -15,7 +15,7 @@ MonoBehaviour:
   <dialogueName>k__BackingField: Introduction
   <text>k__BackingField: Welcome stranger. What brings you to these parts?
   <choices>k__BackingField:
-  - <text>k__BackingField: I am a merchant, in search of trade opportunities.
+  - <text>k__BackingField: I am a merchant, in search of trade
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 515de0700aa5a414c996110eb823d52c,
       type: 2}
     <action>k__BackingField: 0

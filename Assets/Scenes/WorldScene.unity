@@ -18579,7 +18579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightingManager: {fileID: 402951285}
-  time: 0
+  time: 12
   timeAdvancementSpeed: 6
   isNight: 0
   timeSpeed: 20

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Insist
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: Insist
-  <text>k__BackingField: Thanks, take the road east and then north through the forest
-    to find the lumberjack.
+  <text>k__BackingField: That would be an incredible favour. Take the road east and
+    then north through the forest. There is a lumberjack there who could supply you
+    with wood.
   <choices>k__BackingField:
-  - <text>k__BackingField: Please, I insist
+  - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 2
     <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,

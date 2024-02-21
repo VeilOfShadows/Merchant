@@ -19,7 +19,7 @@ MonoBehaviour:
     <name>k__BackingField: Introduction
     <text>k__BackingField: Welcome stranger. What brings you to these parts?
     <choices>k__BackingField:
-    - <text>k__BackingField: I am a merchant, in search of trade opportunities.
+    - <text>k__BackingField: I am a merchant, in search of trade
       <nodeID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
@@ -35,7 +35,7 @@ MonoBehaviour:
       times. I would offer to trade but our supplies have depleted since the Lakeview
       bridge collapsed.
     <choices>k__BackingField:
-    - <text>k__BackingField: What is the Lakeview bridge?
+    - <text>k__BackingField: The Lakeview bridge?
       <nodeID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
       a steady supply of grain from them until goblins destroyed the shortest route
       to us.
     <choices>k__BackingField:
-    - <text>k__BackingField: I could maybe help with the bridge?
+    - <text>k__BackingField: I could help repair the bridge
       <nodeID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
@@ -69,8 +69,8 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
     <name>k__BackingField: WhereAreWe
-    <text>k__BackingField: This is the quaint little village of Willowberry. The
-      lands are fertile here so we are mainly farmers and shepherds.
+    <text>k__BackingField: This is the quaint little village of Willowberry. We don't
+      have much but I might have some grain to spare.
     <choices>k__BackingField:
     - <text>k__BackingField: Do you have anything to trade?
       <nodeID>k__BackingField: 
@@ -84,10 +84,11 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
     <name>k__BackingField: Insist
-    <text>k__BackingField: Thanks, take the road east and then north through the
-      forest to find the lumberjack.
+    <text>k__BackingField: That would be an incredible favour. Take the road east
+      and then north through the forest. There is a lumberjack there who could supply
+      you with wood.
     <choices>k__BackingField:
-    - <text>k__BackingField: Please, I insist
+    - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 
       <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,

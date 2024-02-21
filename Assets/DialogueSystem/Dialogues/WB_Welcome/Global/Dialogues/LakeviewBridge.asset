@@ -17,7 +17,7 @@ MonoBehaviour:
     a steady supply of grain from them until goblins destroyed the shortest route
     to us.
   <choices>k__BackingField:
-  - <text>k__BackingField: I could maybe help with the bridge?
+  - <text>k__BackingField: I could help repair the bridge
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 3a7312502acf2904cb3cb2ac969b096c,
       type: 2}
     <action>k__BackingField: 0

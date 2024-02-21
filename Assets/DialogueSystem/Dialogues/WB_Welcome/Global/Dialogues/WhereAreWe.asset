@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WhereAreWe
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: WhereAreWe
-  <text>k__BackingField: This is the quaint little village of Willowberry. The lands
-    are fertile here so we are mainly farmers and shepherds.
+  <text>k__BackingField: This is the quaint little village of Willowberry. We don't
+    have much but I might have some grain to spare.
   <choices>k__BackingField:
   - <text>k__BackingField: Do you have anything to trade?
     <nextDialogue>k__BackingField: {fileID: 0}

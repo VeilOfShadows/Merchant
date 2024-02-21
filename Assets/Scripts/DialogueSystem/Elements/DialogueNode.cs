@@ -184,7 +184,9 @@ public class DialogueNode : Node
             dialogueText = callback.newValue;
         });
 
-        textTextField.AddToClassList("ds-node__textfield");
+        textTextField.multiline = true;
+        //textTextField.AddToClassList("ds-node__textfield");
+        textTextField.AddToClassList("ds-node__foldouttext_textfield");
         textTextField.AddToClassList("ds-node__quote-textfield");
 
         textFoldout.Add(textTextField);
