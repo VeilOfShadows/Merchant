@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
   m_Name: WB_Welcome
   m_EditorClassIdentifier: 
+  <npcName>k__BackingField: Edmund
   <fileName>k__BackingField: WB_Welcome
   <dialogueGroups>k__BackingField:
     list: []
