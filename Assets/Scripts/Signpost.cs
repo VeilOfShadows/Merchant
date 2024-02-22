@@ -12,10 +12,11 @@ public class Signpost : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canvas.SetActive(true);
-            cam.SetActive(true);
+            //cam.SetActive(true);
             for (int i = 0; i < textFields.Count; i++)
             {
                 textFields[i].ScaleUp();
+                textFields[i].canvas = canvas;
             }
         }
     }
@@ -24,12 +25,12 @@ public class Signpost : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            canvas.SetActive(false);
-            cam.SetActive(false);
-            //for (int i = 0; i < textFields.Count; i++)
-            //{
-            //    textFields[i].ScaleUp();
-            //}
+            //canvas.SetActive(false);
+            //cam.SetActive(false);
+            for (int i = 0; i < textFields.Count; i++)
+            {
+                textFields[i].ScaleDown();
+            }
         }
     }
 }

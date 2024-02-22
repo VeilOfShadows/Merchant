@@ -6,9 +6,14 @@ public class TutorialManager : MonoBehaviour
 {
     public PlayerControls playerControls;
     public bool isInIntro = true;
+
+    [Header("Trigger 1")]
     public GameObject introRoad;
     public GameObject controlsPanel;
     public GameObject trigger1;
+
+    [Header("Trigger 2")]
+    public GameObject trigger2;
 
     private void Update()
     {
@@ -29,5 +34,8 @@ public class TutorialManager : MonoBehaviour
         introRoad.SetActive(false);
         controlsPanel.SetActive(true);
         playerControls.canControl = true;
+
+        trigger2.SetActive(true);
+        
     }
 }

@@ -92,7 +92,6 @@ public class RoadNameDisplay : MonoBehaviour
 
     public void SetText(string newText)
     {
-        Debug.Log(newText);
         textObject.text = newText;
     }
 }

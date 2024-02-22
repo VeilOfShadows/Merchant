@@ -67,21 +67,6 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1626, y: -323}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
-    <name>k__BackingField: WhereAreWe
-    <text>k__BackingField: This is the quaint little village of Willowberry. We don't
-      have much but I might have some grain to spare.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Do you have anything to trade?
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 1
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1617, y: -35}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
     <name>k__BackingField: Insist
     <text>k__BackingField: That would be an incredible favour. Take the road east
@@ -99,12 +84,27 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 2315, y: -449}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
+    <name>k__BackingField: WhereAreWe
+    <text>k__BackingField: This is the quaint little village of Willowberry. I would
+      offer to trade but supplies are low, even for jsut the locals.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Tell me about the Lakeview Bridge
+      <nodeID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1626, y: -7}
+    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - Introduction
   - IAmAMerchant
   - LakeviewBridge
-  - WhereAreWe
   - Insist
+  - WhereAreWe
   <oldGroupedNodeNames>k__BackingField:
     list: []
