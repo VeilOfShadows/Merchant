@@ -12,10 +12,10 @@ public class TimeManager : MonoBehaviour
     [Range(0, 24)]
     public float time;
     public float timeAdvancementSpeed;
+    public float speedUpSpeed;
     public bool isNight;
-    public Animation animation;
-    float storedAnimationTime;
-    public bool advancing;
+    public RectTransform clockRect;
+    public Vector2 clockXAnchors;
 
     //public int currentHour = 8;
     //public int currentMinute = 00;
@@ -26,9 +26,8 @@ public class TimeManager : MonoBehaviour
     //public int timeToAdd;
     //public float tweenSpeed;
 
-    public float timeSpeed = 60f;
     //public TextMeshProUGUI clockDisplay;
-    public RectTransform clockMaster;
+    //public RectTransform clockMaster;
 
     private void Awake()
     {
@@ -40,32 +39,15 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(InitialSetup());
-        //Advance(0);
-        //animation.Stop();
-        //animation.Sample();//AdvanceTime(0);
+        Advance(0);
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            PauseAnim();
-        }
         if (Input.GetKey(KeyCode.Space))
         {
-            //advancing = true;
-            Advance(Time.deltaTime * timeAdvancementSpeed);
-            //AdvanceTime(timeToAdd);
+            Advance(Time.deltaTime * speedUpSpeed);
         }
-    }
-
-    public IEnumerator InitialSetup() {
-        Advance(0);
-        
-        yield return null;
-        animation.Stop();
-        animation.Sample();
     }
 
     //public void AdvanceTime(int minutes)
@@ -135,21 +117,6 @@ public class TimeManager : MonoBehaviour
     //    clockMaster.DOLocalRotate(new Vector3(0, 0, angle3), 1f);
     //    //clockMaster..localEulerAngles = new Vector3(0,0,angle3);
     //}
-
-
-    public void PauseAnim() {        
-        time %= 24;
-        foreach (AnimationState state in animation)
-        {
-            state.time = (time / 24) * state.length;
-        }
-        storedAnimationTime = animation["Sky"].time;
-        animation["Sky"].time = storedAnimationTime;
-
-        animation.Play();
-        animation.Stop();
-        animation.Sample();
-    }
     public void Advance(float amount)
     {
         amount /= timeAdvancementSpeed;
@@ -172,19 +139,11 @@ public class TimeManager : MonoBehaviour
                 //PlayerManager.instance.playerCartFire.SetActive(false);
             }
         }
-        foreach (AnimationState state in animation)
-        {
-            state.time = (time / 24) * state.length;
-        }
-        storedAnimationTime = animation["Sky"].time;
-        animation["Sky"].time = storedAnimationTime;
-        
-        animation.Play();
-        
-        //animation.Play(animation.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, (time/24));
-        //animation.speed = 1 / (time / 24);
+
+        float xpos = Mathf.Lerp(clockXAnchors.x, clockXAnchors.y, time/24);
+        clockRect.anchoredPosition = new Vector2(xpos, 0);
+
         //clockMaster.DOLocalRotate(new Vector3(0, 0, (time / 24) * 360f), 1f);
         lightingManager.UpdateLighting(time/24f);
-        //SetTime
     }
 }

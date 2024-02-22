@@ -165,6 +165,6 @@ public class PlayerControls : MonoBehaviour
         roadSpline = container;
         currentRoad = roadSpline.Splines[0];
         roadSpline.GetComponent<RoadController>().DeactivateTriggers();
-        RoadNameDisplay.instance.Display(roadName);
+        //RoadNameDisplay.instance.Display(roadName);
     }
 }
