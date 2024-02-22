@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using UnityEditor;
 
 public class TimeManager : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class TimeManager : MonoBehaviour
     public float time;
     public float timeAdvancementSpeed;
     public bool isNight;
-
+    public Animation animation;
+    float storedAnimationTime;
+    public bool advancing;
 
     //public int currentHour = 8;
     //public int currentMinute = 00;
@@ -37,17 +40,32 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        Advance(0);
-        //AdvanceTime(0);
+        StartCoroutine(InitialSetup());
+        //Advance(0);
+        //animation.Stop();
+        //animation.Sample();//AdvanceTime(0);
     }
 
     private void Update()
     {
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            PauseAnim();
+        }
         if (Input.GetKey(KeyCode.Space))
         {
-            Advance(Time.deltaTime);
+            //advancing = true;
+            Advance(Time.deltaTime * timeAdvancementSpeed);
             //AdvanceTime(timeToAdd);
         }
+    }
+
+    public IEnumerator InitialSetup() {
+        Advance(0);
+        
+        yield return null;
+        animation.Stop();
+        animation.Sample();
     }
 
     //public void AdvanceTime(int minutes)
@@ -118,6 +136,20 @@ public class TimeManager : MonoBehaviour
     //    //clockMaster..localEulerAngles = new Vector3(0,0,angle3);
     //}
 
+
+    public void PauseAnim() {        
+        time %= 24;
+        foreach (AnimationState state in animation)
+        {
+            state.time = (time / 24) * state.length;
+        }
+        storedAnimationTime = animation["Sky"].time;
+        animation["Sky"].time = storedAnimationTime;
+
+        animation.Play();
+        animation.Stop();
+        animation.Sample();
+    }
     public void Advance(float amount)
     {
         amount /= timeAdvancementSpeed;
@@ -126,22 +158,32 @@ public class TimeManager : MonoBehaviour
 
         if (!isNight)
         {
-            if (time < 4 || time > 20)
+            if (time < 5 || time > 19)
             {
                 isNight = true;
-                PlayerManager.instance.playerCartFire.SetActive(true);
+                //PlayerManager.instance.playerCartFire.SetActive(true);
             }
         }
         else
         {
-            if (time > 4 && time < 20)
+            if (time > 5 && time < 19)
             {
                 isNight = false;
-                PlayerManager.instance.playerCartFire.SetActive(false);
+                //PlayerManager.instance.playerCartFire.SetActive(false);
             }
         }
-
-        clockMaster.DOLocalRotate(new Vector3(0, 0, (time / 24) * 360f), 1f);
+        foreach (AnimationState state in animation)
+        {
+            state.time = (time / 24) * state.length;
+        }
+        storedAnimationTime = animation["Sky"].time;
+        animation["Sky"].time = storedAnimationTime;
+        
+        animation.Play();
+        
+        //animation.Play(animation.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, (time/24));
+        //animation.speed = 1 / (time / 24);
+        //clockMaster.DOLocalRotate(new Vector3(0, 0, (time / 24) * 360f), 1f);
         lightingManager.UpdateLighting(time/24f);
         //SetTime
     }

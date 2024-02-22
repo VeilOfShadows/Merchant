@@ -9,4 +9,5 @@ public class LightingPreset : ScriptableObject
     public Gradient directionalColour;
     public Gradient directionalMoonColour;
     public Gradient fogColour;
+    public Gradient cloudColour;
 }

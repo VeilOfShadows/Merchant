@@ -9,6 +9,7 @@ public class LightingManager : MonoBehaviour
     public Light sun;
     public Light moon;
     public LightingPreset preset;
+    public Material cloudMaterial;
 
     public void UpdateLighting(float timePercent)
     { 
@@ -25,6 +26,12 @@ public class LightingManager : MonoBehaviour
         {
             moon.color = preset.directionalMoonColour.Evaluate(timePercent);
             moon.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) + 90f, 170f, 0));
+        }
+
+        if(cloudMaterial != null)
+        {
+            cloudMaterial.color = preset.cloudColour.Evaluate(timePercent);
+            cloudMaterial.SetColor("_EmissionColor", preset.cloudColour.Evaluate(timePercent));
         }
     }
 }

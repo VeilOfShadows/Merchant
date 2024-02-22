@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientColour:
     serializedVersion: 2
-    key0: {r: 0.26326096, g: 0.35983503, b: 0.6415094, a: 1}
-    key1: {r: 1, g: 0.8774283, b: 0.6084906, a: 1}
-    key2: {r: 1, g: 1, b: 1, a: 0}
-    key3: {r: 1, g: 0.7649604, b: 0.60784316, a: 0}
-    key4: {r: 0.26274514, g: 0.36078432, b: 0.6431373, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.2627451, g: 0.36078432, b: 0.6431373, a: 1}
+    key1: {r: 0.26326096, g: 0.35983503, b: 0.6415094, a: 1}
+    key2: {r: 0.9339623, g: 0.71333855, b: 0.2687344, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0.93333334, g: 0.3834092, b: 0.2705882, a: 0}
+    key5: {r: 0.2627451, g: 0.36078432, b: 0.6431373, a: 0}
+    key6: {r: 0.2627451, g: 0.36078432, b: 0.6431373, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 3277
+    ctime0: 0
     ctime1: 13107
-    ctime2: 32768
-    ctime3: 52428
-    ctime4: 62258
-    ctime5: 0
-    ctime6: 0
+    ctime2: 19661
+    ctime3: 32768
+    ctime4: 45875
+    ctime5: 52428
+    ctime6: 65535
     ctime7: 0
     atime0: 0
     atime1: 65535
@@ -40,7 +40,7 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 5
+    m_NumColorKeys: 7
     m_NumAlphaKeys: 2
   directionalColour:
     serializedVersion: 2
@@ -119,6 +119,36 @@ MonoBehaviour:
     ctime4: 45875
     ctime5: 55705
     ctime6: 65535
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
+  cloudColour:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.49803922, b: 0.09803922, a: 1}
+    key2: {r: 1, g: 1, b: 1, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 1, g: 0.49803922, b: 0.09803922, a: 0}
+    key5: {r: 0.4392157, g: 0, b: 0.04398771, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 13107
+    ctime1: 18697
+    ctime2: 26214
+    ctime3: 32575
+    ctime4: 36044
+    ctime5: 48573
+    ctime6: 52814
     ctime7: 0
     atime0: 0
     atime1: 65535
