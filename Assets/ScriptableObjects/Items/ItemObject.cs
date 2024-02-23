@@ -31,6 +31,7 @@ public class Item {
     public Sprite uiDisplay;
     public bool stackable;
     public bool tradeable;
+    public float nutritionalValue;
 
     public Item() 
     {
@@ -46,5 +47,6 @@ public class Item {
         uiDisplay = item.data.uiDisplay;
         stackable = item.data.stackable;
         tradeable = item.data.tradeable;
+        nutritionalValue = item.data.nutritionalValue;
     }
 }

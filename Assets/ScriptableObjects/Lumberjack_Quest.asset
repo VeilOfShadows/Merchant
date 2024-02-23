@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Lumberjack_Quest
   m_EditorClassIdentifier: 
   questID: 0
-  questName: Lumberjack
+  questName: Find Oswald in Lakeview
   questDescription: Find the Lakeview builder, he will arrange  the bridge repairs.
   questAccepted: 0
-  readyForHandIn: 0
-  questComplete: 0
+  questCompleted: 0
+  questHandedIn: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FindLumberjack_Quest
   m_EditorClassIdentifier: 
   questID: 0
-  questName: Lumberjack Quest
+  questName: Find the Lumberjack
   questDescription: Go to the lumberjack
-  questAccepted: 1
+  questAccepted: 0
   questCompleted: 0
   questHandedIn: 0
