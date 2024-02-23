@@ -38,23 +38,24 @@ public class PlayerQuestManager : MonoBehaviour
         }
     }
 
-    public void AcceptQuest(QuestSO questToAccept) {
-        if (questToAccept.questAccepted)
+    public void AcceptQuest(QuestSO quest) {
+        if (quest.questAccepted)
         {
             Debug.Log("Quest already Accepted");
             return;
         }
 
-        if (questToAccept.questHandedIn)
+        if (quest.questHandedIn)
         {
             Debug.Log("Quest already Completed");
             return;
         }
 
-        if (!activeQuestList.Contains(questToAccept))
+        if (!activeQuestList.Contains(quest))
         {
-            activeQuestList.Add(questToAccept);
-            questToAccept.questAccepted = true;
+            activeQuestList.Add(quest);
+            quest.questAccepted = true;
+            NotificationManager.instance.DisplayNotification("- Quest accepted: " + quest.questName);
         }
     }    
 
@@ -63,6 +64,7 @@ public class PlayerQuestManager : MonoBehaviour
         completedQuestList.Add(quest);
         activeQuestList.Remove(quest);
         quest.questCompleted = true;
+        NotificationManager.instance.DisplayNotification("- Quest objective completed: " + quest.questName);
     }
 
     public void HandInQuest(QuestSO quest)
@@ -71,6 +73,7 @@ public class PlayerQuestManager : MonoBehaviour
         handinQuestList.Add(quest);
         completedQuestList.Remove(quest);
         quest.questHandedIn = true;
+        NotificationManager.instance.DisplayNotification("- Quest handed in: " + quest.questName);
     }
 
     public bool CheckIfQuestActive(QuestSO questToCheck)

@@ -15,25 +15,11 @@ MonoBehaviour:
   <fileName>k__BackingField: WB_Welcome
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: a2911518-9789-46ee-87ce-b60361af01d0
-    <name>k__BackingField: Introduction
-    <text>k__BackingField: Welcome stranger. What brings you to these parts?
-    <choices>k__BackingField:
-    - <text>k__BackingField: I am a merchant, in search of trade
-      <nodeID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 249, y: -191}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
     <name>k__BackingField: IAmAMerchant
     <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
-      times. I would offer to trade but our supplies have depleted since the Lakeview
-      bridge collapsed.
+      times. I would offer to trade but our supplies have depleted since the *Lakeview
+      *bridge collapsed.
     <choices>k__BackingField:
     - <text>k__BackingField: The Lakeview bridge?
       <nodeID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
@@ -51,26 +37,10 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 936, y: -198}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
-    <name>k__BackingField: LakeviewBridge
-    <text>k__BackingField: Lakeview is the larger town to the east. We used to get
-      a steady supply of grain from them until goblins destroyed the shortest route
-      to us.
-    <choices>k__BackingField:
-    - <text>k__BackingField: I could help repair the bridge
-      <nodeID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1626, y: -323}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
     <name>k__BackingField: Insist
     <text>k__BackingField: That would be an incredible favour. Take the road east
-      and then north through Thistlewood forest. There is a lumberjack there who
+      and then north through *Thistlewood *forest. There is a *lumberjack there who
       could supply you with wood.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
@@ -86,8 +56,8 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
     <name>k__BackingField: WhereAreWe
-    <text>k__BackingField: This is the quaint little village of Willowberry. I would
-      offer to trade but supplies are low, even for jsut the locals.
+    <text>k__BackingField: This is the quaint little village of *Willowberry. I would
+      offer to trade but supplies are low, even for just the locals.
     <choices>k__BackingField:
     - <text>k__BackingField: Tell me about the Lakeview Bridge
       <nodeID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
@@ -99,12 +69,42 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1626, y: -7}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: a2911518-9789-46ee-87ce-b60361af01d0
+    <name>k__BackingField: Introduction
+    <text>k__BackingField: Welcome stranger. What brings you to these parts?
+    <choices>k__BackingField:
+    - <text>k__BackingField: I am a merchant, in search of trade
+      <nodeID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 249, y: -191}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
+    <name>k__BackingField: LakeviewBridge
+    <text>k__BackingField: '*Lakeview is the larger town to the *east. We used to
+      get a steady supply of grain from them until goblins destroyed the shortest
+      route to us.'
+    <choices>k__BackingField:
+    - <text>k__BackingField: I could help repair the bridge
+      <nodeID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1626, y: -323}
+    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
-  - Introduction
   - IAmAMerchant
-  - LakeviewBridge
   - Insist
   - WhereAreWe
+  - Introduction
+  - LakeviewBridge
   <oldGroupedNodeNames>k__BackingField:
     list: []

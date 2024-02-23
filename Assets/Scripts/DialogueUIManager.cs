@@ -96,6 +96,40 @@ public class DialogueUIManager : MonoBehaviour
 
     public void SetDialogueText(string text)
     {
-        dialogueText.text = text;
-    }
+        string[] words = text.Split(' ');
+        string formattedText = "";
+
+        foreach (string word in words)
+        {
+            string cleanWord = word.Substring(1);
+            string punctuation = "";
+            string color = "";
+
+            if (word.StartsWith("*"))
+            {
+                color = "red";
+            }
+            else if (word.StartsWith("<"))
+            {
+                color = "blue";
+            }
+
+            if (cleanWord.EndsWith(".") || cleanWord.EndsWith(",") || cleanWord.EndsWith("?"))
+            {
+                punctuation = cleanWord.Substring(cleanWord.Length - 1);
+                cleanWord = cleanWord.Substring(0, cleanWord.Length - 1);
+            }
+
+            if (color != "")
+            {
+                formattedText += "<color=" + color + ">" + cleanWord + "</color>" + punctuation + " ";
+            }
+            else
+            {
+                formattedText += word + " ";
+            }
+        }
+
+        dialogueText.text = formattedText;
+    }        
 }

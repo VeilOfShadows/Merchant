@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: Insist
   <text>k__BackingField: That would be an incredible favour. Take the road east and
-    then north through Thistlewood forest. There is a lumberjack there who could
+    then north through *Thistlewood *forest. There is a *lumberjack there who could
     supply you with wood.
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you
