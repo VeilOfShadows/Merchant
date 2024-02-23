@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: IAmAMerchant
   <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
-    times. I would offer to trade but our supplies have depleted since the *Lakeview
-    *bridge collapsed.
+    times. I would offer to trade but our supplies have depleted since the <Lakeview
+    <bridge collapsed.
   <choices>k__BackingField:
   - <text>k__BackingField: The Lakeview bridge?
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: bb04a73d4e26d0445a2c538d7944e377,

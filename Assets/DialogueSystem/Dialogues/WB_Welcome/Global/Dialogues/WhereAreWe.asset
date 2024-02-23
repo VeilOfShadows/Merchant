@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WhereAreWe
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: WhereAreWe
-  <text>k__BackingField: This is the quaint little village of *Willowberry. I would
+  <text>k__BackingField: This is the quaint little village of <Willowberry. I would
     offer to trade but supplies are low, even for just the locals.
   <choices>k__BackingField:
   - <text>k__BackingField: Tell me about the Lakeview Bridge

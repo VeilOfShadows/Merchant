@@ -19,6 +19,11 @@ public class DialogueUIManager : MonoBehaviour
     public AudioSource textAudioSource;
     public float minTimeBetweenSounds;
 
+    public Color locationColour;
+    public Color npcColour;
+    public Color directionColour;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -107,11 +112,16 @@ public class DialogueUIManager : MonoBehaviour
 
             if (word.StartsWith("*"))
             {
-                color = "red";
+                color = ColorUtility.ToHtmlStringRGBA(npcColour);
             }
             else if (word.StartsWith("<"))
             {
-                color = "blue";
+                color = ColorUtility.ToHtmlStringRGBA(locationColour);
+                //color = locationColour.ToString();
+            }
+            else if (word.StartsWith(">"))
+            {
+                color = ColorUtility.ToHtmlStringRGBA(directionColour);
             }
 
             if (cleanWord.EndsWith(".") || cleanWord.EndsWith(",") || cleanWord.EndsWith("?"))
@@ -122,7 +132,8 @@ public class DialogueUIManager : MonoBehaviour
 
             if (color != "")
             {
-                formattedText += "<color=" + color + ">" + cleanWord + "</color>" + punctuation + " ";
+                //formattedText += color + cleanWord + "</color>" + punctuation + " ";
+                formattedText += "<color=#" + color + ">" + cleanWord + "</color>" + punctuation + " ";
             }
             else
             {

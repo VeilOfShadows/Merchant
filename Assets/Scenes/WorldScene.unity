@@ -23440,6 +23440,9 @@ MonoBehaviour:
   textSpeed: 2
   textAudioSource: {fileID: 1549220755}
   minTimeBetweenSounds: 6
+  locationColour: {r: 0.23300104, g: 0.4964708, b: 0.6415094, a: 1}
+  npcColour: {r: 0.36912602, g: 0.745283, b: 0.4846061, a: 1}
+  directionColour: {r: 0.7108304, g: 0.62411, b: 0.8018868, a: 1}
 --- !u!114 &1549220753
 MonoBehaviour:
   m_ObjectHideFlags: 0
