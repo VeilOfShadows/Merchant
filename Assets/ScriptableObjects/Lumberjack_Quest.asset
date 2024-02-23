@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Lumberjack_Quest
   m_EditorClassIdentifier: 
   questID: 0
-  questName: Find Oswald in Lakeview
-  questDescription: Find the Lakeview builder, he will arrange  the bridge repairs.
+  questName: Arrange Bridge Repairs
+  questDescription: The lumberjack's brother Oswald is a builder who lives in Lakeview.
+    He should be able to help arrange the repair of the bridge.
   questAccepted: 0
   questCompleted: 0
   questHandedIn: 0

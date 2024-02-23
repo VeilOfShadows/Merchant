@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: FindLumberjack_Quest
   m_EditorClassIdentifier: 
   questID: 0
-  questName: Find the Lumberjack
-  questDescription: Go to the lumberjack
-  questAccepted: 0
+  questName: Repair Lakeview Bridge
+  questDescription: The bridge to Lakeview has been destroyed, resulting in less
+    supply deliveries to Willowberry. I should head into Thistlewood Forest to speak
+    with the local lumberjack about acquiring some wood.
+  questAccepted: 1
   questCompleted: 0
   questHandedIn: 0
