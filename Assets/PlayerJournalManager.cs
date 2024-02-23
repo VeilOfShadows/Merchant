@@ -31,7 +31,8 @@ public class PlayerJournalManager : MonoBehaviour
 
     public void Activate() {
         questLog.SetActive(true); 
-        questInformation.SetActive(true); 
+        questInformation.SetActive(true);
+        questInformation.GetComponent<AudioSource>().Play();
         DisableTextObjects();
         FillActiveTextObjects();
         FillCompletedTextObjects();
@@ -55,46 +56,33 @@ public class PlayerJournalManager : MonoBehaviour
     public void FillActiveTextObjects() {
         for (int i = 0; i < questManager.activeQuestList.Count; i++)
         {
-            for (int j = 0; j < activeTextObjects.Count; j++)
+            if (!activeTextObjects[i].gameObject.activeInHierarchy)
             {
-                if (!activeTextObjects[j].gameObject.activeInHierarchy)
-                {
-                    activeTextObjects[j].gameObject.SetActive(true);
-                    activeTextObjects[j].Setup(questManager.activeQuestList[i]);
-                    return;
-                }
+                activeTextObjects[i].gameObject.SetActive(true);
+                activeTextObjects[i].Setup(questManager.activeQuestList[i]);
             }
         }
     }
     public void FillCompletedTextObjects()
     {
         for (int i = 0; i < questManager.completedQuestList.Count; i++)
-        {
-            for (int j = 0; j < activeTextObjects.Count; j++)
+        {            
+            if (!activeTextObjects[i].gameObject.activeInHierarchy)
             {
-                if (!activeTextObjects[j].gameObject.activeInHierarchy)
-                {
-                    activeTextObjects[j].gameObject.SetActive(true);
-                    activeTextObjects[j].Setup(questManager.completedQuestList[i]);
-                    //activeTextObjects[j].text = " - " + questManager.completedQuestList[i].questName;
-                    return;
-                }
-            }
+                activeTextObjects[i].gameObject.SetActive(true);
+                activeTextObjects[i].Setup(questManager.completedQuestList[i]);
+            }            
         }
     }
     public void FillHandedInTextObjects()
     {
         for (int i = 0; i < questManager.handinQuestList.Count; i++)
         {
-            for (int j = 0; j < activeTextObjects.Count; j++)
+            if (!activeTextObjects[i].gameObject.activeInHierarchy)
             {
-                if (!activeTextObjects[j].gameObject.activeInHierarchy)
-                {
-                    activeTextObjects[j].gameObject.SetActive(true);
-                    activeTextObjects[j].Setup(questManager.handinQuestList[i]);
-                    return;
-                }
-            }
+                activeTextObjects[i].gameObject.SetActive(true);
+                activeTextObjects[i].Setup(questManager.handinQuestList[i]);
+            }          
         }
     }
 }
