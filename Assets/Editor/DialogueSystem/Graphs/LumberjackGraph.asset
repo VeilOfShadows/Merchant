@@ -46,8 +46,8 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
     <name>k__BackingField: Quest
-    <text>k__BackingField: Hmm ok. My brother in Lakeview is a builder. if you find
-      him, he might be able to help organise a lumber order for repairs.
+    <text>k__BackingField: Hmm ok. My brother *Oswald in <Lakeview is a builder.
+      if you find him, he might be able to help organise a lumber order for repairs.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 

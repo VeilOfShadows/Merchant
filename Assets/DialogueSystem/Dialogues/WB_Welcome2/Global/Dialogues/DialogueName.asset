@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: He is in Thistlewood forest to the east.
+  <text>k__BackingField: He is in <Thistlewood <forest to the >east.
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}

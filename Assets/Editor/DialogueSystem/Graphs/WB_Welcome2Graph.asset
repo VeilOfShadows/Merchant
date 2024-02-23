@@ -17,7 +17,7 @@ MonoBehaviour:
   <nodes>k__BackingField:
   - <ID>k__BackingField: 1ccdc5f0-1821-45b2-a9c7-d1520d6fa0f5
     <name>k__BackingField: DialogueName
-    <text>k__BackingField: He is in Thistlewood forest to the east.
+    <text>k__BackingField: He is in <Thistlewood <forest to the >east.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 
