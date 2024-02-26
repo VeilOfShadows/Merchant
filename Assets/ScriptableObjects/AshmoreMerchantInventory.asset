@@ -24,43 +24,43 @@ MonoBehaviour:
       stackable: 1
       tradeable: 1
       nutritionalValue: 5
-    amount: 2
+    amount: 7
     slotDisplay: {fileID: 0}
   - parent: {fileID: 0}
     item:
-      itemName: Spices
-      itemType: 2
-      itemID: 1
-      baseCoinValue: 4
-      uiDisplay: {fileID: 21300000, guid: ac5a147bfda183d49a12202d584aaaff, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 0
-    amount: 1
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: Berry
-      itemType: 1
-      itemID: 4
-      baseCoinValue: 1
-      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 2
-    amount: 1
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: Coins
-      itemType: 2
-      itemID: 3
-      baseCoinValue: 1
-      uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
-      stackable: 1
+      itemName: 
+      itemType: 0
+      itemID: -1
+      baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
       tradeable: 0
       nutritionalValue: 0
-    amount: 13
+    amount: 0
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
+      itemName: 
+      itemType: 0
+      itemID: -1
+      baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
+      tradeable: 0
+      nutritionalValue: 0
+    amount: 0
+    slotDisplay: {fileID: 0}
+  - parent: {fileID: 0}
+    item:
+      itemName: 
+      itemType: 0
+      itemID: -1
+      baseCoinValue: -1
+      uiDisplay: {fileID: 0}
+      stackable: 0
+      tradeable: 0
+      nutritionalValue: 0
+    amount: 0
     slotDisplay: {fileID: 0}
   - parent: {fileID: 0}
     item:

@@ -4882,8 +4882,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7130021362796003630}
   - {fileID: 4539102566451200052}
+  - {fileID: 7130021362796003630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2845060319478845213
@@ -4899,9 +4899,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
+  amount: 0
   playerInventory: {fileID: 11400000, guid: 1080e7cd4fc833b4885179ed11189f3d, type: 2}
+  interactableObject: {fileID: 7130021362796003630}
   vfx: {fileID: 860338871551283448}
-  mesh: {fileID: 7618186265583115156}
   collider: {fileID: 3171794909715039522}
 --- !u!65 &3171794909715039522
 BoxCollider:
@@ -4965,7 +4966,7 @@ PrefabInstance:
     - target: {fileID: 2211534513047011903, guid: 09593cef97621c0418f070d7c9fa3091,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2211534513047011903, guid: 09593cef97621c0418f070d7c9fa3091,
         type: 3}
@@ -4985,17 +4986,17 @@ PrefabInstance:
     - target: {fileID: 2211534513047011903, guid: 09593cef97621c0418f070d7c9fa3091,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2211534513047011903, guid: 09593cef97621c0418f070d7c9fa3091,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2211534513047011903, guid: 09593cef97621c0418f070d7c9fa3091,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2211534513047011903, guid: 09593cef97621c0418f070d7c9fa3091,
         type: 3}
@@ -5025,12 +5026,6 @@ PrefabInstance:
 --- !u!4 &7130021362796003630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2211534513047011903, guid: 09593cef97621c0418f070d7c9fa3091,
-    type: 3}
-  m_PrefabInstance: {fileID: 8953752316784673553}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7618186265583115156 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1583897355313174661, guid: 09593cef97621c0418f070d7c9fa3091,
     type: 3}
   m_PrefabInstance: {fileID: 8953752316784673553}
   m_PrefabAsset: {fileID: 0}

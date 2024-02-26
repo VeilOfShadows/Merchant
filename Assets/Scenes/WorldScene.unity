@@ -14023,6 +14023,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7144c40c33f3ff4a80577ffd7629ac1, type: 3}
+--- !u!4 &637766723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7130021362796003630, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1339563433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &642507389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1448780898794413580, guid: 50a156ed21fe5f448b4b4da0b5345643,
@@ -28080,10 +28086,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 710111881}
     m_Modifications:
+    - target: {fileID: 2515946174125536734, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845060319478845213, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
+        type: 3}
+      propertyPath: interactableObject
+      value: 
+      objectReference: {fileID: 637766723}
+    - target: {fileID: 4324985880319619678, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4515559551553145776, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
         type: 3}
       propertyPath: m_Name
       value: BerryBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696483316566196638, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5152148175030020850, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
         type: 3}
@@ -28133,6 +28159,16 @@ PrefabInstance:
     - target: {fileID: 5152148175030020850, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264523817136716528, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618186265583115156, guid: c7c83f2f81454b34d9b9e6be96e66e3d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

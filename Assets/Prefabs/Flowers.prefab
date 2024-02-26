@@ -4882,8 +4882,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9203949652634176795}
   - {fileID: 5905023078195108011}
+  - {fileID: 9203949652634176795}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4330797852372010779
@@ -4899,9 +4899,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 7d85a017f31f24c4e934e7fcc27f6dc2, type: 2}
+  amount: 0
   playerInventory: {fileID: 11400000, guid: 1080e7cd4fc833b4885179ed11189f3d, type: 2}
+  interactableObject: {fileID: 9203949652634176795}
   vfx: {fileID: 6844670569257912451}
-  mesh: {fileID: 8426569005588240289}
   collider: {fileID: 5482761025724791502}
 --- !u!65 &5482761025724791502
 BoxCollider:
@@ -5007,12 +5008,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acc6353c8080714190f0cdc412ecd6b, type: 3}
---- !u!1 &8426569005588240289 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3042332564047214823, guid: 2acc6353c8080714190f0cdc412ecd6b,
-    type: 3}
-  m_PrefabInstance: {fileID: 6830173396920463174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9203949652634176795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2410369136557515357, guid: 2acc6353c8080714190f0cdc412ecd6b,
