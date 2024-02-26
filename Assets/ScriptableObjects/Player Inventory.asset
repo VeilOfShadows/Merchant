@@ -13,341 +13,342 @@ MonoBehaviour:
   m_Name: Player Inventory
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: 46fd6c57ae90bb2468edfb5e4cf290e7, type: 2}
-  slots:
-  - parent: {fileID: 0}
-    item:
-      itemName: Coins
-      itemType: 2
-      itemID: 3
-      baseCoinValue: 1
-      uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
-      stackable: 1
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 15
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: Bread
-      itemType: 1
-      itemID: 0
-      baseCoinValue: 1
-      uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 5
-    amount: 5
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: Berry
-      itemType: 1
-      itemID: 4
-      baseCoinValue: 1
-      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 2
-    amount: 6
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
-  - parent: {fileID: 0}
-    item:
-      itemName: 
-      itemType: 0
-      itemID: -1
-      baseCoinValue: -1
-      uiDisplay: {fileID: 0}
-      stackable: 0
-      tradeable: 0
-      nutritionalValue: 0
-    amount: 0
-    slotDisplay: {fileID: 0}
+  container:
+    Slots:
+    - parent: {fileID: 0}
+      item:
+        itemName: Coins
+        itemType: 2
+        itemID: 3
+        baseCoinValue: 1
+        uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
+        stackable: 1
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 66
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Bread
+        itemType: 1
+        itemID: 0
+        baseCoinValue: 1
+        uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 5
+      amount: 8
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Spices
+        itemType: 2
+        itemID: 1
+        baseCoinValue: 4
+        uiDisplay: {fileID: 21300000, guid: ac5a147bfda183d49a12202d584aaaff, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 0
+      amount: 1
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Berry
+        itemType: 1
+        itemID: 4
+        baseCoinValue: 1
+        uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 2
+      amount: 8
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
+      slotDisplay: {fileID: 0}
   coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}

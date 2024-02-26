@@ -236,7 +236,7 @@ Material:
     - _TrunkFlatColourSwitch: 0
     - _TrunkMetallic: 0
     - _TrunkNormalAmount: 0.5
-    - _TrunkSmoothness: 0.2
+    - _TrunkSmoothness: 0.05
     - _UVSec: 0
     - _WindAmount: 1
     - _WindBaseline: 0

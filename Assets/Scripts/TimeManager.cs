@@ -71,16 +71,18 @@ public class TimeManager : MonoBehaviour
 
         if (!isNight)
         {
-            if (time < 5 || time > 19)
+            if (time < 6 || time > 18)
             {
+                lightingManager.FadeSunIntensity();
                 isNight = true;
                 PlayerManager.instance.playerCartFire.SetActive(true);
             }
         }
         else
         {
-            if (time > 5 && time < 19)
+            if (time > 6 && time < 18)
             {
+                lightingManager.IncreaseSunIntensity();
                 isNight = false;
                 PlayerManager.instance.playerCartFire.SetActive(false);
             }

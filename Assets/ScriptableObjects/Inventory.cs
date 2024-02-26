@@ -7,7 +7,8 @@ using UnityEngine;
 public class Inventory : ScriptableObject
 {
     public ItemDatabase database;
-    public InventorySlot[] slots = new InventorySlot[28];
+    public InventoryClass container;
+    public InventorySlot[] slots { get { return container.Slots; } }
     public ItemObject coinItem;
 
     public void AddItem(Item _item, int _amount) {
@@ -117,10 +118,11 @@ public class Inventory : ScriptableObject
     [ContextMenu("CLEAR")]
     public void Clear()
     {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            slots[i].RemoveItem();
-        }
+        container.Clear();
+        //for (int i = 0; i < slots.Length; i++)
+        //{
+        //    slots[i].RemoveItem();
+        //}
     }
 
     [ContextMenu("Sync")]
@@ -129,6 +131,19 @@ public class Inventory : ScriptableObject
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].item = database.FindItem(slots[i].item.itemID);
+        }
+    }
+}
+
+[System.Serializable]
+public class InventoryClass
+{
+    public InventorySlot[] Slots = new InventorySlot[28];
+    public void Clear() 
+    {
+        for (int i = 0; i < Slots.Length; i++)
+        {
+            Slots[i].RemoveItem();
         }
     }
 }

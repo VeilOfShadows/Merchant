@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water_River_01
+  m_Name: Water_River_SmoothRemove
   m_Shader: {fileID: 4800000, guid: 276a39a5a210b124885f0eff3e80f1f3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -139,9 +139,9 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _BumpScale: 1
-    - _CausticDepthFade: 11.22
-    - _CausticScale: 3
-    - _CausticSpeed: 1.47
+    - _CausticDepthFade: 0
+    - _CausticScale: 0
+    - _CausticSpeed: 0
     - _ColourNoiseScale1: 0.019
     - _Cutoff: 0.5
     - _Depth: 1.31
@@ -183,9 +183,9 @@ Material:
     - _ReflectionPower: 0.32
     - _RippleSpeed: 0.1
     - _ShallowFalloff: 0.4
-    - _Smoothness: 2
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
-    - _Specular: 0.026
+    - _Specular: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Tiling: 0.36
@@ -248,7 +248,7 @@ Material:
     - _waveNoiseOffset: 0.001
     - _waveTime: 14.15
     m_Colors:
-    - _CausticColour: {r: 0.355, g: 0.355, b: 0.355, a: 0}
+    - _CausticColour: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color3: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0}
     - _Color4: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0}
