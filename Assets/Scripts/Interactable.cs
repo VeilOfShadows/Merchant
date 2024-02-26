@@ -15,11 +15,12 @@ public class Interactable : MonoBehaviour
     public Collider collider;
     Tween scaleTween;
     public float tweenSpeed = .4f;
+    public AudioSource audioSource;
 
     public void OnMouseDown()
     {
         amount = 1;
-        NotificationManager.instance.DisplayNotification("+ " + item.data.itemName + " x " + amount);
+        NotificationManager.instance.DisplayNotification("+ " + item.data.itemName + " x " + amount, false);
         //NotificationManager.instance.DisplayNotification("- Item added to inventory: " + item.data.itemName + " x " + amount);
 
         collider.enabled = false;
@@ -33,6 +34,11 @@ public class Interactable : MonoBehaviour
         Vector3 originalScale = interactableObject.transform.localScale;
         //Transform transform = mesh.transform.parent;
         //interactableObject.localScale = Vector3.one;
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+
         scaleTween = interactableObject.DOPunchScale(originalScale * 1.1f, .4f).OnComplete(() => {
             scaleTween = interactableObject.DOScale(Vector3.one * .1f, tweenSpeed).OnUpdate(()=>
             {

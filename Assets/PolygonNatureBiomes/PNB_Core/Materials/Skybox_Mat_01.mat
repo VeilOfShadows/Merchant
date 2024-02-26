@@ -30,13 +30,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _Distance: 50
+    - _Distance: 236.16
     - _Falloff: 1
     - _Offset: 0
     - _UV_Based_Toggle: 0
     - __dirty: 0
     m_Colors:
-    - _ColorBottom: {r: 1, g: 1, b: 1, a: 0}
-    - _ColorTop: {r: 0.6745283, g: 0.95939696, b: 1, a: 0}
+    - _ColorBottom: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 0}
+    - _ColorTop: {r: 0.06138125, g: 0.031372555, b: 0.101960786, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

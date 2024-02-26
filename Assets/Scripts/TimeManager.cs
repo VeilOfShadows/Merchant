@@ -17,6 +17,9 @@ public class TimeManager : MonoBehaviour
     public RectTransform clockRect;
     public Vector2 clockXAnchors;
     public int currentHour;
+    public GameObject starsVFX;
+    public AudioSource dayMusic;
+    public AudioSource nightMusic;
     bool initial = false;
 
     public delegate void OnHourChangeDelegate(int newHour);
@@ -75,7 +78,14 @@ public class TimeManager : MonoBehaviour
             {
                 lightingManager.FadeSunIntensity();
                 isNight = true;
+                starsVFX.SetActive(true);
+                FadeOutMusic(dayMusic);
+                FadeInMusic(nightMusic);
                 PlayerManager.instance.playerCartFire.SetActive(true);
+                if (PlayerManager.instance.currentAudioTrackerZone != null)
+                {
+                    PlayerManager.instance.currentAudioTrackerZone.NighttimeAudio();
+                }
             }
         }
         else
@@ -84,7 +94,14 @@ public class TimeManager : MonoBehaviour
             {
                 lightingManager.IncreaseSunIntensity();
                 isNight = false;
+                starsVFX.SetActive(false);
+                FadeOutMusic(nightMusic);
+                FadeInMusic(dayMusic);
                 PlayerManager.instance.playerCartFire.SetActive(false);
+                if (PlayerManager.instance.currentAudioTrackerZone != null)
+                {
+                    PlayerManager.instance.currentAudioTrackerZone.DaytimeAudio();
+                }
             }
         }
 
@@ -101,5 +118,20 @@ public class TimeManager : MonoBehaviour
             PlayerHungerManager.instance.DepleteHunger();
         }
         initial = true;
+    }
+
+    public void FadeOutMusic(AudioSource source)
+    {
+        DOTween.To(() => source.volume, x => source.volume = x, 0f, 10f).SetEase(Ease.Linear).OnComplete(()=>
+        {
+            source.Stop();
+        });
+    }
+    
+    public void FadeInMusic(AudioSource source)
+    {
+        source.volume = 0;
+        source.Play();
+        DOTween.To(() => source.volume, x => source.volume = x, 0.3f, 10f).SetEase(Ease.Linear);
     }
 }

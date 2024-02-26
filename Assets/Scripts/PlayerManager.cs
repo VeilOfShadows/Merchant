@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject merchantUI;
 
     public GameObject playerCartFire;
+    public AudioTracker currentAudioTrackerZone;
 
     private void Awake()
     {

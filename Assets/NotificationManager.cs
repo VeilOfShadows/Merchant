@@ -8,6 +8,7 @@ public class NotificationManager : MonoBehaviour
 {
     public static NotificationManager instance;
 
+    public AudioSource audioSource;
     public List<NotificationText> textObject;
 
     private void Awake()
@@ -18,9 +19,13 @@ public class NotificationManager : MonoBehaviour
         }
     }
 
-    public void DisplayNotification(string text)
+    public void DisplayNotification(string text, bool playSound = true)
     {
-        Debug.Log("DISPLAYING");
+        if (playSound)
+        {
+            audioSource.Play(); 
+        }
+
         for (int i = 0; i < textObject.Count; i++)
         {
             if (!textObject[i].gameObject.activeInHierarchy)

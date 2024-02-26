@@ -17,6 +17,9 @@ public class RoadNameDisplay : MonoBehaviour
     public float textSpeed;
     public float vanishDelay;
     bool coroutineRunning = false;
+    public AudioSource textAudioSource;
+    public float minTimeBetweenSounds;
+
 
     private void Awake()
     {
@@ -32,6 +35,9 @@ public class RoadNameDisplay : MonoBehaviour
         {
             return;
         }
+
+        minTimeBetweenSounds = Random.Range(.08f, .1f);
+        float lastSoundTime = -minTimeBetweenSounds;
 
         roadName = _roadName;
         //anim.Play("RoadNameIntro");
@@ -60,6 +66,11 @@ public class RoadNameDisplay : MonoBehaviour
 
         textTween = DOTween.To(() => text, x => text = x, _roadName, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
         {
+            if (Time.time - lastSoundTime >= minTimeBetweenSounds)
+            {
+                textAudioSource.Play();
+                lastSoundTime = Time.time;
+            }
             SetText(text);
         }).OnComplete(() =>
         {
