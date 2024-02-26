@@ -13,6 +13,7 @@ public class DialogueFunctionManager : MonoBehaviour
 {
     public static DialogueFunctionManager instance;
     public PlayerSOConnections connector;
+    public QuestDatabase questDatabase;
 
     private void Awake()
     {
@@ -32,11 +33,13 @@ public class DialogueFunctionManager : MonoBehaviour
                 break;
 
             case DialogueActions.AcceptQuest:
-                AcceptQuest(pickupQuest);
+                questDatabase.SetQuestStatus(pickupQuest.questID, QuestStatus.Accepted);
+                //AcceptQuest(pickupQuest);
                 break;
 
             case DialogueActions.HandInQuest:
-                HandInQuest(handInQuest);
+                questDatabase.SetQuestStatus(handInQuest.questID, QuestStatus.HandedIn);
+                //HandInQuest(handInQuest);
                 break;
 
             default:
@@ -53,13 +56,14 @@ public class DialogueFunctionManager : MonoBehaviour
         PlayerManager.instance.EnterShop();
     }
 
-    public void AcceptQuest(QuestSO quest)
-    {
-        PlayerQuestManager.instance.AcceptQuest(quest);
-    }
+    //public void AcceptQuest(QuestSO quest)
+    //{
+    //    questDatabase
+    //    PlayerQuestManager.instance.AcceptQuest(quest);
+    //}
 
-    public void HandInQuest(QuestSO quest)
-    {
-        PlayerQuestManager.instance.HandInQuest(quest);
-    }
+    //public void HandInQuest(QuestSO quest)
+    //{
+    //    PlayerQuestManager.instance.HandInQuest(quest);
+    //}
 }

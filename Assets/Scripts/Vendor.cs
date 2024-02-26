@@ -16,6 +16,7 @@ public class Vendor : MonoBehaviour
     public GameObject promptCanvas;
 
     public QuestSO questToComplete;
+    public QuestDatabase questDatabase;
 
     #region Triggers
     public void OnTriggerEnter(Collider other)
@@ -28,15 +29,9 @@ public class Vendor : MonoBehaviour
 
             if (questToComplete != null)
             {
-                if (PlayerQuestManager.instance.CheckIfQuestActive(questToComplete))
+                if (questDatabase.GetQuestStatus(questToComplete.questID, QuestStatus.Accepted))
                 {
-                    if (!PlayerQuestManager.instance.CheckIfQuestCompleted(questToComplete))
-                    {
-                        if (!PlayerQuestManager.instance.CheckIfQuestHandedIn(questToComplete))
-                        {
-                            PlayerQuestManager.instance.CompleteQuest(questToComplete);
-                        }
-                    }
+                    questDatabase.SetQuestStatus(questToComplete.questID, QuestStatus.Completed);
                 }
             }
         }

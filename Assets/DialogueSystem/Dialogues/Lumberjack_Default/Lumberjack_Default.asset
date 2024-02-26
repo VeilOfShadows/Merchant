@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
-  m_Name: WB_Welcome2
+  m_Name: Lumberjack_Default
   m_EditorClassIdentifier: 
-  <npcName>k__BackingField: Oliver
-  <fileName>k__BackingField: WB_Welcome2
+  <npcName>k__BackingField: 
+  <fileName>k__BackingField: Lumberjack_Default
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
-  - {fileID: 11400000, guid: d7946c6d1beccf34cba441d4be5d9c34, type: 2}
-  - {fileID: 11400000, guid: 4209969b10b6b5a489c20d6f3572ea46, type: 2}
-  <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
-    type: 2}
-  <prerequisiteQuestProgressionRequirement>k__BackingField: 1
+  - {fileID: 11400000, guid: c1f798d2b465f3a429549e8a9e67d4bb, type: 2}
+  <prerequisiteQuest>k__BackingField: {fileID: 0}
+  <prerequisiteQuestProgressionRequirement>k__BackingField: 0

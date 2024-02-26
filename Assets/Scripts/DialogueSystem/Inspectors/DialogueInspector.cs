@@ -12,6 +12,7 @@ public class DialogueInspector : Editor
 {
     /* Dialogue Scriptable Objects */
     private SerializedProperty dialogueContainerProperty;
+    private SerializedProperty defaultDialogueProperty;
     private SerializedProperty dialogueContainersProperty;
     private SerializedProperty dialogueGroupProperty;
     private SerializedProperty dialogueProperty;
@@ -27,6 +28,7 @@ public class DialogueInspector : Editor
     private void OnEnable()
     {
         dialogueContainerProperty = serializedObject.FindProperty("dialogueContainer");
+        defaultDialogueProperty = serializedObject.FindProperty("defaultDialogue");
         dialogueContainersProperty = serializedObject.FindProperty("dialogueContainers");
         dialogueGroupProperty = serializedObject.FindProperty("dialogueGroup");
         dialogueProperty = serializedObject.FindProperty("dialogue");
@@ -122,6 +124,7 @@ public class DialogueInspector : Editor
     {
         DialogueInspectorUtility.DrawHeader("Dialogue Container");
         dialogueContainerProperty.DrawPropertyField();
+        defaultDialogueProperty.DrawPropertyField();
         dialogueContainersProperty.DrawPropertyField();
         DialogueInspectorUtility.DrawSpace();
     }

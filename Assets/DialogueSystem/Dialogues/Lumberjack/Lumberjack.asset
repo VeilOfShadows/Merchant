@@ -22,4 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0da61880e6c1ed748918b23c3cc2a626, type: 2}
   <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
     type: 2}
-  <prerequisiteQuestProgressionRequirement>k__BackingField: 3
+  <prerequisiteQuestProgressionRequirement>k__BackingField: 2

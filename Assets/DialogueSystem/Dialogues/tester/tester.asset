@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
   m_Name: tester
   m_EditorClassIdentifier: 
+  <npcName>k__BackingField: 
   <fileName>k__BackingField: tester
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
   - {fileID: 11400000, guid: 99f4f1b7ae2f4904f832438365ae6c3d, type: 2}
-  - {fileID: 11400000, guid: 603e3314c0a3d494da62670188068f11, type: 2}
   - {fileID: 11400000, guid: e64a1afaef8421544bc89f84319c3529, type: 2}
+  - {fileID: 11400000, guid: 603e3314c0a3d494da62670188068f11, type: 2}
+  - {fileID: 11400000, guid: 116faf3eec926c04ab7211249822353e, type: 2}
   <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
     type: 2}
-  <prerequisiteQuestProgressionRequirement>k__BackingField: 1
+  <prerequisiteQuestProgressionRequirement>k__BackingField: 5

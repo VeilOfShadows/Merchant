@@ -10,6 +10,11 @@ public class PlayerJournalManager : MonoBehaviour
     public GameObject questLog;
     public GameObject questInformation;
     public TextMeshProUGUI questInformationText;
+    public QuestDatabase questdatabase;
+
+    //public List<QuestSO> acceptedList = new List<QuestSO>();
+    //public List<QuestSO> completedList = new List<QuestSO>();
+    //public List<QuestSO> handInList = new List<QuestSO>();
 
     public List<QuestLogButton> activeTextObjects = new List<QuestLogButton>();
     public List<QuestLogButton> completeTextObjects = new List<QuestLogButton>();
@@ -30,59 +35,68 @@ public class PlayerJournalManager : MonoBehaviour
     }
 
     public void Activate() {
+        questInformationText.text = "Nothing to see here. Select a quest to view information about it.";
+
         questLog.SetActive(true); 
         questInformation.SetActive(true);
         questInformation.GetComponent<AudioSource>().Play();
         DisableTextObjects();
-        FillActiveTextObjects();
-        FillCompletedTextObjects();
-        FillHandedInTextObjects();
+        FillQuestLog();
     }
 
+    public void FillQuestLog() {
+        for (int i = 0; i < questdatabase.quests.Length; i++)
+        {
+            switch (questdatabase.quests[i].questStatus)
+            {
+                case QuestStatus.NotStarted:
+                    break;
+                case QuestStatus.Accepted:
+                    if (!activeTextObjects[i].gameObject.activeInHierarchy)
+                    {
+                        activeTextObjects[i].gameObject.SetActive(true);
+                        activeTextObjects[i].Setup(questdatabase.quests[i].quest);
+                    }
+                    break;
+                case QuestStatus.Completed:
+                    if (!completeTextObjects[i].gameObject.activeInHierarchy)
+                    {
+                        completeTextObjects[i].gameObject.SetActive(true);
+                        completeTextObjects[i].Setup(questdatabase.quests[i].quest);
+                    }
+                    break;
+                case QuestStatus.HandedIn:
+                    if (!handedInTextObjects[i].gameObject.activeInHierarchy)
+                    {
+                        handedInTextObjects[i].gameObject.SetActive(true);
+                        handedInTextObjects[i].Setup(questdatabase.quests[i].quest);
+                    }
+                    break;
+                case QuestStatus.DEBUGFORCE:
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    
     public void DisableTextObjects()
     {
         for (int i = 0; i < activeTextObjects.Count; i++)
         {
             activeTextObjects[i].gameObject.SetActive(false);
+        }
+        for (int i = 0; i < completeTextObjects.Count; i++)
+        {
             completeTextObjects[i].gameObject.SetActive(false);
+        }
+        for (int i = 0; i < handedInTextObjects.Count; i++)
+        {
             handedInTextObjects[i].gameObject.SetActive(false);
         }
     }
 
     public void ShowQuestDetails(QuestSO quest) {
         questInformationText.text = quest.questDescription;
-    }
-
-    public void FillActiveTextObjects() {
-        for (int i = 0; i < questManager.activeQuestList.Count; i++)
-        {
-            if (!activeTextObjects[i].gameObject.activeInHierarchy)
-            {
-                activeTextObjects[i].gameObject.SetActive(true);
-                activeTextObjects[i].Setup(questManager.activeQuestList[i]);
-            }
-        }
-    }
-    public void FillCompletedTextObjects()
-    {
-        for (int i = 0; i < questManager.completedQuestList.Count; i++)
-        {            
-            if (!activeTextObjects[i].gameObject.activeInHierarchy)
-            {
-                activeTextObjects[i].gameObject.SetActive(true);
-                activeTextObjects[i].Setup(questManager.completedQuestList[i]);
-            }            
-        }
-    }
-    public void FillHandedInTextObjects()
-    {
-        for (int i = 0; i < questManager.handinQuestList.Count; i++)
-        {
-            if (!activeTextObjects[i].gameObject.activeInHierarchy)
-            {
-                activeTextObjects[i].gameObject.SetActive(true);
-                activeTextObjects[i].Setup(questManager.handinQuestList[i]);
-            }          
-        }
     }
 }

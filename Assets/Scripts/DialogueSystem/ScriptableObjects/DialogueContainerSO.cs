@@ -9,7 +9,7 @@ public class DialogueContainerSO : ScriptableObject
     [field: SerializeField]public SerializableDictionary<DialogueGroupSO, List<DialogueSO>> dialogueGroups { get; set; }
     [field: SerializeField]public List<DialogueSO> ungroupedDialogues { get; set; }
     [field: SerializeField]public QuestSO prerequisiteQuest { get; set; }
-    [field: SerializeField]public QuestProgression prerequisiteQuestProgressionRequirement { get; set; }
+    [field: SerializeField]public QuestStatus prerequisiteQuestProgressionRequirement { get; set; }
 
     public void Initialize(string _fileName) 
     {

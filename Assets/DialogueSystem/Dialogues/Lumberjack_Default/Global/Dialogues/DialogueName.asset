@@ -13,29 +13,15 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: hmmm
+  <text>k__BackingField: hrumph
   <choices>k__BackingField:
-  - <text>k__BackingField: hand in
-    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 116faf3eec926c04ab7211249822353e,
-      type: 2}
-    <action>k__BackingField: 3
-    <questStartingPoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
-      type: 2}
-    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-  - <text>k__BackingField: end
+  - <text>k__BackingField: End
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 0
-    <questStartingPoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 0}
-    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-  - <text>k__BackingField: Shop
-    <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 1
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1

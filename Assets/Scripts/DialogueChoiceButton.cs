@@ -20,6 +20,7 @@ public class DialogueChoiceButton : MonoBehaviour
     Tween textTween;
     public float textSpeed;
     public AudioSource audioSource;
+    public QuestDatabase questDatabase;
 
     public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
@@ -46,31 +47,19 @@ public class DialogueChoiceButton : MonoBehaviour
 
         if (pickupQuest != null)
         {
-            if (!PlayerQuestManager.instance.CheckQuestAvailable(pickupQuest))
+            if (!questDatabase.GetQuestStatus(pickupQuest.questID, QuestStatus.NotStarted))
             {
-                if (PlayerQuestManager.instance.CheckIfQuestCompleted(pickupQuest))
-                {
-                    transform.parent.gameObject.SetActive(false);
-                    return;
-                }
-                
-                if (PlayerQuestManager.instance.CheckIfQuestHandedIn(pickupQuest))
-                {
-                    transform.parent.gameObject.SetActive(false);
-                    return;
-                }
+                transform.parent.gameObject.SetActive(false);
                 return;
             }
         }
 
+        //hand in quest is available
         if (handinQuest != null)
         {
-            if (!PlayerQuestManager.instance.CheckQuestAvailable(handinQuest))
+            if (!questDatabase.GetQuestStatus(handinQuest.questID, QuestStatus.Completed))
             {
-                if (!PlayerQuestManager.instance.CheckIfQuestCompleted(handinQuest))
-                {
-                    transform.parent.gameObject.SetActive(false);
-                }
+                transform.parent.gameObject.SetActive(false);
                 return;
             }
         }
@@ -88,41 +77,6 @@ public class DialogueChoiceButton : MonoBehaviour
         {
             dialogueUIManager.dialogueController.dialogue.dialogueContainer = dialogueAfterCompletion;
         }
-        //switch (action)
-        //{
-        //    case DialogueActions.None:
-        //        break;
-        //    case DialogueActions.OpenShop:
-        //        DialogueFunctionManager.instance.HandInQuest(handinQuest);
-        //        break;
-        //    case DialogueActions.AcceptQuest:
-        //        DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
-        //        break;
-        //    case DialogueActions.HandInQuest:
-        //        DialogueFunctionManager.instance.HandInQuest(handinQuest);
-        //        break;
-        //    default:
-        //        break;
-        //}
-        //if (hasFunction)
-        //{
-        //    if (pickupQuest != null)
-        //    {
-        //        DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
-
-        //        //DialogueFunctionManager.instance.AcceptQuest(pickupQuest);
-        //    }
-            
-        //    if (handinQuest != null)
-        //    {
-        //        DialogueFunctionManager.instance.HandInQuest(handinQuest);
-        //    }
-
-        //    else
-        //    {
-        //        //DialogueFunctionManager.instance.Activate(functionName);
-        //    }
-        //}
 
         if (isEnd)
         {

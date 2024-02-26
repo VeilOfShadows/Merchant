@@ -10,11 +10,6 @@ public class CharacterDialogueController : MonoBehaviour
     //public DialogueNodeSaveData currentDialogue;
     public DialogueSO lastDialogue;
 
-    public void UpdateDialogues() 
-    { 
-        
-    }
-
     public DialogueSO ReturnNextDialogue(DialogueSO dialogueToCheck) 
     {
         if (dialogueToCheck.choices[0].nextDialogue == null)

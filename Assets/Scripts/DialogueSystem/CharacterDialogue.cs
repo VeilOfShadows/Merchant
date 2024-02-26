@@ -6,6 +6,7 @@ public class CharacterDialogue : MonoBehaviour
 {
     /* Dialogue Scriptable Objects */
     [SerializeField] public DialogueContainerSO dialogueContainer;
+    [SerializeField] public DialogueContainerSO defaultDialogue;
     [SerializeField] public List<DialogueContainerSO> dialogueContainers;
     [SerializeField] public DialogueGroupSO dialogueGroup;
     [SerializeField] public DialogueSO dialogue;
@@ -21,16 +22,11 @@ public class CharacterDialogue : MonoBehaviour
     public void SelectDialogues() {
         for (int i = 0; i < dialogueContainers.Count; i++)
         {
-            if (dialogueContainers[i].prerequisiteQuestProgressionRequirement == QuestProgression.DEBUGFORCE)
+            if (dialogueContainers[i].prerequisiteQuestProgressionRequirement == QuestStatus.DEBUGFORCE)
             {
                 dialogueContainer = dialogueContainers[i];
                 return;
             }
-            //if (dialogueContainers[i].prerequisiteQuest == null)
-            //{
-            //    dialogueContainer = dialogueContainers[i];
-            //    return;
-            //}
 
             if (PlayerQuestManager.instance.FindAvailableDialogues(dialogueContainers[i].prerequisiteQuest, dialogueContainers[i].prerequisiteQuestProgressionRequirement))
             {
@@ -40,6 +36,7 @@ public class CharacterDialogue : MonoBehaviour
             }
             else
             {
+                dialogueContainer = defaultDialogue;
                 Debug.Log("Quest has not progressed enough. Dialogue is unavailable");
             }
         }

@@ -29,33 +29,12 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 0
     <position>k__BackingField: {x: 231, y: 136}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 13ef4351-79b4-46c4-9f6b-deba10abbdc7
-    <name>k__BackingField: test
-    <text>k__BackingField: second
-    <choices>k__BackingField:
-    - <text>k__BackingField: pickup
-      <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
-      <action>k__BackingField: 2
-      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
-        type: 2}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    - <text>k__BackingField: Without pickup
-      <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 637, y: 161}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
     <name>k__BackingField: DialogueName
     <text>k__BackingField: hmmm
     <choices>k__BackingField:
     - <text>k__BackingField: hand in
-      <nodeID>k__BackingField: 
+      <nodeID>k__BackingField: 94d1fc0b-6de3-4689-acf1-b4f392057cc4
       <action>k__BackingField: 3
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
@@ -77,10 +56,47 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1340, y: 172}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 13ef4351-79b4-46c4-9f6b-deba10abbdc7
+    <name>k__BackingField: test
+    <text>k__BackingField: second
+    <choices>k__BackingField:
+    - <text>k__BackingField: pickup
+      <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+        type: 2}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Without pickup
+      <nodeID>k__BackingField: 0e1ec417-478d-46d9-ad98-e8c02a78ccc1
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 637, y: 161}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 94d1fc0b-6de3-4689-acf1-b4f392057cc4
+    <name>k__BackingField: dfsv
+    <text>k__BackingField: Type here.....
+    <choices>k__BackingField:
+    - <text>k__BackingField: New Quest
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+        type: 2}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1868, y: 172}
+    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - start
-  - test
   - DialogueName
+  - test
+  - dfsv
   <oldGroupedNodeNames>k__BackingField:
     list: []
