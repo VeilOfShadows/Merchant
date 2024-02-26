@@ -18,6 +18,11 @@ public class Vendor : MonoBehaviour
     public QuestSO questToComplete;
     public QuestDatabase questDatabase;
 
+    private void Start()
+    {
+        inventory.RestockShop();
+    }
+
     #region Triggers
     public void OnTriggerEnter(Collider other)
     {

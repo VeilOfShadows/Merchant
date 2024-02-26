@@ -72,6 +72,18 @@ public class Inventory : ScriptableObject
         return null;
     }
 
+    public InventorySlot FindFoodInInventory()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item.itemType == ItemType.Consumable)
+            {
+                return slots[i];
+            }
+        }
+        return null;
+    }
+
     public void SwapItems(InventorySlot item1, InventorySlot item2)
     {
         if (item1.item.itemID == -1)

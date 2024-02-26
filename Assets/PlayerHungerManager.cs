@@ -39,6 +39,51 @@ public class PlayerHungerManager : MonoBehaviour
         }
     }
 
+    public void EatFirstFood() {
+        InventorySlot foodItemSlot = PlayerManager.instance.playerInventory.FindFoodInInventory();
+        if (foodItemSlot != null)
+        {
+            RestoreHunger(foodItemSlot.item.nutritionalValue);
+            foodItemSlot.RemoveAmount(1);
+        }
+        else
+        {
+            Debug.Log("No food in inventory.");
+        }
+    }
+
+    public void EatSelectedFood(InventorySlot _foodItemSlot)
+    {
+        //InventorySlot foodItemSlot = PlayerManager.instance.playerInventory.FindFoodInInventory();
+        if (_foodItemSlot != null)
+        {
+            RestoreHunger(_foodItemSlot.item.nutritionalValue);
+            _foodItemSlot.RemoveAmount(1);
+        }
+        else
+        {
+            Debug.Log("No food in inventory.");
+        }
+    }
+
+    public void RestoreHunger(float hungerRestored)
+    {
+        float startingHunger = currentHunger;
+        float target = currentHunger + hungerRestored;
+
+        currentHunger += hungerRestored;
+
+        //if (currentHunger <= hungerThreshold)
+        //{
+            hungerSlider.targetGraphic.DOColor(Color.green, .4f).From();
+        //    Die();
+        //}
+
+        sliderTween = DOTween.To(() => startingHunger, x => startingHunger = x, target, tweenSpeed).SetEase(Ease.Linear).OnUpdate(() =>
+        {
+            hungerSlider.value = startingHunger / maxHunger;
+        });
+    }
 
     public void DepleteHunger()
     {

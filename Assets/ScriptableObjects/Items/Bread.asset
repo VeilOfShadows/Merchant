@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99d2414d48b4bc94b8aa2bc4423700a7, type: 3}
-  m_Name: Food
+  m_Name: Bread
   m_EditorClassIdentifier: 
   data:
-    itemName: Food
+    itemName: Bread
     itemType: 1
     itemID: 0
     baseCoinValue: 1
     uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
     stackable: 1
     tradeable: 1
+    nutritionalValue: 5

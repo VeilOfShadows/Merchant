@@ -16,7 +16,7 @@ public class VendorInventory : Inventory
             roll = Random.Range(0, 100);
             if (roll <= itemPool.vendorItems[i].percentageChance)
             {
-                Debug.Log("You rolled: " + roll);
+                //Debug.Log("You rolled: " + roll);
                 AddItem(itemPool.vendorItems[i].item, Random.Range(itemPool.vendorItems[i].amountMin, itemPool.vendorItems[i].amountMax));
             }
         }

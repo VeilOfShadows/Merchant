@@ -84,6 +84,13 @@ public class UserInterface : MonoBehaviour
                 inventory.AddItem(inventory.coinItem.data, buyPrice);
             }
         }
+        else
+        {
+            if (slotsOnInterface[obj].item.itemType == ItemType.Consumable)
+            {
+                PlayerHungerManager.instance.EatSelectedFood(slotsOnInterface[obj]);
+            }
+        }
         //MouseData.slotHoveredOver = obj;
     }
     public void OnExit(GameObject obj)
