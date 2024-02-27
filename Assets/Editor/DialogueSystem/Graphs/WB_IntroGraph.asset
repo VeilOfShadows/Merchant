@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: WB_IntroGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: WB_Intro
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 7b1b5682-4ad3-45ff-b408-29903d134891
+    <name>k__BackingField: 1
+    <text>k__BackingField: Ahhh a stranger. Welcome to <Willowberry friend, what
+      brings you to our small corner of the world?
+    <choices>k__BackingField:
+    - <text>k__BackingField: I am a merchant. I am in search of new trade opportunities
+      <nodeID>k__BackingField: d1bca2fd-2ffd-4495-816f-1e22befacf85
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: -387, y: 23}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: d1bca2fd-2ffd-4495-816f-1e22befacf85
+    <name>k__BackingField: 2
+    <text>k__BackingField: You've come to the right place. The <Kingdom <of <Carnassa
+      is rich in resources and trade. <Willowberry is unfortunately a little dry
+      of both at the moment.
+    <choices>k__BackingField:
+    - <text>k__BackingField: What's happened?
+      <nodeID>k__BackingField: 023bd9a3-f305-42fa-b545-1884b4edf0b1
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 324, y: 45}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 023bd9a3-f305-42fa-b545-1884b4edf0b1
+    <name>k__BackingField: 3
+    <text>k__BackingField: Well we don't have much to offer besides berries and bread
+      unfortunately. We used to get a steadly supply of food from <Lakeview but they
+      haven't sent anything in over a week.
+    <choices>k__BackingField:
+    - <text>k__BackingField: What happened to the supplies?
+      <nodeID>k__BackingField: af70e78d-e1c6-4418-9979-9cb2754784bf
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1011, y: -78}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: af70e78d-e1c6-4418-9979-9cb2754784bf
+    <name>k__BackingField: 4
+    <text>k__BackingField: The bridge out of <Lakeview has been destroyed by goblins.
+      There are other routes but they are much longer and the supply usage isn't
+      worth it.
+    <choices>k__BackingField:
+    - <text>k__BackingField: I could help repair the bridge?
+      <nodeID>k__BackingField: 35ad94c2-10f4-443f-b880-72d8a22fff9f
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1797, y: -100}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 35ad94c2-10f4-443f-b880-72d8a22fff9f
+    <name>k__BackingField: 5
+    <text>k__BackingField: You would? That would be incredible! There is a *carpenter
+      in <Thistlewood <Forest who might be able to help. If you take the path >north
+      just after <Willowberry <Pond, you should find him.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+        type: 2}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2471, y: -78}
+    <quest>k__BackingField: {fileID: 0}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

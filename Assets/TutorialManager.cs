@@ -16,7 +16,8 @@ public class TutorialManager : MonoBehaviour
 
     [Header("Trigger 2")]
     public GameObject trigger2;
-    public GameObject berryPanel;
+    public GameObject flowerPanel;
+    public Collider flowerCollider;
     public bool isStep2;
 
     [Header("Trigger 3")]
@@ -64,13 +65,14 @@ public class TutorialManager : MonoBehaviour
     public void Action2()
     {
         isStep2 = true;
-        berryPanel.SetActive(true);
+        flowerPanel.SetActive(true);
+        flowerCollider.enabled = true;
         Time.timeScale = 0f;
     }
 
     public void CancelAction2() {
         isStep2 = false;
-        berryPanel.SetActive(false);
+        flowerPanel.SetActive(false);
         trigger2.SetActive(false);
         trigger3.SetActive(true);
         Time.timeScale = 1f;

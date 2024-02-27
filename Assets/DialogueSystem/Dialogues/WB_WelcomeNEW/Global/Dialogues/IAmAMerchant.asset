@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
+  m_Name: IAmAMerchant
+  m_EditorClassIdentifier: 
+  <dialogueName>k__BackingField: IAmAMerchant
+  <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
+    times. I would offer to trade but our supplies have depleted since the <Lakeview
+    <bridge collapsed.
+  <choices>k__BackingField:
+  - <text>k__BackingField: The Lakeview bridge?
+    <nextDialogue>k__BackingField: {fileID: 0}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: What is this place?
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 597b2ee21fc5b6242a63d89fab41f0c3,
+      type: 2}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  <choiceResults>k__BackingField:
+    list: []
+  <dialogueType>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1

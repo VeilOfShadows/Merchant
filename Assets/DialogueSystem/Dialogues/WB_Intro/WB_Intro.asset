@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
+  m_Name: WB_Intro
+  m_EditorClassIdentifier: 
+  <npcName>k__BackingField: Oliver
+  <fileName>k__BackingField: WB_Intro
+  <dialogueGroups>k__BackingField:
+    list: []
+  <ungroupedDialogues>k__BackingField:
+  - {fileID: 11400000, guid: c4f843a8179a014438b68b9d3d1e8eb4, type: 2}
+  - {fileID: 11400000, guid: faacf6ce04940164bba07e235da99666, type: 2}
+  - {fileID: 11400000, guid: f495b34b149c5104e9540b1691b295c0, type: 2}
+  - {fileID: 11400000, guid: ffa09776aa900314fbe63a54b517cf16, type: 2}
+  - {fileID: 11400000, guid: 66a5dc48c6e404e44bacd97f1105e2ec, type: 2}
+  <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+    type: 2}
+  <prerequisiteQuestProgressionRequirement>k__BackingField: 0

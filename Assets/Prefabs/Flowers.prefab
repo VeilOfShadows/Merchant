@@ -4905,7 +4905,7 @@ MonoBehaviour:
   interactableObject: {fileID: 9203949652634176795}
   vfx: {fileID: 6844670569257912451}
   collider: {fileID: 5482761025724791502}
-  tweenSpeed: 0.4
+  tweenSpeed: 0.2
   audioSource: {fileID: 6332308001547242905}
 --- !u!65 &5482761025724791502
 BoxCollider:

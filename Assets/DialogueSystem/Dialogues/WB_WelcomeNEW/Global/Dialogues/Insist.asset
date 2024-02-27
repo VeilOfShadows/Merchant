@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
+  m_Name: Insist
+  m_EditorClassIdentifier: 
+  <dialogueName>k__BackingField: Insist
+  <text>k__BackingField: That would be an incredible favour. Take the road >east
+    and then >north through <Thistlewood <forest. There is a *lumberjack there who
+    could supply you with wood.
+  <choices>k__BackingField:
+  - <text>k__BackingField: Thank you
+    <nextDialogue>k__BackingField: {fileID: 0}
+    <action>k__BackingField: 2
+    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+      type: 2}
+    <questHandinPoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  <choiceResults>k__BackingField:
+    list: []
+  <dialogueType>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1

@@ -39,7 +39,7 @@ public class Interactable : MonoBehaviour
             audioSource.Play();
         }
 
-        scaleTween = interactableObject.DOPunchScale(originalScale * 1.1f, .4f).OnComplete(() => {
+        scaleTween = interactableObject.DOPunchScale(originalScale * .2f, .4f).OnComplete(() => {
             scaleTween = interactableObject.DOScale(Vector3.one * .1f, tweenSpeed).OnUpdate(()=>
             {
                 interactableObject.localPosition = Vector3.zero;

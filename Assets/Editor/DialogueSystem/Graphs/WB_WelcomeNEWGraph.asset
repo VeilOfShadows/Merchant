@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: WB_WelcomeNEWGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: WB_WelcomeNEW
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: fa0fb780-e830-4fd7-9daa-db9bd74ab48b
+    <name>k__BackingField: WillowberryIsDry
+    <text>k__BackingField: You've come to the right place. The <Kingdom <of <Carnassa
+      is rich in resources and trade. <Willowberry is unfortunately a little dry
+      of both at the moment.
+    <choices>k__BackingField:
+    - <text>k__BackingField: What's happened to all of your resources?
+      <nodeID>k__BackingField: 72c4ffdb-e595-441b-8e9c-5f42006dbcfd
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 593, y: -808}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 72c4ffdb-e595-441b-8e9c-5f42006dbcfd
+    <name>k__BackingField: LakeviewSupplies
+    <text>k__BackingField: Well we don't have much to offer besides berries and bread
+      unfortunately. We used to get a steadly supply of food from <Lakeview but they
+      haven't sent anything in over a week.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Why have they stopped sending supplies?
+      <nodeID>k__BackingField: b1b642db-9a68-4808-a7ab-76982318015f
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1253, y: -808}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 0fb257f9-028c-4e7d-b9a2-adcac8f37d3a
+    <name>k__BackingField: Welcome
+    <text>k__BackingField: Ahhh a stranger. Welcome to our small corner of the world.
+      Welcome to <Willowberry friend, what brings you here?
+    <choices>k__BackingField:
+    - <text>k__BackingField: I'm a merchant in search of new trade opportunities.
+        I've travelled for weeks
+      <nodeID>k__BackingField: fa0fb780-e830-4fd7-9daa-db9bd74ab48b
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: -68, y: -808}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: b1b642db-9a68-4808-a7ab-76982318015f
+    <name>k__BackingField: LakeviewBridge
+    <text>k__BackingField: The bridge out of <Lakeview has been destroyed by goblins.
+      There are other routes but they are much longer and the supply usage isn't
+      worth it.
+    <choices>k__BackingField:
+    - <text>k__BackingField: I could look into getting the bridge repaired for you?
+      <nodeID>k__BackingField: 220622c4-580f-4f41-833d-b482b9fe5fc5
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1913, y: -808}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 220622c4-580f-4f41-833d-b482b9fe5fc5
+    <name>k__BackingField: AcceptQuest
+    <text>k__BackingField: You would? That would be incredible! There is a *carpenter
+      in <Thistlewood <Forest who might be able to help. If you take the path >north
+      just after <Willowberry <Pond, you should find him.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+        type: 2}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2585, y: -808}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 4137a116-2816-4be2-af0e-f27989516322
+    <name>k__BackingField: IAmAMerchant
+    <text>k__BackingField: Ah, a travelling merchant, quite a rare sight in recent
+      times. I would offer to trade but our supplies have depleted since the <Lakeview
+      <bridge collapsed.
+    <choices>k__BackingField:
+    - <text>k__BackingField: The Lakeview bridge?
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: What is this place?
+      <nodeID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 936, y: -198}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: a55a8ffb-0a0d-4560-842d-096955558e6b
+    <name>k__BackingField: WhereAreWe
+    <text>k__BackingField: This is the quaint little village of <Willowberry. I would
+      offer to trade but supplies are low, even for just the locals.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Tell me about the Lakeview Bridge
+      <nodeID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1626, y: -7}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: a2911518-9789-46ee-87ce-b60361af01d0
+    <name>k__BackingField: Introduction
+    <text>k__BackingField: Welcome stranger. What brings you to these parts?
+    <choices>k__BackingField:
+    - <text>k__BackingField: I am a merchant, in search of trade
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 249, y: -191}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 924761a4-a713-4ce2-b9f9-50fccabde050
+    <name>k__BackingField: LakeviewBridge
+    <text>k__BackingField: <Lakeview is the larger town to the >east. We used to
+      get a steady supply of grain from them until goblins destroyed the shortest
+      route to us.
+    <choices>k__BackingField:
+    - <text>k__BackingField: I could help repair the bridge
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1626, y: -323}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 9c61a929-c0fa-4fb4-90c8-54f47decf746
+    <name>k__BackingField: Insist
+    <text>k__BackingField: That would be an incredible favour. Take the road >east
+      and then >north through <Thistlewood <forest. There is a *lumberjack there
+      who could supply you with wood.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+        type: 2}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2315, y: -451}
+    <quest>k__BackingField: {fileID: 0}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - WillowberryIsDry
+  - LakeviewSupplies
+  - Welcome
+  - LakeviewBridge
+  - AcceptQuest
+  - IAmAMerchant
+  - WhereAreWe
+  - Introduction
+  - LakeviewBridge
+  - Insist
+  <oldGroupedNodeNames>k__BackingField:
+    list: []
