@@ -11,6 +11,7 @@ public class TutorialTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GetComponent<Collider>().enabled = false;
             manager.ActivateTutorialSequence(index);
         }
     }

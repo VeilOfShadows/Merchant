@@ -17,6 +17,7 @@ public class PlayerHungerManager : MonoBehaviour
     public float currentHunger;
     public float hourlyHungerDrain;
     public float hungerThreshold;
+    public bool drainHunger = true;
 
     private void Awake()
     {
@@ -31,20 +32,19 @@ public class PlayerHungerManager : MonoBehaviour
         hungerSlider.value = currentHunger / maxHunger;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            DepleteHunger();
-        }
-    }
-
     public void EatFirstFood() {
         InventorySlot foodItemSlot = PlayerManager.instance.playerInventory.FindFoodInInventory();
         if (foodItemSlot != null)
         {
-            RestoreHunger(foodItemSlot.item.nutritionalValue);
-            foodItemSlot.RemoveAmount(1);
+            if (currentHunger + foodItemSlot.item.nutritionalValue > maxHunger)
+            {
+                NotificationManager.instance.DisplayNotification("You are not hungry enough to eat yet", false);
+            }
+            else
+            {
+                RestoreHunger(foodItemSlot.item.nutritionalValue);
+                foodItemSlot.RemoveAmount(1);
+            }
         }
         else
         {
@@ -54,11 +54,17 @@ public class PlayerHungerManager : MonoBehaviour
 
     public void EatSelectedFood(InventorySlot _foodItemSlot)
     {
-        //InventorySlot foodItemSlot = PlayerManager.instance.playerInventory.FindFoodInInventory();
         if (_foodItemSlot != null)
         {
-            RestoreHunger(_foodItemSlot.item.nutritionalValue);
-            _foodItemSlot.RemoveAmount(1);
+            if (currentHunger + _foodItemSlot.item.nutritionalValue > maxHunger)
+            {
+                NotificationManager.instance.DisplayNotification("You are not hungry enough to eat this", false);
+            }
+            else
+            {
+                RestoreHunger(_foodItemSlot.item.nutritionalValue);
+                _foodItemSlot.RemoveAmount(1);
+            }
         }
         else
         {
@@ -87,6 +93,11 @@ public class PlayerHungerManager : MonoBehaviour
 
     public void DepleteHunger()
     {
+        if (!drainHunger)
+        {
+            return;
+        }
+
         float startingHunger = currentHunger;
         float target = currentHunger - hourlyHungerDrain;
         
