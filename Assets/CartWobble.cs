@@ -6,17 +6,14 @@ public class CartWobble : MonoBehaviour
 {
     public Transform target;
     public Transform aim;
+    public Transform wheel_L;
+    public Transform wheel_R;
 
     private void LateUpdate()
     {
-        //if (aim.position != target.position)
-        //{
-        //    Vector3 targetVector = (target.position - aim.position).normalized;
-        //    Vector3 newVector = new Vector3(targetVector.x,0,0);
-
-        //    Quaternion targetRotation = Quaternion.LookRotation(newVector);
-
-        //    transform.rotation = targetRotation;
-        //}
+        //Quaternion targetRotation = Quaternion.LookRotation(target.position - aim.position);
+        //float xRotation = targetRotation.eulerAngles.x;
+            
+        //transform.rotation = Quaternion.Euler(xRotation, transform.eulerAngles.y, transform.eulerAngles.z);
     }
 }
