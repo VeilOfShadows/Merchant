@@ -14,6 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: 46fd6c57ae90bb2468edfb5e4cf290e7, type: 2}
   vendorItems:
+  - itemObject: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
+    item:
+      itemName: Coins
+      itemType: 2
+      itemID: 3
+      baseCoinValue: 1
+      uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
+      stackable: 1
+      tradeable: 0
+      nutritionalValue: 0
+    amountMin: 4
+    amountMax: 18
+    percentageChance: 110
   - itemObject: {fileID: 11400000, guid: 89c2f31ee17bbba4eb513c4556420a8a, type: 2}
     item:
       itemName: Bread
@@ -27,19 +40,6 @@ MonoBehaviour:
     amountMin: 3
     amountMax: 10
     percentageChance: 90
-  - itemObject: {fileID: 11400000, guid: 7387210ca915e724787dffdc8597b6f3, type: 2}
-    item:
-      itemName: Spices
-      itemType: 2
-      itemID: 1
-      baseCoinValue: 4
-      uiDisplay: {fileID: 21300000, guid: ac5a147bfda183d49a12202d584aaaff, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 0
-    amountMin: 1
-    amountMax: 2
-    percentageChance: 30
   - itemObject: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
     item:
       itemName: Berry
@@ -53,3 +53,16 @@ MonoBehaviour:
     amountMin: 3
     amountMax: 9
     percentageChance: 80
+  - itemObject: {fileID: 11400000, guid: 7387210ca915e724787dffdc8597b6f3, type: 2}
+    item:
+      itemName: Spices
+      itemType: 2
+      itemID: 1
+      baseCoinValue: 4
+      uiDisplay: {fileID: 21300000, guid: ac5a147bfda183d49a12202d584aaaff, type: 3}
+      stackable: 1
+      tradeable: 1
+      nutritionalValue: 0
+    amountMin: 1
+    amountMax: 2
+    percentageChance: 30

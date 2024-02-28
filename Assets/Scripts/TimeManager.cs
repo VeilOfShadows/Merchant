@@ -132,6 +132,6 @@ public class TimeManager : MonoBehaviour
     {
         source.volume = 0;
         source.Play();
-        DOTween.To(() => source.volume, x => source.volume = x, 0.35f, 10f).SetEase(Ease.Linear);
+        DOTween.To(() => source.volume, x => source.volume = x, 0.3f, 10f).SetEase(Ease.Linear);
     }
 }

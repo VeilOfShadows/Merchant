@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
-  m_Name: Lumberjack
+  m_Name: Carpenter_Intro
   m_EditorClassIdentifier: 
-  <npcName>k__BackingField: Carpenter
-  <fileName>k__BackingField: Lumberjack
+  <npcName>k__BackingField: 
+  <fileName>k__BackingField: Carpenter_Intro
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
-  - {fileID: 11400000, guid: e192f5b0f9d303f4885c324c5d97b584, type: 2}
-  - {fileID: 11400000, guid: 185a01661f09ac64dbe289465f6e20d7, type: 2}
-  - {fileID: 11400000, guid: 0da61880e6c1ed748918b23c3cc2a626, type: 2}
+  - {fileID: 11400000, guid: 654937732760d5448a3daa487e7c9a84, type: 2}
+  - {fileID: 11400000, guid: 7d1f5c1f59cca62498877a9a21c869c7, type: 2}
+  - {fileID: 11400000, guid: b02ec5b1d4011f444939f41b42a2f7e3, type: 2}
+  - {fileID: 11400000, guid: 520358f52edcf2545b832358428ff6ed, type: 2}
+  - {fileID: 11400000, guid: 6903091e25e838e478547ab0a5d7762f, type: 2}
   <prerequisiteQuests>k__BackingField: []

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  <dialogueName>k__BackingField: 2
+  <text>k__BackingField: Oh I'm sorry, I thought you were someone else. I don't believe
+    we've met before. I'm *Richard the *carpenter, how can I help you today?
+  <choices>k__BackingField:
+  - <text>k__BackingField: Oliver told me to come find you
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: b02ec5b1d4011f444939f41b42a2f7e3,
+      type: 2}
+    <action>k__BackingField: 3
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+      type: 2}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  <choiceResults>k__BackingField:
+    list: []
+  <dialogueType>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 0

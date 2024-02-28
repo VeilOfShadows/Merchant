@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67d3ad99b714fc24b8969d6dd4ac0382, type: 3}
-  m_Name: FindCarpenter_Quest
+  m_Name: LakeviewBridgeRepair2_Quest
   m_EditorClassIdentifier: 
-  questID: 0
-  questName: Repair Lakeview Bridge
-  questDescription: The bridge to Lakeview has been destroyed, resulting in less
-    supply deliveries to Willowberry. I should head into Thistlewood Forest to speak
-    with the local carpenter about acquiring some wood.
+  questID: 1
+  questName: Arrange Bridge Repairs
+  questDescription: The carpenter's brother Oswald is a builder who lives in Lakeview.
+    He should be able to help arrange the repair of the bridge.
   questStatus: 0

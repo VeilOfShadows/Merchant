@@ -22,13 +22,21 @@ public class CharacterDialogue : MonoBehaviour
     public void SelectDialogues() {
         for (int i = 0; i < dialogueContainers.Count; i++)
         {
-            if (dialogueContainers[i].prerequisiteQuestProgressionRequirement == QuestStatus.DEBUGFORCE)
+            for (int j = 0; j < dialogueContainers[i].prerequisiteQuests.Count; j++)
             {
-                dialogueContainer = dialogueContainers[i];
-                return;
-            }
+                if (dialogueContainers[i].prerequisiteQuests[j].prerequisiteQuestProgressionRequirement == QuestStatus.DEBUGFORCE)
+                {
+                    dialogueContainer = dialogueContainers[i];
+                    return;
+                }
+            }            
+            //if (dialogueContainers[i].prere.prerequisiteQuestProgressionRequirement == QuestStatus.DEBUGFORCE)
+            //{
+            //    dialogueContainer = dialogueContainers[i];
+            //    return;
+            //}
 
-            if (PlayerQuestManager.instance.FindAvailableDialogues(dialogueContainers[i].prerequisiteQuest, dialogueContainers[i].prerequisiteQuestProgressionRequirement))
+            if (PlayerQuestManager.instance.FindAvailableDialogues(dialogueContainers[i].prerequisiteQuests))
             {
                 dialogueContainer = dialogueContainers[i];
                 Debug.Log("Quest has progressed enough. Dialogue is available");

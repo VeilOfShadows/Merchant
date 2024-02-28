@@ -2,14 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct QuestPrerequisites {
+    [field: SerializeField] public QuestSO prerequisiteQuest { get; set; }
+    [field: SerializeField] public QuestStatus prerequisiteQuestProgressionRequirement { get; set; }
+}
+
 public class DialogueContainerSO : ScriptableObject
 {
     [field: SerializeField]public string npcName { get; set; }
     [field: SerializeField]public string fileName { get; set; }
     [field: SerializeField]public SerializableDictionary<DialogueGroupSO, List<DialogueSO>> dialogueGroups { get; set; }
     [field: SerializeField]public List<DialogueSO> ungroupedDialogues { get; set; }
-    [field: SerializeField]public QuestSO prerequisiteQuest { get; set; }
-    [field: SerializeField]public QuestStatus prerequisiteQuestProgressionRequirement { get; set; }
+    [field: SerializeField]public List<QuestPrerequisites> prerequisiteQuests { get; set; }
+    //[field: SerializeField]public List<QuestSO> prerequisiteQuests { get; set; }
+    //[field: SerializeField]public QuestStatus prerequisiteQuestProgressionRequirement { get; set; }
 
     public void Initialize(string _fileName) 
     {

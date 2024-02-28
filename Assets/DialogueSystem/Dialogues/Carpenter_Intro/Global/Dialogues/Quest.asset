@@ -10,24 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: DialogueName
+  m_Name: Quest
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: Ahh it's you again! Can I get you anything?
+  <dialogueName>k__BackingField: Quest
+  <text>k__BackingField: Hmm ok. My brother *Oswald in <Lakeview is a builder. He
+    might be able to help organise a lumber order and get the <Lakeview coffers to
+    pay for it.
   <choices>k__BackingField:
-  - <text>k__BackingField: Do you have anything to trade?
+  - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 1
-    <questStartingPoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 0}
-    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-  - <text>k__BackingField: Leave
-    <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 0
-    <questStartingPoint>k__BackingField: {fileID: 0}
+    <action>k__BackingField: 2
+    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+      type: 2}
     <questHandinPoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 1
+  <isStartingDialogue>k__BackingField: 0

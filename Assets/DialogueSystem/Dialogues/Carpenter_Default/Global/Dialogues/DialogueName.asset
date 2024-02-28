@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: Ahh it's you again! Can I get you anything?
+  <text>k__BackingField: Welcome back traveller, what'll it be?
   <choices>k__BackingField:
   - <text>k__BackingField: Do you have anything to trade?
     <nextDialogue>k__BackingField: {fileID: 0}

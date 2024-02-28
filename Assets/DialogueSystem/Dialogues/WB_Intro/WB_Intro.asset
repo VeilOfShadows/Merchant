@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f495b34b149c5104e9540b1691b295c0, type: 2}
   - {fileID: 11400000, guid: ffa09776aa900314fbe63a54b517cf16, type: 2}
   - {fileID: 11400000, guid: 66a5dc48c6e404e44bacd97f1105e2ec, type: 2}
-  <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
-    type: 2}
-  <prerequisiteQuestProgressionRequirement>k__BackingField: 0
+  <prerequisiteQuests>k__BackingField:
+  - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+      type: 2}
+    <prerequisiteQuestProgressionRequirement>k__BackingField: 0

@@ -32,12 +32,24 @@ public class PlayerQuestManager : MonoBehaviour
         }
     }
 
-    public bool FindAvailableDialogues(QuestSO questToCheck, QuestStatus _progression) {
-        if (questToCheck.questStatus == _progression)
+    public bool FindAvailableDialogues(List<QuestPrerequisites> questPrerequisites) {
+        for (int i = 0; i < questPrerequisites.Count; i++)
         {
-            return true;
+            if (questPrerequisites[i].prerequisiteQuest.questStatus != questPrerequisites[i].prerequisiteQuestProgressionRequirement)
+            {
+                Debug.Log("Quest: " + questPrerequisites[i].prerequisiteQuest.questName + " does not have progression: " + questPrerequisites[i].prerequisiteQuestProgressionRequirement);
+                return false;
+            }
         }
 
-        return false;
+        //for (int i = 0; i < questsToCheck.Count; i++)
+        //{
+        //    if (questsToCheck[i].questStatus != _progression)
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        return true;
     }
 }

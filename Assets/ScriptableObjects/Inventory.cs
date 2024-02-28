@@ -52,7 +52,12 @@ public class Inventory : ScriptableObject
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            if (slots[i].item.itemID <= -1)
+            if (slots[i].item == null)
+            {
+                slots[i].UpdateSlot(_item, _amount);
+                return slots[i];
+            }
+            else if (slots[i].item.itemID <= -1)
             {
                 slots[i].UpdateSlot(_item, _amount);
                 return slots[i];
@@ -65,9 +70,12 @@ public class Inventory : ScriptableObject
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            if (slots[i].item.itemID == _item.itemID)
+            if (slots[i].item != null)
             {
-                return slots[i];
+                if (slots[i].item.itemID == _item.itemID)
+                {
+                    return slots[i];
+                }
             }
         }
         return null;
