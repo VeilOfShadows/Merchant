@@ -21,7 +21,6 @@ public class Interactable : MonoBehaviour
     {
         amount = 1;
         NotificationManager.instance.DisplayNotification("+ " + item.data.itemName + " x " + amount, false);
-        //NotificationManager.instance.DisplayNotification("- Item added to inventory: " + item.data.itemName + " x " + amount);
 
         collider.enabled = false;
         playerInventory.AddItem(item.data, amount);
