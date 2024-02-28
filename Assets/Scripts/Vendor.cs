@@ -20,7 +20,10 @@ public class Vendor : MonoBehaviour
 
     private void Start()
     {
-        inventory.RestockShop();
+        if (inventory != null)
+        {
+            inventory.RestockShop();
+        }
     }
 
     #region Triggers

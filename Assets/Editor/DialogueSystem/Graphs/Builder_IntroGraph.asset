@@ -15,26 +15,62 @@ MonoBehaviour:
   <fileName>k__BackingField: Builder_Intro
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: 5ddbea3a-9a7b-4dad-b194-ce0d20624d85
-    <name>k__BackingField: 1
-    <text>k__BackingField: Hello I am Builder
+  - <ID>k__BackingField: 0edb73d9-d645-48a9-a00e-b2d014f8066a
+    <name>k__BackingField: 2
+    <text>k__BackingField: Oh I would love to but unfortunately <Lakeview doesn't
+      have the highest quality wood. Theres plenty of trees but the moisture makes
+      them quite weak as you can see from the bridge.
     <choices>k__BackingField:
-    - <text>k__BackingField: Give me wood
-      <nodeID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
-      <action>k__BackingField: 3
-      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
-        type: 2}
+    - <text>k__BackingField: Your brother Richard can provide the wood if you pay
+        for it
+      <nodeID>k__BackingField: d27aedb8-d88c-4b56-ad49-c17b62400208
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 310, y: 289}
+    <position>k__BackingField: {x: 831, y: 3}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 5ddbea3a-9a7b-4dad-b194-ce0d20624d85
+    <name>k__BackingField: 1
+    <text>k__BackingField: Greetings traveller, you're a new face. What brings you
+      to <Lakeview?
+    <choices>k__BackingField:
+    - <text>k__BackingField: Can you help me repair the bridge?
+      <nodeID>k__BackingField: 0edb73d9-d645-48a9-a00e-b2d014f8066a
+      <action>k__BackingField: 3
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+        type: 2}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 112, y: 134}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: d27aedb8-d88c-4b56-ad49-c17b62400208
+    <name>k__BackingField: 3
+    <text>k__BackingField: I haven't spoken to *Richard in many moons, I hope he's
+      doing alright. The bridge is good for trade so I'm sure the council will be
+      happy to see it repaired.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Can you give me a lumber order?
+      <nodeID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1484, y: 3}
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
-    <name>k__BackingField: 2
-    <text>k__BackingField: Ok here is lumber order
+    <name>k__BackingField: 4
+    <text>k__BackingField: Of course, I have been planning this repair for a few
+      days but lacked the materials to do so. Take this to my *brother, I shall meet
+      you on the other side of <Lakeview <Bridge when you have the wood.
     <choices>k__BackingField:
-    - <text>k__BackingField: Leave
+    - <text>k__BackingField: See you then
       <nodeID>k__BackingField: 
       <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
@@ -43,11 +79,13 @@ MonoBehaviour:
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 969, y: 316}
+    <position>k__BackingField: {x: 2146, y: 3}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
-  - 1
   - 2
+  - 1
+  - 3
+  - 4
   <oldGroupedNodeNames>k__BackingField:
     list: []

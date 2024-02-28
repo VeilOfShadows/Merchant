@@ -10,8 +10,9 @@ public class RoadTrigger : MonoBehaviour
     public RoadController roadController;
 
     public void OnTriggerEnter(Collider other)
-    {        
-        if (other.gameObject.layer == 8)
+    {
+        //if (other.gameObject.layer == 9)
+        if (other.CompareTag("PlayerNode"))
         {
             playerControls.SetRoad(roadController.GetComponent<SplineContainer>(), cam/*, roadController.roadName*/);
         }

@@ -15,12 +15,6 @@ MonoBehaviour:
   <dialogueName>k__BackingField: DialogueName
   <text>k__BackingField: Welcome back traveller, what'll it be?
   <choices>k__BackingField:
-  - <text>k__BackingField: Do you have anything to trade?
-    <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 1
-    <questStartingPoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 0}
-    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   - <text>k__BackingField: Leave
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 0

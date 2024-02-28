@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 2
-  <text>k__BackingField: Ok here is lumber order
+  <text>k__BackingField: Oh I would love to but unfortunately <Lakeview doesn't have
+    the highest quality wood. Theres plenty of trees but the moisture makes them
+    quite weak as you can see from the bridge.
   <choices>k__BackingField:
-  - <text>k__BackingField: Leave
-    <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 2
-    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
+  - <text>k__BackingField: Your brother Richard can provide the wood if you pay for
+      it
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: a2ddf4e011bb966489c52e93b0ed5687,
       type: 2}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
     <questHandinPoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

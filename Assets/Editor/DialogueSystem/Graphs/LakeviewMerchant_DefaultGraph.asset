@@ -15,11 +15,11 @@ MonoBehaviour:
   <fileName>k__BackingField: LakeviewMerchant_Default
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: 7e4af1cc-8c96-463f-8799-6a9c24b1a96f
+  - <ID>k__BackingField: e26fd56e-eb17-4bde-bd7f-66d12e3678e9
     <name>k__BackingField: DialogueName
-    <text>k__BackingField: I am a merchant
+    <text>k__BackingField: Welcome friend. Can I interest you in some of my wares?
     <choices>k__BackingField:
-    - <text>k__BackingField: Lemme see
+    - <text>k__BackingField: Sure, let me see your wares
       <nodeID>k__BackingField: 
       <action>k__BackingField: 1
       <questStartingPoint>k__BackingField: {fileID: 0}
@@ -27,7 +27,7 @@ MonoBehaviour:
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 555, y: 424}
+    <position>k__BackingField: {x: 477, y: 490}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:

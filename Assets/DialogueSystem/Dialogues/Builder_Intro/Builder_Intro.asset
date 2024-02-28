@@ -17,8 +17,10 @@ MonoBehaviour:
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
-  - {fileID: 11400000, guid: 6dd5425367e89534581d02e32fd90c7b, type: 2}
   - {fileID: 11400000, guid: 731cdffbcdd7283489a4f5a63b2e21f4, type: 2}
+  - {fileID: 11400000, guid: 6dd5425367e89534581d02e32fd90c7b, type: 2}
+  - {fileID: 11400000, guid: a2ddf4e011bb966489c52e93b0ed5687, type: 2}
+  - {fileID: 11400000, guid: 77c3399bc266d164eaaea031823346ae, type: 2}
   <prerequisiteQuests>k__BackingField:
   - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}

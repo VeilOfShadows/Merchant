@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: DialogueName
+  m_Name: 4
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: Welcome friend. Can I interest you in some of my wares?
+  <dialogueName>k__BackingField: 4
+  <text>k__BackingField: Of course, I have been planning this repair for a few days
+    but lacked the materials to do so. Take this to my *brother, I shall meet you
+    on the other side of <Lakeview <Bridge when you have the wood.
   <choices>k__BackingField:
-  - <text>k__BackingField: Sure, let me see your wares
+  - <text>k__BackingField: See you then
     <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 1
-    <questStartingPoint>k__BackingField: {fileID: 0}
+    <action>k__BackingField: 2
+    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
+      type: 2}
     <questHandinPoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 1
+  <isStartingDialogue>k__BackingField: 0

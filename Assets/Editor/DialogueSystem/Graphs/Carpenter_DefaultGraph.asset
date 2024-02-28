@@ -19,12 +19,6 @@ MonoBehaviour:
     <name>k__BackingField: DialogueName
     <text>k__BackingField: Welcome back traveller, what'll it be?
     <choices>k__BackingField:
-    - <text>k__BackingField: Do you have anything to trade?
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 1
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     - <text>k__BackingField: Leave
       <nodeID>k__BackingField: 
       <action>k__BackingField: 0
@@ -33,7 +27,7 @@ MonoBehaviour:
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1049, y: -533}
+    <position>k__BackingField: {x: 477, y: 490}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
