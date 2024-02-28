@@ -162,7 +162,7 @@ Material:
     - _FoamSize1: 0.019
     - _FoamSmoothness: 0
     - _FoamSmoothness1: 0
-    - _FoamSpread: 1.01
+    - _FoamSpread: 0.47
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -219,8 +219,8 @@ Material:
     - _Wave3DTilingTuffs1: -0.18
     - _Wave3DTilingTufts: -0.09
     - _WaveAmplitude: 0
-    - _WaveDirection: 3.03
-    - _WaveFoamOpacity: 0
+    - _WaveDirection: 1.64
+    - _WaveFoamOpacity: 0.026
     - _WaveNoiseAmount: 2
     - _WaveNoiseScale: 30
     - _WaveSpeed: 0.094
@@ -259,7 +259,7 @@ Material:
     - _FoamColor1: {r: 0.5215687, g: 0.8980392, b: 0.8470588, a: 0}
     - _FoamEmitColour: {r: 0, g: 0, b: 0, a: 0}
     - _ShallowColour: {r: 0.9529412, g: 0.7882354, b: 0.5882353, a: 0}
-    - _VeryDeepColour: {r: 0.01176471, g: 0.172549, b: 0.2745098, a: 0}
+    - _VeryDeepColour: {r: 0.011764698, g: 0.22532497, b: 0.27450982, a: 0}
     - _WaterDeepColor: {r: 0, g: 0.435, b: 0.40020004, a: 0}
     - _WaterDeepColor1: {r: 0.04705882, g: 0.3098039, b: 0.1960784, a: 0}
     - _WaterReallyDeepColor: {r: 0, g: 0.17401281, b: 0.277, a: 0}
