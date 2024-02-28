@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: LakeviewMerchant_DefaultGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: LakeviewMerchant_Default
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 7e4af1cc-8c96-463f-8799-6a9c24b1a96f
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: I am a merchant
+    <choices>k__BackingField:
+    - <text>k__BackingField: Lemme see
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 1
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 555, y: 424}
+    <quest>k__BackingField: {fileID: 0}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - DialogueName
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

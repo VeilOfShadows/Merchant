@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
   m_Name: Carpenter_Intro
   m_EditorClassIdentifier: 
-  <npcName>k__BackingField: 
+  <npcName>k__BackingField: Richard
   <fileName>k__BackingField: Carpenter_Intro
   <dialogueGroups>k__BackingField:
     list: []
@@ -22,4 +22,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b02ec5b1d4011f444939f41b42a2f7e3, type: 2}
   - {fileID: 11400000, guid: 520358f52edcf2545b832358428ff6ed, type: 2}
   - {fileID: 11400000, guid: 6903091e25e838e478547ab0a5d7762f, type: 2}
-  <prerequisiteQuests>k__BackingField: []
+  <prerequisiteQuests>k__BackingField:
+  - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+      type: 2}
+    <prerequisiteQuestProgressionRequirement>k__BackingField: 2
+  - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+      type: 2}
+    <prerequisiteQuestProgressionRequirement>k__BackingField: 0

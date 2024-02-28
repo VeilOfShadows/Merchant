@@ -155,9 +155,9 @@ public class PlayerControls : MonoBehaviour
         //rb.AddForce(dir);
     }
 
-    public void SetRoad(SplineContainer container, GameObject cam, string _roadName) {
+    public void SetRoad(SplineContainer container, GameObject cam) {
         
-        roadName = _roadName;
+        //roadName = _roadName;
         cam.SetActive(true);
         currentCam.SetActive(false);
         currentCam = cam;
