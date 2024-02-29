@@ -17,20 +17,24 @@ public class CartWobble : MonoBehaviour
         //float xRotation = targetRotation.eulerAngles.x;
         Vector3 targetVector = (target.position - aim.position).normalized;
         float xRotation = scale * (aim.position.y - target.position.y);
-        float zClamp = transform.eulerAngles.z;
-        if (zClamp > 50)
+        float zClamp;
+        if (transform.eulerAngles.z > 50 || transform.eulerAngles.z < -50)
         {
-            zClamp = 50;
+            zClamp = 0;
         }
-        else if (zClamp < -50)
+        else
         {
-            zClamp -= 50;
+            zClamp = transform.eulerAngles.z;
         }
+        //else if (zClamp < -50)
+        //{
+        //    zClamp -= 50;
+        //}
         positionClamp.x = 0;
         positionClamp.y = transform.localPosition.y;
         positionClamp.z = -2;
 
         transform.localPosition = positionClamp;
-        transform.localRotation = Quaternion.Euler(xRotation, 0, transform.eulerAngles.z);
+        transform.localRotation = Quaternion.Euler(xRotation, 0, zClamp);
     }
 }

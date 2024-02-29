@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 1
-  <text>k__BackingField: Greetings traveller, you're a new face. What brings you
-    to <Lakeview?
+  <text>k__BackingField: Not often you see a new face. What brings you to <Lakeview?
   <choices>k__BackingField:
-  - <text>k__BackingField: Can you help me repair the bridge?
+  - <text>k__BackingField: I'm trying to arrange the bridge to be repaired
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 731cdffbcdd7283489a4f5a63b2e21f4,
       type: 2}
     <action>k__BackingField: 3

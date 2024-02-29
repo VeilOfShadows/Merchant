@@ -20,4 +20,4 @@ MonoBehaviour:
     uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
     stackable: 1
     tradeable: 1
-    nutritionalValue: 5
+    nutritionalValue: 8

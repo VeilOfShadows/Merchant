@@ -13,18 +13,17 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 3
-  <text>k__BackingField: I haven't spoken to *Richard in many moons, I hope he's
-    doing alright. The bridge is good for trade so I'm sure the council will be happy
-    to see it repaired.
+  <text>k__BackingField: Oh you should have said! Any friend of *Richard is a friend
+    of mine. Besides, the bridge is good for trade so I'm sure the council will be
+    happy to see it repaired.
   <choices>k__BackingField:
-  - <text>k__BackingField: Can you give me a lumber order?
-    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 77c3399bc266d164eaaea031823346ae,
+  - <text>k__BackingField: Do you know what materials you will need?
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: b252d6237c2be3748af0286c9bbbbb22,
       type: 2}
-    <action>k__BackingField: 4
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questCompletePoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
-      type: 2}
+    <questHandinPoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []

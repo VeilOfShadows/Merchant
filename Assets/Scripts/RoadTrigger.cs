@@ -16,7 +16,10 @@ public class RoadTrigger : MonoBehaviour
         if (other.CompareTag("PlayerNode"))
         {
             playerControls.SetRoad(roadController.GetComponent<SplineContainer>(), cam/*, roadController.roadName*/);
-            roadJunction.EnterRoad(roadController);
+            if (roadJunction != null)
+            {
+                roadJunction.EnterRoad(roadController);
+            }
         }
     }
 }
