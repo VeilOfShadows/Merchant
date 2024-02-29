@@ -13,6 +13,6 @@ public class RoadSwitch : MonoBehaviour
 
     public void OnMouseDown()
     {
-        junction.SwitchRoad(gameObject, road.Splines[0]);
+        //junction.SwitchRoad(gameObject, road.Splines[0]);
     }
 }

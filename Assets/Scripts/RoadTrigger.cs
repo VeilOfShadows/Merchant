@@ -8,6 +8,7 @@ public class RoadTrigger : MonoBehaviour
     public GameObject cam;
     public PlayerControls playerControls;
     public RoadController roadController;
+    public RoadJunction roadJunction;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,8 @@ public class RoadTrigger : MonoBehaviour
         if (other.CompareTag("PlayerNode"))
         {
             playerControls.SetRoad(roadController.GetComponent<SplineContainer>(), cam/*, roadController.roadName*/);
+            roadJunction.EnterRoad(roadController);
+            //roadController.DeactivateTriggers();
         }
     }
 }

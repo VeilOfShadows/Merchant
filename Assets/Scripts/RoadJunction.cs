@@ -8,71 +8,102 @@ using Cinemachine;
 
 public class RoadJunction : MonoBehaviour
 {
-    public SplineContainer junctionRoad;
-    public SplineContainer defaultRoad;
-    public List<GameObject> roadSwitchers = new List<GameObject>();
-    public PlayerControls playerControls;
-    public RoadSwitch defaultRoadSwitch;
-    public GameObject cam;
-    public GameObject cam2;
-    public CinemachineVirtualCamera camObject;
-    //public List<GameObject> cameras = new List<GameObject>();
+    public List<RoadController> triggers = new List<RoadController>();
+    List<GameObject> temp = new List<GameObject>();
 
-    //public List<int> roads = new List<int>();
-
-    //public int currentRoad = 0;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("SWITCHING ROAD");
-            playerControls = other.GetComponent<PlayerControls>();
-            //if (CheckDirection(playerControls))
-            //{
-                for (int i = 0; i < roadSwitchers.Count; i++)
-                {
-                    roadSwitchers[i].SetActive(true);                
-                }
-            //}
-        }
+    public void EnterRoad(RoadController currentController) {
+        StartCoroutine(Enter(currentController));
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+    public IEnumerator Enter(RoadController currentController) {
+        Debug.Log("TEST");
+        for (int i = 0; i < triggers.Count; i++)
         {
-            //if (CheckDirection(playerControls))
-            //{
-                playerControls.currentRoad = defaultRoad.Splines[0];
-            //cam2.SetActive(true);
-            //cam.SetActive(false);
-            camObject.GetCinemachineComponent<CinemachineTrackedDolly>().m_Path = defaultRoadSwitch.dolly;
-            playerControls = null;
-                Debug.Log("LEAVING ROAD");
-                for (int i = 0; i < roadSwitchers.Count; i++)
-                {
-                    roadSwitchers[i].SetActive(false);
-                }
-            //}
+            triggers[i].DeactivateTriggers();
         }
-    }
 
-    public void SwitchRoad(GameObject roadSwitcher, Spline newRoad)
-    {
-        for (int i = 0; i < roadSwitchers.Count; i++)
+        //for (int i = 0; i < triggers.Count; i++)
+        //{
+        //    triggers[i].SetActive(false);
+        //}
+
+        yield return new WaitForSeconds(1f);
+
+        for (int i = 0; i < triggers.Count; i++)
         {
-            if (roadSwitchers[i] == roadSwitcher)
+            if (triggers[i] != currentController)
             {
-                roadSwitchers[i].SetActive(false);
-            }
-            else
-            {
-                roadSwitchers[i].SetActive(true);
+                triggers[i].ActivateTriggers();
+                //triggers[i].SetActive(true);
             }
         }
-        playerControls.currentRoad = newRoad;
     }
+
+    //public SplineContainer junctionRoad;
+    //public SplineContainer defaultRoad;
+    //public List<GameObject> roadSwitchers = new List<GameObject>();
+    //public PlayerControls playerControls;
+    //public RoadSwitch defaultRoadSwitch;
+    //public GameObject cam;
+    //public GameObject cam2;
+    //public CinemachineVirtualCamera camObject;
+    ////public List<GameObject> cameras = new List<GameObject>();
+
+    ////public List<int> roads = new List<int>();
+
+    ////public int currentRoad = 0;
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        Debug.Log("SWITCHING ROAD");
+    //        playerControls = other.GetComponent<PlayerControls>();
+    //        //if (CheckDirection(playerControls))
+    //        //{
+    //            for (int i = 0; i < roadSwitchers.Count; i++)
+    //            {
+    //                roadSwitchers[i].SetActive(true);                
+    //            }
+    //        //}
+    //    }
+    //}
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        //if (CheckDirection(playerControls))
+    //        //{
+    //            playerControls.currentRoad = defaultRoad.Splines[0];
+    //        //cam2.SetActive(true);
+    //        //cam.SetActive(false);
+    //        camObject.GetCinemachineComponent<CinemachineTrackedDolly>().m_Path = defaultRoadSwitch.dolly;
+    //        playerControls = null;
+    //            Debug.Log("LEAVING ROAD");
+    //            for (int i = 0; i < roadSwitchers.Count; i++)
+    //            {
+    //                roadSwitchers[i].SetActive(false);
+    //            }
+    //        //}
+    //    }
+    //}
+
+    //public void SwitchRoad(GameObject roadSwitcher, Spline newRoad)
+    //{
+    //    for (int i = 0; i < roadSwitchers.Count; i++)
+    //    {
+    //        if (roadSwitchers[i] == roadSwitcher)
+    //        {
+    //            roadSwitchers[i].SetActive(false);
+    //        }
+    //        else
+    //        {
+    //            roadSwitchers[i].SetActive(true);
+    //        }
+    //    }
+    //    playerControls.currentRoad = newRoad;
+    //}
 
     //public bool CheckDirection(PlayerControls player) {
     //    if (player.currentRoad != junctionRoad.Splines[0])
