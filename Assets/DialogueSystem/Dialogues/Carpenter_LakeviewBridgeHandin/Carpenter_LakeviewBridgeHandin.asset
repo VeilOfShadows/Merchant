@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
+  m_Name: Carpenter_LakeviewBridgeHandin
+  m_EditorClassIdentifier: 
+  <npcName>k__BackingField: Richard
+  <fileName>k__BackingField: Carpenter_LakeviewBridgeHandin
+  <dialogueGroups>k__BackingField:
+    list: []
+  <ungroupedDialogues>k__BackingField:
+  - {fileID: 11400000, guid: 224572cfeeb2fda4eab571c40e45fa38, type: 2}
+  - {fileID: 11400000, guid: c02c1780cdf45e14e89bec6895e062bd, type: 2}
+  <prerequisiteQuests>k__BackingField:
+  - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
+      type: 2}
+    <prerequisiteQuestProgressionRequirement>k__BackingField: 1
+  - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624,
+      type: 2}
+    <prerequisiteQuestProgressionRequirement>k__BackingField: 0

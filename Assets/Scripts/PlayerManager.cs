@@ -57,6 +57,7 @@ public class PlayerManager : MonoBehaviour
     public void EnterShop() 
     {
         playerUI.SetActive(true);
+        //merchantInventory.SyncNewInventory();
         merchantUI.SetActive(true);
 
         playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();

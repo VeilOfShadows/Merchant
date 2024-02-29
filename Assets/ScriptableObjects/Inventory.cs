@@ -139,6 +139,13 @@ public class Inventory : ScriptableObject
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].item = database.FindItem(slots[i].item.itemID);
+            if (slots[i].item != null)
+            {
+                if (slots[i].item.itemID == -1)
+                {
+                    slots[i].RemoveItem();
+                }
+            }
         }
     }
 }

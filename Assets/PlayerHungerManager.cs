@@ -11,6 +11,7 @@ public class PlayerHungerManager : MonoBehaviour
 
     public Slider hungerSlider;
     Tween sliderTween;
+    Tween colourTween;
     public float tweenSpeed;
 
     public float maxHunger;
@@ -79,9 +80,15 @@ public class PlayerHungerManager : MonoBehaviour
 
         currentHunger += hungerRestored;
 
-        //if (currentHunger <= hungerThreshold)
+        if (colourTween != null && colourTween.IsActive() && colourTween.IsPlaying())
+        {
+            colourTween.Kill();
+        }
+
+        colourTween = hungerSlider.targetGraphic.DOColor(Color.white, .1f).OnComplete(() => {
+            colourTween = hungerSlider.targetGraphic.DOColor(Color.green, .4f).From();
+        });        //if (currentHunger <= hungerThreshold)
         //{
-            hungerSlider.targetGraphic.DOColor(Color.green, .4f).From();
         //    Die();
         //}
 
@@ -105,7 +112,14 @@ public class PlayerHungerManager : MonoBehaviour
 
         if (currentHunger <= hungerThreshold)
         {
-            hungerSlider.targetGraphic.DOColor(Color.red, .4f).From();
+            if (colourTween != null && colourTween.IsActive() && colourTween.IsPlaying())
+            {
+                colourTween.Kill();
+            }
+            colourTween = hungerSlider.targetGraphic.DOColor(Color.white, .1f).OnComplete(() => { 
+                colourTween = hungerSlider.targetGraphic.DOColor(Color.red, .4f).From();
+            });
+            
             Die();
         }
 

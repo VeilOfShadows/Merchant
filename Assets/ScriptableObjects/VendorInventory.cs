@@ -9,6 +9,7 @@ public class VendorInventory : Inventory
 
     [ContextMenu("Restock Shop")]
     public void RestockShop() {
+        itemPool.Sync();
         Clear();
         int roll;
         for (int i = 0; i < itemPool.vendorItems.Length; i++)

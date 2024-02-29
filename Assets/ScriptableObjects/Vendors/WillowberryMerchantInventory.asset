@@ -25,19 +25,19 @@ MonoBehaviour:
         stackable: 1
         tradeable: 0
         nutritionalValue: 0
-      amount: 5
+      amount: 6
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: Bread
-        itemType: 1
-        itemID: 0
-        baseCoinValue: 1
-        uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
-        stackable: 1
-        tradeable: 1
-        nutritionalValue: 5
-      amount: 1
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -53,15 +53,15 @@ MonoBehaviour:
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: 0
-      amount: 0
+        itemName: Mushroom
+        itemType: 1
+        itemID: 7
+        baseCoinValue: 2
+        uiDisplay: {fileID: 21300000, guid: 5e103bda7f23ea34dabf0567ff91fcca, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 4
+      amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:

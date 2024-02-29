@@ -25,19 +25,7 @@ MonoBehaviour:
         stackable: 1
         tradeable: 0
         nutritionalValue: 0
-      amount: 15
-      slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: Bread
-        itemType: 1
-        itemID: 0
-        baseCoinValue: 1
-        uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
-        stackable: 1
-        tradeable: 1
-        nutritionalValue: 5
-      amount: 5
+      amount: 11
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -50,6 +38,18 @@ MonoBehaviour:
         tradeable: 0
         nutritionalValue: 0
       amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Starflower
+        itemType: 2
+        itemID: 5
+        baseCoinValue: 3
+        uiDisplay: {fileID: 21300000, guid: da609764537e4c14d92fc20d0fa3a8e9, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 0
+      amount: 2
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:

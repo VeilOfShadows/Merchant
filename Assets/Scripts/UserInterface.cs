@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Linq;
 
 public class UserInterface : MonoBehaviour
 {
@@ -52,8 +53,24 @@ public class UserInterface : MonoBehaviour
         slotsOnInterface.UpdateSlotDisplay();
     }
 
+    public void SyncNewInventory() {
+        //for (int i = 0; i < inventory.slots.Length; i++)
+        //{
+        //    slotsOnInterface[i] = inventory.slots[i];
+        //}
+        foreach (KeyValuePair<GameObject, InventorySlot> _slot in slotsOnInterface)
+        {
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
+                slotsOnInterface[_slot.Key] = inventory.slots[i];
+            }
+        }
+        slotsOnInterface.UpdateSlotDisplay();
+    }
+
     private void OnSlotUpdate(InventorySlot _slot)
     {
+
         if (_slot.item.itemID >= 0)
         {
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.item.uiDisplay;
