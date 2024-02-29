@@ -164,10 +164,8 @@ public class PlayerControls : MonoBehaviour
             currentCam.SetActive(false);
         }
         currentCam = cam;
-        //roadSpline.GetComponent<RoadController>().ActivateTriggers();
         roadSpline = container;
         currentRoad = roadSpline.Splines[0];
-        //roadSpline.GetComponent<RoadController>().DeactivateTriggers();
-        //RoadNameDisplay.instance.Display(roadName);
+
     }
 }

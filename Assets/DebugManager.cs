@@ -29,8 +29,14 @@ public class DebugManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            debugPanel.SetActive(!debugPanel.activeInHierarchy);
+            TogglePanel(!debugPanel.activeInHierarchy);
+            //debugPanel.SetActive(!debugPanel.activeInHierarchy);
         }
+    }
+
+    public void TogglePanel(bool toggle)
+    {
+        debugPanel.SetActive(toggle);
     }
 
     public void SpeedUp() {

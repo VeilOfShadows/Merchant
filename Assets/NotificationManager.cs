@@ -30,7 +30,6 @@ public class NotificationManager : MonoBehaviour
         {
             if (!textObject[i].gameObject.activeInHierarchy)
             {
-                Debug.Log(textObject[i]);
                 textObject[i].gameObject.SetActive(true);
                 textObject[i].Display(text);
                 return;

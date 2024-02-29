@@ -17,7 +17,6 @@ public class RoadTrigger : MonoBehaviour
         {
             playerControls.SetRoad(roadController.GetComponent<SplineContainer>(), cam/*, roadController.roadName*/);
             roadJunction.EnterRoad(roadController);
-            //roadController.DeactivateTriggers();
         }
     }
 }

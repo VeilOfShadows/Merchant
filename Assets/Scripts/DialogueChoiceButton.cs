@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using System;
+using UnityEngine.UI;
 
 public class DialogueChoiceButton : MonoBehaviour
 {
@@ -22,9 +23,19 @@ public class DialogueChoiceButton : MonoBehaviour
     public float textSpeed;
     public AudioSource audioSource;
     public QuestDatabase questDatabase;
+    Button button;
+    RectTransform rect;
+
+    private void Start()
+    {
+        rect = GetComponent<RectTransform>();
+        button = GetComponent<Button>();
+    }
 
     public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _completeQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
+        rect.DOAnchorPosX(0, .1f);
+
         isEnd = false;
         nextDialogue = nextDialogueSO;
         action = _action;
@@ -109,16 +120,20 @@ public class DialogueChoiceButton : MonoBehaviour
 
     public void Hover()
     {
-        DOTween.Complete(textTween);
-        RectTransform rect = this.GetComponent<RectTransform>();
-        rect.DOAnchorPosX(-30, .3f);
-        audioSource.Play();
+        if (button.interactable)
+        {
+            DOTween.Complete(textTween);
+            rect.DOAnchorPosX(-30, .3f);
+            audioSource.Play();            
+        }
     }
 
     public void Leave()
     {
-        DOTween.Complete(textTween);
-        RectTransform rect = this.GetComponent<RectTransform>();
-        rect.DOAnchorPosX(0, .3f);
+        if (button.interactable)
+        {
+            DOTween.Complete(textTween);
+            rect.DOAnchorPosX(0, .3f);
+        }
     }
 }

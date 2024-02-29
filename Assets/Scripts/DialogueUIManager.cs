@@ -40,9 +40,48 @@ public class DialogueUIManager : MonoBehaviour
         //}
     }
 
+    //public void StartDialogueAnimation()
+    //{
+    //    dialoguePanel.SetActive(true);
+    //}
+
     public void StartDialogue(CharacterDialogueController activeDialogue) {
-        activeDialogue.dialogue.SelectDialogues();
+
+        StartCoroutine(AnimIntro(activeDialogue));
+        //activeDialogue.dialogue.SelectDialogues();
+        ////dialoguePanel.SetActive(true);
+        //currentDialogue = activeDialogue.FindStartingDialogue();
+        //dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
+
+        //minTimeBetweenSounds = Random.Range(.08f, .1f);
+        //float lastSoundTime = -minTimeBetweenSounds;
+
+        //npcNameText.text = activeDialogue.dialogue.dialogueContainer.npcName;
+
+        ////DOTween.Kill(textTween);
+        //if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
+        //{
+        //    textTween.Kill();
+        //}
+        //string text = "";
+        //textTween = DOTween.To(() => text, x => text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
+        //{
+        //    if (Time.time - lastSoundTime >= minTimeBetweenSounds)
+        //    {
+        //        textAudioSource.Play();
+        //        lastSoundTime = Time.time;
+        //    }
+        //    SetDialogueText(text);
+        //});
+    }
+
+    public IEnumerator AnimIntro(CharacterDialogueController activeDialogue) {
         dialoguePanel.SetActive(true);
+        Animation anim = dialoguePanel.GetComponent<Animation>();
+
+        yield return new WaitUntil(() => !anim.isPlaying);
+
+        activeDialogue.dialogue.SelectDialogues();
         currentDialogue = activeDialogue.FindStartingDialogue();
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
 
