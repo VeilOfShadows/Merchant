@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
@@ -76,3 +77,4 @@ public class DialogueSearchWindow : ScriptableObject, ISearchWindowProvider
         }
     }
 }
+#endif

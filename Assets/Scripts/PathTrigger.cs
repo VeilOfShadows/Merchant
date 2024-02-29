@@ -12,15 +12,16 @@ public class PathTrigger : MonoBehaviour
     public Vector3 pos;
     float moveX = 0f;
     float moveZ = 0f;
+    public float offset;
 
     void Update()
     {
         if (Input.GetKey(KeyCode.W)) {
-            moveX = -4f;
+            moveX = -offset;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            moveX = 4f;
+            moveX = offset;
         }
         else
         {
@@ -29,11 +30,11 @@ public class PathTrigger : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            moveZ = 4f;
+            moveZ = offset;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            moveZ = -4f;
+            moveZ = -offset;
         }
         else
         {
@@ -43,9 +44,5 @@ public class PathTrigger : MonoBehaviour
         pos.x = moveX;
         pos.z = moveZ;
         trigger.localPosition = pos;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
     }
 }

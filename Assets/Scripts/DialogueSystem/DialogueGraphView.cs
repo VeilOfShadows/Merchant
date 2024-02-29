@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine.UIElements;
 using UnityEditor;
 using System.Linq;
 using System.Security.Cryptography;
+
 
 //Class for defining visual elements in the graph editor window
 public class DialogueGraphView : GraphView
@@ -585,3 +587,4 @@ public class DialogueGraphView : GraphView
         styleSheets.Add(styleSheet);
     }
 }
+#endif

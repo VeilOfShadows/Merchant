@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -46,3 +47,4 @@ public static class DialogueInspectorUtility
         EditorGUILayout.Space(amount);
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using UnityEditor;
 using UnityEditor.Build.Content;
 using UnityEditor.UI;
 using UnityEngine;
+
 
 [CustomEditor(typeof(CharacterDialogue))]
 public class DialogueInspector : Editor
@@ -214,3 +216,4 @@ public class DialogueInspector : Editor
         }
     }
 }
+#endif
