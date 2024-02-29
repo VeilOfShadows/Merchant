@@ -152,6 +152,7 @@ public class InventoryClass
         for (int i = 0; i < Slots.Length; i++)
         {
             Slots[i].RemoveItem();
+            Slots[i].amount = 0;
         }
     }
 }

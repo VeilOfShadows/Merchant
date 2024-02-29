@@ -46,7 +46,9 @@ public class DialogueUIManager : MonoBehaviour
     //}
 
     public void StartDialogue(CharacterDialogueController activeDialogue) {
-
+        dialogueChoicePanel.ClearButtons();
+        dialogueText.text = "";
+        npcNameText.text = "";
         StartCoroutine(AnimIntro(activeDialogue));
         //activeDialogue.dialogue.SelectDialogues();
         ////dialoguePanel.SetActive(true);

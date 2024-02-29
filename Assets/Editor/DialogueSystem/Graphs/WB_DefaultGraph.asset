@@ -15,23 +15,8 @@ MonoBehaviour:
   <fileName>k__BackingField: WB_Default
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: 17af6357-2181-4150-8f24-f51562e6ff56
-    <name>k__BackingField: 2
-    <text>k__BackingField: Type here.....
-    <choices>k__BackingField:
-    - <text>k__BackingField: End
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2757, y: 57}
-    <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 9bf24d58-4a19-4164-8e86-9830d87482ea
-    <name>k__BackingField: 1
+  - <ID>k__BackingField: afcce178-cff0-4b34-95e0-6b48aa56c931
+    <name>k__BackingField: DialogueName
     <text>k__BackingField: Ahh it's you again! Can I get you anything?
     <choices>k__BackingField:
     - <text>k__BackingField: Do you have anything to trade?
@@ -41,21 +26,12 @@ MonoBehaviour:
       <questCompletePoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    - <text>k__BackingField: Complete
-      <nodeID>k__BackingField: 17af6357-2181-4150-8f24-f51562e6ff56
-      <action>k__BackingField: 3
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
-        type: 2}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1806, y: -154}
+    <position>k__BackingField: {x: 774, y: -171}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
-  - 2
-  - 1
+  - DialogueName
   <oldGroupedNodeNames>k__BackingField:
     list: []

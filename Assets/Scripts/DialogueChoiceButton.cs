@@ -32,6 +32,10 @@ public class DialogueChoiceButton : MonoBehaviour
         button = GetComponent<Button>();
     }
 
+    public void Clear() {
+        textObject.text = "";
+    }
+
     public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _completeQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
         rect.DOAnchorPosX(0, .1f);
