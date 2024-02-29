@@ -17,15 +17,15 @@ MonoBehaviour:
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
-  - {fileID: 11400000, guid: 654937732760d5448a3daa487e7c9a84, type: 2}
   - {fileID: 11400000, guid: 7d1f5c1f59cca62498877a9a21c869c7, type: 2}
   - {fileID: 11400000, guid: b02ec5b1d4011f444939f41b42a2f7e3, type: 2}
   - {fileID: 11400000, guid: 520358f52edcf2545b832358428ff6ed, type: 2}
   - {fileID: 11400000, guid: 6903091e25e838e478547ab0a5d7762f, type: 2}
+  - {fileID: 11400000, guid: 654937732760d5448a3daa487e7c9a84, type: 2}
   <prerequisiteQuests>k__BackingField:
   - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
-    <prerequisiteQuestProgressionRequirement>k__BackingField: 2
+    <prerequisiteQuestProgressionRequirement>k__BackingField: 1
   - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
       type: 2}
     <prerequisiteQuestProgressionRequirement>k__BackingField: 0

@@ -14,6 +14,7 @@ public class DialogueChoiceButton : MonoBehaviour
     public DialogueActions action;
     public bool hasQuestHandin = false;
     public QuestSO pickupQuest;
+    public QuestSO completeQuest;
     public QuestSO handinQuest;
     public DialogueContainerSO dialogueAfterCompletion;
     public TextMeshProUGUI textObject;
@@ -22,12 +23,13 @@ public class DialogueChoiceButton : MonoBehaviour
     public AudioSource audioSource;
     public QuestDatabase questDatabase;
 
-    public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
+    public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _completeQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
         isEnd = false;
         nextDialogue = nextDialogueSO;
         action = _action;
         pickupQuest = _pickupQuest;
+        completeQuest = _completeQuest;
         handinQuest = _handinQuest;
         dialogueAfterCompletion = _dialogueAfterCompletion;
 
@@ -54,6 +56,15 @@ public class DialogueChoiceButton : MonoBehaviour
             }
         }
 
+        if (completeQuest != null)
+        {
+            if (!questDatabase.GetQuestStatus(completeQuest.questID, QuestStatus.Accepted))
+            {
+                transform.parent.gameObject.SetActive(false);
+                return;
+            }
+        }
+
         //hand in quest is available
         if (handinQuest != null)
         {
@@ -72,7 +83,7 @@ public class DialogueChoiceButton : MonoBehaviour
 
     public void ActivateButton()
     {
-        DialogueFunctionManager.instance.Activate(action, pickupQuest, handinQuest);
+        DialogueFunctionManager.instance.Activate(action, pickupQuest,completeQuest, handinQuest);
         if (dialogueAfterCompletion != null)
         {
             dialogueUIManager.dialogueController.dialogue.dialogueContainer = dialogueAfterCompletion;

@@ -15,21 +15,6 @@ MonoBehaviour:
   <fileName>k__BackingField: Carpenter_Intro
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: 7b8886c6-0c5d-491d-b0b4-8c0793fd340b
-    <name>k__BackingField: Start
-    <text>k__BackingField: If you've come to collect your chairs, some goblins made
-      off with them so there's a bit of a delay.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Excuse me?
-      <nodeID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 741, y: -88}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
     <name>k__BackingField: 2
     <text>k__BackingField: Oh I'm sorry, I thought you were someone else. I don't
@@ -37,8 +22,9 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Oliver told me to come find you
       <nodeID>k__BackingField: d238bef4-0c2c-4ea1-b647-68e499378e0d
-      <action>k__BackingField: 3
+      <action>k__BackingField: 4
       <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
@@ -55,6 +41,7 @@ MonoBehaviour:
       <nodeID>k__BackingField: eee081c3-29ec-4a46-a9d3-24f740e4dcb4
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -71,6 +58,7 @@ MonoBehaviour:
       <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
@@ -88,18 +76,36 @@ MonoBehaviour:
       <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
         type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 3407, y: -174}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 7b8886c6-0c5d-491d-b0b4-8c0793fd340b
+    <name>k__BackingField: Start
+    <text>k__BackingField: If you've come to collect your chairs, some goblins made
+      off with them so there's a bit of a delay.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Excuse me?
+      <nodeID>k__BackingField: 00275cf2-a00b-4a96-82f0-8fad97827dd0
+      <action>k__BackingField: 3
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
+        type: 2}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 741, y: -88}
+    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
-  - Start
   - 2
   - 3
   - 4
   - Quest
+  - Start
   <oldGroupedNodeNames>k__BackingField:
     list: []

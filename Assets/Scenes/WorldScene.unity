@@ -1661,8 +1661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -105}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -109}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70561976
 MonoBehaviour:
@@ -1888,8 +1888,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1914,8 +1914,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2173,6 +2173,7 @@ MonoBehaviour:
   action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
+  completeQuest: {fileID: 0}
   handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1721121646}
@@ -3613,7 +3614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -375}
+  m_AnchoredPosition: {x: 120, y: -375}
   m_SizeDelta: {x: 200, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135204357
@@ -3983,7 +3984,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -125}
-  m_SizeDelta: {x: 200, y: 150}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142716955
 MonoBehaviour:
@@ -3998,12 +3999,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
+    m_Left: 40
     m_Right: 10
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 5
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -4768,7 +4769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -45}
+  m_AnchoredPosition: {x: 120, y: -45}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178682458
@@ -4793,8 +4794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quest Log
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 100c6710138f1734ab2363fbbf3eadf7, type: 2}
-  m_sharedMaterial: {fileID: -2183806276758129458, guid: 100c6710138f1734ab2363fbbf3eadf7,
+  m_fontAsset: {fileID: 11400000, guid: bc1f5fc73ec016c4f87f2d030eb6dc71, type: 2}
+  m_sharedMaterial: {fileID: -2183806276758129458, guid: bc1f5fc73ec016c4f87f2d030eb6dc71,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7724,7 +7725,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -125}
-  m_SizeDelta: {x: 200, y: 150}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252772579
 MonoBehaviour:
@@ -7739,12 +7740,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
+    m_Left: 40
     m_Right: 10
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 5
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -8023,7 +8024,7 @@ Transform:
   m_GameObject: {fileID: 269130360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -331.65, y: 0, z: -271.4}
+  m_LocalPosition: {x: -399, y: 0, z: -362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8250,8 +8251,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Completed
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 100c6710138f1734ab2363fbbf3eadf7, type: 2}
-  m_sharedMaterial: {fileID: -2183806276758129458, guid: 100c6710138f1734ab2363fbbf3eadf7,
+  m_fontAsset: {fileID: 11400000, guid: bc1f5fc73ec016c4f87f2d030eb6dc71, type: 2}
+  m_sharedMaterial: {fileID: -2183806276758129458, guid: bc1f5fc73ec016c4f87f2d030eb6dc71,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10071,8 +10072,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.092240565, y: -0.20522687, z: 0.01943229, w: 0.97416425}
-  m_LocalPosition: {x: -326.26776, y: 4.07639, z: -284.34412}
+  m_LocalRotation: {x: 0.06313852, y: -0.74511534, z: 0.071269795, w: 0.660104}
+  m_LocalPosition: {x: -387.54984, y: 4.032381, z: -363.73096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12652,8 +12653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -135}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -143}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419289774
 MonoBehaviour:
@@ -12879,8 +12880,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -12905,8 +12906,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13099,8 +13100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -45}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -41}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422302633
 MonoBehaviour:
@@ -13326,8 +13327,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13352,8 +13353,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13529,8 +13530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -105}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -109}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426918760
 MonoBehaviour:
@@ -13756,8 +13757,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13782,8 +13783,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14950,8 +14951,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -105}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -109}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458681901
 MonoBehaviour:
@@ -15177,8 +15178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -15203,8 +15204,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15711,11 +15712,11 @@ MonoBehaviour:
     roll: 0
   - position: {x: -12.633743, y: 1, z: -179.9724}
     roll: 0
-  - position: {x: -5.5131073, y: 1, z: -176.61559}
+  - position: {x: -5.5131073, y: 1, z: -178.08727}
     roll: 0
-  - position: {x: -1.2550049, y: 1, z: -174.51353}
+  - position: {x: -1.5782318, y: 1, z: -176.23677}
     roll: 0
-  - position: {x: 3.4228363, y: 1, z: -174.5319}
+  - position: {x: 4.880722, y: 1, z: -173.80138}
     roll: 0
 --- !u!4 &473360841
 Transform:
@@ -15875,7 +15876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 0}
+  m_AnchoredPosition: {x: 500, y: 0}
   m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485532837
@@ -15961,6 +15962,7 @@ MonoBehaviour:
   action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
+  completeQuest: {fileID: 0}
   handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1363370892}
@@ -16712,7 +16714,7 @@ MonoBehaviour:
   vendorDialogueController: {fileID: 2134226488}
   cam: {fileID: 48844107}
   promptCanvas: {fileID: 1607742284}
-  questToComplete: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b, type: 2}
+  questToComplete: {fileID: 0}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
 --- !u!1001 &497854500
 PrefabInstance:
@@ -30163,8 +30165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -45}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -41}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830003309
 MonoBehaviour:
@@ -30390,8 +30392,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -30416,8 +30418,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -34890,8 +34892,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -45}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -41}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951603928
 MonoBehaviour:
@@ -35117,8 +35119,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -35143,8 +35145,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -35522,8 +35524,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -15}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -7.0000005}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &971865129
 MonoBehaviour:
@@ -35749,8 +35751,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -35775,8 +35777,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -38877,8 +38879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -75}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -75}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097342147
 MonoBehaviour:
@@ -39104,8 +39106,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -39130,8 +39132,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -42523,8 +42525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -15}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -7.0000005}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1202080852
 MonoBehaviour:
@@ -42750,8 +42752,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -42776,8 +42778,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -44484,7 +44486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 2113023762}
-  m_PathPosition: 299.7422
+  m_PathPosition: 168.17393
   m_PositionUnits: 1
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2
@@ -44718,7 +44720,7 @@ MonoBehaviour:
   vendorDialogueController: {fileID: 565933441}
   cam: {fileID: 1949173328}
   promptCanvas: {fileID: 1089952915}
-  questToComplete: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f, type: 2}
+  questToComplete: {fileID: 0}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
 --- !u!1001 &1270217703
 PrefabInstance:
@@ -45000,8 +45002,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -135}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -143}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279545013
 MonoBehaviour:
@@ -45227,8 +45229,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -45253,8 +45255,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -46464,27 +46466,27 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 235.3073, y: 1, z: -100.373764}
+  - position: {x: 239.60645, y: 1, z: -101.04494}
     roll: 0
-  - position: {x: 229.20164, y: 2.7432446, z: -100.57207}
+  - position: {x: 228.55719, y: 3.3115816, z: -100.11708}
     roll: 0
-  - position: {x: 223.74486, y: 2.95992, z: -101.386246}
+  - position: {x: 223.74486, y: 2.95992, z: -98.63628}
     roll: 0
-  - position: {x: 215.94955, y: 1.6292572, z: -100.926865}
+  - position: {x: 215.94955, y: 0.79547215, z: -98.07329}
     roll: 0
-  - position: {x: 204.82968, y: -0.0076863766, z: -99.95247}
+  - position: {x: 204.82968, y: -0.48000717, z: -98.54503}
     roll: 0
-  - position: {x: 191.8439, y: -0.040466785, z: -102.62395}
+  - position: {x: 191.59084, y: 0.7750876, z: -100.46846}
     roll: 0
-  - position: {x: 185.04738, y: -0.04687929, z: -106.458084}
+  - position: {x: 185.04738, y: 1.3358135, z: -101.4543}
     roll: 0
-  - position: {x: 176.71703, y: 0.22990155, z: -109.78453}
+  - position: {x: 176.71703, y: 3.9181361, z: -102.71266}
     roll: 0
-  - position: {x: 166.7433, y: 0.30270815, z: -103.1411}
+  - position: {x: 166.7433, y: 2.5015879, z: -101.532455}
     roll: 0
-  - position: {x: 160.93282, y: 0.3189528, z: -97.41063}
+  - position: {x: 160.93282, y: 0.748858, z: -99.947464}
     roll: 0
-  - position: {x: 153.73456, y: 0.2552693, z: -95.7339}
+  - position: {x: 154.16104, y: 0.2552693, z: -97.84065}
     roll: 0
 --- !u!4 &1333362543
 Transform:
@@ -48870,8 +48872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -15}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -7.0000005}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405440176
 MonoBehaviour:
@@ -48895,8 +48897,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -48921,8 +48923,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -51723,8 +51725,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Active '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 100c6710138f1734ab2363fbbf3eadf7, type: 2}
-  m_sharedMaterial: {fileID: -2183806276758129458, guid: 100c6710138f1734ab2363fbbf3eadf7,
+  m_fontAsset: {fileID: 11400000, guid: bc1f5fc73ec016c4f87f2d030eb6dc71, type: 2}
+  m_sharedMaterial: {fileID: -2183806276758129458, guid: bc1f5fc73ec016c4f87f2d030eb6dc71,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -53892,7 +53894,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 100, y: 0}
-  m_SizeDelta: {x: 200, y: 700}
+  m_SizeDelta: {x: 300, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577170162
 MonoBehaviour:
@@ -53907,7 +53909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 20
     m_Right: 0
     m_Top: 20
     m_Bottom: 20
@@ -55493,8 +55495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -135}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -143}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627137309
 MonoBehaviour:
@@ -55720,8 +55722,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -55746,8 +55748,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -56892,8 +56894,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -75}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -75}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671859326
 MonoBehaviour:
@@ -57119,8 +57121,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -57145,8 +57147,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -57777,7 +57779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712468052}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08467317, y: 0.2761, z: -0.024426645, w: 0.95708025}
+  m_LocalRotation: {x: 0.08467317, y: 0.2761, z: -0.024426648, w: 0.95708025}
   m_LocalPosition: {x: -387.54532, y: 4.1688185, z: -208.45143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -58037,8 +58039,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nothing to see here. Select a quest to view information about it.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -59001,8 +59003,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748261484}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.092240565, y: -0.20522687, z: 0.01943229, w: 0.97416425}
-  m_LocalPosition: {x: -238.24692, y: 4.0468497, z: -71.36226}
+  m_LocalRotation: {x: 0.06313852, y: -0.74511534, z: 0.071269795, w: 0.660104}
+  m_LocalPosition: {x: -299.529, y: 4.002841, z: -150.7491}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59823,7 +59825,7 @@ Transform:
   m_GameObject: {fileID: 1784995023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -330.65, y: 0.5, z: -274.4}
+  m_LocalPosition: {x: -398, y: 0.5, z: -365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60698,8 +60700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -75}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 190, y: -75}
+  m_SizeDelta: {x: 300, y: 14.000001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813694124
 MonoBehaviour:
@@ -60925,8 +60927,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -Find the Lumberjack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f312816a97841964d8fe86d0a05e7382, type: 2}
-  m_sharedMaterial: {fileID: -878670112621598383, guid: f312816a97841964d8fe86d0a05e7382,
+  m_fontAsset: {fileID: 11400000, guid: 5f32c8a5f0820454faa8484566d0fe2e, type: 2}
+  m_sharedMaterial: {fileID: -878670112621598383, guid: 5f32c8a5f0820454faa8484566d0fe2e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -60951,8 +60953,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -61930,7 +61932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightingManager: {fileID: 402951285}
   time: 8
-  timeAdvancementSpeed: 20
+  timeAdvancementSpeed: 30
   speedUpSpeed: 20
   isNight: 1
   clockRect: {fileID: 940288426}
@@ -62704,8 +62706,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Handed In
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 100c6710138f1734ab2363fbbf3eadf7, type: 2}
-  m_sharedMaterial: {fileID: -2183806276758129458, guid: 100c6710138f1734ab2363fbbf3eadf7,
+  m_fontAsset: {fileID: 11400000, guid: bc1f5fc73ec016c4f87f2d030eb6dc71, type: 2}
+  m_sharedMaterial: {fileID: -2183806276758129458, guid: bc1f5fc73ec016c4f87f2d030eb6dc71,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -63685,6 +63687,7 @@ MonoBehaviour:
   action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
+  completeQuest: {fileID: 0}
   handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1039902751}
@@ -69387,6 +69390,7 @@ MonoBehaviour:
   action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
+  completeQuest: {fileID: 0}
   handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 314255885}
@@ -69666,6 +69670,7 @@ MonoBehaviour:
   action: 0
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
+  completeQuest: {fileID: 0}
   handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1891618306}
@@ -71793,7 +71798,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -125}
-  m_SizeDelta: {x: 200, y: 150}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103443078
 MonoBehaviour:
@@ -71808,12 +71813,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
+    m_Left: 40
     m_Right: 10
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 5
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -72031,11 +72036,11 @@ MonoBehaviour:
     roll: 0
   - position: {x: -107.782486, y: 0.39835572, z: -54.97548}
     roll: 0
-  - position: {x: -96.156784, y: 0.0976336, z: -51.332047}
+  - position: {x: -96.156784, y: 0.0976336, z: -52.2903}
     roll: 0
-  - position: {x: -87.019485, y: 0.66530323, z: -49.422745}
+  - position: {x: -88.95891, y: 0.39733362, z: -51.150375}
     roll: 0
-  - position: {x: -82.28096, y: 0.50811577, z: -52.216476}
+  - position: {x: -82.36861, y: 1.225985, z: -51.654648}
     roll: 0
 --- !u!4 &2113023763
 Transform:

@@ -29,14 +29,14 @@ public class QuestLogButton : MonoBehaviour
     {
         DOTween.Complete(textTween);
         RectTransform rect = this.GetComponent<RectTransform>();
-        rect.DOAnchorPosX(120, .3f);
+        rect.DOAnchorPosX(200, .3f);
         audioSource.Play();
     }
     public void Leave()
     {
         DOTween.Complete(textTween);
         RectTransform rect = this.GetComponent<RectTransform>();
-        rect.DOAnchorPosX(110, .3f);
+        rect.DOAnchorPosX(190, .3f);
     }
 
     public void Activate() { 

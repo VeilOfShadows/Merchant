@@ -34,16 +34,20 @@ public class DebugManager : MonoBehaviour
     }
 
     public void SpeedUp() {
-        playerControls.speed = 8;
-        navMeshAgent.speed = 8;
-        NotificationManager.instance.DisplayNotification("Player speed set to 8");
+        //playerControls.speed = 8;
+        //navMeshAgent.speed = 8;
+        playerControls.speed += 5;
+        navMeshAgent.speed += 5; 
+        NotificationManager.instance.DisplayNotification("Player speed set to: " + playerControls.speed);
     }
 
     public void SlowDown()
     {
-        playerControls.speed = 3;
-        navMeshAgent.speed = 3;
-        NotificationManager.instance.DisplayNotification("Player speed set to 3");
+        //playerControls.speed = 3;
+        //navMeshAgent.speed = 3;
+        playerControls.speed -= 5;
+        navMeshAgent.speed   -= 5;
+        NotificationManager.instance.DisplayNotification("Player speed set to: " + playerControls.speed);
     }
 
     public void SetTime(int time) {

@@ -90,6 +90,20 @@ public class DialogueNodeMultipleChoice : DialogueNode
                 questStartObjectField.value = choiceData.questStartingPoint;
             }
 
+            ObjectField questCompleteObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Complete", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choiceData.questCompletePoint = (QuestSO)callback.newValue;
+
+                //}
+            });
+
+            if (choiceData.questCompletePoint != null)
+            {
+                questCompleteObjectField.value = choiceData.questCompletePoint;
+            }
+
             ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
             {
                 //if (callback.newValue is ScriptableObject so)
@@ -120,6 +134,7 @@ public class DialogueNodeMultipleChoice : DialogueNode
 
             outputContainer.Add(choicePort);
             outputContainer.Add(questStartObjectField);
+            outputContainer.Add(questCompleteObjectField);
             outputContainer.Add(questHandInObjectField);
             outputContainer.Add(actionField);
             outputContainer.Add(nextDialogue);
@@ -185,6 +200,20 @@ public class DialogueNodeMultipleChoice : DialogueNode
                 questStartObjectField.value = choice.questStartingPoint;
             }
 
+            ObjectField questCompleteObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Complete", callback =>
+            {
+                //if (callback.newValue is ScriptableObject so)
+                //{
+                choice.questCompletePoint = (QuestSO)callback.newValue;
+
+                //}
+            });
+
+            if (choice.questCompletePoint != null)
+            {
+                questCompleteObjectField.value = choice.questCompletePoint;
+            }
+
             ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
             {
                 //if (callback.newValue is ScriptableObject so)
@@ -216,6 +245,7 @@ public class DialogueNodeMultipleChoice : DialogueNode
             outputContainer.Add(choicePort);
             outputContainer.Add(actionField);
             outputContainer.Add(questStartObjectField);
+            outputContainer.Add(questCompleteObjectField);
             outputContainer.Add(questHandInObjectField);
             outputContainer.Add(nextDialogue);
 

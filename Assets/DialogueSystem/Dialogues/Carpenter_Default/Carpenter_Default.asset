@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
   m_Name: Carpenter_Default
   m_EditorClassIdentifier: 
-  <npcName>k__BackingField: 
+  <npcName>k__BackingField: Richard
   <fileName>k__BackingField: Carpenter_Default
   <dialogueGroups>k__BackingField:
     list: []

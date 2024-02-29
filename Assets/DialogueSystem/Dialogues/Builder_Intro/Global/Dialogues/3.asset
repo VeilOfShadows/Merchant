@@ -20,9 +20,11 @@ MonoBehaviour:
   - <text>k__BackingField: Can you give me a lumber order?
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 77c3399bc266d164eaaea031823346ae,
       type: 2}
-    <action>k__BackingField: 0
+    <action>k__BackingField: 4
     <questStartingPoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 0}
+    <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+      type: 2}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []

@@ -305,15 +305,16 @@ public static class DialogueIOUtility
 
         foreach (DialogueChoiceSaveData nodeChoice in nodeChoices)
         {
+            //NEW CHOICE DATA
             DialogueChoiceData choiceData = new DialogueChoiceData()
             {
                 text = nodeChoice.text,
                 action = nodeChoice.action,
                 questStartingPoint = nodeChoice.questStartingPoint,
+                questCompletePoint = nodeChoice.questCompletePoint,
                 questHandinPoint = nodeChoice.questHandinPoint,
                 dialogueAfterCompletion = nodeChoice.dialogueAfterCompletion,
             };
-            Debug.Log(choiceData.questStartingPoint);
 
             dialogueChoices.Add(choiceData);
         }
@@ -344,12 +345,14 @@ public static class DialogueIOUtility
 
         foreach (DialogueChoiceSaveData choice in nodeChoices)
         {
+            //NEW CHOICE DATA
             DialogueChoiceSaveData choiceData = new DialogueChoiceSaveData()
             {
                 text = choice.text,
                 nodeID = choice.nodeID,
                 action = choice.action,
                 questStartingPoint = choice.questStartingPoint,
+                questCompletePoint = choice.questCompletePoint,
                 questHandinPoint = choice.questHandinPoint,
                 dialogueAfterCompletion = choice.dialogueAfterCompletion,
             };
