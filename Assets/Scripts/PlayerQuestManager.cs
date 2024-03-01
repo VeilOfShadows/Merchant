@@ -24,14 +24,6 @@ public class PlayerQuestManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            questDatabase.SetQuestStatus(temp.questID, QuestStatus.Completed);
-        }
-    }
-
     public bool FindAvailableDialogues(List<QuestPrerequisites> questPrerequisites) {
         for (int i = 0; i < questPrerequisites.Count; i++)
         {

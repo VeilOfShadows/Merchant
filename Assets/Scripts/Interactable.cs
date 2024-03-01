@@ -19,6 +19,10 @@ public class Interactable : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (Vector3.Distance(transform.position, PlayerManager.instance.transform.position) > 20)
+        {
+            return;
+        }
         amount = 1;
         NotificationManager.instance.DisplayNotification("+ " + item.data.itemName + " x " + amount, false);
 

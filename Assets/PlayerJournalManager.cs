@@ -46,6 +46,17 @@ public class PlayerJournalManager : MonoBehaviour
         anim.Play();
     }
 
+    public void ToggleQuestLog() {
+        if (questLog.activeInHierarchy)
+        {
+            Deactivate();
+        }
+        else 
+        {
+            Activate();
+        }
+    }
+
     public void FillQuestLog() {
         for (int i = 0; i < questdatabase.quests.Length; i++)
         {

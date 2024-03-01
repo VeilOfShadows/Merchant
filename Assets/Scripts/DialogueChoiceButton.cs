@@ -109,7 +109,7 @@ public class DialogueChoiceButton : MonoBehaviour
             if (action != DialogueActions.OpenShop)
             {
                 PlayerManager.instance.ExitShop();
-                PlayerManager.instance.currentVendor.ExitShop();
+                PlayerManager.instance.currentVendor.DeactivateShopCam();
             }
 
             dialogueUIManager.EndDialogue();

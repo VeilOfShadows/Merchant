@@ -52,25 +52,26 @@ public class Vendor : MonoBehaviour
             PlayerManager.instance.currentVendor = null;
             PlayerManager.instance.merchantInventory.inventory = null;
             PlayerManager.instance.inRangeOfShop = false;
-            ExitShop();
+            PlayerManager.instance.ExitShop();
             DialogueUIManager.instance.EndDialogue();
+            cam.SetActive(false);
             promptCanvas.SetActive(false);
         }
     }
     #endregion
 
     #region Shop Methods
-    public void EnterShop() 
+    public void ActivateShopCam() 
     {
         cam.SetActive(true);
                 
         promptCanvas.SetActive(false);        
     }
 
-    public void ExitShop()
+    public void DeactivateShopCam()
     { 
         cam.SetActive(false);
-        PlayerManager.instance.ExitShop();
+        //PlayerManager.instance.ExitShop();
         promptCanvas.SetActive(true);
     }
     #endregion

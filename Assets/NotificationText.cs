@@ -9,6 +9,21 @@ public class NotificationText : MonoBehaviour
     Tween textTween;
     public float textSpeed;
     public TextMeshProUGUI textObject;
+    public float activationTime;
+
+    public void Kill() {
+        SetText("");
+        if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
+        {
+            textTween.Kill();
+        }
+        if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
+        {
+            textTween.Kill();
+        }
+        gameObject.SetActive(false);
+        Debug.Log("Killing " + gameObject.name);
+    }
 
     public void Display(string _text)
     {

@@ -4685,10 +4685,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1334107688}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 269130361}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: ToggleInventoryUI
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7955,7 +7955,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a34f55fc3e9a044f858678b13d4779c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllers: []
+  controllers:
+  - {fileID: 1371338776}
+  - {fileID: 868830451}
+  - {fileID: 868185979}
+  playerPathTrigger: {fileID: 2126538112}
 --- !u!4 &257550882
 Transform:
   m_ObjectHideFlags: 0
@@ -8074,7 +8078,7 @@ GameObject:
   - component: {fileID: 269130364}
   - component: {fileID: 269130365}
   - component: {fileID: 269130366}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: TESTPLAYER (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8109,6 +8113,8 @@ MonoBehaviour:
     amount: 1
     slotDisplay: {fileID: 0}
   inRangeOfShop: 0
+  inShop: 0
+  inDialogue: 0
   currentVendor: {fileID: 0}
   merchantInventory: {fileID: 1919823305}
   playerUI: {fileID: 1334107688}
@@ -8145,7 +8151,7 @@ Transform:
   m_GameObject: {fileID: 269130360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -467, y: 0, z: -412}
+  m_LocalPosition: {x: -399, y: 0, z: -362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8165,7 +8171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a049974766ee7f24bafec78fd0e3bb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadSpline: {fileID: 462265615}
+  roadSpline: {fileID: 1371338777}
   currentRoad:
     m_EditModeType: 1
     m_Knots: []
@@ -8185,7 +8191,7 @@ MonoBehaviour:
   cartWheel_L: {fileID: 2125795599}
   cartWheel_R: {fileID: 184471130}
   cart: {fileID: 438320557}
-  currentCam: {fileID: 293647477}
+  currentCam: {fileID: 1385356068}
   timeManager: {fileID: 1847574930}
   canControl: 1
 --- !u!114 &269130365
@@ -8205,7 +8211,7 @@ MonoBehaviour:
   player: {fileID: 269130364}
   trigger: {fileID: 2126538113}
   pos: {x: 0, y: 0, z: 0}
-  offset: 2
+  offset: 1
 --- !u!114 &269130366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10404,8 +10410,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08467317, y: 0.2761, z: -0.024426648, w: 0.95708025}
-  m_LocalPosition: {x: -475.56616, y: 4.1983585, z: -421.4333}
+  m_LocalRotation: {x: 0.06313852, y: -0.74511534, z: 0.071269795, w: 0.660104}
+  m_LocalPosition: {x: -387.54984, y: 4.032381, z: -363.73096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11209,6 +11215,7 @@ MonoBehaviour:
   controllers:
   - {fileID: 868830451}
   - {fileID: 1252769423}
+  playerPathTrigger: {fileID: 2126538112}
 --- !u!4 &361219405
 Transform:
   m_ObjectHideFlags: 0
@@ -14649,7 +14656,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 269130361}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: ExitShop
+        m_MethodName: ToggleInventoryUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15879,7 +15886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &462265615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22049,7 +22056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &688458955
 Transform:
   m_ObjectHideFlags: 0
@@ -22724,7 +22731,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 485532837}
         m_TargetAssemblyTypeName: PlayerJournalManager, Assembly-CSharp
-        m_MethodName: Activate
+        m_MethodName: ToggleQuestLog
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30054,6 +30061,8 @@ MonoBehaviour:
     amount: 1
     slotDisplay: {fileID: 0}
   inRangeOfShop: 0
+  inShop: 0
+  inDialogue: 0
   currentVendor: {fileID: 0}
   merchantInventory: {fileID: 0}
   playerUI: {fileID: 0}
@@ -46634,7 +46643,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a34f55fc3e9a044f858678b13d4779c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllers: []
+  controllers:
+  - {fileID: 868185979}
+  - {fileID: 1979238377}
+  - {fileID: 937251025}
+  playerPathTrigger: {fileID: 2126538112}
 --- !u!4 &1287701989
 Transform:
   m_ObjectHideFlags: 0
@@ -48338,7 +48351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a34f55fc3e9a044f858678b13d4779c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllers: []
+  controllers:
+  - {fileID: 1371338776}
+  playerPathTrigger: {fileID: 2126538112}
 --- !u!4 &1358949772
 Transform:
   m_ObjectHideFlags: 0
@@ -49842,7 +49857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1377368427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50064,7 +50079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1385356069
 Transform:
   m_ObjectHideFlags: 0
@@ -50372,7 +50387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a34f55fc3e9a044f858678b13d4779c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllers: []
+  controllers:
+  - {fileID: 937251025}
+  - {fileID: 1786285779}
+  playerPathTrigger: {fileID: 2126538112}
 --- !u!4 &1403993360
 Transform:
   m_ObjectHideFlags: 0
@@ -62350,7 +62368,7 @@ Transform:
   m_GameObject: {fileID: 1784995023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -469, y: 0.5, z: -411}
+  m_LocalPosition: {x: -398, y: 0.5, z: -365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63860,7 +63878,7 @@ PrefabInstance:
     - target: {fileID: 2459341068444078624, guid: 5514574440572dc49bd270690bfb8343,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -71766,7 +71784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1988443022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74041,7 +74059,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a34f55fc3e9a044f858678b13d4779c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllers: []
+  controllers:
+  - {fileID: 1979238377}
+  - {fileID: 1532143136}
+  playerPathTrigger: {fileID: 2126538112}
 --- !u!4 &2059960448
 Transform:
   m_ObjectHideFlags: 0

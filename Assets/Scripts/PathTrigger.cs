@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -41,6 +43,11 @@ public class PathTrigger : MonoBehaviour
             moveZ = 0f;
         }
 
+        //float distance = SplineUtility.GetNearestPoint(player.currentRoad, transform.position, out float3 nearest, out float t);
+        //pos = Vector3.Normalize(player.roadSpline.EvaluateTangent(t));
+
+        //pos.x += moveX;
+        //pos.z += moveZ;
         pos.x = moveX;
         pos.z = moveZ;
         trigger.localPosition = pos;

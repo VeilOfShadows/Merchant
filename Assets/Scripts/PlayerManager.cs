@@ -15,6 +15,8 @@ public class PlayerManager : MonoBehaviour
 
     [Header("Shop Details")]
     public bool inRangeOfShop = false;
+    public bool inShop = false;
+    public bool inDialogue = false;
     public Vendor currentVendor;
     public MerchantInventoryInterface merchantInventory;
 
@@ -39,25 +41,41 @@ public class PlayerManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //inRangeOfShop = false;
-                DialogueUIManager.instance.StartDialogue(currentVendor.vendorDialogueController);
-                currentVendor.EnterShop();
+                if (!inDialogue)
+                {
+                    inDialogue = true;
+                    if (!inShop)
+                    {
+                        DialogueUIManager.instance.StartDialogue(currentVendor.vendorDialogueController);
+                    }
+                    currentVendor.ActivateShopCam();
+                }
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 //inRangeOfShop = false;
                 ExitShop();
                 DialogueUIManager.instance.EndDialogue();
-                currentVendor.ExitShop();
+                currentVendor.DeactivateShopCam();
             }
+        }
+    }
+
+    public void ToggleInventoryUI() { 
+        playerUI.SetActive(!playerUI.activeInHierarchy);
+        if (inShop)
+        {
+            currentVendor.DeactivateShopCam();
+            ExitShop();
         }
     }
 
     #region Shop Methods
     public void EnterShop() 
     {
-        playerUI.SetActive(true);
         //merchantInventory.SyncNewInventory();
+        inShop = true;
+        playerUI.SetActive(true);
         merchantUI.SetActive(true);
 
         playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
@@ -67,10 +85,13 @@ public class PlayerManager : MonoBehaviour
 
     public void ExitShop()
     {
+        inShop = false;
+        inDialogue = false;
         playerUI.SetActive(false);
         merchantUI.SetActive(false);
         playerUI.GetComponentInChildren<UserInterface>().merchantInterface = null;
         playerUI.GetComponentInChildren<UserInterface>().inShop = false;
+        //currentVendor.ExitShop();
     }
     #endregion
 
