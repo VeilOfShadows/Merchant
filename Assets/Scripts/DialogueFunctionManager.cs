@@ -52,31 +52,15 @@ public class DialogueFunctionManager : MonoBehaviour
                     playerInventory.AddItem(handInQuest.questRewardItem.data, handInQuest.questRewardItemAmount);
                     NotificationManager.instance.DisplayNotification("+ " + handInQuest.questRewardItem.data.itemName + " x " + handInQuest.questRewardItemAmount, false);
                 }
-                //HandInQuest(handInQuest);
                 break;
 
             default:
                 break;
         }
-
-        //test = DialogueUIManager.instance.currentDialogue.methodname;
-        //Debug.Log(test);
-        //Invoke(test, 0f);
     }
 
     public void OpenShop()
     {
         PlayerManager.instance.EnterShop();
     }
-
-    //public void AcceptQuest(QuestSO quest)
-    //{
-    //    questDatabase
-    //    PlayerQuestManager.instance.AcceptQuest(quest);
-    //}
-
-    //public void HandInQuest(QuestSO quest)
-    //{
-    //    PlayerQuestManager.instance.HandInQuest(quest);
-    //}
 }

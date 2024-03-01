@@ -22,7 +22,6 @@ public class NotificationText : MonoBehaviour
             textTween.Kill();
         }
         gameObject.SetActive(false);
-        Debug.Log("Killing " + gameObject.name);
     }
 
     public void Display(string _text)

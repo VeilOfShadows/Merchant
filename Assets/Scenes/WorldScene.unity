@@ -8206,9 +8206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fc1dd3667a2654c95e8bbe40dc668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 2126538115}
-  key: 119
-  player: {fileID: 269130364}
   trigger: {fileID: 2126538113}
   pos: {x: 0, y: 0, z: 0}
   offset: 1
@@ -11773,8 +11770,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8697a49e499a04a9fb2cb3f08c3574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.8
+  textSpeed: 0.5
   textObject: {fileID: 376572510}
+  activationTime: 0
 --- !u!114 &376572510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47676,8 +47674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8697a49e499a04a9fb2cb3f08c3574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.8
+  textSpeed: 0.5
   textObject: {fileID: 1320421202}
+  activationTime: 0
 --- !u!114 &1320421202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50456,8 +50455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8697a49e499a04a9fb2cb3f08c3574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.8
+  textSpeed: 0.5
   textObject: {fileID: 1405437367}
+  activationTime: 0
 --- !u!114 &1405437367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54338,8 +54338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8697a49e499a04a9fb2cb3f08c3574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.8
+  textSpeed: 0.5
   textObject: {fileID: 1516575010}
+  activationTime: 0
 --- !u!114 &1516575010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55636,8 +55637,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8697a49e499a04a9fb2cb3f08c3574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.8
+  textSpeed: 0.5
   textObject: {fileID: 1556344849}
+  activationTime: 0
 --- !u!114 &1556344849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75467,9 +75469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fc1dd3667a2654c95e8bbe40dc668a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 2126538115}
-  key: 119
-  player: {fileID: 269130364}
   trigger: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
   offset: 0

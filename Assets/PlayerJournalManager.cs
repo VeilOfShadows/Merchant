@@ -13,9 +13,6 @@ public class PlayerJournalManager : MonoBehaviour
     public QuestDatabase questdatabase;
     public Animation anim;
 
-    //public List<QuestSO> acceptedList = new List<QuestSO>();
-    //public List<QuestSO> completedList = new List<QuestSO>();
-    //public List<QuestSO> handInList = new List<QuestSO>();
 
     public List<QuestLogButton> activeTextObjects = new List<QuestLogButton>();
     public List<QuestLogButton> completeTextObjects = new List<QuestLogButton>();
@@ -38,8 +35,6 @@ public class PlayerJournalManager : MonoBehaviour
     public void Activate() {
         questInformationText.text = "Nothing to see here. Select a quest to view information about it.";
 
-        //questLog.SetActive(true); 
-        //questInformation.SetActive(true);
         questInformation.GetComponent<AudioSource>().Play();
         DisableTextObjects();
         FillQuestLog();

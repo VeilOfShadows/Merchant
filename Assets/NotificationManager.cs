@@ -10,7 +10,9 @@ public class NotificationManager : MonoBehaviour
 
     public AudioSource audioSource;
     public List<NotificationText> textObject;
-    public NotificationText temp;
+    NotificationText temp;
+    float t;
+    NotificationText oldest;
 
     private void Awake()
     {
@@ -22,6 +24,7 @@ public class NotificationManager : MonoBehaviour
 
     public void DisplayNotification(string text, bool playSound = true)
     {
+
         if (playSound)
         {
             audioSource.Play(); 
@@ -46,15 +49,8 @@ public class NotificationManager : MonoBehaviour
             }
         }
 
-        //for (int i = 0; i < textObject.Count; i++)
-        //{
-        //    if (!textObject[i].gameObject.activeInHierarchy)
-        //    {
-        //        textObject[i].gameObject.SetActive(true);
-        //        textObject[i].Display(text);
-        //        return;
-        //    }
-        //}
+        t = 0;
+        oldest = null;
         temp = null;
     }
 
@@ -66,18 +62,15 @@ public class NotificationManager : MonoBehaviour
                 return textObject[i];
             }
         }
-        Debug.Log("No available texts");
         return null;
     }
 
     public NotificationText FindOldest()
     {
-        float t = textObject[0].activationTime;
-        NotificationText oldest = textObject[0];
-        //Debug.Log(t + " " + textObject[0]);
+        t = textObject[0].activationTime;
+        oldest = textObject[0];
         for (int i = 0; i < textObject.Count; i++)
         {
-            //Debug.Log("T: " + t + ". Object: " + textObject[i] + ". Activation Time: " + textObject[i].activationTime);
             if (t > textObject[i].activationTime)
             {
                 t = textObject[i].activationTime;
@@ -87,7 +80,6 @@ public class NotificationManager : MonoBehaviour
         if ( oldest != null )
         {
             oldest.Kill();
-            Debug.Log("Oldest: " + oldest.gameObject.name);
         }
         return oldest;
     }
