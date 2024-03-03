@@ -25,7 +25,6 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
         type: 2}
-      <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -38,11 +37,10 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: Yeah he made note of them, here
       <nodeID>k__BackingField: 
-      <action>k__BackingField: 4
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624,
         type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1

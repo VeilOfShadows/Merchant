@@ -74,9 +74,9 @@ public class QuestDatabase : ScriptableObject
                     case QuestStatus.Completed:
                         NotificationManager.instance.DisplayNotification(" - Quest Completed: " + quests[i].quest.questName);
                         break;
-                    case QuestStatus.HandedIn:
-                        NotificationManager.instance.DisplayNotification(" - Quest Handed In: " + quests[i].quest.questName);
-                        break;
+                    //case QuestStatus.HandedIn:
+                    //    NotificationManager.instance.DisplayNotification(" - Quest Handed In: " + quests[i].quest.questName);
+                        //break;
                     case QuestStatus.DEBUGFORCE:
                         break;
                     default:

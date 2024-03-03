@@ -17,4 +17,14 @@ MonoBehaviour:
   questDescription: The bridge to Lakeview has been destroyed, resulting in less
     supply deliveries to Willowberry. I should head into Thistlewood Forest to speak
     with the local carpenter about acquiring some wood.
-  questStatus: 0
+  questStatus: 1
+  questStartAction: 0
+  questStartItem: {fileID: 0}
+  questStartItemAmount: 0
+  questStartFunctionName: 
+  questRequiredItem: {fileID: 0}
+  questRequiredItemAmount: 0
+  questCompleteAction: 0
+  questCompleteItem: {fileID: 0}
+  questCompleteItemAmount: 0
+  questCompleteFunctionName: 

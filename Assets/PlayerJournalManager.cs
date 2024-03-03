@@ -13,10 +13,9 @@ public class PlayerJournalManager : MonoBehaviour
     public QuestDatabase questdatabase;
     public Animation anim;
 
-
     public List<QuestLogButton> activeTextObjects = new List<QuestLogButton>();
     public List<QuestLogButton> completeTextObjects = new List<QuestLogButton>();
-    public List<QuestLogButton> handedInTextObjects = new List<QuestLogButton>();
+    //public List<QuestLogButton> handedInTextObjects = new List<QuestLogButton>();
 
     private void Awake()
     {
@@ -73,12 +72,12 @@ public class PlayerJournalManager : MonoBehaviour
                         completeTextObjects[i].Setup(questdatabase.quests[i].quest);
                     }
                     break;
-                case QuestStatus.HandedIn:
-                    if (!handedInTextObjects[i].gameObject.activeInHierarchy)
-                    {
-                        handedInTextObjects[i].gameObject.SetActive(true);
-                        handedInTextObjects[i].Setup(questdatabase.quests[i].quest);
-                    }
+                //case QuestStatus.HandedIn:
+                //    if (!handedInTextObjects[i].gameObject.activeInHierarchy)
+                //    {
+                //        handedInTextObjects[i].gameObject.SetActive(true);
+                //        handedInTextObjects[i].Setup(questdatabase.quests[i].quest);
+                //    }
                     break;
                 case QuestStatus.DEBUGFORCE:
                     break;
@@ -98,10 +97,10 @@ public class PlayerJournalManager : MonoBehaviour
         {
             completeTextObjects[i].gameObject.SetActive(false);
         }
-        for (int i = 0; i < handedInTextObjects.Count; i++)
-        {
-            handedInTextObjects[i].gameObject.SetActive(false);
-        }
+        //for (int i = 0; i < handedInTextObjects.Count; i++)
+        //{
+        //    handedInTextObjects[i].gameObject.SetActive(false);
+        //}
     }
 
     public void ShowQuestDetails(QuestSO quest) {

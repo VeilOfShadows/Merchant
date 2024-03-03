@@ -14,17 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
   <text>k__BackingField: Of course, I have been planning the repairs so I have a
-    list of the required materials right here. Oh and before I forget, the journey
-    back to <Willowberry is a long one, take some bread for the road.
+    list of the required materials right here. Take that to *Richard and he can supply
+    you with the right amount of lumber.
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you, I will take this to Richard
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 77c3399bc266d164eaaea031823346ae,
       type: 2}
-    <action>k__BackingField: 4
-    <questStartingPoint>k__BackingField: {fileID: 0}
-    <questCompletePoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+    <action>k__BackingField: 2
+    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
       type: 2}
+    <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []

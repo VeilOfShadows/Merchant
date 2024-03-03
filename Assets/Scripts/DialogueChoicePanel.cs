@@ -25,7 +25,7 @@ public class DialogueChoicePanel : MonoBehaviour
         {
             buttons[i].transform.parent.gameObject.SetActive(true);
 
-            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, currentDialogue.choices[i].action, currentDialogue.choices[i].questStartingPoint, currentDialogue.choices[i].questCompletePoint, currentDialogue.choices[i].questHandinPoint, currentDialogue.choices[i].dialogueAfterCompletion);
+            buttons[i].Setup(currentDialogue.choices[i].text, currentDialogue.choices[i].nextDialogue, currentDialogue.choices[i].action, currentDialogue.choices[i].questStartingPoint, currentDialogue.choices[i].questCompletePoint, currentDialogue.choices[i].dialogueAfterCompletion);
         }
     }
 

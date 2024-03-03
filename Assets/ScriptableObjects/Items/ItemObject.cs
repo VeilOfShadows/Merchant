@@ -7,7 +7,7 @@ public enum ItemType {
     DEFAULT,
     Consumable,
     Commodity,
-    Equipment
+    QuestItem
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "Create/Item/New Item")]

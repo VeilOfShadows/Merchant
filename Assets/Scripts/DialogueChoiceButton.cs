@@ -16,36 +16,36 @@ public class DialogueChoiceButton : MonoBehaviour
     public bool hasQuestHandin = false;
     public QuestSO pickupQuest;
     public QuestSO completeQuest;
-    public QuestSO handinQuest;
+    //public QuestSO handinQuest;
     public DialogueContainerSO dialogueAfterCompletion;
     public TextMeshProUGUI textObject;
     Tween textTween;
     public float textSpeed;
     public AudioSource audioSource;
     public QuestDatabase questDatabase;
-    Button button;
-    RectTransform rect;
+    public Button button;
+    public RectTransform rect;
 
     private void Start()
     {
-        rect = GetComponent<RectTransform>();
-        button = GetComponent<Button>();
+        //rect = GetComponent<RectTransform>();
+        //button = GetComponent<Button>();
     }
 
     public void Clear() {
         textObject.text = "";
     }
 
-    public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _completeQuest, QuestSO _handinQuest, DialogueContainerSO _dialogueAfterCompletion)
+    public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _completeQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
         rect.DOAnchorPosX(0, .1f);
-
+        button.interactable = true;
         isEnd = false;
         nextDialogue = nextDialogueSO;
         action = _action;
         pickupQuest = _pickupQuest;
         completeQuest = _completeQuest;
-        handinQuest = _handinQuest;
+        //handinQuest = _handinQuest;
         dialogueAfterCompletion = _dialogueAfterCompletion;
 
         if (nextDialogue == null)
@@ -78,17 +78,26 @@ public class DialogueChoiceButton : MonoBehaviour
                 transform.parent.gameObject.SetActive(false);
                 return;
             }
-        }
 
-        //hand in quest is available
-        if (handinQuest != null)
-        {
-            if (!questDatabase.GetQuestStatus(handinQuest.questID, QuestStatus.Completed))
+            if (completeQuest.questRequiredItem != null)
             {
-                transform.parent.gameObject.SetActive(false);
-                return;
+                if (PlayerManager.instance.playerInventory.CheckForItem(completeQuest.questRequiredItem.data, completeQuest.questRequiredItemAmount))
+                {
+                    button.interactable = false;
+                    Debug.Log("Item not found in inventory");
+                }
             }
         }
+
+        ////hand in quest is available
+        //if (handinQuest != null)
+        //{
+        //    if (!questDatabase.GetQuestStatus(handinQuest.questID, QuestStatus.Completed))
+        //    {
+        //        transform.parent.gameObject.SetActive(false);
+        //        return;
+        //    }
+        //}
     }
 
     private void SetDialogueText(string newText)
@@ -98,7 +107,7 @@ public class DialogueChoiceButton : MonoBehaviour
 
     public void ActivateButton()
     {
-        DialogueFunctionManager.instance.Activate(action, pickupQuest,completeQuest, handinQuest);
+        DialogueFunctionManager.instance.Activate(action, pickupQuest,completeQuest);
         if (dialogueAfterCompletion != null)
         {
             dialogueUIManager.dialogueController.dialogue.dialogueContainer = dialogueAfterCompletion;

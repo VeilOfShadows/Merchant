@@ -6,11 +6,11 @@ public enum QuestStatus {
     NotStarted,
     Accepted,
     Completed,
-    HandedIn,
+    //HandedIn,
     DEBUGFORCE
 }
 
-public enum QuestRewardType { 
+public enum QuestAction { 
     None,
     Item,
     Function
@@ -25,8 +25,19 @@ public class QuestSO : ScriptableObject
     public string questDescription;
     public QuestStatus questStatus;
 
-    public QuestRewardType questRewardType;
-    public ItemObject questRewardItem;
-    public int questRewardItemAmount;
-    public string questRewardFunctionName;
+    [Header("Quest Start Action")]
+    public QuestAction questStartAction;
+    public ItemObject questStartItem;
+    public int questStartItemAmount;
+    public string questStartFunctionName;
+
+    [Header("Quest Items")]
+    public ItemObject questRequiredItem;
+    public int questRequiredItemAmount;
+
+    [Header("Quest Complete Action")]
+    public QuestAction questCompleteAction;
+    public ItemObject questCompleteItem;
+    public int questCompleteItemAmount;
+    public string questCompleteFunctionName;
 }

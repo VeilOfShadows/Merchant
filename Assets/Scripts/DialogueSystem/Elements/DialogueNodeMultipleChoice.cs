@@ -106,19 +106,19 @@ public class DialogueNodeMultipleChoice : DialogueNode
                 questCompleteObjectField.value = choiceData.questCompletePoint;
             }
 
-            ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
-            {
-                //if (callback.newValue is ScriptableObject so)
-                //{
-                choiceData.questHandinPoint = (QuestSO)callback.newValue;
+            //ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
+            //{
+            //    //if (callback.newValue is ScriptableObject so)
+            //    //{
+            //    choiceData.questHandinPoint = (QuestSO)callback.newValue;
 
-                //}
-            });
+            //    //}
+            //});
 
-            if (choiceData.questHandinPoint != null)
-            {
-                questHandInObjectField.value = choiceData.questHandinPoint;
-            }
+            //if (choiceData.questHandinPoint != null)
+            //{
+            //    questHandInObjectField.value = choiceData.questHandinPoint;
+            //}
 
             ObjectField nextDialogue = DialogueElementUtility.CreateDialogueObjectField("Next Dialogue", callback =>
             {
@@ -137,7 +137,7 @@ public class DialogueNodeMultipleChoice : DialogueNode
             outputContainer.Add(choicePort);
             outputContainer.Add(questStartObjectField);
             outputContainer.Add(questCompleteObjectField);
-            outputContainer.Add(questHandInObjectField);
+            //outputContainer.Add(questHandInObjectField);
             outputContainer.Add(actionField);
             outputContainer.Add(nextDialogue);
         });
@@ -216,19 +216,19 @@ public class DialogueNodeMultipleChoice : DialogueNode
                 questCompleteObjectField.value = choice.questCompletePoint;
             }
 
-            ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
-            {
-                //if (callback.newValue is ScriptableObject so)
-                //{
-                choice.questHandinPoint = (QuestSO)callback.newValue;
+            //ObjectField questHandInObjectField = DialogueElementUtility.CreateQuestObjectField("Quest Hand-in", callback =>
+            //{
+            //    //if (callback.newValue is ScriptableObject so)
+            //    //{
+            //    choice.questHandinPoint = (QuestSO)callback.newValue;
 
-                //}
-            });
+            //    //}
+            //});
 
-            if (choice.questHandinPoint != null)
-            {
-                questHandInObjectField.value = choice.questHandinPoint;
-            }
+            //if (choice.questHandinPoint != null)
+            //{
+            //    questHandInObjectField.value = choice.questHandinPoint;
+            //}
 
             ObjectField nextDialogue = DialogueElementUtility.CreateDialogueObjectField("Next Dialogue", callback =>
             {
@@ -248,7 +248,7 @@ public class DialogueNodeMultipleChoice : DialogueNode
             outputContainer.Add(actionField);
             outputContainer.Add(questStartObjectField);
             outputContainer.Add(questCompleteObjectField);
-            outputContainer.Add(questHandInObjectField);
+            //outputContainer.Add(questHandInObjectField);
             outputContainer.Add(nextDialogue);
 
         }

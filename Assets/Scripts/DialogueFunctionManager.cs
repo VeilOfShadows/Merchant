@@ -24,7 +24,7 @@ public class DialogueFunctionManager : MonoBehaviour
         { instance = this; }
     }
 
-    public void Activate(DialogueActions action, QuestSO pickupQuest = null, QuestSO completeQuest = null, QuestSO handInQuest = null)
+    public void Activate(DialogueActions action, QuestSO pickupQuest = null, QuestSO completeQuest = null)
     {
         switch (action)
         {
@@ -37,22 +37,31 @@ public class DialogueFunctionManager : MonoBehaviour
 
             case DialogueActions.AcceptQuest:
                 questDatabase.SetQuestStatus(pickupQuest.questID, QuestStatus.Accepted);
-                //AcceptQuest(pickupQuest);
+                if (pickupQuest.questStartAction == QuestAction.Item)
+                {
+                    playerInventory.AddItem(pickupQuest.questStartItem.data, pickupQuest.questStartItemAmount);
+                    NotificationManager.instance.DisplayNotification("+ " + pickupQuest.questStartItem.data.itemName + " x " + pickupQuest.questStartItemAmount, false);
+                }
                 break;
 
             case DialogueActions.CompleteQuest:
-                questDatabase.SetQuestStatus(completeQuest.questID, QuestStatus.Completed);
-                //AcceptQuest(pickupQuest);
-                break;
-
-            case DialogueActions.HandInQuest:
-                questDatabase.SetQuestStatus(handInQuest.questID, QuestStatus.HandedIn);
-                if (handInQuest.questRewardType == QuestRewardType.Item)
+                if (completeQuest.questRequiredItem != null)
                 {
-                    playerInventory.AddItem(handInQuest.questRewardItem.data, handInQuest.questRewardItemAmount);
-                    NotificationManager.instance.DisplayNotification("+ " + handInQuest.questRewardItem.data.itemName + " x " + handInQuest.questRewardItemAmount, false);
+                    playerInventory.FindItemInInventory(completeQuest.questRequiredItem.data).RemoveAmount(completeQuest.questRequiredItemAmount);
+                    NotificationManager.instance.DisplayNotification("- " + completeQuest.questRequiredItem.data.itemName + " x " + completeQuest.questRequiredItemAmount, false);
+                }
+
+                questDatabase.SetQuestStatus(completeQuest.questID, QuestStatus.Completed);
+                if (completeQuest.questCompleteAction == QuestAction.Item)
+                {
+                    playerInventory.AddItem(completeQuest.questCompleteItem.data, completeQuest.questCompleteItemAmount);
+                    NotificationManager.instance.DisplayNotification("+ " + completeQuest.questCompleteItem.data.itemName + " x " + completeQuest.questCompleteItemAmount, false);
                 }
                 break;
+
+            //case DialogueActions.HandInQuest:
+            //    questDatabase.SetQuestStatus(handInQuest.questID, QuestStatus.HandedIn);
+            //    break;
 
             default:
                 break;

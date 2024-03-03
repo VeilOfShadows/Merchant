@@ -313,7 +313,7 @@ public static class DialogueIOUtility
                 action = nodeChoice.action,
                 questStartingPoint = nodeChoice.questStartingPoint,
                 questCompletePoint = nodeChoice.questCompletePoint,
-                questHandinPoint = nodeChoice.questHandinPoint,
+                //questHandinPoint = nodeChoice.questHandinPoint,
                 dialogueAfterCompletion = nodeChoice.dialogueAfterCompletion,
             };
 
@@ -354,7 +354,7 @@ public static class DialogueIOUtility
                 action = choice.action,
                 questStartingPoint = choice.questStartingPoint,
                 questCompletePoint = choice.questCompletePoint,
-                questHandinPoint = choice.questHandinPoint,
+                //questHandinPoint = choice.questHandinPoint,
                 dialogueAfterCompletion = choice.dialogueAfterCompletion,
             };
 

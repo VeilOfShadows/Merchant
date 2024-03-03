@@ -2260,12 +2260,13 @@ MonoBehaviour:
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   completeQuest: {fileID: 0}
-  handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1721121646}
   textSpeed: 1.2
   audioSource: {fileID: 341581968}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  button: {fileID: 86894503}
+  rect: {fileID: 86894502}
 --- !u!114 &86894507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17050,12 +17051,6 @@ MonoBehaviour:
   - {fileID: 1671859328}
   - {fileID: 426918762}
   - {fileID: 419289776}
-  handedInTextObjects:
-  - {fileID: 971865131}
-  - {fileID: 951603930}
-  - {fileID: 1097342149}
-  - {fileID: 70561978}
-  - {fileID: 1627137311}
 --- !u!222 &485532838
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17121,12 +17116,13 @@ MonoBehaviour:
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   completeQuest: {fileID: 0}
-  handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1363370892}
   textSpeed: 1.2
   audioSource: {fileID: 982731234}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  button: {fileID: 486158424}
+  rect: {fileID: 486158422}
 --- !u!224 &486158422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -67614,12 +67610,13 @@ MonoBehaviour:
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   completeQuest: {fileID: 0}
-  handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1039902751}
   textSpeed: 1.2
   audioSource: {fileID: 1488956573}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  button: {fileID: 1892570985}
+  rect: {fileID: 1892570983}
 --- !u!224 &1892570983
 RectTransform:
   m_ObjectHideFlags: 0
@@ -73020,10 +73017,8 @@ MonoBehaviour:
   trigger2: {fileID: 1163723490}
   flowerPanel: {fileID: 1412650055}
   flowerCollider: {fileID: 1748487878}
-  isStep2: 0
   trigger3: {fileID: 1653203326}
   hungerPanel: {fileID: 562273030}
-  isStep3: 0
 --- !u!4 &1988443023
 Transform:
   m_ObjectHideFlags: 0
@@ -73792,12 +73787,13 @@ MonoBehaviour:
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   completeQuest: {fileID: 0}
-  handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 314255885}
   textSpeed: 1.2
   audioSource: {fileID: 1514712526}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  button: {fileID: 2003747399}
+  rect: {fileID: 2003747397}
 --- !u!224 &2003747397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -74078,12 +74074,13 @@ MonoBehaviour:
   hasQuestHandin: 0
   pickupQuest: {fileID: 0}
   completeQuest: {fileID: 0}
-  handinQuest: {fileID: 0}
   dialogueAfterCompletion: {fileID: 0}
   textObject: {fileID: 1891618306}
   textSpeed: 1.2
   audioSource: {fileID: 1005512766}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  button: {fileID: 2011318854}
+  rect: {fileID: 2011318852}
 --- !u!224 &2011318852
 RectTransform:
   m_ObjectHideFlags: 0

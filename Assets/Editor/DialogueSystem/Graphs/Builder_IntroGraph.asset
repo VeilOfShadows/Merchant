@@ -25,7 +25,6 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
         type: 2}
-      <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -43,7 +42,6 @@ MonoBehaviour:
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -60,7 +58,6 @@ MonoBehaviour:
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -73,11 +70,9 @@ MonoBehaviour:
     <choices>k__BackingField:
     - <text>k__BackingField: See you then
       <nodeID>k__BackingField: 
-      <action>k__BackingField: 2
-      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
-        type: 2}
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -86,20 +81,19 @@ MonoBehaviour:
   - <ID>k__BackingField: c53378f3-6610-4500-80ac-12b378e90da5
     <name>k__BackingField: DialogueName
     <text>k__BackingField: Of course, I have been planning the repairs so I have
-      a list of the required materials right here. Oh and before I forget, the journey
-      back to <Willowberry is a long one, take some bread for the road.
+      a list of the required materials right here. Take that to *Richard and he can
+      supply you with the right amount of lumber.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you, I will take this to Richard
       <nodeID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
-      <action>k__BackingField: 4
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
         type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2003, y: -11}
+    <position>k__BackingField: {x: 2004, y: -11}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:

@@ -18,11 +18,9 @@ MonoBehaviour:
   <choices>k__BackingField:
   - <text>k__BackingField: See you then
     <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 2
-    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
-      type: 2}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
     <questCompletePoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []

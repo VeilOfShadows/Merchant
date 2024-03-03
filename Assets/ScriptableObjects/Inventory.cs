@@ -14,7 +14,16 @@ public class Inventory : ScriptableObject
     public void AddItem(Item _item, int _amount) {
         InventorySlot slot = FindItemInInventory(_item);
 
-        if (!database.items[_item.itemID].data.stackable || slot == null)
+        if (_item.itemType == ItemType.QuestItem)
+        {
+            if (slot == null)
+            {
+                SetEmptySlot(_item, _amount);
+                return;
+                //return true;
+            }
+        }
+        else if (!database.items[_item.itemID].data.stackable || slot == null)
         {
             SetEmptySlot(_item, _amount);
             return;
@@ -79,6 +88,24 @@ public class Inventory : ScriptableObject
             }
         }
         return null;
+    }
+
+    public bool CheckForItem(Item _item, int _amount)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item != null)
+            {
+                if (slots[i].item.itemID == _item.itemID)
+                {
+                    if (slots[i].amount >= _amount)
+                    {
+                        return true;                        
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     public InventorySlot FindFoodInInventory()

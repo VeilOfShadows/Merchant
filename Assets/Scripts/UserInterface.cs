@@ -74,7 +74,15 @@ public class UserInterface : MonoBehaviour
         if (_slot.item.itemID >= 0)
         {
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.item.uiDisplay;
-            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+            if (_slot.item.itemType == ItemType.QuestItem)
+            {
+                _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, .8f, 0, 1);
+            }
+            else
+            {
+                _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+            }
+            //_slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
             _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
         }
         else
@@ -156,6 +164,10 @@ public class UserInterface : MonoBehaviour
             rt.sizeDelta = new Vector2(50, 50);
             tempItem.transform.SetParent(transform.parent);
             var img = tempItem.AddComponent<Image>();
+            if (slotsOnInterface[obj].item.itemType == ItemType.QuestItem)
+            {
+                img.color = new Color(1, .8f, 0, 1);
+            }
             img.sprite = slotsOnInterface[obj].item.uiDisplay;
             img.raycastTarget = false;
         }
@@ -251,7 +263,14 @@ public static class ExtensionMethods
                 if (_slot.Value.item.itemID >= 0)
                 {
                     _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.Value.item.uiDisplay;
-                    _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+                    if (_slot.Value.item.itemType == ItemType.QuestItem)
+                    {
+                        _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, .8f, 0, 1);
+                    }
+                    else
+                    {
+                        _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+                    }
                     _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
                 }
                 else

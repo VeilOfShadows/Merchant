@@ -10,6 +10,6 @@ public class DialogueChoiceSaveData
     [field: SerializeField] public DialogueActions action { get; set; }
     [field: SerializeField] public QuestSO questStartingPoint { get; set; }
     [field: SerializeField] public QuestSO questCompletePoint { get; set; }
-    [field: SerializeField] public QuestSO questHandinPoint { get; set; }
+    //[field: SerializeField] public QuestSO questHandinPoint { get; set; }
     [field: SerializeField] public DialogueContainerSO dialogueAfterCompletion { get; set; }
 }
