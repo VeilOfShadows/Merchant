@@ -18,12 +18,10 @@ public class TutorialManager : MonoBehaviour
     public GameObject trigger2;
     public GameObject flowerPanel;
     public Collider flowerCollider;
-    public bool isStep2;
 
     [Header("Trigger 3")]
     public GameObject trigger3;
     public GameObject hungerPanel;
-    public bool isStep3;
 
     private void Update()
     {
@@ -31,20 +29,7 @@ public class TutorialManager : MonoBehaviour
         {
             playerControls.TutorialMove();
         }
-        if (isStep2)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                CancelAction2();
-            }
-        }
-        if (isStep3)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                CancelAction3();
-            }
-        }
+
     }
 
     public void ActivateTutorialSequence(int index)
@@ -64,14 +49,12 @@ public class TutorialManager : MonoBehaviour
 
     public void Action2()
     {
-        isStep2 = true;
         flowerPanel.SetActive(true);
-        flowerCollider.enabled = true;
         Time.timeScale = 0f;
     }
 
     public void CancelAction2() {
-        isStep2 = false;
+        flowerCollider.enabled = true;
         flowerPanel.SetActive(false);
         trigger2.SetActive(false);
         trigger3.SetActive(true);
@@ -80,14 +63,12 @@ public class TutorialManager : MonoBehaviour
 
     public void Action3()
     {
-        isStep3 = true;
         hungerPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void CancelAction3()
     {
-        isStep3 = false;
         hungerPanel.SetActive(false);
         Time.timeScale = 1f;
         trigger3.SetActive(false);
