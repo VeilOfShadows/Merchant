@@ -16,6 +16,8 @@ public class UserInterface : MonoBehaviour
     public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
     public bool inShop;
     public MerchantInventoryInterface merchantInterface;
+    public TooltipManager tooltipManager;
+    public float tooltipOffset;
 
     private void Start()
     {
@@ -112,6 +114,13 @@ public class UserInterface : MonoBehaviour
         MouseData.slotHoveredOver = obj;
         growTween.Complete();
         growTween = obj.transform.DOScale(1.2f, .3f);
+        if (slotsOnInterface[obj].item != null)
+        {
+            if (slotsOnInterface[obj].item.itemID != -1)
+            {               
+                tooltipManager.ShowTooltip(slotsOnInterface[obj].item, tooltipOffset);
+            }
+        }
     }
 
     public virtual void OnClick(GameObject obj)
@@ -143,6 +152,7 @@ public class UserInterface : MonoBehaviour
         MouseData.slotHoveredOver = null;
         growTween.Complete();
         growTween = obj.transform.DOScale(1, .3f);
+        tooltipManager.HideTooltip();
     }
 
     public void OnEnterInterface(GameObject obj)
