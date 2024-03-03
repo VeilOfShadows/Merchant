@@ -7,6 +7,7 @@ public class PlayerFollow : MonoBehaviour
 {
     public Transform followTarget;
     public NavMeshAgent agent;
+    public bool follow;
 
     private void Start()
     {
@@ -15,6 +16,9 @@ public class PlayerFollow : MonoBehaviour
 
     private void Update()
     {
-        agent.destination = followTarget.position;
+        if (follow) 
+        { 
+            agent.destination = followTarget.position;
+        }
     }
 }

@@ -28,9 +28,26 @@ public class PlayerHungerManager : MonoBehaviour
         }
     }
 
+    public void ResetHunger() {
+        if (colourTween != null && colourTween.IsActive() && colourTween.IsPlaying())
+        {
+            colourTween.Kill();
+        }
+        if (sliderTween != null && sliderTween.IsActive() && sliderTween.IsPlaying())
+        {
+            sliderTween.Kill();
+        }
+        currentHunger = maxHunger;
+        hungerSlider.value = 1;
+        //sliderTween = DOTween.To(() => startingHunger, x => startingHunger = x, target, tweenSpeed).SetEase(Ease.Linear).OnUpdate(() =>
+        //{
+        //    hungerSlider.value = startingHunger / maxHunger;
+        //});
+    }
+
     private void Start()
     {
-        hungerSlider.value = currentHunger / maxHunger;
+        ResetHunger();
     }
 
     public void EatFirstFood() {
@@ -118,18 +135,17 @@ public class PlayerHungerManager : MonoBehaviour
             }
             colourTween = hungerSlider.targetGraphic.DOColor(Color.white, .1f).OnComplete(() => { 
                 colourTween = hungerSlider.targetGraphic.DOColor(Color.red, .4f).From();
-            });
-            
-            Die();
+            });       
+        }
+
+        if (currentHunger <= 0)
+        {
+            PlayerManager.instance.Die();
         }
 
         sliderTween = DOTween.To(() => startingHunger, x => startingHunger = x, target, tweenSpeed).SetEase(Ease.Linear).OnUpdate(() =>
         {
             hungerSlider.value = startingHunger / maxHunger;            
         });
-    }
-
-    public void Die() {
-        Debug.Log("You are close to starving");
     }
 }

@@ -22,7 +22,7 @@ public class NotificationManager : MonoBehaviour
         }
     }
 
-    public void DisplayNotification(string text, bool playSound = true)
+    public void DisplayNotification(string text, bool playSound = true, float duration = .5f)
     {
 
         if (playSound)
@@ -35,7 +35,7 @@ public class NotificationManager : MonoBehaviour
         if (temp != null)
         {
             temp.gameObject.SetActive(true);
-            temp.Display(text);
+            temp.Display(text, duration);
             temp.activationTime = Time.time;
         }
         else
@@ -44,7 +44,7 @@ public class NotificationManager : MonoBehaviour
             if (temp != null)
             {
                 temp.gameObject.SetActive(true);
-                temp.Display(text);
+                temp.Display(text, duration);
                 temp.activationTime = Time.time;
             }
         }

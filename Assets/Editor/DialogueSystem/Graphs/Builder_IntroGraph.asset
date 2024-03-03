@@ -66,6 +66,23 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1347, y: -11}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
+    <name>k__BackingField: 4
+    <text>k__BackingField: 'Excellent. I shall meet you on the other side of <Lakeview
+      <Bridge when you have the wood. Pleasure to meet you. '
+    <choices>k__BackingField:
+    - <text>k__BackingField: See you then
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
+        type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <questHandinPoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2734, y: -11}
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: c53378f3-6610-4500-80ac-12b378e90da5
     <name>k__BackingField: DialogueName
     <text>k__BackingField: Of course, I have been planning the repairs so I have
@@ -84,29 +101,12 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 2003, y: -11}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
-    <name>k__BackingField: 4
-    <text>k__BackingField: 'Excellent. I shall meet you on the >western side of <Lakeview
-      <Bridge when you have the wood. Pleasure to meet you. '
-    <choices>k__BackingField:
-    - <text>k__BackingField: See you then
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 2
-      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
-        type: 2}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2734, y: -11}
-    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - 1
   - 2
   - 3
-  - DialogueName
   - 4
+  - DialogueName
   <oldGroupedNodeNames>k__BackingField:
     list: []

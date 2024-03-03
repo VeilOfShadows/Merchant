@@ -8,6 +8,10 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager instance;
 
     public PlayerSOConnections so;
+    public PlayerControls playerControls;
+    public RespawnTrigger respawnLocation;
+    public PlayerFollow playerFollow;
+    public DeathCanvas deathCanvas;
 
     [Header("Inventory")]
     public Inventory playerInventory;
@@ -98,5 +102,30 @@ public class PlayerManager : MonoBehaviour
     [ContextMenu("ADD")]
     public void AddItem() {
         playerInventory.AddItem(itemToAdd.item, itemToAdd.amount);
+    }
+
+    public void Die() 
+    {
+        deathCanvas.PlayFadeOut();
+        playerControls.canControl = false;
+        playerControls.roadSpline = null;
+        playerControls.currentCam.SetActive(false);
+        playerFollow.follow = false;        
+    }
+
+    public void Respawn()
+    {
+        playerControls.currentCam.SetActive(true);
+        transform.position = respawnLocation.respawnLocation.position;
+        playerFollow.transform.position = respawnLocation.respawnLocation.position;
+
+        NotificationManager.instance.DisplayNotification("Oh dear, you passed out from exhaustion and were rushed to the village.", true, 3f);
+        PlayerHungerManager.instance.ResetHunger();
+
+        playerControls.roadSpline = respawnLocation.nearestRoad;
+        playerControls.currentRoad = playerControls.roadSpline.Splines[0]; 
+        
+        playerControls.canControl = true;
+        playerFollow.follow = true;
     }
 }

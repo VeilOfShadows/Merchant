@@ -30,20 +30,23 @@ public class PlayerControls : MonoBehaviour
 
     private void Start()
     {
-        currentRoad = roadSpline.Splines[0];
-        native = new NativeSpline(roadSpline.Spline);
-        distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
+        if (roadSpline != null)
+        {
+            currentRoad = roadSpline.Splines[0];
+            native = new NativeSpline(roadSpline.Spline);
+            distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
 
-        transform.position = nearest;
+            transform.position = nearest;
 
-        forward = Vector3.Normalize(roadSpline.EvaluateTangent(t));
-        up = roadSpline.EvaluateUpVector(t);
+            forward = Vector3.Normalize(roadSpline.EvaluateTangent(t));
+            up = roadSpline.EvaluateUpVector(t);
 
-        //var remappedForward = new Vector3(0, 0, 1);
-        //var remappedUp = new Vector3(0, 1, 0);
-        axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
+            //var remappedForward = new Vector3(0, 0, 1);
+            //var remappedUp = new Vector3(0, 1, 0);
+            axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
 
-        transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
+            transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
+        }
     }
     private void Update()
     {

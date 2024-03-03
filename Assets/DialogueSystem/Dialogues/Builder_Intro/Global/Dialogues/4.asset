@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 4
-  <text>k__BackingField: 'Excellent. I shall meet you on the >western side of <Lakeview
+  <text>k__BackingField: 'Excellent. I shall meet you on the other side of <Lakeview
     <Bridge when you have the wood. Pleasure to meet you. '
   <choices>k__BackingField:
   - <text>k__BackingField: See you then

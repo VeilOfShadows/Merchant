@@ -24,7 +24,7 @@ public class NotificationText : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Display(string _text)
+    public void Display(string _text, float speed)
     {
         string text = "";
         if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
@@ -38,7 +38,7 @@ public class NotificationText : MonoBehaviour
 
         textObject.color = new Color(1, 1, 1, 1);
 
-        textTween = DOTween.To(() => text, x => text = x, _text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
+        textTween = DOTween.To(() => text, x => text = x, _text, speed).SetEase(Ease.Linear).OnUpdate(() =>
         {
             SetText(text);
         }).OnComplete(() =>
