@@ -13,6 +13,10 @@ public class MerchantInventoryInterface : UserInterface
             slotsOnInterface[obj].RemoveAmount(1);
             inventory.AddItem(inventory.coinItem.data, buyPrice);
         }
+        else
+        {
+            NotificationManager.instance.DisplayNotification("You do not have enough gold.", true, 1.4f);
+        }
     }
 
     public override void OnDragStart(GameObject obj)

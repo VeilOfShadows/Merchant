@@ -116,6 +116,10 @@ public class UserInterface : MonoBehaviour
                 slotsOnInterface[obj].RemoveAmount(1);
                 inventory.AddItem(inventory.coinItem.data, buyPrice);
             }
+            else
+            {
+                NotificationManager.instance.DisplayNotification("Vendor does not have enough gold.", true, 1.4f);
+            }
         }
         else
         {
