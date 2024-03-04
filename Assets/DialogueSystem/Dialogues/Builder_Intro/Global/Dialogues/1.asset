@@ -15,7 +15,7 @@ MonoBehaviour:
   <dialogueName>k__BackingField: 1
   <text>k__BackingField: Not often you see a new face. What brings you to <Lakeview?
   <choices>k__BackingField:
-  - <text>k__BackingField: I'm trying to arrange the bridge to be repaired
+  - <text>k__BackingField: I've come to arrange bridge repairs
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 731cdffbcdd7283489a4f5a63b2e21f4,
       type: 2}
     <action>k__BackingField: 3

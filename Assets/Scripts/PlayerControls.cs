@@ -1,7 +1,9 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Splines;
 
 public class PlayerControls : MonoBehaviour
@@ -10,8 +12,11 @@ public class PlayerControls : MonoBehaviour
     public Spline currentRoad;
     public string roadName;
     //public Rigidbody rb;
-    public float speed;
+    public float villageSpeed = 3;
+    public float roadSpeed = 4.5f;
+    public float currentSpeed;
     public float wheelSpeed;
+    public NavMeshAgent agent;
     public Transform cartWheel_L;
     public Transform cartWheel_R;
     public Transform cart;
@@ -30,6 +35,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Start()
     {
+        SetRoadSpeed();
         if (roadSpline != null)
         {
             currentRoad = roadSpline.Splines[0];
@@ -88,7 +94,7 @@ public class PlayerControls : MonoBehaviour
         axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-        transform.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
+        transform.Translate(new Vector3(0, 0, (moveHorizontal * currentSpeed) * Time.deltaTime));
         //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
         float direction = Input.GetAxis("Vertical");
@@ -125,7 +131,7 @@ public class PlayerControls : MonoBehaviour
         axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-        transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+        transform.Translate(new Vector3(0, 0, currentSpeed * Time.deltaTime));
         //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
         cartWheel_L.Rotate(wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
@@ -150,7 +156,7 @@ public class PlayerControls : MonoBehaviour
         axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-        transform.Translate(new Vector3(0, 0, (moveHorizontal * (speed/2)) * Time.deltaTime));
+        transform.Translate(new Vector3(0, 0, (moveHorizontal * (currentSpeed / 2)) * Time.deltaTime));
         //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
         cartWheel_L.Rotate(Input.GetAxis("Horizontal") * (wheelSpeed / 2), 0, 0);//Vector3 dir = power * transform.forward;
@@ -170,5 +176,27 @@ public class PlayerControls : MonoBehaviour
         roadSpline = container;
         currentRoad = roadSpline.Splines[0];
 
+    }
+
+    public void SetVillageSpeed() {
+        DOTween.To(() => currentSpeed, x => currentSpeed = x, villageSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => { agent.speed = currentSpeed; });
+    }
+
+    public void SetRoadSpeed()
+    {
+        DOTween.To(() => currentSpeed, x => currentSpeed = x, roadSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => { agent.speed = currentSpeed; });
+    }
+
+    public void ChangeSpeed(float amount, bool increase)
+    {
+        if (increase)
+        {
+            currentSpeed += amount;
+        }
+        else
+        {
+            currentSpeed -= amount;
+        }
+        agent.speed = currentSpeed;
     }
 }

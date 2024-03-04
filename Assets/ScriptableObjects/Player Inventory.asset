@@ -25,7 +25,7 @@ MonoBehaviour:
         stackable: 1
         tradeable: 0
         nutritionalValue: 0
-      amount: 19
+      amount: 23
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -37,7 +37,7 @@ MonoBehaviour:
         stackable: 1
         tradeable: 1
         nutritionalValue: 8
-      amount: 14
+      amount: 13
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -53,39 +53,39 @@ MonoBehaviour:
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
+        itemName: Starflower
+        itemType: 2
+        itemID: 5
+        baseCoinValue: 3
+        uiDisplay: {fileID: 21300000, guid: da609764537e4c14d92fc20d0fa3a8e9, type: 3}
+        stackable: 1
+        tradeable: 1
         nutritionalValue: 0
       amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: 0
+        itemName: Mushroom
+        itemType: 1
+        itemID: 7
+        baseCoinValue: 2
+        uiDisplay: {fileID: 21300000, guid: 5e103bda7f23ea34dabf0567ff91fcca, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 5
       amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        uiDisplay: {fileID: 0}
+        itemName: Granny's Soup
+        itemType: 1
+        itemID: 8
+        baseCoinValue: 1
+        uiDisplay: {fileID: 21300000, guid: f9960a92ec16bf84d82d5c9ba883478c, type: 3}
         stackable: 0
-        tradeable: 0
-        nutritionalValue: 0
-      amount: 0
+        tradeable: 1
+        nutritionalValue: 15
+      amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:

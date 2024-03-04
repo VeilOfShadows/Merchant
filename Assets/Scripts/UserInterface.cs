@@ -127,15 +127,22 @@ public class UserInterface : MonoBehaviour
     {
         if (inShop)
         {
-            int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
-            if (merchantInterface.inventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
+            if (slotsOnInterface[obj].item.itemType == ItemType.QuestItem)
             {
-                slotsOnInterface[obj].RemoveAmount(1);
-                inventory.AddItem(inventory.coinItem.data, buyPrice);
+                NotificationManager.instance.DisplayNotification("Cannot sell quest items.", true, 1.4f);
             }
             else
             {
-                NotificationManager.instance.DisplayNotification("Vendor does not have enough gold.", true, 1.4f);
+                int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
+                if (merchantInterface.inventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
+                {
+                    slotsOnInterface[obj].RemoveAmount(1);
+                    inventory.AddItem(inventory.coinItem.data, buyPrice);
+                }
+                else
+                {
+                    NotificationManager.instance.DisplayNotification("Vendor does not have enough gold.", true, 1.4f);
+                }
             }
         }
         else

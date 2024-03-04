@@ -81,10 +81,12 @@ public class DialogueChoiceButton : MonoBehaviour
 
             if (completeQuest.questRequiredItem != null)
             {
-                if (PlayerManager.instance.playerInventory.CheckForItem(completeQuest.questRequiredItem.data, completeQuest.questRequiredItemAmount))
+                if (!PlayerManager.instance.playerInventory.CheckForItem(completeQuest.questRequiredItem.data, completeQuest.questRequiredItemAmount))
                 {
-                    button.interactable = false;
+                    transform.parent.gameObject.SetActive(false);
                     Debug.Log("Item not found in inventory");
+                    return;
+                    //button.interactable = false;
                 }
             }
         }

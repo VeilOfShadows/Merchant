@@ -16,12 +16,19 @@ MonoBehaviour:
   <text>k__BackingField: Oh hey it's you. Did you manage to find Oswald?
   <choices>k__BackingField:
   - <text>k__BackingField: Yeah he agreed to repair the bridge
-    <nextDialogue>k__BackingField: {fileID: 11400000, guid: c02c1780cdf45e14e89bec6895e062bd,
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: af69da1ceae5d7a499f4fac44ef07f5e,
       type: 2}
     <action>k__BackingField: 3
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
       type: 2}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: Where was he again?
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: faa477b32add7a044a2ef4bef6cc9f2a,
+      type: 2}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []

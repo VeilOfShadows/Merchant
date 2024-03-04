@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 2
-  <text>k__BackingField: Oh I would love that but unfortunately <Lakeview doesn't
-    have the highest quality wood. Theres plenty of trees but the moisture makes
-    them quite weak as you can see from the bridge.
+  <text>k__BackingField: I see. Unfortunately, <Lakeview doesn't have the highest
+    quality wood. Theres plenty of trees but the moisture makes them quite weak as
+    you can see from the bridge.
   <choices>k__BackingField:
-  - <text>k__BackingField: Your brother Richard can provide the wood if Lakeview
-      pays for it
+  - <text>k__BackingField: Your brother Richard can provide the wood
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: a2ddf4e011bb966489c52e93b0ed5687,
       type: 2}
     <action>k__BackingField: 0

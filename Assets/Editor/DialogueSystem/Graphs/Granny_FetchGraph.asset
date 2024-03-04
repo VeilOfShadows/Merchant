@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: Granny_FetchGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: Granny_Fetch
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: 451a0238-3e46-4193-b370-254218c98dd3
+    <name>k__BackingField: 1
+    <text>k__BackingField: Welcome back deary! Did you manage to find me all those
+      ingredients?
+    <choices>k__BackingField:
+    - <text>k__BackingField: Yeah I have them here
+      <nodeID>k__BackingField: 13aaf273-3b2b-4f6c-91fb-a3c6daa729a6
+      <action>k__BackingField: 3
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc,
+        type: 2}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Where can I find the seeds again?
+      <nodeID>k__BackingField: cba55dc0-a1fa-4b2f-862f-24aff8457640
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 363, y: 519}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 13aaf273-3b2b-4f6c-91fb-a3c6daa729a6
+    <name>k__BackingField: 2
+    <text>k__BackingField: There we are. That soup shuold perk you right up for a
+      short while. You take care now!
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thanks Granny
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1054, y: 340}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: cba55dc0-a1fa-4b2f-862f-24aff8457640
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: There's a patch of them just down the road towards <Lakeview.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thanks
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1111, y: 635}
+    <quest>k__BackingField: {fileID: 0}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - 1
+  - 2
+  - DialogueName
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

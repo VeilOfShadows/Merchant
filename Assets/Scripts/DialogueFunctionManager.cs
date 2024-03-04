@@ -8,7 +8,7 @@ public enum DialogueActions {
     OpenShop,
     AcceptQuest,
     CompleteQuest,
-    HandInQuest
+    //HandInQuest
 }
 
 public class DialogueFunctionManager : MonoBehaviour

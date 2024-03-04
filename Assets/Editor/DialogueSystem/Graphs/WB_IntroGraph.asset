@@ -24,7 +24,7 @@ MonoBehaviour:
       <nodeID>k__BackingField: d1bca2fd-2ffd-4495-816f-1e22befacf85
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -40,7 +40,7 @@ MonoBehaviour:
       <nodeID>k__BackingField: 023bd9a3-f305-42fa-b545-1884b4edf0b1
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -56,7 +56,7 @@ MonoBehaviour:
       <nodeID>k__BackingField: af70e78d-e1c6-4418-9979-9cb2754784bf
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -72,7 +72,7 @@ MonoBehaviour:
       <nodeID>k__BackingField: 35ad94c2-10f4-443f-b880-72d8a22fff9f
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
-      <questHandinPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -80,20 +80,19 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 35ad94c2-10f4-443f-b880-72d8a22fff9f
     <name>k__BackingField: 5
-    <text>k__BackingField: You would? That would be incredible! There is a *carpenter
-      in <Thistlewood <Forest who might be able to help. If you take the path >north
-      just after <Willowberry <Pond, you should find him.
+    <text>k__BackingField: You would? If you head past <Willowberry <Pond, there
+      is a *carpenter just >north in <Thistlewood <Forest who could help.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 
       <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
         type: 2}
-      <questHandinPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2471, y: -78}
+    <position>k__BackingField: {x: 2479, y: -100}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:

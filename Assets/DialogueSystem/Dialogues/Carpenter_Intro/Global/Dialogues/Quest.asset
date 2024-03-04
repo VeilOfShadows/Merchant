@@ -13,15 +13,22 @@ MonoBehaviour:
   m_Name: Quest
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: Quest
-  <text>k__BackingField: Hmm ok. My brother *Oswald in <Lakeview is a builder. He
-    might be able to help organise a lumber order and get the <Lakeview coffers to
-    pay for it. And take some bread for the trip.
+  <text>k__BackingField: My brother *Oswald in <Lakeview is a builder. He might be
+    able to help organise a lumber order and get the <Lakeview council to pay for
+    it. The journey is long though so take some bread with you.
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 2
     <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
       type: 2}
+    <questCompletePoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: How do I get to Lakeview?
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: aadd2d8fdbe2a2947b2f24f43e5bac97,
+      type: 2}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
     <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: 2
+  m_Name: 4
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: 2
-  <text>k__BackingField: That's brilliant news. Did you manage to find out what materials
-    will be needed?
+  <dialogueName>k__BackingField: 4
+  <text>k__BackingField: There should be some sunflowers growing by <Lakeview <Bridge.
+    There's a particularly juicy tall one I have been eyeing up, but my legs are
+    too short for that kind of prize.
   <choices>k__BackingField:
-  - <text>k__BackingField: Yeah he made note of them, here
+  - <text>k__BackingField: Alright I will get some for you
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 2
-    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624,
+    <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc,
       type: 2}
     <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}

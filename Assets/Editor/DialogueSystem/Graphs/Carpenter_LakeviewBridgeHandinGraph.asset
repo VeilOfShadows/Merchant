@@ -15,6 +15,37 @@ MonoBehaviour:
   <fileName>k__BackingField: Carpenter_LakeviewBridgeHandin
   <groups>k__BackingField: []
   <nodes>k__BackingField:
+  - <ID>k__BackingField: fbe1a5dd-91ea-47c4-9f09-7e88cd14a837
+    <name>k__BackingField: 2a
+    <text>k__BackingField: That's brilliant news. Did you manage to find out what
+      materials will be needed?
+    <choices>k__BackingField:
+    - <text>k__BackingField: Yeah he made note of them, here
+      <nodeID>k__BackingField: 1d0f2c83-e246-4842-a555-291346527337
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624,
+        type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2139, y: 50}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 1d0f2c83-e246-4842-a555-291346527337
+    <name>k__BackingField: 3
+    <text>k__BackingField: Perfect! I can run out and quickly open my side gate.
+      Should take you to the bridge much faster.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2818, y: 50}
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 99ad27c7-c206-433e-9f84-3dee0adb96fb
     <name>k__BackingField: 1
     <text>k__BackingField: Oh hey it's you. Did you manage to find Oswald?
@@ -26,29 +57,36 @@ MonoBehaviour:
       <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
         type: 2}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1416, y: 50}
-    <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: fbe1a5dd-91ea-47c4-9f09-7e88cd14a837
-    <name>k__BackingField: 2
-    <text>k__BackingField: That's brilliant news. Did you manage to find out what
-      materials will be needed?
-    <choices>k__BackingField:
-    - <text>k__BackingField: Yeah he made note of them, here
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 2
-      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624,
-        type: 2}
+    - <text>k__BackingField: Where was he again?
+      <nodeID>k__BackingField: 90e6ca69-ba68-4d3d-91bb-1a5c6816ee4d
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2139, y: 50}
+    <position>k__BackingField: {x: 1397, y: 156}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 90e6ca69-ba68-4d3d-91bb-1a5c6816ee4d
+    <name>k__BackingField: 2b
+    <text>k__BackingField: He should be in <Lakeview. the bridge is out so you might
+      have to go around the lake.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2218, y: 408}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
+  - 2a
+  - 3
   - 1
-  - 2
+  - 2b
   <oldGroupedNodeNames>k__BackingField:
     list: []

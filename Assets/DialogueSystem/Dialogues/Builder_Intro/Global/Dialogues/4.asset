@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 4
-  <text>k__BackingField: 'Excellent. I shall meet you on the other side of <Lakeview
-    <Bridge when you have the wood. Pleasure to meet you. '
+  <text>k__BackingField: Excellent. I shall meet you on the other side of <Lakeview
+    <Bridge when you have the wood.
   <choices>k__BackingField:
-  - <text>k__BackingField: See you then
+  - <text>k__BackingField: See you soon
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}

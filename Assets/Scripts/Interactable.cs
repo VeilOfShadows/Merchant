@@ -16,10 +16,11 @@ public class Interactable : MonoBehaviour
     Tween scaleTween;
     public float tweenSpeed = .4f;
     public AudioSource audioSource;
+    public bool singleUse = false;
 
     public void OnMouseDown()
     {
-        if (Vector3.Distance(transform.position, PlayerManager.instance.transform.position) > 20)
+        if (Vector3.Distance(transform.position, PlayerManager.instance.transform.position) > 30)
         {
             return;
         }

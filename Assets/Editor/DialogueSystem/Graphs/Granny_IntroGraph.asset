@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: Granny_IntroGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: Granny_Intro
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: f9e35775-b580-417d-b167-8eeea4895341
+    <name>k__BackingField: 1
+    <text>k__BackingField: What a beautiful face for a stranger. What can I do for
+      you?
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 15eec000-be1e-48c2-9211-4f10b9b26998
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 287, y: 416}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 15eec000-be1e-48c2-9211-4f10b9b26998
+    <name>k__BackingField: 2
+    <text>k__BackingField: I'm sure I could whip something up for you if you have
+      the ingredients?
+    <choices>k__BackingField:
+    - <text>k__BackingField: What do you need?
+      <nodeID>k__BackingField: b51d923f-a3c7-47c1-a415-d0efe6448960
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 958, y: 433}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: b51d923f-a3c7-47c1-a415-d0efe6448960
+    <name>k__BackingField: 3
+    <text>k__BackingField: 3 Berries, 1 mushroom and some crushed sunflower seeds.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Crushed sunflower seeds?
+      <nodeID>k__BackingField: f12eeefb-da42-4681-945c-43c98011aa50
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Sure I'll get those for you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc,
+        type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 1649, y: 395}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: f12eeefb-da42-4681-945c-43c98011aa50
+    <name>k__BackingField: 4
+    <text>k__BackingField: There should be some sunflowers growing by <Lakeview <Bridge.
+      There's a particularly juicy tall one I have been eyeing up, but my legs are
+      too short for that kind of prize.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Alright I will get some for you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc,
+        type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2358, y: 416}
+    <quest>k__BackingField: {fileID: 0}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - 1
+  - 2
+  - 3
+  - 4
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

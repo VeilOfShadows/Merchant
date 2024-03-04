@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
   <text>k__BackingField: Of course, I have been planning the repairs so I have a
-    list of the required materials right here. Take that to *Richard and he can supply
-    you with the right amount of lumber.
+    list of the required materials right here. Take that to *Richard so he knows
+    what to give you.
   <choices>k__BackingField:
-  - <text>k__BackingField: Thank you, I will take this to Richard
+  - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: 77c3399bc266d164eaaea031823346ae,
       type: 2}
     <action>k__BackingField: 2

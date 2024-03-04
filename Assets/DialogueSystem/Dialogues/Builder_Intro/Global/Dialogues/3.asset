@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 3
-  <text>k__BackingField: Oh you should have said! Any friend of *Richard is a friend
-    of mine. Besides, the bridge is good for trade so I'm sure the council will be
-    happy to see it repaired.
+  <text>k__BackingField: Oh perfect! I shall speak with the council for funding.
+    They would love to have the bridge repaired, it plays a massive part in our trade.
   <choices>k__BackingField:
   - <text>k__BackingField: Do you know what materials you will need?
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: b252d6237c2be3748af0286c9bbbbb22,

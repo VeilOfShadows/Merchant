@@ -19,7 +19,7 @@ MonoBehaviour:
     <name>k__BackingField: 1
     <text>k__BackingField: Not often you see a new face. What brings you to <Lakeview?
     <choices>k__BackingField:
-    - <text>k__BackingField: I'm trying to arrange the bridge to be repaired
+    - <text>k__BackingField: I've come to arrange bridge repairs
       <nodeID>k__BackingField: 0edb73d9-d645-48a9-a00e-b2d014f8066a
       <action>k__BackingField: 3
       <questStartingPoint>k__BackingField: {fileID: 0}
@@ -32,12 +32,11 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 0edb73d9-d645-48a9-a00e-b2d014f8066a
     <name>k__BackingField: 2
-    <text>k__BackingField: Oh I would love that but unfortunately <Lakeview doesn't
-      have the highest quality wood. Theres plenty of trees but the moisture makes
-      them quite weak as you can see from the bridge.
+    <text>k__BackingField: I see. Unfortunately, <Lakeview doesn't have the highest
+      quality wood. Theres plenty of trees but the moisture makes them quite weak
+      as you can see from the bridge.
     <choices>k__BackingField:
-    - <text>k__BackingField: Your brother Richard can provide the wood if Lakeview
-        pays for it
+    - <text>k__BackingField: Your brother Richard can provide the wood
       <nodeID>k__BackingField: d27aedb8-d88c-4b56-ad49-c17b62400208
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
@@ -49,9 +48,9 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: d27aedb8-d88c-4b56-ad49-c17b62400208
     <name>k__BackingField: 3
-    <text>k__BackingField: Oh you should have said! Any friend of *Richard is a friend
-      of mine. Besides, the bridge is good for trade so I'm sure the council will
-      be happy to see it repaired.
+    <text>k__BackingField: Oh perfect! I shall speak with the council for funding.
+      They would love to have the bridge repaired, it plays a massive part in our
+      trade.
     <choices>k__BackingField:
     - <text>k__BackingField: Do you know what materials you will need?
       <nodeID>k__BackingField: c53378f3-6610-4500-80ac-12b378e90da5
@@ -61,30 +60,15 @@ MonoBehaviour:
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1347, y: -11}
-    <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
-    <name>k__BackingField: 4
-    <text>k__BackingField: 'Excellent. I shall meet you on the other side of <Lakeview
-      <Bridge when you have the wood. Pleasure to meet you. '
-    <choices>k__BackingField:
-    - <text>k__BackingField: See you then
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2734, y: -11}
+    <position>k__BackingField: {x: 1358, y: 8}
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: c53378f3-6610-4500-80ac-12b378e90da5
     <name>k__BackingField: DialogueName
     <text>k__BackingField: Of course, I have been planning the repairs so I have
-      a list of the required materials right here. Take that to *Richard and he can
-      supply you with the right amount of lumber.
+      a list of the required materials right here. Take that to *Richard so he knows
+      what to give you.
     <choices>k__BackingField:
-    - <text>k__BackingField: Thank you, I will take this to Richard
+    - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
       <action>k__BackingField: 2
       <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
@@ -93,14 +77,29 @@ MonoBehaviour:
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2004, y: -11}
+    <position>k__BackingField: {x: 2040, y: 8}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 45c88e05-818c-415f-8971-54ffa94aedfa
+    <name>k__BackingField: 4
+    <text>k__BackingField: Excellent. I shall meet you on the other side of <Lakeview
+      <Bridge when you have the wood.
+    <choices>k__BackingField:
+    - <text>k__BackingField: See you soon
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2703, y: 8}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - 1
   - 2
   - 3
-  - 4
   - DialogueName
+  - 4
   <oldGroupedNodeNames>k__BackingField:
     list: []

@@ -110,7 +110,12 @@ public class DialogueUIManager : MonoBehaviour
     }
 
     public void EndDialogue()
-    {        
+    {
+        if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
+        {
+            textTween.Kill();
+        }
+        textAudioSource.Stop();
         dialoguePanel.SetActive(false);
     }
 

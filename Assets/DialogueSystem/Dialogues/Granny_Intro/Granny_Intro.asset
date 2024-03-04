@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
+  m_Name: Granny_Intro
+  m_EditorClassIdentifier: 
+  <npcName>k__BackingField: Granny
+  <fileName>k__BackingField: Granny_Intro
+  <dialogueGroups>k__BackingField:
+    list: []
+  <ungroupedDialogues>k__BackingField:
+  - {fileID: 11400000, guid: 318b1c7e8052cbd4f8cb129bc69f270a, type: 2}
+  - {fileID: 11400000, guid: 84eec39f22f030e4fb4832413fb7a89e, type: 2}
+  - {fileID: 11400000, guid: 5e1205a5eaf0c204788d568877ecff2b, type: 2}
+  - {fileID: 11400000, guid: 42e10a350eb9e0047b20bb71fb8787f2, type: 2}
+  <prerequisiteQuests>k__BackingField:
+  - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc,
+      type: 2}
+    <prerequisiteQuestProgressionRequirement>k__BackingField: 0

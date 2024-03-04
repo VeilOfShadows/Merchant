@@ -21,3 +21,5 @@ MonoBehaviour:
     questStatus: 0
   - quest: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624, type: 2}
     questStatus: 0
+  - quest: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc, type: 2}
+    questStatus: 2

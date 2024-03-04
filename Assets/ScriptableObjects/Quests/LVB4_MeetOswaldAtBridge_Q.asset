@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67d3ad99b714fc24b8969d6dd4ac0382, type: 3}
-  m_Name: LakeviewBridgeRepair1_Quest
+  m_Name: LVB4_MeetOswaldAtBridge_Q
   m_EditorClassIdentifier: 
-  questID: 0
-  questName: Find the carpenter
-  questDescription: The bridge to Lakeview has been destroyed, resulting in less
-    supply deliveries to Willowberry. I should head into Thistlewood Forest to speak
-    with the local carpenter about acquiring some wood.
-  questStatus: 1
-  questStartAction: 0
-  questStartItem: {fileID: 0}
-  questStartItemAmount: 0
+  questID: 3
+  questName: Repair the Lakeview Bridge
+  questDescription: With the lumber ready, I should meet Oswald on the Western side
+    of the Lakeview Bridge so he can start repairs.
+  questStatus: 0
+  questStartAction: 1
+  questStartItem: {fileID: 11400000, guid: 6c5a10bacecb11d46bc72ec4d08053ee, type: 2}
+  questStartItemAmount: 1
   questStartFunctionName: 
-  questRequiredItem: {fileID: 0}
-  questRequiredItemAmount: 0
+  questRequiredItem: {fileID: 11400000, guid: 6c5a10bacecb11d46bc72ec4d08053ee, type: 2}
+  questRequiredItemAmount: 1
   questCompleteAction: 0
   questCompleteItem: {fileID: 0}
   questCompleteItemAmount: 0

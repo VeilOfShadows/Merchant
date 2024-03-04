@@ -13,16 +13,15 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 5
-  <text>k__BackingField: You would? That would be incredible! There is a *carpenter
-    in <Thistlewood <Forest who might be able to help. If you take the path >north
-    just after <Willowberry <Pond, you should find him.
+  <text>k__BackingField: You would? If you head past <Willowberry <Pond, there is
+    a *carpenter just >north in <Thistlewood <Forest who could help.
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 2
     <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 5f1905c8c976fb34f857db46cab1278b,
       type: 2}
-    <questHandinPoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
