@@ -10,13 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: 3
+  m_Name: 1
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: 3
-  <text>k__BackingField: Heres the wood *Oswald asked for. I can run out and quickly
-    open my side gate. Should take you to the bridge much faster.
+  <dialogueName>k__BackingField: 1
+  <text>k__BackingField: Oh hey it's you. Did you bring the lumber for the bridge?
   <choices>k__BackingField:
-  - <text>k__BackingField: Thank you
+  - <text>k__BackingField: Yeah I have it here
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: c54adccbab2627741a9bf9a476972de3,
+      type: 2}
+    <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: Nope
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
@@ -25,4 +31,4 @@ MonoBehaviour:
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1

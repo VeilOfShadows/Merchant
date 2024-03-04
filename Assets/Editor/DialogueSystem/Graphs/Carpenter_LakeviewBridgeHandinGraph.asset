@@ -33,8 +33,8 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 1d0f2c83-e246-4842-a555-291346527337
     <name>k__BackingField: 3
-    <text>k__BackingField: Perfect! I can run out and quickly open my side gate.
-      Should take you to the bridge much faster.
+    <text>k__BackingField: Heres the wood *Oswald asked for. I can run out and quickly
+      open my side gate. Should take you to the bridge much faster.
     <choices>k__BackingField:
     - <text>k__BackingField: Thank you
       <nodeID>k__BackingField: 

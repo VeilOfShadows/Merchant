@@ -17,13 +17,10 @@ MonoBehaviour:
   questDescription: The carpenter's brother Oswald is a builder who lives in Lakeview.
     He should be able to help arrange the repair of the bridge.
   questStatus: 0
-  questStartAction: 1
-  questStartItem: {fileID: 11400000, guid: 89c2f31ee17bbba4eb513c4556420a8a, type: 2}
-  questStartItemAmount: 5
-  questStartFunctionName: 
-  questRequiredItem: {fileID: 0}
-  questRequiredItemAmount: 0
-  questCompleteAction: 0
-  questCompleteItem: {fileID: 0}
-  questCompleteItemAmount: 0
-  questCompleteFunctionName: 
+  startActions:
+  - action: 1
+    item: {fileID: 11400000, guid: 89c2f31ee17bbba4eb513c4556420a8a, type: 2}
+    itemAmount: 5
+    fuctionID: 
+  itemRequirement: []
+  completeActions: []

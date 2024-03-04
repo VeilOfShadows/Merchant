@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 //using static UnityEditor.Progress;
 
@@ -37,25 +35,77 @@ public class DialogueFunctionManager : MonoBehaviour
 
             case DialogueActions.AcceptQuest:
                 questDatabase.SetQuestStatus(pickupQuest.questID, QuestStatus.Accepted);
-                if (pickupQuest.questStartAction == QuestAction.Item)
+                if (pickupQuest.startActions.Length > 0)
                 {
-                    playerInventory.AddItem(pickupQuest.questStartItem.data, pickupQuest.questStartItemAmount);
-                    NotificationManager.instance.DisplayNotification("+ " + pickupQuest.questStartItem.data.itemName + " x " + pickupQuest.questStartItemAmount, false);
+                    for (int i = 0; i < pickupQuest.startActions.Length; i++)
+                    {
+                        switch (pickupQuest.startActions[i].action)
+                        {
+                            case QuestAction.None:
+                                break;
+
+                            case QuestAction.Item:
+                                playerInventory.AddItem(pickupQuest.startActions[i].item.data, pickupQuest.startActions[i].itemAmount);
+                                NotificationManager.instance.DisplayNotification("+ " + pickupQuest.startActions[i].item.data.itemName + " x " + pickupQuest.startActions[i].itemAmount, false);
+                                break;
+
+                            case QuestAction.Function:
+                                QuestFunctionManager.instance.Activate(pickupQuest.startActions[i].fuctionID);
+                                break;
+
+                            default:
+                                break;
+                        }
+                        //if (pickupQuest.startActions[i].action == QuestAction.Item)
+                        //{
+                        //    playerInventory.AddItem(pickupQuest.startActions[i].item.data, pickupQuest.startActions[i].itemAmount);
+                        //    NotificationManager.instance.DisplayNotification("+ " + pickupQuest.startActions[i].item.data.itemName + " x " + pickupQuest.startActions[i].itemAmount, false);
+                        //}
+                    }
                 }
                 break;
 
             case DialogueActions.CompleteQuest:
-                if (completeQuest.questRequiredItem != null)
+                if (completeQuest.itemRequirement.Length > 0)
                 {
-                    playerInventory.FindItemInInventory(completeQuest.questRequiredItem.data).RemoveAmount(completeQuest.questRequiredItemAmount);
-                    NotificationManager.instance.DisplayNotification("- " + completeQuest.questRequiredItem.data.itemName + " x " + completeQuest.questRequiredItemAmount, false);
+                    if (CanHandIn(completeQuest))
+                    {
+                        for (int i = 0; i < completeQuest.itemRequirement.Length; i++)
+                        {
+                            playerInventory.FindItemInInventory(completeQuest.itemRequirement[i].requiredItem.data).RemoveAmount(completeQuest.itemRequirement[i].requiredAmount);
+                            NotificationManager.instance.DisplayNotification("- " + completeQuest.itemRequirement[i].requiredItem.data.itemName + " x " + completeQuest.itemRequirement[i].requiredAmount, false);
+                        }                        
+                    }
                 }
 
                 questDatabase.SetQuestStatus(completeQuest.questID, QuestStatus.Completed);
-                if (completeQuest.questCompleteAction == QuestAction.Item)
+                if (completeQuest.completeActions.Length > 0)
                 {
-                    playerInventory.AddItem(completeQuest.questCompleteItem.data, completeQuest.questCompleteItemAmount);
-                    NotificationManager.instance.DisplayNotification("+ " + completeQuest.questCompleteItem.data.itemName + " x " + completeQuest.questCompleteItemAmount, false);
+                    for (int i = 0; i < completeQuest.completeActions.Length; i++)
+                    {
+                        switch (completeQuest.completeActions[i].action)
+                        {
+                            case QuestAction.None:
+                                break;
+
+                            case QuestAction.Item:
+                                playerInventory.AddItem(completeQuest.completeActions[i].item.data, completeQuest.completeActions[i].itemAmount);
+                                NotificationManager.instance.DisplayNotification("+ " + completeQuest.completeActions[i].item.data.itemName + " x " + completeQuest.completeActions[i].itemAmount, false);
+                                break;
+
+                            case QuestAction.Function:
+                                QuestFunctionManager.instance.Activate(completeQuest.completeActions[i].fuctionID);
+                                break;
+
+                            default:
+                                break;
+                        }
+                        //if (completeQuest.completeActions[i].action == QuestAction.Item)
+                        //{
+                        //    playerInventory.AddItem(completeQuest.completeActions[i].item.data, completeQuest.completeActions[i].itemAmount);
+                        //    NotificationManager.instance.DisplayNotification("+ " + completeQuest.completeActions[i].item.data.itemName + " x " + completeQuest.completeActions[i].itemAmount, false);
+                        //}
+                    }
                 }
                 break;
 
@@ -66,6 +116,22 @@ public class DialogueFunctionManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public bool CanHandIn(QuestSO quest) {
+        for (int i = 0; i < quest.itemRequirement.Length; i++)
+        {
+            if (!playerInventory.CheckForItem(quest.itemRequirement[i].requiredItem.data, quest.itemRequirement[i].requiredAmount))
+            {
+                return false;
+            }
+            else
+            {
+                Debug.Log("You have the required item: " + quest.itemRequirement[i].requiredItem);
+            }
+        }
+
+        return true;
     }
 
     public void OpenShop()

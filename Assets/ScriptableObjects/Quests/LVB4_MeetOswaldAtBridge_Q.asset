@@ -16,14 +16,25 @@ MonoBehaviour:
   questName: Repair the Lakeview Bridge
   questDescription: With the lumber ready, I should meet Oswald on the Western side
     of the Lakeview Bridge so he can start repairs.
-  questStatus: 0
-  questStartAction: 1
-  questStartItem: {fileID: 11400000, guid: 6c5a10bacecb11d46bc72ec4d08053ee, type: 2}
-  questStartItemAmount: 1
-  questStartFunctionName: 
-  questRequiredItem: {fileID: 11400000, guid: 6c5a10bacecb11d46bc72ec4d08053ee, type: 2}
-  questRequiredItemAmount: 1
-  questCompleteAction: 0
-  questCompleteItem: {fileID: 0}
-  questCompleteItemAmount: 0
-  questCompleteFunctionName: 
+  questStatus: 1
+  startActions:
+  - action: 1
+    item: {fileID: 11400000, guid: 6c5a10bacecb11d46bc72ec4d08053ee, type: 2}
+    itemAmount: 1
+    fuctionID: 
+  - action: 2
+    item: {fileID: 0}
+    itemAmount: 0
+    fuctionID: 1
+  itemRequirement:
+  - requiredItem: {fileID: 11400000, guid: 6c5a10bacecb11d46bc72ec4d08053ee, type: 2}
+    requiredAmount: 1
+  completeActions:
+  - action: 2
+    item: {fileID: 0}
+    itemAmount: 0
+    fuctionID: 1a
+  - action: 1
+    item: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
+    itemAmount: 20
+    fuctionID: 

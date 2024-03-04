@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
+  m_Name: Builder_FixBridgeGraph
+  m_EditorClassIdentifier: 
+  <fileName>k__BackingField: Builder_FixBridge
+  <groups>k__BackingField: []
+  <nodes>k__BackingField:
+  - <ID>k__BackingField: cfff68bb-c106-415f-a913-75250310e78f
+    <name>k__BackingField: 1
+    <text>k__BackingField: Oh hey it's you. Did you bring the lumber for the bridge?
+    <choices>k__BackingField:
+    - <text>k__BackingField: Yeah I have it here
+      <nodeID>k__BackingField: 9a9163da-fd6e-4dcf-b563-423bf7c13573
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Nope
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 262, y: 432}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 9a9163da-fd6e-4dcf-b563-423bf7c13573
+    <name>k__BackingField: 2
+    <text>k__BackingField: Alright I shall get started on repairing the bridge immediately.
+      Please take some coins for your trouble, this bridge being fixed will help
+      us massively
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 3
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624,
+        type: 2}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 993, y: 457}
+    <quest>k__BackingField: {fileID: 0}
+  <oldGroupNames>k__BackingField: []
+  <oldUngroupedNodeNames>k__BackingField:
+  - 1
+  - 2
+  <oldGroupedNodeNames>k__BackingField:
+    list: []

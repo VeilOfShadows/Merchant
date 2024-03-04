@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: 3
+  m_Name: 2
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: 3
-  <text>k__BackingField: Heres the wood *Oswald asked for. I can run out and quickly
-    open my side gate. Should take you to the bridge much faster.
+  <dialogueName>k__BackingField: 2
+  <text>k__BackingField: Alright I shall get started on repairing the bridge immediately.
+    Please take some coins for your trouble, this bridge being fixed will help us
+    massively
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 0
+    <action>k__BackingField: 3
     <questStartingPoint>k__BackingField: {fileID: 0}
-    <questCompletePoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 33a82ed2b4e385c49bea53e1177cc624,
+      type: 2}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []

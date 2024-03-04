@@ -41,14 +41,14 @@ MonoBehaviour:
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: Berry
+        itemName: Granny's Soup
         itemType: 1
-        itemID: 4
+        itemID: 8
         baseCoinValue: 1
-        uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
-        stackable: 1
+        uiDisplay: {fileID: 21300000, guid: f9960a92ec16bf84d82d5c9ba883478c, type: 3}
+        stackable: 0
         tradeable: 1
-        nutritionalValue: 2
+        nutritionalValue: 15
       amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -73,18 +73,18 @@ MonoBehaviour:
         stackable: 1
         tradeable: 1
         nutritionalValue: 5
-      amount: 1
+      amount: 2
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: Granny's Soup
-        itemType: 1
-        itemID: 8
-        baseCoinValue: 1
-        uiDisplay: {fileID: 21300000, guid: f9960a92ec16bf84d82d5c9ba883478c, type: 3}
+        itemName: Fresh Lumber
+        itemType: 3
+        itemID: 1110
+        baseCoinValue: 0
+        uiDisplay: {fileID: 21300000, guid: bc51b08db53e8d348929f6786d5145da, type: 3}
         stackable: 0
-        tradeable: 1
-        nutritionalValue: 15
+        tradeable: 0
+        nutritionalValue: 0
       amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}

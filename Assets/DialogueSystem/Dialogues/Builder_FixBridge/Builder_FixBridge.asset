@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
-  m_Name: Granny_Default
+  m_Name: Builder_FixBridge
   m_EditorClassIdentifier: 
-  <npcName>k__BackingField: Granny
-  <fileName>k__BackingField: Granny_Default
+  <npcName>k__BackingField: Oswald
+  <fileName>k__BackingField: Builder_FixBridge
   <dialogueGroups>k__BackingField:
     list: []
   <ungroupedDialogues>k__BackingField:
-  - {fileID: 11400000, guid: 7951d716ec3a1cd45902411280cb83ba, type: 2}
+  - {fileID: 11400000, guid: 278703da550fe114ea3101dc348289e1, type: 2}
+  - {fileID: 11400000, guid: c54adccbab2627741a9bf9a476972de3, type: 2}
   <prerequisiteQuests>k__BackingField: []

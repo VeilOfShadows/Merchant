@@ -79,15 +79,18 @@ public class DialogueChoiceButton : MonoBehaviour
                 return;
             }
 
-            if (completeQuest.questRequiredItem != null)
+            if (completeQuest.itemRequirement.Length > 0)
             {
-                if (!PlayerManager.instance.playerInventory.CheckForItem(completeQuest.questRequiredItem.data, completeQuest.questRequiredItemAmount))
+                if (!DialogueFunctionManager.instance.CanHandIn(completeQuest))
                 {
                     transform.parent.gameObject.SetActive(false);
                     Debug.Log("Item not found in inventory");
                     return;
-                    //button.interactable = false;
                 }
+                //if (!PlayerManager.instance.playerInventory.CheckForItem(completeQuest.questRequiredItem.data, completeQuest.questRequiredItemAmount))
+                //{
+                    //button.interactable = false;
+                //}
             }
         }
 
