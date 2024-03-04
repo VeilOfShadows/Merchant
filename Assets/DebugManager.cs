@@ -24,6 +24,12 @@ public class DebugManager : MonoBehaviour
 
     public Transform playerControlTransform;
     public Transform playerFollowTransform;
+    public GameObject thistlewoodSideGate;
+    public GameObject thistlewoodSideGateEast;
+    public GameObject thistlewoodSideRoad;
+    public GameObject lakeviewBridgeRoad;
+    public GameObject lakeviewBridgeBroken;
+    public GameObject lakeviewBridgeRepaired;
 
     private void Update()
     {
@@ -96,5 +102,20 @@ public class DebugManager : MonoBehaviour
         willowberryTrigger2.SetActive(true);
         tutorialRoad.gameObject.SetActive(true);
         tutorialManager.SetActive(true);
+    }
+
+    [ContextMenu("Reset Level For Build")]
+
+    public void ResetForBuild()
+    {
+        TurnOnTutorial();
+        questDatabase.SetIDs();
+        //set up player inventory
+        thistlewoodSideGate.transform.localEulerAngles = new Vector3(0, 0, 0);
+        thistlewoodSideGateEast.transform.localEulerAngles = new Vector3(0, 0, 0);
+        thistlewoodSideRoad.SetActive(false);
+        lakeviewBridgeRoad.SetActive(false);
+        lakeviewBridgeBroken.SetActive(true);
+        lakeviewBridgeRepaired.SetActive(false);
     }
 }

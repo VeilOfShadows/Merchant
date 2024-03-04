@@ -4,6 +4,13 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.VFX;
 
+public enum InteractableType { 
+    DEFAULT,
+    CollectItem,
+    QuestItem,
+    Greeble
+}
+
 public class Interactable : MonoBehaviour
 {
     public ItemObject item;
@@ -16,21 +23,55 @@ public class Interactable : MonoBehaviour
     Tween scaleTween;
     public float tweenSpeed = .4f;
     public AudioSource audioSource;
-    public bool singleUse = false;
+    public Animation anim;
+    public InteractableType interactableType;
 
     public void OnMouseDown()
     {
-        if (Vector3.Distance(transform.position, PlayerManager.instance.transform.position) > 30)
+        switch (interactableType)
         {
-            return;
+            case InteractableType.DEFAULT:
+                break;
+            case InteractableType.CollectItem:
+                if (Vector3.Distance(transform.position, PlayerManager.instance.transform.position) > 30)
+                {
+                    return;
+                }
+                CollectItem();
+                
+                break;
+
+            case InteractableType.QuestItem:
+                if (Vector3.Distance(transform.position, PlayerManager.instance.transform.position) > 30)
+                {
+                    return;
+                }
+                CollectItem(); 
+                break;
+
+            case InteractableType.Greeble:
+                collider.enabled = false;
+                if (audioSource != null)
+                {
+                    audioSource.Play();
+                }
+                anim.Play();
+                break;
+
+            default:
+                break;
         }
+    }
+
+    public void CollectItem(bool singleUse = false) 
+    {
         amount = 1;
         NotificationManager.instance.DisplayNotification("+ " + item.data.itemName + " x " + amount, false);
 
         collider.enabled = false;
         playerInventory.AddItem(item.data, amount);
         //vfx.SetActive(false);
-        
+
         if (scaleTween != null && scaleTween.IsActive() && scaleTween.IsPlaying())
         {
             scaleTween.Kill();
@@ -44,19 +85,20 @@ public class Interactable : MonoBehaviour
         }
 
         scaleTween = interactableObject.DOPunchScale(originalScale * .2f, .4f).OnComplete(() => {
-            scaleTween = interactableObject.DOScale(Vector3.one * .1f, tweenSpeed).OnUpdate(()=>
+            scaleTween = interactableObject.DOScale(Vector3.one * .1f, tweenSpeed).OnUpdate(() =>
             {
                 interactableObject.localPosition = Vector3.zero;
             }
-            ).OnComplete(() => 
+            ).OnComplete(() =>
             {
                 interactableObject.gameObject.SetActive(false);
                 vfx.SetActive(false);
-                interactableObject.localScale = originalScale; 
-            });        
+                interactableObject.localScale = originalScale;
+            });
         });
+    }
 
-        
-        //mesh.SetActive(false);
+    public void EnableCollider() { 
+        collider.enabled = true;
     }
 }

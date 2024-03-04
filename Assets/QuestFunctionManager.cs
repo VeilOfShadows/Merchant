@@ -9,6 +9,7 @@ public class QuestFunctionManager : MonoBehaviour
     public GameObject oswaldObject;
     public GameObject thistlewoodRoad;
     public GameObject thistlewoodGate;
+    public GameObject thistlewoodGateEast;
     public GameObject lakeviewBridgeRoad;
     public GameObject lakeviewBridgeBroken;
     public GameObject lakeviewBridgeRepaired;
@@ -32,6 +33,7 @@ public class QuestFunctionManager : MonoBehaviour
         oswaldObject.SetActive(true);
         thistlewoodRoad.SetActive(true);
         thistlewoodGate.transform.localEulerAngles = new Vector3(0, -90, 0);
+        thistlewoodGateEast.transform.localEulerAngles = new Vector3(0, -90, 0);
     }
 
     //Repair Lakeview Bridge

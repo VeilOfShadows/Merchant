@@ -57,6 +57,8 @@ MonoBehaviour:
   collider: {fileID: 4068348276603071093}
   tweenSpeed: 0.2
   audioSource: {fileID: 4197768195884437757}
+  anim: {fileID: 0}
+  interactableType: 1
 --- !u!65 &4068348276603071093
 BoxCollider:
   m_ObjectHideFlags: 0
