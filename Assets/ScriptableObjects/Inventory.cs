@@ -8,6 +8,7 @@ public class Inventory : ScriptableObject
 {
     public ItemDatabase database;
     public InventoryClass container;
+    public float totalWeight;
     public InventorySlot[] slots { get { return container.Slots; } }
     public ItemObject coinItem;
 
@@ -30,6 +31,7 @@ public class Inventory : ScriptableObject
             //return true;
         }
         slot.AddAmount(_amount);
+        EvaluateWeight();
         //return true;
     }
 
@@ -57,6 +59,18 @@ public class Inventory : ScriptableObject
         return true;
     }
 
+    public void EvaluateWeight() { 
+        totalWeight = 0;
+        for (int i = 0; i < container.Slots.Length; i++)
+        {
+            if (container.Slots[i].item != null)
+            {
+                totalWeight += container.Slots[i].slotWeight;
+
+            }
+        }
+    }
+
     public InventorySlot SetEmptySlot(Item _item, int _amount)
     {
         for (int i = 0; i < slots.Length; i++)
@@ -72,6 +86,8 @@ public class Inventory : ScriptableObject
                 return slots[i];
             }
         }
+        EvaluateWeight();
+
         return null;
     }
 
@@ -158,6 +174,7 @@ public class Inventory : ScriptableObject
         //{
         //    slots[i].RemoveItem();
         //}
+        EvaluateWeight();
     }
 
     [ContextMenu("Sync")]
@@ -168,12 +185,15 @@ public class Inventory : ScriptableObject
             slots[i].item = database.FindItem(slots[i].item.itemID);
             if (slots[i].item != null)
             {
+                slots[i].SetSlotWeight();
                 if (slots[i].item.itemID == -1)
                 {
                     slots[i].RemoveItem();
                 }
             }
         }
+
+        EvaluateWeight();
     }
 }
 
@@ -197,6 +217,7 @@ public delegate void SlotUpdated(InventorySlot _slot);
 public class InventorySlot {
     public UserInterface parent; 
     public Item item = new Item();
+    public float slotWeight;
     public int amount;
     public GameObject slotDisplay;
 
@@ -218,6 +239,7 @@ public class InventorySlot {
             OnBeforeUpdate.Invoke(this);
         item = _item;
         amount = _amount;
+        slotWeight = item.weight * amount;
         //if (amount <= 0)
         //{
         //      RemoveItem();
@@ -248,4 +270,7 @@ public class InventorySlot {
         UpdateSlot(new Item(), 0);
     }
 
+    public void SetSlotWeight() {
+        slotWeight = (item.weight * amount);
+    }
 }

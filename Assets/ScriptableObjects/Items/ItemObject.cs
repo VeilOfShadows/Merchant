@@ -28,10 +28,11 @@ public class Item {
     public ItemType itemType;
     public int itemID = -1;
     public int baseCoinValue = -1;
+    public float weight = -1;
     public Sprite uiDisplay;
     public bool stackable;
     public bool tradeable;
-    public float nutritionalValue;
+    public float nutritionalValue = -1;
 
     public Item() 
     {
@@ -44,6 +45,7 @@ public class Item {
         itemType = item.data.itemType;
         itemID = item.data.itemID;
         baseCoinValue = item.data.baseCoinValue;
+        weight = item.data.weight;
         uiDisplay = item.data.uiDisplay;
         stackable = item.data.stackable;
         tradeable = item.data.tradeable;
