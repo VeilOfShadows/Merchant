@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 
 [CreateAssetMenu(fileName = "Item Database", menuName = "Create/Database/New Item Database")]
 public class ItemDatabase : ScriptableObject

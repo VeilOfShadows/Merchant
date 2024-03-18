@@ -21,11 +21,13 @@ MonoBehaviour:
         itemType: 2
         itemID: 3
         baseCoinValue: 1
+        weight: 0.2
         uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
         stackable: 1
         tradeable: 0
-        nutritionalValue: 0
-      amount: 23
+        nutritionalValue: -1
+      slotWeight: 3
+      amount: 15
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -33,59 +35,13 @@ MonoBehaviour:
         itemType: 1
         itemID: 0
         baseCoinValue: 3
+        weight: 3
         uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
         stackable: 1
         tradeable: 1
         nutritionalValue: 8
-      amount: 13
-      slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: Granny's Soup
-        itemType: 1
-        itemID: 8
-        baseCoinValue: 1
-        uiDisplay: {fileID: 21300000, guid: f9960a92ec16bf84d82d5c9ba883478c, type: 3}
-        stackable: 0
-        tradeable: 1
-        nutritionalValue: 15
-      amount: 1
-      slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: Starflower
-        itemType: 2
-        itemID: 5
-        baseCoinValue: 3
-        uiDisplay: {fileID: 21300000, guid: da609764537e4c14d92fc20d0fa3a8e9, type: 3}
-        stackable: 1
-        tradeable: 1
-        nutritionalValue: 0
-      amount: 1
-      slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: Mushroom
-        itemType: 1
-        itemID: 7
-        baseCoinValue: 2
-        uiDisplay: {fileID: 21300000, guid: 5e103bda7f23ea34dabf0567ff91fcca, type: 3}
-        stackable: 1
-        tradeable: 1
-        nutritionalValue: 5
-      amount: 2
-      slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: Fresh Lumber
-        itemType: 3
-        itemID: 1110
-        baseCoinValue: 0
-        uiDisplay: {fileID: 21300000, guid: bc51b08db53e8d348929f6786d5145da, type: 3}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: 0
-      amount: 1
+      slotWeight: 15
+      amount: 5
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -93,10 +49,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -105,10 +63,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -117,10 +77,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -129,10 +91,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -141,10 +105,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -153,10 +119,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -165,10 +133,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -177,10 +147,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -189,10 +161,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -201,10 +175,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -213,10 +189,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -225,10 +203,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -237,10 +217,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -249,10 +231,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -261,10 +245,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -273,10 +259,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -285,10 +273,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -297,10 +287,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -309,10 +301,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -321,10 +315,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -333,10 +329,12 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
@@ -345,10 +343,69 @@ MonoBehaviour:
         itemType: 0
         itemID: -1
         baseCoinValue: -1
+        weight: -1
         uiDisplay: {fileID: 0}
         stackable: 0
         tradeable: 0
-        nutritionalValue: 0
+        nutritionalValue: -1
+      slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        weight: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: -1
+      slotWeight: -0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        weight: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: -1
+      slotWeight: -0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        weight: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: -1
+      slotWeight: -0
+      amount: 0
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        weight: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: -1
+      slotWeight: -0
+      amount: 0
+      slotDisplay: {fileID: 0}
+  totalWeight: 18.800001
   coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}

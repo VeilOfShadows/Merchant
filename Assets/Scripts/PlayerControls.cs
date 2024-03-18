@@ -179,12 +179,19 @@ public class PlayerControls : MonoBehaviour
     }
 
     public void SetVillageSpeed() {
-        DOTween.To(() => currentSpeed, x => currentSpeed = x, villageSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => { agent.speed = currentSpeed; });
+        DOTween.To(() => currentSpeed, x => currentSpeed = x, villageSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => 
+        { 
+            agent.speed = currentSpeed;
+            wheelSpeed = currentSpeed / 2;
+        });
     }
 
     public void SetRoadSpeed()
     {
-        DOTween.To(() => currentSpeed, x => currentSpeed = x, roadSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => { agent.speed = currentSpeed; });
+        DOTween.To(() => currentSpeed, x => currentSpeed = x, roadSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => 
+        {
+            agent.speed = currentSpeed; wheelSpeed = currentSpeed / 2;
+        });
     }
 
     public void ChangeSpeed(float amount, bool increase)
@@ -198,5 +205,6 @@ public class PlayerControls : MonoBehaviour
             currentSpeed -= amount;
         }
         agent.speed = currentSpeed;
+        wheelSpeed = currentSpeed / 2;
     }
 }

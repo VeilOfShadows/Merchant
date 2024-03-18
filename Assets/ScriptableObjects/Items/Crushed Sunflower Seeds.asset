@@ -17,6 +17,7 @@ MonoBehaviour:
     itemType: 3
     itemID: 1112
     baseCoinValue: 0
+    weight: 0.6
     uiDisplay: {fileID: 21300000, guid: ac5a147bfda183d49a12202d584aaaff, type: 3}
     stackable: 0
     tradeable: 0

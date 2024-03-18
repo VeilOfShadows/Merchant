@@ -21,6 +21,7 @@ public class TimeManager : MonoBehaviour
     public AudioSource dayMusic;
     public AudioSource nightMusic;
     bool initial = false;
+    public TownController[] townControllers;
 
     public delegate void OnHourChangeDelegate(int newHour);
     public OnHourChangeDelegate onHourChange;
@@ -79,8 +80,11 @@ public class TimeManager : MonoBehaviour
                 lightingManager.FadeSunIntensity();
                 isNight = true;
                 starsVFX.SetActive(true);
-                FadeOutMusic(dayMusic);
-                FadeInMusic(nightMusic);
+                AudioManager.instance.FadeTransition(dayMusic, nightMusic);
+                for (int i = 0; i < townControllers.Length; i++)
+                {
+                    townControllers[i].ToggleHouseLights(true);
+                }
                 PlayerManager.instance.playerCartFire.SetActive(true);
                 if (PlayerManager.instance.currentAudioTrackerZone != null)
                 {
@@ -95,8 +99,11 @@ public class TimeManager : MonoBehaviour
                 lightingManager.IncreaseSunIntensity();
                 isNight = false;
                 starsVFX.SetActive(false);
-                FadeOutMusic(nightMusic);
-                FadeInMusic(dayMusic);
+                AudioManager.instance.FadeTransition(nightMusic, dayMusic);
+                for (int i = 0; i < townControllers.Length; i++)
+                {
+                    townControllers[i].ToggleHouseLights(false);
+                }
                 PlayerManager.instance.playerCartFire.SetActive(false);
                 if (PlayerManager.instance.currentAudioTrackerZone != null)
                 {

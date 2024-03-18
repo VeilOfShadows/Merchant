@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
 
     public PlayerSOConnections so;
     public PlayerControls playerControls;
-    public RespawnTrigger respawnLocation;
+    public TownController respawnLocation;
     public PlayerFollow playerFollow;
     public DeathCanvas deathCanvas;
 
@@ -67,6 +67,16 @@ public class PlayerManager : MonoBehaviour
 
     public void ToggleInventoryUI() { 
         playerUI.SetActive(!playerUI.activeInHierarchy);
+        if (inShop)
+        {
+            currentVendor.DeactivateShopCam();
+            ExitShop();
+        }
+    }
+
+    public void DisableInventoryUI()
+    {
+        playerUI.SetActive(false);
         if (inShop)
         {
             currentVendor.DeactivateShopCam();
