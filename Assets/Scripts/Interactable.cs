@@ -18,6 +18,10 @@ public class Interactable : MonoBehaviour
     public Inventory playerInventory;
     public Transform interactableObject;
     public GameObject vfx;
+    public bool respawn = false;
+    public bool onCooldown = false;
+    public int cooldownTime;
+    public int currentCooldown;
     //public GameObject mesh;
     public Collider collider;
     Tween scaleTween;
@@ -96,9 +100,41 @@ public class Interactable : MonoBehaviour
                 interactableObject.localScale = originalScale;
             });
         });
+        currentCooldown = cooldownTime;
+        onCooldown = true;
+        if (respawn)
+        {
+            InteractableRespawnManager.instance.onCooldown.Add(this);
+        }
     }
 
     public void EnableCollider() { 
         collider.enabled = true;
+    }
+
+    public void Respawn() {
+        //todo - add respawn functionality
+
+        Vector3 originalScale = interactableObject.transform.localScale;
+        interactableObject.localScale = Vector3.zero;
+
+        interactableObject.gameObject.SetActive(true);
+
+        //scaleTween = interactableObject.DOScale(originalScale * .2f, .4f).OnComplete(() => {
+            scaleTween = interactableObject.DOScale(originalScale, tweenSpeed * 2).OnUpdate(() =>
+            {
+                interactableObject.localPosition = Vector3.zero;
+            }
+            ).OnComplete(() =>
+            {
+                currentCooldown = 0;
+                onCooldown = false;
+                collider.enabled = true;
+                vfx.SetActive(true);
+
+                //interactableObject.localScale = originalScale;
+            });
+        //});
+
     }
 }

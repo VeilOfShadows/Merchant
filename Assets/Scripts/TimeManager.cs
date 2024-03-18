@@ -123,6 +123,7 @@ public class TimeManager : MonoBehaviour
         if (initial)
         {
             PlayerHungerManager.instance.DepleteHunger();
+            InteractableRespawnManager.instance.ReduceCooldowns();
         }
         initial = true;
     }

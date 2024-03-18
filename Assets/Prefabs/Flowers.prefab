@@ -4904,6 +4904,10 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 1080e7cd4fc833b4885179ed11189f3d, type: 2}
   interactableObject: {fileID: 9203949652634176795}
   vfx: {fileID: 6844670569257912451}
+  respawn: 1
+  onCooldown: 0
+  cooldownTime: 2
+  currentCooldown: 0
   collider: {fileID: 5482761025724791502}
   tweenSpeed: 0.2
   audioSource: {fileID: 6332308001547242905}
