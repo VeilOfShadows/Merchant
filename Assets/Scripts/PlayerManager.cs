@@ -65,8 +65,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void ToggleInventoryUI() { 
+    public void ToggleInventoryUI() {
         playerUI.SetActive(!playerUI.activeInHierarchy);
+        playerUI.GetComponentInChildren<UserInterface>().SyncNew(playerInventory);
         if (inShop)
         {
             currentVendor.DeactivateShopCam();

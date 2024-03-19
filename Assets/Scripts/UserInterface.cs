@@ -72,8 +72,15 @@ public class UserInterface : MonoBehaviour
     }
 
     [ContextMenu("SyncNew")]
-    public void SyncNew() 
+    public void SyncNew(Inventory newInventory) 
     {
+        if (newInventory == syncedInventory)
+        {
+            return;
+        }
+
+        syncedInventory = newInventory;
+
         inventory.Clear();
         for (int i = 0; i < inventory.slots.Length; i++)
         {

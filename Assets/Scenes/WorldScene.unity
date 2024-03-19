@@ -11999,7 +11999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 286635694}
   inventory: {fileID: 11400000, guid: a65581fb70ef2ce4c875dae094bbfb93, type: 2}
-  syncedInventory: {fileID: 11400000, guid: 8def2a49ba5ae3e47a1fdf5ab8ad14b4, type: 2}
+  syncedInventory: {fileID: 0}
   inventoryPrefab: {fileID: 753976122579873344, guid: 25c1a85b0587b70488a3a712274c5df7,
     type: 3}
   inShop: 0
