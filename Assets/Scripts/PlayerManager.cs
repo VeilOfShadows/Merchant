@@ -26,6 +26,7 @@ public class PlayerManager : MonoBehaviour
 
     [Header("UI")]
     public GameObject playerUI;
+    public UserInterface playerInventoryUI;
     public GameObject merchantUI;
 
     public GameObject playerCartFire;
@@ -67,7 +68,7 @@ public class PlayerManager : MonoBehaviour
 
     public void ToggleInventoryUI() {
         playerUI.SetActive(!playerUI.activeInHierarchy);
-        playerUI.GetComponentInChildren<UserInterface>().SyncNew(playerInventory);
+        playerInventoryUI.SyncNew(playerInventory);
         if (inShop)
         {
             currentVendor.DeactivateShopCam();

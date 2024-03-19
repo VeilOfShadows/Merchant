@@ -32,6 +32,7 @@ public class Inventory : ScriptableObject
         }
         slot.AddAmount(_amount);
         EvaluateWeight();
+        //PlayerManager.instance.playerInventoryUI.SyncWithInventory();
         //return true;
     }
 
@@ -162,7 +163,6 @@ public class Inventory : ScriptableObject
                     item1.RemoveItem();
                 }
             }
-
         }
     }
 
@@ -244,6 +244,11 @@ public class InventorySlot {
         //{
         //      RemoveItem();
         //}
+        if (PlayerManager.instance != null)
+        {
+            PlayerManager.instance.playerInventoryUI.SyncWithInventory();
+        }
+
         if (OnAfterUpdate != null)
             OnAfterUpdate.Invoke(this);
     }

@@ -20,7 +20,7 @@ public class UserInterface : MonoBehaviour
     public TooltipManager tooltipManager;
     public float tooltipOffset;
 
-    private void Start()
+    private void Awake()
     {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
@@ -74,24 +74,77 @@ public class UserInterface : MonoBehaviour
     [ContextMenu("SyncNew")]
     public void SyncNew(Inventory newInventory) 
     {
-        if (newInventory == syncedInventory)
-        {
-            return;
-        }
+        //if (newInventory == syncedInventory)
+        //{
+        //    return;
+        //}
 
         syncedInventory = newInventory;
 
         inventory.Clear();
+
+        //if (inventory.slots.Length < 0)
+        //{
+        //    return;
+        //}
+
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             inventory.slots[i].slotDisplay.SetActive(false);
         }
 
+        //for (int i = 0; i < syncedInventory.slots.Length; i++)
+        //{
+        //    inventory.slots[i].item = syncedInventory.slots[i].item;
+        //    inventory.slots[i].amount = syncedInventory.slots[i].amount;
+        //    inventory.slots[i].slotDisplay.SetActive(true);
+        //}
+
         for (int i = 0; i < syncedInventory.slots.Length; i++)
         {
+            slotsOnInterface[inventory.slots[i].slotDisplay] = syncedInventory.slots[i];
+            slotsOnInterface[inventory.slots[i].slotDisplay].slotDisplay = syncedInventory.slots[i].slotDisplay;
+            //if (syncedInventory.slots[i].item != inventory.slots[i].item)
+            //{
+            //    inventory.slots[i].item = syncedInventory.slots[i].item;
+            //}
+
+            //if (syncedInventory.slots[i].amount != inventory.slots[i].amount)
+            //{
+            //    inventory.slots[i].amount = syncedInventory.slots[i].amount;
+            //}
+           
             inventory.slots[i].item = syncedInventory.slots[i].item;
             inventory.slots[i].amount = syncedInventory.slots[i].amount;
             inventory.slots[i].slotDisplay.SetActive(true);
+        }
+        //inventory = syncedInventory;
+        slotsOnInterface.UpdateSlotDisplay();
+    }
+
+    public void SyncWithInventory() {
+        if (syncedInventory == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < syncedInventory.slots.Length; i++)
+        {
+            if (syncedInventory.slots[i].item != inventory.slots[i].item)
+            {
+                inventory.slots[i].item = syncedInventory.slots[i].item;
+            }
+
+            if (syncedInventory.slots[i].amount != inventory.slots[i].amount)
+            {
+                inventory.slots[i].amount = syncedInventory.slots[i].amount;
+            }
+
+            if (syncedInventory.slots[i].slotWeight != inventory.slots[i].slotWeight)
+            {
+                inventory.slots[i].slotWeight = syncedInventory.slots[i].slotWeight;
+            }
+            //inventory.slots[i].slotDisplay.SetActive(true);
         }
 
         slotsOnInterface.UpdateSlotDisplay();

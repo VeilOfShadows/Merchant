@@ -73,7 +73,7 @@ public class Interactable : MonoBehaviour
         NotificationManager.instance.DisplayNotification("+ " + item.data.itemName + " x " + amount, false);
 
         collider.enabled = false;
-        playerInventory.AddItem(item.data, amount);
+        PlayerManager.instance.playerInventory.AddItem(item.data, amount);
         //vfx.SetActive(false);
 
         if (scaleTween != null && scaleTween.IsActive() && scaleTween.IsPlaying())
