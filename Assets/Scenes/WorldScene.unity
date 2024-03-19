@@ -9152,6 +9152,7 @@ MonoBehaviour:
   playerUI: {fileID: 1334107688}
   playerInventoryUI: {fileID: 318845620}
   merchantUI: {fileID: 1119182095}
+  merchantInventoryUI: {fileID: 1919823305}
   playerCartFire: {fileID: 1406070687}
   currentAudioTrackerZone: {fileID: 0}
 --- !u!65 &269130362
@@ -12569,7 +12570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 161.57, y: -270.02002}
+  m_AnchoredPosition: {x: 161.57, y: -155.01001}
   m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336117068
@@ -27841,7 +27842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 161.57, y: -230.02}
+  m_AnchoredPosition: {x: 161.57, y: -115.01}
   m_SizeDelta: {x: 303.14, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771309349
@@ -29418,6 +29419,7 @@ MonoBehaviour:
   playerUI: {fileID: 0}
   playerInventoryUI: {fileID: 0}
   merchantUI: {fileID: 0}
+  merchantInventoryUI: {fileID: 0}
   playerCartFire: {fileID: 0}
   currentAudioTrackerZone: {fileID: 0}
 --- !u!1001 &818178001
@@ -54552,14 +54554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9150943, g: 0.7929942, b: 0.40143287, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a7b103eb634300a42afe783a4eebb079, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -68469,7 +68471,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 323.14, y: 315.02002}
+  m_SizeDelta: {x: 323.14, y: 200.01001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792306381
 MonoBehaviour:
@@ -73961,7 +73963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 286635694}
-  inventory: {fileID: 0}
+  inventory: {fileID: 11400000, guid: 682705509a6ca7e4ea49043e814608c9, type: 2}
   syncedInventory: {fileID: 0}
   inventoryPrefab: {fileID: 753976122579873344, guid: 25c1a85b0587b70488a3a712274c5df7,
     type: 3}
@@ -73969,7 +73971,6 @@ MonoBehaviour:
   merchantInterface: {fileID: 1919823305}
   tooltipManager: {fileID: 1510921501}
   tooltipOffset: 50
-  playerInventory: {fileID: 11400000, guid: 1080e7cd4fc833b4885179ed11189f3d, type: 2}
 --- !u!114 &1919823306
 MonoBehaviour:
   m_ObjectHideFlags: 0

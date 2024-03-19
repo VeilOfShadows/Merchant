@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class MerchantInventoryInterface : UserInterface
 {
-    public Inventory playerInventory;
+    public static MerchantInventoryInterface instance;
+
+    public override void Awake()
+    {
+        base.Awake();
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+    //public Inventory playerInventory;
 
     public override void OnClick(GameObject obj) {
         int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
-        if (playerInventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
+        if (PlayerManager.instance.playerInventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
         {
             slotsOnInterface[obj].RemoveAmount(1);
-            inventory.AddItem(inventory.coinItem.data, buyPrice);
+            syncedInventory.AddItem(syncedInventory.coinItem.data, buyPrice);
         }
         else
         {
             NotificationManager.instance.DisplayNotification("You do not have enough gold.", true, 1.4f);
         }
+        SyncWithInventory();
     }
 
     public override void OnDragStart(GameObject obj)

@@ -26,8 +26,8 @@ MonoBehaviour:
         stackable: 1
         tradeable: 0
         nutritionalValue: -1
-      slotWeight: 1
-      amount: 5
+      slotWeight: 0.4
+      amount: 2
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -40,8 +40,8 @@ MonoBehaviour:
         stackable: 1
         tradeable: 1
         nutritionalValue: 0
-      slotWeight: 0.8
-      amount: 8
+      slotWeight: 0.5
+      amount: 5
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -54,8 +54,8 @@ MonoBehaviour:
         stackable: 1
         tradeable: 1
         nutritionalValue: 2
-      slotWeight: 0.2
-      amount: 1
+      slotWeight: 1
+      amount: 5
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -127,5 +127,5 @@ MonoBehaviour:
       slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
-  totalWeight: 1.8
-  coinItem: {fileID: 0}
+  totalWeight: 1.9
+  coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}

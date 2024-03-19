@@ -12,7 +12,7 @@ public class Inventory : ScriptableObject
     public InventorySlot[] slots { get { return container.Slots; } }
     public ItemObject coinItem;
 
-    public void AddItem(Item _item, int _amount) {
+    public virtual void AddItem(Item _item, int _amount) {
         InventorySlot slot = FindItemInInventory(_item);
 
         if (_item.itemType == ItemType.QuestItem)
@@ -32,6 +32,11 @@ public class Inventory : ScriptableObject
         }
         slot.AddAmount(_amount);
         EvaluateWeight();
+        if (PlayerManager.instance != null)
+        {
+            PlayerManager.instance.playerInventoryUI.SyncWithInventory();
+        }
+        
         //PlayerManager.instance.playerInventoryUI.SyncWithInventory();
         //return true;
     }
@@ -247,6 +252,11 @@ public class InventorySlot {
         if (PlayerManager.instance != null)
         {
             PlayerManager.instance.playerInventoryUI.SyncWithInventory();
+        }
+        
+        if (MerchantInventoryInterface.instance != null)
+        {
+            MerchantInventoryInterface.instance.SyncWithInventory();
         }
 
         if (OnAfterUpdate != null)

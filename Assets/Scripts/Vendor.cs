@@ -32,7 +32,9 @@ public class Vendor : MonoBehaviour
         if (other.CompareTag("Player")) {
             PlayerManager.instance.inRangeOfShop = true;
             PlayerManager.instance.currentVendor = this;
-            PlayerManager.instance.merchantInventory.inventory = inventory;
+            //PlayerManager.instance.merchantInventoryUI.SyncNew(inventory);
+
+            //PlayerManager.instance.merchantInventory.inventory = inventory;
             promptCanvas.SetActive(true);
 
             if (questToComplete != null)

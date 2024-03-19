@@ -23,4 +23,34 @@ public class VendorInventory : Inventory
         }
         Sync();
     }
+
+    public override void AddItem(Item _item, int _amount)
+    {
+        InventorySlot slot = FindItemInInventory(_item);
+
+        if (_item.itemType == ItemType.QuestItem)
+        {
+            if (slot == null)
+            {
+                SetEmptySlot(_item, _amount);
+                return;
+                //return true;
+            }
+        }
+        else if (!database.items[_item.itemID].data.stackable || slot == null)
+        {
+            SetEmptySlot(_item, _amount);
+            return;
+            //return true;
+        }
+        slot.AddAmount(_amount);
+        EvaluateWeight();
+
+        if (MerchantInventoryInterface.instance != null)
+        {
+            MerchantInventoryInterface.instance.SyncWithInventory();
+        }
+        //PlayerManager.instance.playerInventoryUI.SyncWithInventory();
+        //return true;
+    }
 }

@@ -28,6 +28,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject playerUI;
     public UserInterface playerInventoryUI;
     public GameObject merchantUI;
+    public UserInterface merchantInventoryUI;
 
     public GameObject playerCartFire;
     public AudioTracker currentAudioTrackerZone;
@@ -93,6 +94,7 @@ public class PlayerManager : MonoBehaviour
         inShop = true;
         playerUI.SetActive(true);
         merchantUI.SetActive(true);
+        merchantInventoryUI.SyncNew(currentVendor.inventory);
 
         playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
         playerUI.GetComponentInChildren<UserInterface>().inShop = true;

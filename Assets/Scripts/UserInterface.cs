@@ -20,7 +20,7 @@ public class UserInterface : MonoBehaviour
     public TooltipManager tooltipManager;
     public float tooltipOffset;
 
-    private void Awake()
+    public virtual void Awake()
     {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
@@ -152,25 +152,34 @@ public class UserInterface : MonoBehaviour
 
     private void OnSlotUpdate(InventorySlot _slot)
     {
-        if (_slot.item.itemID >= 0)
-        {
-            _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.item.uiDisplay;
-            if (_slot.item.itemType == ItemType.QuestItem)
-            {
-                _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, .8f, 0, 1);
-            }
-            else
-            {
-                _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
-            }
-            //_slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
-            _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
-        }
-        else
+        if (_slot.item == null)
         {
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
             _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        }
+        else
+        {
+            if (_slot.item.itemID >= 0)
+            {
+                _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.item.uiDisplay;
+                if (_slot.item.itemType == ItemType.QuestItem)
+                {
+                    _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, .8f, 0, 1);
+                }
+                else
+                {
+                    _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+                }
+                //_slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+                _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
+            }
+            else
+            {
+                _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
+                _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+                _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            }
         }
     }
 
@@ -213,16 +222,18 @@ public class UserInterface : MonoBehaviour
             else
             {
                 int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
-                if (merchantInterface.inventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
+                if (merchantInterface.syncedInventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
                 {
                     slotsOnInterface[obj].RemoveAmount(1);
-                    inventory.AddItem(inventory.coinItem.data, buyPrice);
+                    syncedInventory.AddItem(syncedInventory.coinItem.data, buyPrice);
                 }
                 else
                 {
                     NotificationManager.instance.DisplayNotification("Vendor does not have enough gold.", true, 1.4f);
                 }
             }
+            SyncWithInventory();
+            //slotsOnInterface.UpdateSlotDisplay();
         }
         else
         {

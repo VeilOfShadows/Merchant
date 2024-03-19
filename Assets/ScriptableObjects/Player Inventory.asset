@@ -45,31 +45,31 @@ MonoBehaviour:
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        weight: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: -1
-      slotWeight: -0
-      amount: 0
+        itemName: Berry
+        itemType: 1
+        itemID: 4
+        baseCoinValue: 1
+        weight: 0.2
+        uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 2
+      slotWeight: 0.2
+      amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        weight: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
+        itemName: Starflower
+        itemType: 2
+        itemID: 5
+        baseCoinValue: 3
+        weight: 0.3
+        uiDisplay: {fileID: 21300000, guid: da609764537e4c14d92fc20d0fa3a8e9, type: 3}
+        stackable: 1
+        tradeable: 1
         nutritionalValue: -1
-      slotWeight: -0
-      amount: 0
+      slotWeight: 0.6
+      amount: 2
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
