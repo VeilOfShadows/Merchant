@@ -12,6 +12,7 @@ public class UserInterface : MonoBehaviour
     public Canvas canvas;
     Tween growTween;
     public Inventory inventory;
+    public Inventory syncedInventory;
     public GameObject inventoryPrefab;
     public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
     public bool inShop;
@@ -70,9 +71,27 @@ public class UserInterface : MonoBehaviour
         slotsOnInterface.UpdateSlotDisplay();
     }
 
+    [ContextMenu("SyncNew")]
+    public void SyncNew() 
+    {
+        inventory.Clear();
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            inventory.slots[i].slotDisplay.SetActive(false);
+        }
+
+        for (int i = 0; i < syncedInventory.slots.Length; i++)
+        {
+            inventory.slots[i].item = syncedInventory.slots[i].item;
+            inventory.slots[i].amount = syncedInventory.slots[i].amount;
+            inventory.slots[i].slotDisplay.SetActive(true);
+        }
+
+        slotsOnInterface.UpdateSlotDisplay();
+    }
+
     private void OnSlotUpdate(InventorySlot _slot)
     {
-
         if (_slot.item.itemID >= 0)
         {
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = _slot.item.uiDisplay;
@@ -267,8 +286,6 @@ public static class ExtensionMethods
     {
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in _slotsOnInterface)
         {
-
-
             if (_slot.Value.item == null)
             {
                 _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
@@ -297,9 +314,6 @@ public static class ExtensionMethods
                     _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 }
             }
-
         }
     }
-
-
 }
