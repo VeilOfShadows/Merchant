@@ -124,12 +124,12 @@ public class PlayerManager : MonoBehaviour
         playerControls.canControl = false;
         playerControls.roadSpline = null;
         playerControls.currentCam.SetActive(false);
-        playerFollow.follow = false;        
+        playerFollow.follow = false;
+        playerFollow.agent.enabled = false;
     }
 
-    public void Respawn()
+    public void Respawn(DeathCanvas deathCanvas)
     {
-        playerControls.currentCam.SetActive(true);
         transform.position = respawnLocation.respawnLocation.position;
         playerFollow.transform.position = respawnLocation.respawnLocation.position;
 
@@ -139,7 +139,14 @@ public class PlayerManager : MonoBehaviour
         playerControls.roadSpline = respawnLocation.nearestRoad;
         playerControls.currentRoad = playerControls.roadSpline.Splines[0]; 
         
+        playerControls.currentCam = playerControls.roadSpline.GetComponent<RoadCamera>().camera;
+        playerControls.currentCam.SetActive(true);
+
         playerControls.canControl = true;
         playerFollow.follow = true;
+        playerFollow.agent.enabled = true;
+        deathCanvas.PlayFadeIn();
     }
+
+    //public IEnumerator
 }

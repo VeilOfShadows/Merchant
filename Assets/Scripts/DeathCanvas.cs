@@ -11,8 +11,11 @@ public class DeathCanvas : MonoBehaviour
         anim.Play("DeathFade");
     }
 
+    public void TriggerRespawn() { 
+        PlayerManager.instance.Respawn(this);
+    }
+    
     public void PlayFadeIn() {
-        PlayerManager.instance.Respawn();
         anim.Play("DeathFadeIn");
     }
 }
