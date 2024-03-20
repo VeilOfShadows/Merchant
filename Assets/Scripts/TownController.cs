@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -9,6 +10,7 @@ public class TownController : MonoBehaviour
     public Transform respawnLocation;
     public PlayerControls playerControls;
     public HouseController[] housesInTown;
+    public Vendor[] vendorsInTown;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -33,5 +35,13 @@ public class TownController : MonoBehaviour
         {
             housesInTown[i].ToggleLights(toggle);
         }    
+    }
+
+    public void ReduceShopCooldowns()
+    {
+        for (int i = 0; i < vendorsInTown.Length; i++)
+        {
+            vendorsInTown[i].ReduceRestockCooldown();
+        }
     }
 }

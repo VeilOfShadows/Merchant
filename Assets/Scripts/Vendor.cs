@@ -18,6 +18,11 @@ public class Vendor : MonoBehaviour
     public QuestSO questToComplete;
     public QuestDatabase questDatabase;
 
+    public bool restock = false;
+    public bool onCooldown = false;
+    public int cooldownTime;
+    public int currentCooldown;
+
     private void Start()
     {
         if (inventory != null)
@@ -75,6 +80,26 @@ public class Vendor : MonoBehaviour
         cam.SetActive(false);
         //PlayerManager.instance.ExitShop();
         promptCanvas.SetActive(true);
+    }
+
+    public void ReduceRestockCooldown() {
+        if (!restock)
+        {
+            return;
+        }
+
+        if(inventory == null) 
+        {
+            return;
+        }
+
+        currentCooldown -= 1;
+
+        if (currentCooldown < 0)
+        {
+            currentCooldown = cooldownTime;
+            inventory.RestockShop();
+        }
     }
     #endregion
 }

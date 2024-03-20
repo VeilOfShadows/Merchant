@@ -124,6 +124,10 @@ public class TimeManager : MonoBehaviour
         {
             PlayerHungerManager.instance.DepleteHunger();
             InteractableRespawnManager.instance.ReduceCooldowns();
+            for (int i = 0; i < townControllers.Length; i++)
+            {
+                townControllers[i].ReduceShopCooldowns();
+            }
         }
         initial = true;
     }

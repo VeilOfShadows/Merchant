@@ -5528,6 +5528,9 @@ MonoBehaviour:
   - {fileID: 1624566105}
   - {fileID: 905438169}
   - {fileID: 1477873070}
+  vendorsInTown:
+  - {fileID: 1267078808}
+  - {fileID: 2002038978}
 --- !u!65 &173173222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20341,6 +20344,10 @@ MonoBehaviour:
   promptCanvas: {fileID: 1607742284}
   questToComplete: {fileID: 0}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  restock: 0
+  onCooldown: 0
+  cooldownTime: 0
+  currentCooldown: 0
 --- !u!1001 &497854500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40405,6 +40412,8 @@ MonoBehaviour:
   - {fileID: 1885532354}
   - {fileID: 1252043456}
   - {fileID: 1864534711}
+  vendorsInTown:
+  - {fileID: 1577404430}
 --- !u!65 &1077373131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47857,6 +47866,10 @@ MonoBehaviour:
   promptCanvas: {fileID: 1032430110}
   questToComplete: {fileID: 0}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  restock: 0
+  onCooldown: 0
+  cooldownTime: 0
+  currentCooldown: 0
 --- !u!1 &1247017708
 GameObject:
   m_ObjectHideFlags: 0
@@ -48843,6 +48856,10 @@ MonoBehaviour:
   promptCanvas: {fileID: 1089952915}
   questToComplete: {fileID: 0}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  restock: 1
+  onCooldown: 0
+  cooldownTime: 6
+  currentCooldown: 6
 --- !u!1001 &1267117159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61422,6 +61439,10 @@ MonoBehaviour:
   promptCanvas: {fileID: 1308155987}
   questToComplete: {fileID: 0}
   questDatabase: {fileID: 0}
+  restock: 1
+  onCooldown: 0
+  cooldownTime: 6
+  currentCooldown: 6
 --- !u!1001 &1578582814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63289,6 +63310,10 @@ MonoBehaviour:
   promptCanvas: {fileID: 1881219725}
   questToComplete: {fileID: 0}
   questDatabase: {fileID: 0}
+  restock: 0
+  onCooldown: 0
+  cooldownTime: 0
+  currentCooldown: 0
 --- !u!1 &1638524528
 GameObject:
   m_ObjectHideFlags: 0
@@ -79375,6 +79400,10 @@ MonoBehaviour:
   promptCanvas: {fileID: 216321264}
   questToComplete: {fileID: 0}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  restock: 1
+  onCooldown: 0
+  cooldownTime: 6
+  currentCooldown: 6
 --- !u!224 &2003724348 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4621472314521230244, guid: 29d08910dc479e64aa473a74b2e319d1,
@@ -83007,6 +83036,10 @@ MonoBehaviour:
   promptCanvas: {fileID: 1145468462}
   questToComplete: {fileID: 0}
   questDatabase: {fileID: 11400000, guid: e832cedd2a1878443ab0d0b0e1922eb3, type: 2}
+  restock: 0
+  onCooldown: 0
+  cooldownTime: 0
+  currentCooldown: 0
 --- !u!1 &2133284017
 GameObject:
   m_ObjectHideFlags: 0
