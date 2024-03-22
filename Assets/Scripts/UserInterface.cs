@@ -10,13 +10,14 @@ using System.Linq;
 public class UserInterface : MonoBehaviour
 {
     public Canvas canvas;
-    Tween growTween;
+    public Tween growTween;
     public Inventory inventory;
     public Inventory syncedInventory;
     public GameObject inventoryPrefab;
     public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
     public bool inShop;
     public MerchantInventoryInterface merchantInterface;
+    public UserInterface playerInterface;
     public TooltipManager tooltipManager;
     public float tooltipOffset;
 
@@ -52,21 +53,6 @@ public class UserInterface : MonoBehaviour
 
             slotsOnInterface.Add(obj, inventory.slots[i]);
             //OnSlotUpdate(slotsOnInterface[obj]);
-        }
-        slotsOnInterface.UpdateSlotDisplay();
-    }
-
-    public void SyncNewInventory() {
-        //for (int i = 0; i < inventory.slots.Length; i++)
-        //{
-        //    slotsOnInterface[i] = inventory.slots[i];
-        //}
-        foreach (KeyValuePair<GameObject, InventorySlot> _slot in slotsOnInterface)
-        {
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                slotsOnInterface[_slot.Key] = inventory.slots[i];
-            }
         }
         slotsOnInterface.UpdateSlotDisplay();
     }
@@ -152,6 +138,8 @@ public class UserInterface : MonoBehaviour
 
     private void OnSlotUpdate(InventorySlot _slot)
     {
+        _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(false);
+        _slot.slotDisplay.transform.GetChild(3).gameObject.SetActive(false);
         if (_slot.item == null)
         {
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
@@ -173,6 +161,36 @@ public class UserInterface : MonoBehaviour
                 }
                 //_slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
                 _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
+
+                if (MouseData.interfaceMouseIsOver == merchantInterface)
+                {
+                    if (PriceManager.instance.CheckIfPriceIsModified(_slot.item))
+                    {
+                        if (PriceManager.instance.CheckHigherOrLower(_slot.item))
+                        {
+                            _slot.slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(true);
+                        }
+                    }
+                }
+                else
+                {
+                    if (PriceManager.instance.CheckIfPriceIsModified(_slot.item))
+                    {
+                        if (PriceManager.instance.CheckHigherOrLower(_slot.item))
+                        {
+                            _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            _slot.slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
+                        }
+                    }
+                }
+
             }
             else
             {
@@ -197,7 +215,7 @@ public class UserInterface : MonoBehaviour
     //    //return new Vector3(X_START + (X_SPACE_BETWEEN_ITEM * (i % NUMBER_OF_COLUMN)), Y_START + (-Y_SPACE_BETWEEN_ITEMS * (i / NUMBER_OF_COLUMN)), 0f);
     //}
 
-    public void OnEnter(GameObject obj)
+    public virtual void OnEnter(GameObject obj)
     {
         MouseData.slotHoveredOver = obj;
         growTween.Complete();
@@ -205,8 +223,8 @@ public class UserInterface : MonoBehaviour
         if (slotsOnInterface[obj].item != null)
         {
             if (slotsOnInterface[obj].item.itemID != -1)
-            {               
-                tooltipManager.ShowTooltip(slotsOnInterface[obj].item, tooltipOffset);
+            {
+                tooltipManager.ShowTooltip(slotsOnInterface[obj].item, tooltipOffset, true);                
             }
         }
     }
@@ -357,6 +375,8 @@ public static class ExtensionMethods
     {
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in _slotsOnInterface)
         {
+             _slot.Key.transform.GetChild(2).gameObject.SetActive(false);
+             _slot.Key.transform.GetChild(3).gameObject.SetActive(false);
             if (_slot.Value.item == null)
             {
                 _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
@@ -377,6 +397,20 @@ public static class ExtensionMethods
                         _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
                     }
                     _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
+                    
+                    
+                    
+                    if (PriceManager.instance.CheckIfPriceIsModified(_slot.Value.item))
+                    {
+                        if (PriceManager.instance.CheckHigherOrLower(_slot.Value.item))
+                        {
+                            _slot.Key.transform.GetChild(2).gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            _slot.Key.transform.GetChild(3).gameObject.SetActive(true);
+                        }
+                    }
                 }
                 else
                 {

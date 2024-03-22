@@ -25,9 +25,9 @@ MonoBehaviour:
         uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
         stackable: 1
         tradeable: 0
-        nutritionalValue: -1
-      slotWeight: 1.8000001
-      amount: 9
+        nutritionalValue: 0
+      slotWeight: 0.8
+      amount: 4
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -40,22 +40,8 @@ MonoBehaviour:
         stackable: 1
         tradeable: 1
         nutritionalValue: 2
-      slotWeight: 1.4
-      amount: 7
-      slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: Thread
-        itemType: 2
-        itemID: 2
-        baseCoinValue: 2
-        weight: 0.1
-        uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
-        stackable: 1
-        tradeable: 1
-        nutritionalValue: 0
-      slotWeight: 0.3
-      amount: 3
+      slotWeight: 1.6
+      amount: 8
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -407,5 +393,21 @@ MonoBehaviour:
       slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
-  totalWeight: 3.5
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        weight: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: -1
+      slotWeight: -0
+      amount: 0
+      slotDisplay: {fileID: 0}
+  totalWeight: 2.4
   coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
+  stockItems: []
+  playerItems: []

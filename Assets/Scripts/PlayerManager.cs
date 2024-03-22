@@ -93,6 +93,7 @@ public class PlayerManager : MonoBehaviour
         //merchantInventory.SyncNewInventory();
         inShop = true;
         playerUI.SetActive(true);
+        playerInventoryUI.SyncNew(playerInventory);
         merchantUI.SetActive(true);
         merchantInventoryUI.SyncNew(currentVendor.inventory);
 

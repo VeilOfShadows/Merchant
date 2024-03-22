@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,19 @@ public class MerchantInventoryInterface : UserInterface
         SyncWithInventory();
     }
 
+    public override void OnEnter(GameObject obj)
+    {
+        MouseData.slotHoveredOver = obj;
+        growTween.Complete();
+        growTween = obj.transform.DOScale(1.2f, .3f);
+        if (slotsOnInterface[obj].item != null)
+        {
+            if (slotsOnInterface[obj].item.itemID != -1)
+            {                
+               tooltipManager.ShowTooltip(slotsOnInterface[obj].item, tooltipOffset, false);                
+            }
+        }
+    }
     public override void OnDragStart(GameObject obj)
     { }
     public override void OnDragEnd(GameObject obj)

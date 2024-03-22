@@ -409,3 +409,5 @@ MonoBehaviour:
       slotDisplay: {fileID: 0}
   totalWeight: 18.800001
   coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
+  stockItems: []
+  playerItems: []

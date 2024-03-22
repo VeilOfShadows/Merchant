@@ -1,7 +1,15 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+
+[System.Serializable]
+public struct ItemPriceMultiplier
+{
+    public ItemObject item;
+    public float priceMultiplierPercent;
+}
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "Create/Inventory/New Inventory")]
 public class Inventory : ScriptableObject
@@ -11,6 +19,9 @@ public class Inventory : ScriptableObject
     public float totalWeight;
     public InventorySlot[] slots { get { return container.Slots; } }
     public ItemObject coinItem;
+    [SerializeField]
+    public ItemPriceMultiplier[] stockItems;
+    public ItemPriceMultiplier[] playerItems;
 
     public virtual void AddItem(Item _item, int _amount) {
         InventorySlot slot = FindItemInInventory(_item);
@@ -63,6 +74,24 @@ public class Inventory : ScriptableObject
         temp.RemoveAmount(buyPrice);
         AddItem(_item, 1);
         return true;
+    }
+
+    
+
+    public int AdjustedTradePrice(Item _item) {
+        for (int i = 0; i < stockItems.Length; i++)
+        {
+            if (stockItems[i].item.data == _item)
+            {
+                int temp = _item.baseCoinValue;
+                Debug.Log("Base Cost: " + _item.baseCoinValue);
+                Debug.Log("Multiplier: " + (stockItems[i].priceMultiplierPercent + 100) / 100);
+                Debug.Log("Adjusted: " + (temp * (stockItems[i].priceMultiplierPercent + 100) / 100));
+                temp = Mathf.RoundToInt(temp * ((stockItems[i].priceMultiplierPercent + 100) / 100));
+                return temp;
+            }
+        }
+        return _item.baseCoinValue;
     }
 
     public void EvaluateWeight() { 
