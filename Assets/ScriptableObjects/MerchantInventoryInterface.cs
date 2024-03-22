@@ -31,6 +31,27 @@ public class MerchantInventoryInterface : UserInterface
         SyncWithInventory();
     }
 
+    //public override void SyncMarketPrices()
+    //{
+    //    for (int i = 0; i < syncedInventory.slots.Length; i++)
+    //    {
+    //        if (slotsOnInterface[inventory.slots[i].slotDisplay].item != null)
+    //        {
+    //            if (PriceManager.instance.CheckIfPriceIsModified(syncedInventory.slots[i].item))
+    //            {
+    //                if (PriceManager.instance.CheckHigherOrLower(syncedInventory.slots[i].item))
+    //                {
+    //                    inventory.slots[i].slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
+    //                }
+    //                else
+    //                {
+    //                    inventory.slots[i].slotDisplay.transform.GetChild(2).gameObject.SetActive(true);
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+
     public override void OnEnter(GameObject obj)
     {
         MouseData.slotHoveredOver = obj;

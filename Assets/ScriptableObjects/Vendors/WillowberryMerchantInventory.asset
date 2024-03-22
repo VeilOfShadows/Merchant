@@ -26,8 +26,22 @@ MonoBehaviour:
         stackable: 1
         tradeable: 0
         nutritionalValue: 0
-      slotWeight: 1
-      amount: 5
+      slotWeight: 1.6
+      amount: 8
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Bread
+        itemType: 1
+        itemID: 0
+        baseCoinValue: 3
+        weight: 3
+        uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 8
+      slotWeight: 3
+      amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -393,22 +407,13 @@ MonoBehaviour:
       slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        weight: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: -1
-      slotWeight: -0
-      amount: 0
-      slotDisplay: {fileID: 0}
-  totalWeight: 1.8
+  totalWeight: 5.4
   coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
-  stockItems: []
-  playerItems: []
+  demandItems:
+  - item: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
+    priceMultiplierPercent: 100
+    adjustedPrice: 2
+  - item: {fileID: 11400000, guid: 9a4adc9d8deef6948865b90575423fab, type: 2}
+    priceMultiplierPercent: -50
+    adjustedPrice: 1
   itemPool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}

@@ -6277,11 +6277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f2c3e7920b7134e8f344536b13bfea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifiedItems:
-  - item: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
-    priceMultiplierPercent: 100
-  - item: {fileID: 11400000, guid: 9a4adc9d8deef6948865b90575423fab, type: 2}
-    priceMultiplierPercent: -50
+  modifiedItems: []
   itemDatabase: {fileID: 11400000, guid: 46fd6c57ae90bb2468edfb5e4cf290e7, type: 2}
 --- !u!4 &190185974
 Transform:
@@ -42529,7 +42525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1119182096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51593,7 +51589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1334107689
 RectTransform:
   m_ObjectHideFlags: 0

@@ -55,6 +55,7 @@ public class UserInterface : MonoBehaviour
             //OnSlotUpdate(slotsOnInterface[obj]);
         }
         slotsOnInterface.UpdateSlotDisplay();
+        transform.parent.gameObject.SetActive(false);
     }
 
     [ContextMenu("SyncNew")]
@@ -136,6 +137,26 @@ public class UserInterface : MonoBehaviour
         slotsOnInterface.UpdateSlotDisplay();
     }
 
+    //public virtual void SyncMarketPrices() {
+    //    for (int i = 0; i < syncedInventory.slots.Length; i++)
+    //    {
+    //        if (slotsOnInterface[inventory.slots[i].slotDisplay].item != null)
+    //        {
+    //            if (PriceManager.instance.CheckIfPriceIsModified(syncedInventory.slots[i].item))
+    //            {
+    //                if (PriceManager.instance.CheckHigherOrLower(syncedInventory.slots[i].item))
+    //                {
+    //                    inventory.slots[i].slotDisplay.transform.GetChild(2).gameObject.SetActive(true);                        
+    //                }
+    //                else
+    //                {
+    //                    inventory.slots[i].slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+
     private void OnSlotUpdate(InventorySlot _slot)
     {
         _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(false);
@@ -161,35 +182,35 @@ public class UserInterface : MonoBehaviour
                 }
                 //_slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
                 _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = _slot.amount == 1 ? "" : _slot.amount.ToString("n0");
-
-                if (MouseData.interfaceMouseIsOver == merchantInterface)
-                {
-                    if (PriceManager.instance.CheckIfPriceIsModified(_slot.item))
-                    {
-                        if (PriceManager.instance.CheckHigherOrLower(_slot.item))
-                        {
-                            _slot.slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
-                        }
-                        else
-                        {
-                            _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(true);
-                        }
-                    }
-                }
-                else
-                {
-                    if (PriceManager.instance.CheckIfPriceIsModified(_slot.item))
-                    {
-                        if (PriceManager.instance.CheckHigherOrLower(_slot.item))
-                        {
-                            _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(true);
-                        }
-                        else
-                        {
-                            _slot.slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
-                        }
-                    }
-                }
+                //SyncMarketPrices();
+                //if (MouseData.interfaceMouseIsOver == merchantInterface)
+                //{
+                //    if (PriceManager.instance.CheckIfPriceIsModified(_slot.item))
+                //    {
+                //        if (PriceManager.instance.CheckHigherOrLower(_slot.item))
+                //        {
+                //            _slot.slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
+                //        }
+                //        else
+                //        {
+                //            _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(true);
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    if (PriceManager.instance.CheckIfPriceIsModified(_slot.item))
+                //    {
+                //        if (PriceManager.instance.CheckHigherOrLower(_slot.item))
+                //        {
+                //            _slot.slotDisplay.transform.GetChild(2).gameObject.SetActive(true);
+                //        }
+                //        else
+                //        {
+                //            _slot.slotDisplay.transform.GetChild(3).gameObject.SetActive(true);
+                //        }
+                //    }
+                //}
 
             }
             else
@@ -400,17 +421,17 @@ public static class ExtensionMethods
                     
                     
                     
-                    if (PriceManager.instance.CheckIfPriceIsModified(_slot.Value.item))
-                    {
-                        if (PriceManager.instance.CheckHigherOrLower(_slot.Value.item))
-                        {
-                            _slot.Key.transform.GetChild(2).gameObject.SetActive(true);
-                        }
-                        else
-                        {
-                            _slot.Key.transform.GetChild(3).gameObject.SetActive(true);
-                        }
-                    }
+                    //if (PriceManager.instance.CheckIfPriceIsModified(_slot.Value.item))
+                    //{
+                    //    if (PriceManager.instance.CheckHigherOrLower(_slot.Value.item))
+                    //    {
+                    //        _slot.Key.transform.GetChild(2).gameObject.SetActive(true);
+                    //    }
+                    //    else
+                    //    {
+                    //        _slot.Key.transform.GetChild(3).gameObject.SetActive(true);
+                    //    }
+                    //}
                 }
                 else
                 {

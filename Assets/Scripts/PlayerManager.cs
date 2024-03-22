@@ -96,6 +96,9 @@ public class PlayerManager : MonoBehaviour
         playerInventoryUI.SyncNew(playerInventory);
         merchantUI.SetActive(true);
         merchantInventoryUI.SyncNew(currentVendor.inventory);
+        PriceManager.instance.SetItems(currentVendor.inventory);
+        //playerInventoryUI.SyncMarketPrices();
+        //merchantInventoryUI.SyncMarketPrices();
 
         playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
         playerUI.GetComponentInChildren<UserInterface>().inShop = true;
