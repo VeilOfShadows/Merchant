@@ -260,9 +260,10 @@ public class UserInterface : MonoBehaviour
             }
             else
             {
-                int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
+                int buyPrice = PriceManager.instance.GetAdjustedPrice(slotsOnInterface[obj].item);
+                //int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
                 if (merchantInterface.syncedInventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
-                {
+                {                     
                     slotsOnInterface[obj].RemoveAmount(1);
                     syncedInventory.AddItem(syncedInventory.coinItem.data, buyPrice);
                 }

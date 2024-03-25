@@ -77,9 +77,19 @@ public class PriceManager : MonoBehaviour
 
     public void AdjustPrices()
     {
+        int price;
+        int ceilPrice;
+
         for (int i = 0; i < modifiedItems.Count; i++)
         {
-            modifiedItems[i].adjustedPrice = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
+            price = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
+            ceilPrice = Mathf.CeilToInt(modifiedItems[i].item.data.baseCoinValue * 0.25f);
+
+            if(price < ceilPrice)
+            {
+                price = ceilPrice;
+            }
+            modifiedItems[i].adjustedPrice = price;
             //if (_item.itemID == modifiedItems[i].item.data.itemID)
             //{
             //    return Mathf.RoundToInt(_item.baseCoinValue * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));

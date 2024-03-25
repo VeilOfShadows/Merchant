@@ -5,6 +5,12 @@ using UnityEngine;
 public class RabbitSpawner : MonoBehaviour
 {
     public GameObject rabbitObject;
+
+    private void Start()
+    {
+        rabbitObject.SetActive(false);
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

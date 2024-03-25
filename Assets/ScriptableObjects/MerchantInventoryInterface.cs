@@ -18,7 +18,8 @@ public class MerchantInventoryInterface : UserInterface
     //public Inventory playerInventory;
 
     public override void OnClick(GameObject obj) {
-        int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
+        int buyPrice = PriceManager.instance.GetAdjustedPrice(slotsOnInterface[obj].item);
+        //int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
         if (PlayerManager.instance.playerInventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
         {
             slotsOnInterface[obj].RemoveAmount(1);
