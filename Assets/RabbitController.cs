@@ -1,10 +1,13 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class RabbitController : MonoBehaviour
 {
+    Tween rotationTween;
     public TerrainController terrain;
     public Transform parent;
     public Animator animator;
@@ -13,69 +16,58 @@ public class RabbitController : MonoBehaviour
     public float jumpRange;
     public float jumpDuration;
     Vector3 targetPosition;
+    public float maxDistance;
+    float distance;
 
-    private void Start()
+    public void OnEnable()
     {
-        //StartCoroutine(JumpDelay());
         Jump();
     }
 
-
-    private void Update()
+    public void OnDisable()
     {
-        if (!isMoving) { 
-            isMoving = true;
-            Jump();
-        }
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Jump();
-        //}
+        rotationTween.Kill();
+        StopAllCoroutines();
+        isMoving = false;
     }
+
     public void Jump() {
-        parent.Rotate(new Vector3(parent.eulerAngles.x, Random.Range(0, 360), parent.eulerAngles.z));
-        animator.SetTrigger("Jump");
-        targetPosition = parent.position + parent.forward * jumpRange;
+
+        distance = Vector3.Distance(transform.position, parent.transform.position);
+
+        if (distance > maxDistance)
+        {
+            rotationTween = transform.DOLookAt(parent.transform.position, .6f).OnComplete(() =>
+            {
+                targetPosition = transform.localPosition + transform.forward * jumpRange;
+                StartCoroutine(PerformJump());
+            });
+        }
+        else
+        {
+            Debug.Log("CLOSE");
+            rotationTween = transform.DOLocalRotate(new Vector3(parent.eulerAngles.x, Random.Range(0, 360), parent.eulerAngles.z), .6f).OnComplete(() =>
+            {
+                targetPosition = transform.localPosition + transform.forward * jumpRange;
+                StartCoroutine(PerformJump());
+            });
+        }
+
+        //parent.Rotate(new Vector3(parent.eulerAngles.x, Random.Range(0, 360), parent.eulerAngles.z));
+        //animator.SetTrigger("Jump");
+        //targetPosition = parent.position + parent.forward * jumpRange;
         //targetPosition.y = terrain.FindHeight(targetPosition) - 46.7f;
     }
 
-    //public IEnumerator JumpDelay() 
-    //{
-    //    //if (coroutineRunning) 
-    //    //{
-    //    //    yield break;
-    //    //}
-    //    //coroutineRunning = true;
+    public IEnumerator PerformJump() {
+        animator.SetTrigger("Jump");
+        isMoving = true;
 
-    //    //yield return new WaitForSeconds(Random.Range(waitRange.x,waitRange.y));        
+        rotationTween = transform.DOLocalMove(targetPosition, jumpDuration).OnComplete(() => isMoving = false); ;
 
-    //    //coroutineRunning = false;
-    //    //Jump();
-    //    //yield return null;
-    //}
+        yield return new WaitUntil(() => !isMoving);
 
-    private IEnumerator MoveGradually()
-    {
-        //isMoving = true;
-
-        float elapsedTime = 0f;
-        //float duration = 1f; // Adjust the duration as needed
-
-        while (elapsedTime < jumpDuration)
-        {
-            // Interpolate the position
-            parent.position = Vector3.Lerp(parent.position, targetPosition, elapsedTime / jumpDuration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        //yield return new WaitForSeconds(jumpDuration);
-
-        // Ensure the final position matches the target
-        parent.position = targetPosition;
         yield return new WaitForSeconds(Random.Range(waitRange.x, waitRange.y));
-        //StartCoroutine(JumpDelay());
-        isMoving = false;
-        //Jump();
+        Jump();
     }
 }

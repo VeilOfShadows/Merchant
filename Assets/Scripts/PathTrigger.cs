@@ -6,21 +6,44 @@ using UnityEngine;
 using UnityEngine.Splines;
 
 public class PathTrigger : MonoBehaviour
-{    
+{
+    public SplineContainer spline;
+    public Spline roadSpline;
     public Transform trigger;
-    public Vector3 pos;
+    public float3 pos;
     float moveX = 0f;
     float moveZ = 0f;
     public float offset;
 
+    NativeSpline native;
+    float distance;
+    float3 forward;
+    float3 up;
+    float3 right;
+    Vector3 remappedForward = new Vector3(0, 0, 1);
+    Vector3 remappedUp = new Vector3(0, 1, 0);
+    Quaternion axisRemapRotation;
+
+    private void Start()
+    {
+        roadSpline = spline.Splines[0];
+    }
+
     void Update()
     {
+        native = new NativeSpline(roadSpline);
+        distance = SplineUtility.GetNearestPoint(roadSpline, transform.position, out float3 nearest, out float t);
+
+         forward = Vector3.Normalize(roadSpline.EvaluateTangent(t));
+         //up = roadSpline.EvaluateUpVector(t);
+         right = math.cross(forward, new Vector3(0, 1, 0));
+
         if (Input.GetKey(KeyCode.W)) {
-            moveX = -offset;
+            moveX = offset;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            moveX = offset;
+            moveX = -offset;
         }
         else
         {
@@ -40,13 +63,7 @@ public class PathTrigger : MonoBehaviour
             moveZ = 0f;
         }
 
-        //float distance = SplineUtility.GetNearestPoint(player.currentRoad, transform.position, out float3 nearest, out float t);
-        //pos = Vector3.Normalize(player.roadSpline.EvaluateTangent(t));
-
-        //pos.x += moveX;
-        //pos.z += moveZ;
-        pos.x = moveX;
-        pos.z = moveZ;
-        trigger.localPosition = pos;
+        pos = nearest + moveX * right + moveZ * forward;
+        trigger.position = pos;
     }
 }

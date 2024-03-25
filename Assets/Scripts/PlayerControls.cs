@@ -8,6 +8,7 @@ using UnityEngine.Splines;
 
 public class PlayerControls : MonoBehaviour
 {
+    public static PlayerControls instance;
     public SplineContainer roadSpline;
     public Spline currentRoad;
     public string roadName;
@@ -22,6 +23,7 @@ public class PlayerControls : MonoBehaviour
     public Transform cart;
     public GameObject currentCam;
     public TimeManager timeManager;
+    public PathTrigger trigger;
     public bool canControl;
 
     NativeSpline native;
@@ -32,6 +34,14 @@ public class PlayerControls : MonoBehaviour
     Vector3 remappedUp = new Vector3(0, 1, 0);
     Quaternion axisRemapRotation;
     float moveHorizontal;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -175,7 +185,12 @@ public class PlayerControls : MonoBehaviour
         currentCam = cam;
         roadSpline = container;
         currentRoad = roadSpline.Splines[0];
+        trigger.spline = roadSpline;
+        trigger.roadSpline = currentRoad;
+        native = new NativeSpline(currentRoad);
+        distance = SplineUtility.GetNearestPoint(currentRoad, transform.position, out float3 nearest, out float t);
 
+        transform.position = nearest;
     }
 
     public void SetVillageSpeed() {

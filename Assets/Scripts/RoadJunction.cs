@@ -41,7 +41,9 @@ public class RoadJunction : MonoBehaviour
             }
         }
         playerPathTrigger.SetActive(false);
-        yield return new WaitForSeconds(.5f);
+        //PlayerControls.instance.canControl = false;
+        yield return new WaitForSeconds(1.5f);
+        //PlayerControls.instance.canControl = true;
         playerPathTrigger.SetActive(true);
 
         //for (int i = 0; i < controllers.Count; i++)
