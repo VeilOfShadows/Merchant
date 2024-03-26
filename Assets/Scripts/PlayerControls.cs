@@ -18,6 +18,7 @@ public class PlayerControls : MonoBehaviour
     public float currentSpeed;
     public float wheelSpeed;
     public NavMeshAgent agent;
+    public Animator characterAnim;
     public Transform cartWheel_L;
     public Transform cartWheel_R;
     public Transform cart;
@@ -72,8 +73,13 @@ public class PlayerControls : MonoBehaviour
             moveHorizontal = Input.GetAxis("Horizontal");
             if (moveHorizontal != 0)
             {
+                //characterAnim.SetBool("Walk", true);
                 Move();
             }
+            //else
+            //{
+            //    characterAnim.SetBool("Walk", false);
+            //}
         }
         
     //    if (moveHorizontal > 0)
@@ -206,6 +212,7 @@ public class PlayerControls : MonoBehaviour
         DOTween.To(() => currentSpeed, x => currentSpeed = x, roadSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => 
         {
             agent.speed = currentSpeed; wheelSpeed = currentSpeed / 2;
+            
         });
     }
 

@@ -32,7 +32,7 @@ public class CartWobble : MonoBehaviour
         //}
         positionClamp.x = 0;
         positionClamp.y = transform.localPosition.y;
-        positionClamp.z = -2;
+        positionClamp.z = -1.4f;
 
         transform.localPosition = positionClamp;
         transform.localRotation = Quaternion.Euler(xRotation, 0, zClamp);
