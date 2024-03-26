@@ -45,7 +45,6 @@ public class RabbitController : MonoBehaviour
         }
         else
         {
-            Debug.Log("CLOSE");
             rotationTween = transform.DOLocalRotate(new Vector3(parent.eulerAngles.x, Random.Range(0, 360), parent.eulerAngles.z), .6f).OnComplete(() =>
             {
                 targetPosition = transform.localPosition + transform.forward * jumpRange;
