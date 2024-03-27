@@ -25,7 +25,7 @@ public struct QuestActions {
 }
 
 [System.Serializable]
-public struct QuestItemRequirements {
+public struct ItemRequirement {
     public ItemObject requiredItem;
     public int requiredAmount;
 }
@@ -43,7 +43,7 @@ public class QuestSO : ScriptableObject
     public QuestActions[] startActions;
 
     [Header("Quest Items")]
-    public QuestItemRequirements[] itemRequirement;
+    public ItemRequirement[] itemRequirement;
 
     [Header("Quest Complete Action")]
     public QuestActions[] completeActions;
