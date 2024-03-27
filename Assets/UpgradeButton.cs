@@ -28,8 +28,13 @@ public class UpgradeButton : MonoBehaviour
             {
                 nextUpgrade.GetComponent<Button>().interactable = true;
                 nextUpgrade.icon.color = grey;
+                nextUpgrade.buttonIcon.color = grey;
             }
             upgrade.PerformAction();
+        }
+        else
+        {
+            Debug.Log("No Assigned Upgrade");
         }
     }
 }
