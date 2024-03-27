@@ -22,30 +22,12 @@ public class PlayerFollow : MonoBehaviour
     {
         if (follow) 
         {
-            currentVelocity = agent.velocity.magnitude / agent.speed;
-            if (Vector3.Distance(transform.position, followTarget.position) < agent.stoppingDistance)
-            {
-
-            }
-            else
-            {
-            }
+            currentVelocity = agent.velocity.magnitude / agent.speed;            
 
             animator.SetFloat(Animator.StringToHash("Walk"), currentVelocity);
-            //animator.SetFloat(Animator.StringToHash("Walk"), agent.velocity.magnitude/agent.speed);
             agent.destination = followTarget.position;
             WheelL.Rotate(1* (agent.velocity.magnitude/2), 0,0);
             WheelR.Rotate(1* (agent.velocity.magnitude/2), 0,0);
-            //    cartWheel_L.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-            //    cartWheel_R.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-            //}
-            //else
-            //{
-            //    cartWheel_L.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-            //    cartWheel_R.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-            //} //if (agent.hasPath)
-            //{
-            //}
         }
     }
 }

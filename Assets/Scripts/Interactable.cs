@@ -15,7 +15,6 @@ public class Interactable : MonoBehaviour
 {
     public ItemObject item;
     public int amount;
-    public Inventory playerInventory;
     public Transform interactableObject;
     public GameObject vfx;
     public bool respawn = false;

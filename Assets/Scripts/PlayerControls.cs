@@ -16,11 +16,8 @@ public class PlayerControls : MonoBehaviour
     public float villageSpeed = 3;
     public float roadSpeed = 4.5f;
     public float currentSpeed;
-    public float wheelSpeed;
     public NavMeshAgent agent;
     public Animator characterAnim;
-    //public Transform cartWheel_L;
-    //public Transform cartWheel_R;
     public Transform cart;
     public GameObject currentCam;
     public TimeManager timeManager;
@@ -69,27 +66,12 @@ public class PlayerControls : MonoBehaviour
     {
         if (canControl)
         { 
-            //rb.velocity = rb.velocity.magnitude * transform.forward;
             moveHorizontal = Input.GetAxis("Horizontal");
             if (moveHorizontal != 0)
             {
-                //characterAnim.SetBool("Walk", true);
                 Move();
             }
-            //else
-            //{
-            //    characterAnim.SetBool("Walk", false);
-            //}
         }
-        
-    //    if (moveHorizontal > 0)
-    //    {
-    //        Move();
-    //    }
-    //    else if (moveHorizontal < 0)
-    //    {
-    //        MoveBackwards();
-    //    }
     }
 
     public void Move()
@@ -114,18 +96,6 @@ public class PlayerControls : MonoBehaviour
         //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
         float direction = Input.GetAxis("Vertical");
-        //if (Input.GetAxis("Horizontal") < 0)
-        //{
-        //    cartWheel_L.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-        //    cartWheel_R.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-        //}
-        //else
-        //{
-        //    cartWheel_L.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-        //    cartWheel_R.Rotate(1 * wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-        //}
-        //cartWheel_L.Rotate(Input.GetAxis("Horizontal") * wheelSpeed * direction, 0, 0);//Vector3 dir = power * transform.forward;
-        //cartWheel_R.Rotate(Input.GetAxis("Horizontal") * wheelSpeed * direction, 0, 0);//Vector3 dir = power * transform.forward;
         //rb.AddForce(dir);
     }
 
@@ -148,11 +118,6 @@ public class PlayerControls : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         transform.Translate(new Vector3(0, 0, currentSpeed * Time.deltaTime));
-        //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-        //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
-        //cartWheel_L.Rotate(wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-        //cartWheel_R.Rotate(wheelSpeed, 0, 0);//Vector3 dir = power * transform.forward;
-        //rb.AddForce(dir);
     }
 
     public void MoveBackwards()
@@ -173,11 +138,6 @@ public class PlayerControls : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
         transform.Translate(new Vector3(0, 0, (moveHorizontal * (currentSpeed / 2)) * Time.deltaTime));
-        //transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-        //cart.Translate(new Vector3(0, 0, (moveHorizontal * speed) * Time.deltaTime));
-        //cartWheel_L.Rotate(Input.GetAxis("Horizontal") * (wheelSpeed / 2), 0, 0);//Vector3 dir = power * transform.forward;
-        //cartWheel_R.Rotate(Input.GetAxis("Horizontal") * (wheelSpeed / 2), 0, 0);//Vector3 dir = power * transform.forward;
-        //rb.AddForce(dir);
     }
 
     public void SetRoad(SplineContainer container, GameObject cam) {
@@ -203,7 +163,6 @@ public class PlayerControls : MonoBehaviour
         DOTween.To(() => currentSpeed, x => currentSpeed = x, villageSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => 
         { 
             agent.speed = currentSpeed;
-            wheelSpeed = currentSpeed / 2;
         });
     }
 
@@ -211,7 +170,7 @@ public class PlayerControls : MonoBehaviour
     {
         DOTween.To(() => currentSpeed, x => currentSpeed = x, roadSpeed, 2f).SetEase(Ease.Linear).OnUpdate(() => 
         {
-            agent.speed = currentSpeed; wheelSpeed = currentSpeed / 2;
+            agent.speed = currentSpeed;
             
         });
     }
@@ -227,6 +186,5 @@ public class PlayerControls : MonoBehaviour
             currentSpeed -= amount;
         }
         agent.speed = currentSpeed;
-        wheelSpeed = currentSpeed / 2;
     }
 }

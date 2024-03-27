@@ -229,6 +229,29 @@ public class Inventory : ScriptableObject
 
         EvaluateWeight();
     }
+
+    public void SyncWithNewInventory(Inventory newInventory)
+    {
+        Clear();
+        for (int i = 0; i < newInventory.slots.Length; i++)
+        {
+            slots[i].item = newInventory.slots[i].item;
+            slots[i].amount = newInventory.slots[i].amount;
+            //if (slots[i].item != null)
+            //{
+            //    slots[i].SetSlotWeight();
+            //    if (slots[i].item.itemID == -1)
+            //    {
+            //        slots[i].RemoveItem();
+            //    }
+            //}
+        }
+        newInventory.Sync();
+        PlayerManager.instance.playerInventory = this;
+        PlayerManager.instance.playerInventoryUI.SyncNew(this);
+
+        //EvaluateWeight();
+    }
 }
 
 [System.Serializable]

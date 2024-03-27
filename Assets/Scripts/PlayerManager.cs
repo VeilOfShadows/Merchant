@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
 
     [Header("Inventory")]
     public Inventory playerInventory;
+    public Inventory newInventory;
     public InventorySlot itemToAdd;
 
     [Header("Shop Details")]
@@ -85,6 +86,12 @@ public class PlayerManager : MonoBehaviour
             currentVendor.DeactivateShopCam();
             ExitShop();
         }
+    }
+
+    [ContextMenu("NEW")]
+    public void NEWINVENT() 
+    {
+        newInventory.SyncWithNewInventory(playerInventory);
     }
 
     #region Shop Methods

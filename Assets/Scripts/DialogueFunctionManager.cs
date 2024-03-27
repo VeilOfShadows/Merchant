@@ -14,7 +14,6 @@ public class DialogueFunctionManager : MonoBehaviour
     public static DialogueFunctionManager instance;
     public PlayerSOConnections connector;
     public QuestDatabase questDatabase;
-    public Inventory playerInventory;
 
     private void Awake()
     {
@@ -45,7 +44,7 @@ public class DialogueFunctionManager : MonoBehaviour
                                 break;
 
                             case QuestAction.Item:
-                                playerInventory.AddItem(pickupQuest.startActions[i].item.data, pickupQuest.startActions[i].itemAmount);
+                                PlayerManager.instance.playerInventory.AddItem(pickupQuest.startActions[i].item.data, pickupQuest.startActions[i].itemAmount);
                                 NotificationManager.instance.DisplayNotification("+ " + pickupQuest.startActions[i].item.data.itemName + " x " + pickupQuest.startActions[i].itemAmount, false);
                                 break;
 
@@ -72,7 +71,7 @@ public class DialogueFunctionManager : MonoBehaviour
                     {
                         for (int i = 0; i < completeQuest.itemRequirement.Length; i++)
                         {
-                            playerInventory.FindItemInInventory(completeQuest.itemRequirement[i].requiredItem.data).RemoveAmount(completeQuest.itemRequirement[i].requiredAmount);
+                            PlayerManager.instance.playerInventory.FindItemInInventory(completeQuest.itemRequirement[i].requiredItem.data).RemoveAmount(completeQuest.itemRequirement[i].requiredAmount);
                             NotificationManager.instance.DisplayNotification("- " + completeQuest.itemRequirement[i].requiredItem.data.itemName + " x " + completeQuest.itemRequirement[i].requiredAmount, false);
                         }                        
                     }
@@ -89,7 +88,7 @@ public class DialogueFunctionManager : MonoBehaviour
                                 break;
 
                             case QuestAction.Item:
-                                playerInventory.AddItem(completeQuest.completeActions[i].item.data, completeQuest.completeActions[i].itemAmount);
+                                PlayerManager.instance.playerInventory.AddItem(completeQuest.completeActions[i].item.data, completeQuest.completeActions[i].itemAmount);
                                 NotificationManager.instance.DisplayNotification("+ " + completeQuest.completeActions[i].item.data.itemName + " x " + completeQuest.completeActions[i].itemAmount, false);
                                 break;
 
@@ -121,7 +120,7 @@ public class DialogueFunctionManager : MonoBehaviour
     public bool CanHandIn(QuestSO quest) {
         for (int i = 0; i < quest.itemRequirement.Length; i++)
         {
-            if (!playerInventory.CheckForItem(quest.itemRequirement[i].requiredItem.data, quest.itemRequirement[i].requiredAmount))
+            if (!PlayerManager.instance.playerInventory.CheckForItem(quest.itemRequirement[i].requiredItem.data, quest.itemRequirement[i].requiredAmount))
             {
                 return false;
             }

@@ -80,13 +80,6 @@ public class UserInterface : MonoBehaviour
             inventory.slots[i].slotDisplay.SetActive(false);
         }
 
-        //for (int i = 0; i < syncedInventory.slots.Length; i++)
-        //{
-        //    inventory.slots[i].item = syncedInventory.slots[i].item;
-        //    inventory.slots[i].amount = syncedInventory.slots[i].amount;
-        //    inventory.slots[i].slotDisplay.SetActive(true);
-        //}
-
         for (int i = 0; i < syncedInventory.slots.Length; i++)
         {
             slotsOnInterface[inventory.slots[i].slotDisplay] = syncedInventory.slots[i];
