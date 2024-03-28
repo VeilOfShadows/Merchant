@@ -141,6 +141,11 @@ public class Inventory : ScriptableObject
         return null;
     }
 
+    public int FindItemAmount(Item _item) 
+    {
+        return FindItemInInventory(_item).amount;
+    }
+
     public bool CheckForItem(Item _item, int _amount)
     {
         for (int i = 0; i < slots.Length; i++)

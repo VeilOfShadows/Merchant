@@ -11,4 +11,5 @@ public class UpgradeObject : ScriptableObject
     public ItemRequirement[] requiredItems;
 
     public virtual void PerformAction() { }
+    public virtual void FillTooltip() { }
 }

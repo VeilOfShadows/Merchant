@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 3280963146919870967}
   - component: {fileID: 8953057526562809710}
   - component: {fileID: 8870529825230689357}
+  - component: {fileID: 2486234812726097304}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -379,6 +380,52 @@ MonoBehaviour:
   green: {r: 0.43529412, g: 0.77254903, b: 0.43529412, a: 1}
   grey: {r: 1, g: 1, b: 1, a: 1}
   red: {r: 0.40392157, g: 0.1764706, b: 0.1764706, a: 1}
+  tooltipManager: {fileID: 0}
+--- !u!114 &2486234812726097304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015844634203947605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8870529825230689357}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: Highlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8870529825230689357}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: UnHighlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3442318116405223931
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +439,7 @@ GameObject:
   - component: {fileID: 5529305686852769042}
   - component: {fileID: 8942194641317494814}
   - component: {fileID: 2909527097920186337}
+  - component: {fileID: 7797672023180788023}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -533,6 +581,52 @@ MonoBehaviour:
   green: {r: 0.43529412, g: 0.77254903, b: 0.43529412, a: 1}
   grey: {r: 1, g: 1, b: 1, a: 1}
   red: {r: 0.40392157, g: 0.1764706, b: 0.1764706, a: 1}
+  tooltipManager: {fileID: 0}
+--- !u!114 &7797672023180788023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442318116405223931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2909527097920186337}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: Highlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2909527097920186337}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: UnHighlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4617107270222429671
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +791,7 @@ GameObject:
   - component: {fileID: 8894245375967624372}
   - component: {fileID: 4274919065414785181}
   - component: {fileID: 2296802038691130970}
+  - component: {fileID: 981563423945474533}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -838,6 +933,52 @@ MonoBehaviour:
   green: {r: 0.43529412, g: 0.77254903, b: 0.43529412, a: 1}
   grey: {r: 1, g: 1, b: 1, a: 1}
   red: {r: 0.40392157, g: 0.1764706, b: 0.1764706, a: 1}
+  tooltipManager: {fileID: 0}
+--- !u!114 &981563423945474533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955710783863316007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2296802038691130970}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: Highlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2296802038691130970}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: UnHighlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6070412206601565675
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +992,7 @@ GameObject:
   - component: {fileID: 5811406062495139956}
   - component: {fileID: 861706515276156147}
   - component: {fileID: 4965524192585407101}
+  - component: {fileID: 4183018592294081998}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -992,6 +1134,52 @@ MonoBehaviour:
   green: {r: 0.43529412, g: 0.77254903, b: 0.43529412, a: 1}
   grey: {r: 1, g: 1, b: 1, a: 1}
   red: {r: 0.40392157, g: 0.1764706, b: 0.1764706, a: 1}
+  tooltipManager: {fileID: 0}
+--- !u!114 &4183018592294081998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6070412206601565675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4965524192585407101}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: Highlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4965524192585407101}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: UnHighlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6570973561601157796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,6 +1193,7 @@ GameObject:
   - component: {fileID: 1493068127248147234}
   - component: {fileID: 5493568867479913088}
   - component: {fileID: 624352168280541881}
+  - component: {fileID: 57019513112531647}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1146,6 +1335,52 @@ MonoBehaviour:
   green: {r: 0.43529412, g: 0.77254903, b: 0.43529412, a: 1}
   grey: {r: 1, g: 1, b: 1, a: 1}
   red: {r: 0.40392157, g: 0.1764706, b: 0.1764706, a: 1}
+  tooltipManager: {fileID: 0}
+--- !u!114 &57019513112531647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570973561601157796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 624352168280541881}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: Highlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 624352168280541881}
+          m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+          m_MethodName: UnHighlight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6575159271562343052
 GameObject:
   m_ObjectHideFlags: 0

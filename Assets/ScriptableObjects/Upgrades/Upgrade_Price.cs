@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Upgrade", menuName = "Create/Upgrade/New Inventory Upgrade")]
-public class Upgrade_Inventory : UpgradeObject
+public class Upgrade_Price : UpgradeObject
 {
-    public Inventory inventory;
+    public float priceMultiplier;
 
     public override void PerformAction()
     {
-        inventory.SyncWithNewInventory(PlayerManager.instance.playerInventory);
+        PlayerManager.instance.priceUpgrade = this;
     }
 
-    public override void FillTooltip() { }
+    public override void FillTooltip() 
+    {
+    
+    }
 }

@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e58748c14c44fc47a92675cf4b75b0b, type: 3}
-  m_Name: U_16SlotInventory
+  m_Script: {fileID: 11500000, guid: 245adefd422dc6845a2837cba2a86c53, type: 3}
+  m_Name: U_Harvest1
   m_EditorClassIdentifier: 
-  upgradeName: Medium Cart
-  upgradeDescription: Further increase inventory space to 16 slots.
+  upgradeName: Harvest Boost
+  upgradeDescription: +5% chance to harvest 1 extra item.
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
-    requiredAmount: 30
-  - requiredItem: {fileID: 11400000, guid: 7387210ca915e724787dffdc8597b6f3, type: 2}
     requiredAmount: 6
-  inventory: {fileID: 11400000, guid: 94cf7bf97ef2b6045b3ed17a7171db77, type: 2}
+  effectChance: 5
+  extraHarvestAmount: 1

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UpgradeButton : MonoBehaviour
 {
+    public RectTransform rect;
+    Vector2 position;
     public bool purchased = false;
     public UpgradeObject upgrade;
     public UpgradeButton nextUpgrade;
@@ -13,6 +15,16 @@ public class UpgradeButton : MonoBehaviour
     public Color green;
     public Color grey;
     public Color red;
+    public UpgradeTooltipManager tooltipManager;
+    bool displayTooltip = true;
+
+    private void Start()
+    {
+        rect = GetComponent<RectTransform>();
+        position = rect.position;
+        position.y = rect.position.y;
+        //position.x += 100;
+    }
 
     public void PurchaseUpgrade() {
         if (purchased)
@@ -31,10 +43,30 @@ public class UpgradeButton : MonoBehaviour
                 nextUpgrade.buttonIcon.color = grey;
             }
             upgrade.PerformAction();
+            UnHighlight();
+            displayTooltip = false;
         }
         else
         {
             Debug.Log("No Assigned Upgrade");
         }
+    }
+
+    public void Highlight()
+    {
+        if (!displayTooltip)
+        {
+            return;
+        }
+        tooltipManager.ShowTooltip(upgrade, new Vector2(rect.position.x -225, rect.position.y));
+    }
+
+    public void UnHighlight()
+    {
+        if (!displayTooltip)
+        {
+            return;
+        }
+        tooltipManager.HideTooltip();
     }
 }

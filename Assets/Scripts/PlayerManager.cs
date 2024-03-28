@@ -13,6 +13,10 @@ public class PlayerManager : MonoBehaviour
     public PlayerFollow playerFollow;
     public DeathCanvas deathCanvas;
 
+    [Header("Upgrades")]
+    public UpgradeObject priceUpgrade;
+    public UpgradeObject harvestUpgrade;
+
     [Header("Inventory")]
     public Inventory playerInventory;
     public Inventory newInventory;
