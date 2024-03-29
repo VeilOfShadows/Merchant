@@ -36,7 +36,7 @@ namespace DitzelGames.FastIK
             HandTarget.rotation = Quaternion.Lerp(Quaternion.Euler(90, 0, 0), HandTarget.rotation, normDist);
             HandTarget.position = Vector3.Lerp(Attraction.position, HandTarget.position, normDist);
             HandPole.position = Vector3.Lerp(HandTarget.position + Vector3.down * 2, HandTarget.position + Vector3.forward * 2f, normDist);
-            LookTarget.position = Vector3.Lerp(Attraction.position, LookTarget.position, normDist);
+            //LookTarget.position = Vector3.Lerp(Attraction.position, LookTarget.position, normDist);
 
 
         }
