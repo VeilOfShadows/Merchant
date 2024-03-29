@@ -13,6 +13,8 @@ public class CartWobble : MonoBehaviour
     public float maxXRotation;
     Vector3 positionClamp;
     float zPos;
+    float zClamp;
+    public float checkDistance;
 
     private void Start()
     {
@@ -23,31 +25,33 @@ public class CartWobble : MonoBehaviour
     {
         //Quaternion targetRotation = Quaternion.LookRotation(target.position - aim.position);
         //float xRotation = targetRotation.eulerAngles.x;
-        Vector3 targetVector = (target.position - aim.position).normalized;
+        //Vector3 targetVector = (target.position - aim.position).normalized;
         //float xRotation = 0;
-        if (aim.position.y > target.position.y)
+        if (target.position.y - aim.position.y > checkDistance || target.position.y - aim.position.y < -checkDistance)
         {
-            if (!(xRotation > maxXRotation) || !(xRotation < -maxXRotation))
+            if (aim.position.y > target.position.y)
             {
-                xRotation+= .3f;
+                if (!(xRotation > maxXRotation) || !(xRotation < -maxXRotation))
+                {
+                    xRotation+= .4f;
+                }
             }
-        }
-        else
-        {
-            if (!(xRotation > maxXRotation) || !(xRotation < -maxXRotation))
+            else
             {
-                xRotation -= .3f;
+                if (!(xRotation > maxXRotation) || !(xRotation < -maxXRotation))
+                {
+                    xRotation -= .4f;
+                }
             }
-        }
-        //xRotation = scale * (aim.position.y - target.position.y);
-        float zClamp;
-        if (transform.eulerAngles.z > 50 || transform.eulerAngles.z < -50)
-        {
-            zClamp = 0;
-        }
-        else
-        {
-            zClamp = transform.eulerAngles.z;
+            //xRotation = scale * (aim.position.y - target.position.y);
+            if (transform.eulerAngles.z > 50 || transform.eulerAngles.z < -50)
+            {
+                zClamp = 0;
+            }
+            else
+            {
+                zClamp = transform.eulerAngles.z;
+            }
         }
         //else if (zClamp < -50)
         //{
