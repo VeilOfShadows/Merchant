@@ -50,7 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   amount: 0
-  playerInventory: {fileID: 0}
   interactableObject: {fileID: 0}
   vfx: {fileID: 0}
   respawn: 0
@@ -74,7 +73,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e38bb1bdb6b844447a78e659e1844096, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
