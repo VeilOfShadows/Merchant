@@ -17,6 +17,7 @@ public class UpgradeButton : MonoBehaviour
     public Color red;
     public UpgradeTooltipManager tooltipManager;
     bool displayTooltip = true;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -45,6 +46,7 @@ public class UpgradeButton : MonoBehaviour
             {
                 PlayerManager.instance.playerInventory.FindItemInInventory(upgrade.requiredItems[i].requiredItem.data).RemoveAmount(upgrade.requiredItems[i].requiredAmount);
             }
+            audioSource.Play();
             upgrade.PerformAction();
             UnHighlight();
             displayTooltip = false;
@@ -70,6 +72,7 @@ public class UpgradeButton : MonoBehaviour
 
     public void Highlight()
     {
+        audioSource.Play();
         if (!displayTooltip) { return; }
         if (upgrade == null) { return; }
 
