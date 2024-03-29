@@ -14,7 +14,7 @@ public class LookTargetPositioner : MonoBehaviour
     {
         if (look)
         {
-            
+            transform.LookAt(targetTransform);
         }
         
     }
