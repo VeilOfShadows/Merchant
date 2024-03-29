@@ -36,18 +36,28 @@ public class UpgradeTooltipManager : MonoBehaviour
             if (upgrade.requiredItems[i].requiredItem == coinObject)
             {
                 coinImage.transform.parent.gameObject.SetActive(true);
-                coinImage.sprite = coinObject.data.uiDisplay;
                 InventorySlot coin = PlayerManager.instance.playerInventory.FindItemInInventory(upgrade.requiredItems[i].requiredItem.data);
-                coinText.text = coin.amount + "/" + upgrade.requiredItems[i].requiredAmount.ToString();
-                if (coin.amount < upgrade.requiredItems[i].requiredAmount)
+                if (coin != null)
                 {
-                    coinText.color = red;
-                    coinImage.color = red;
+                    coinText.text = coin.amount + "/" + upgrade.requiredItems[i].requiredAmount.ToString();
+                    coinImage.sprite = coinObject.data.uiDisplay;
+                    if (coin.amount < upgrade.requiredItems[i].requiredAmount)
+                    {
+                        coinText.color = red;
+                        //coinImage.color = red;
+                    }
+                    else
+                    {
+                        coinText.color = grey;
+                        //coinImage.color = grey;
+                    }
                 }
                 else
                 {
-                    coinText.color = grey;
-                    coinImage.color = grey;
+                    coinText.text = 0 + "/" + upgrade.requiredItems[i].requiredAmount.ToString();
+                    coinImage.sprite = coinObject.data.uiDisplay;
+                    coinText.color = red;
+                    //coinImage.color = red;
                 }
             }
             else
@@ -62,12 +72,12 @@ public class UpgradeTooltipManager : MonoBehaviour
                     if (temp.amount < upgrade.requiredItems[i].requiredAmount)
                     {
                         requiredItemObjects[i].GetComponentInChildren<TextMeshProUGUI>().color = red;
-                        requiredItemObjects[i].GetComponentInChildren<Image>().color = red;
+                        //requiredItemObjects[i].GetComponentInChildren<Image>().color = red;
                     }
                     else
                     {
                         requiredItemObjects[i].GetComponentInChildren<TextMeshProUGUI>().color = grey;
-                        requiredItemObjects[i].GetComponentInChildren<Image>().color = grey;
+                        //requiredItemObjects[i].GetComponentInChildren<Image>().color = grey;
                     }
                 }
                 else
@@ -76,7 +86,7 @@ public class UpgradeTooltipManager : MonoBehaviour
                     requiredItemObjects[i].GetComponentInChildren<Image>().sprite = upgrade.requiredItems[i].requiredItem.data.uiDisplay;
                     
                     requiredItemObjects[i].GetComponentInChildren<TextMeshProUGUI>().color = red;
-                    requiredItemObjects[i].GetComponentInChildren<Image>().color = red;                    
+                    //requiredItemObjects[i].GetComponentInChildren<Image>().color = red;                    
                 }
             }
         }

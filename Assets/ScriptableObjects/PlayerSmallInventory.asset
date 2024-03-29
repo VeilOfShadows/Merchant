@@ -25,9 +25,9 @@ MonoBehaviour:
         uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
         stackable: 1
         tradeable: 0
-        nutritionalValue: -1
-      slotWeight: 0.4
-      amount: 2
+        nutritionalValue: 0
+      slotWeight: 7.2000003
+      amount: 36
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -127,5 +127,6 @@ MonoBehaviour:
       slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
-  totalWeight: 1.9
+  totalWeight: 8.700001
   coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
+  demandItems: []
