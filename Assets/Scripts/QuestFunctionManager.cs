@@ -13,6 +13,8 @@ public class QuestFunctionManager : MonoBehaviour
     public GameObject lakeviewBridgeRoad;
     public GameObject lakeviewBridgeBroken;
     public GameObject lakeviewBridgeRepaired;
+    public CharacterDialogue carpenterController;
+    public DialogueContainerSO carpenterDefaultUpgradeController;
 
     private void Awake()
     {
@@ -43,5 +45,11 @@ public class QuestFunctionManager : MonoBehaviour
         lakeviewBridgeBroken.SetActive(false);
         lakeviewBridgeRepaired.SetActive(true);
         lakeviewBridgeRoad.SetActive(true);
+    }
+
+    //Unlock Upgrades
+    void Quest1b()
+    {
+        carpenterController.defaultDialogue = carpenterDefaultUpgradeController;
     }
 }

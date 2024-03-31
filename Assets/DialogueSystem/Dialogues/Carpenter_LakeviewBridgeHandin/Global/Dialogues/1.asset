@@ -23,7 +23,7 @@ MonoBehaviour:
     <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
       type: 2}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-  - <text>k__BackingField: Where was he again?
+  - <text>k__BackingField: Yeah about those upgrades...
     <nextDialogue>k__BackingField: {fileID: 11400000, guid: faa477b32add7a044a2ef4bef6cc9f2a,
       type: 2}
     <action>k__BackingField: 0

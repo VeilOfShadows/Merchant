@@ -46,6 +46,8 @@ public class DialogueUIManager : MonoBehaviour
     //}
 
     public void StartDialogue(CharacterDialogueController activeDialogue) {
+        PlayerManager.instance.DeactivateUI();
+
         dialogueChoicePanel.ClearButtons();
         dialogueText.text = "";
         npcNameText.text = "";

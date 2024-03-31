@@ -16,7 +16,7 @@ MonoBehaviour:
   questName: Deliver the lumber order
   questDescription: Oswald has provided me with the lumber order for the Lakeview
     bridge repair. I should bring it to Richard in Thistlewood forest.
-  questStatus: 2
+  questStatus: 0
   startActions:
   - action: 1
     item: {fileID: 11400000, guid: 16aa0e3bb9abf854db3ceffc921f8c8c, type: 2}
@@ -25,4 +25,8 @@ MonoBehaviour:
   itemRequirement:
   - requiredItem: {fileID: 11400000, guid: 16aa0e3bb9abf854db3ceffc921f8c8c, type: 2}
     requiredAmount: 1
-  completeActions: []
+  completeActions:
+  - action: 2
+    item: {fileID: 0}
+    itemAmount: 0
+    fuctionID: 1b

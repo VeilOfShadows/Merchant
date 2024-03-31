@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,11 +8,10 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
 
-    public PlayerSOConnections so;
+    //public PlayerSOConnections so;
     public PlayerControls playerControls;
     public TownController respawnLocation;
     public PlayerFollow playerFollow;
-    public DeathCanvas deathCanvas;
 
     [Header("Upgrades")]
     public UpgradeObject priceUpgrade;
@@ -34,9 +34,12 @@ public class PlayerManager : MonoBehaviour
     public UserInterface playerInventoryUI;
     public GameObject merchantUI;
     public UserInterface merchantInventoryUI;
+    public GameObject upgradeUI;
 
+    [Header("Misc")]
     public GameObject playerCartFire;
     public AudioTracker currentAudioTrackerZone;
+    public DeathCanvas deathCanvas;
 
     private void Awake()
     {
@@ -111,8 +114,8 @@ public class PlayerManager : MonoBehaviour
         //playerInventoryUI.SyncMarketPrices();
         //merchantInventoryUI.SyncMarketPrices();
 
-        playerUI.GetComponentInChildren<UserInterface>().merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
-        playerUI.GetComponentInChildren<UserInterface>().inShop = true;
+        //playerInventoryUI.merchantInterface = merchantUI.GetComponentInChildren<MerchantInventoryInterface>();
+        playerInventoryUI.inShop = true;
         DialogueUIManager.instance.EndDialogue();
     }
 
@@ -122,9 +125,27 @@ public class PlayerManager : MonoBehaviour
         inDialogue = false;
         playerUI.SetActive(false);
         merchantUI.SetActive(false);
-        playerUI.GetComponentInChildren<UserInterface>().merchantInterface = null;
-        playerUI.GetComponentInChildren<UserInterface>().inShop = false;
+        //playerInventoryUI.merchantInterface = null;
+        playerInventoryUI.inShop = false;
         //currentVendor.ExitShop();
+    }
+
+    public void OpenUpgradeMenu() { 
+        upgradeUI.SetActive(true);
+        playerUI.SetActive(true);
+        playerInventoryUI.SyncNew(playerInventory);
+    }
+
+    public void CloseUpgradeMenu()
+    {
+        upgradeUI.SetActive(false);
+        ExitShop();
+    }
+
+    public void DeactivateUI() {
+        upgradeUI.SetActive(false);
+        playerUI.SetActive(false);
+        merchantUI.SetActive(false);
     }
     #endregion
 

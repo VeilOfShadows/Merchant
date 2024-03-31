@@ -57,7 +57,7 @@ MonoBehaviour:
       <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
         type: 2}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    - <text>k__BackingField: Where was he again?
+    - <text>k__BackingField: Yeah about those upgrades...
       <nodeID>k__BackingField: 90e6ca69-ba68-4d3d-91bb-1a5c6816ee4d
       <action>k__BackingField: 0
       <questStartingPoint>k__BackingField: {fileID: 0}
@@ -69,12 +69,11 @@ MonoBehaviour:
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 90e6ca69-ba68-4d3d-91bb-1a5c6816ee4d
     <name>k__BackingField: 2b
-    <text>k__BackingField: He should be in <Lakeview. the bridge is out so you might
-      have to go around the lake.
+    <text>k__BackingField: A deal is a deal. What are you after?
     <choices>k__BackingField:
-    - <text>k__BackingField: Thank you
+    - <text>k__BackingField: Open Upgrade Menu
       <nodeID>k__BackingField: 
-      <action>k__BackingField: 0
+      <action>k__BackingField: 4
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}

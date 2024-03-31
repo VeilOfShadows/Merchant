@@ -6,6 +6,7 @@ public enum DialogueActions {
     OpenShop,
     AcceptQuest,
     CompleteQuest,
+    OpenUpgrades,
     //HandInQuest
 }
 
@@ -108,6 +109,9 @@ public class DialogueFunctionManager : MonoBehaviour
                 }
                 break;
 
+            case DialogueActions.OpenUpgrades:
+                OpenUpgrades();
+                break;
             //case DialogueActions.HandInQuest:
             //    questDatabase.SetQuestStatus(handInQuest.questID, QuestStatus.HandedIn);
             //    break;
@@ -136,5 +140,10 @@ public class DialogueFunctionManager : MonoBehaviour
     public void OpenShop()
     {
         PlayerManager.instance.EnterShop();
+    }
+
+    public void OpenUpgrades()
+    {
+        PlayerManager.instance.OpenUpgradeMenu();
     }
 }

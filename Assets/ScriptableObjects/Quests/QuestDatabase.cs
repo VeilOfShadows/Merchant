@@ -38,6 +38,16 @@ public class QuestDatabase : ScriptableObject
         }
     }
 
+    [ContextMenu("Sync Completion")]
+    public void SyncCompletion()
+    {
+        for (int i = 0; i < quests.Length; i++)
+        {
+            //quests[i].questStatus = QuestStatus.NotStarted;
+            quests[i].quest.questStatus = quests[i].questStatus;
+        }
+    }
+
     public QuestSO FindItem(int _questID)
     {
         for (int i = 0; i < quests.Length; i++)

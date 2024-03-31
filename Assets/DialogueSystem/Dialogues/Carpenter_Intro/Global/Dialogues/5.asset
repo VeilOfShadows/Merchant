@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89d0c903b18ab5b4dadd0b2853e6318b, type: 3}
-  m_Name: 2b
+  m_Name: 5
   m_EditorClassIdentifier: 
-  <dialogueName>k__BackingField: 2b
-  <text>k__BackingField: A deal is a deal. What are you after?
+  <dialogueName>k__BackingField: 5
+  <text>k__BackingField: Well that cart of yours looks like it needs some work. If
+    you help me arrange this repair I could kit it out with a few new upgrades perhaps?
   <choices>k__BackingField:
-  - <text>k__BackingField: Open Upgrade Menu
-    <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 4
+  - <text>k__BackingField: That works for me
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: 6903091e25e838e478547ab0a5d7762f,
+      type: 2}
+    <action>k__BackingField: 0
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}

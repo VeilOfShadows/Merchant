@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d435609829a104c408e0b7c3e00fe82e, type: 3}
-  m_Name: WB_DefaultGraph
+  m_Name: Carpenter_Default_UpgradeGraph
   m_EditorClassIdentifier: 
-  <fileName>k__BackingField: WB_Default
+  <fileName>k__BackingField: Carpenter_Default_Upgrade
   <groups>k__BackingField: []
   <nodes>k__BackingField:
-  - <ID>k__BackingField: afcce178-cff0-4b34-95e0-6b48aa56c931
+  - <ID>k__BackingField: e26fd56e-eb17-4bde-bd7f-66d12e3678e9
     <name>k__BackingField: DialogueName
-    <text>k__BackingField: Ahh it's you again! Can I get you anything?
+    <text>k__BackingField: Welcome back traveller, what'll it be?
     <choices>k__BackingField:
-    - <text>k__BackingField: Do you have anything to trade?
+    - <text>k__BackingField: Open Upgrades Menu
       <nodeID>k__BackingField: 
-      <action>k__BackingField: 1
+      <action>k__BackingField: 4
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 774, y: -171}
+    <position>k__BackingField: {x: 477, y: 490}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:

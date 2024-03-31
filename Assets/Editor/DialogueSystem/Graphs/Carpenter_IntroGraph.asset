@@ -30,22 +30,6 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 2073, y: -161}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: eee081c3-29ec-4a46-a9d3-24f740e4dcb4
-    <name>k__BackingField: 4
-    <text>k__BackingField: I see so it's been destroyed... That explains why <Willowberry
-      has been so stingy with their berry supply lately. Not a problem, if you can
-      go and assess the damages then I can collect some wood for the repairs.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Is this going to be expensive? I don't have much coin
-      <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2728, y: -161}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 7b8886c6-0c5d-491d-b0b4-8c0793fd340b
     <name>k__BackingField: Start
     <text>k__BackingField: If you've come to collect your chairs, some goblins made
@@ -77,6 +61,53 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 1405, y: -88}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: eee081c3-29ec-4a46-a9d3-24f740e4dcb4
+    <name>k__BackingField: 4
+    <text>k__BackingField: I see so it's been destroyed... That explains why <Willowberry
+      has been so stingy with their berry supply lately. Not a problem, if you can
+      go and assess the damages then I can collect some wood for the repairs.
+    <choices>k__BackingField:
+    - <text>k__BackingField: What's in it for me?
+      <nodeID>k__BackingField: f5968d33-7610-452e-b9d9-768c6676b82a
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2728, y: -161}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: f5968d33-7610-452e-b9d9-768c6676b82a
+    <name>k__BackingField: 5
+    <text>k__BackingField: Well that cart of yours looks like it needs some work.
+      If you help me arrange this repair I could kit it out with a few new upgrades
+      perhaps?
+    <choices>k__BackingField:
+    - <text>k__BackingField: That works for me
+      <nodeID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 3385, y: -161}
+    <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 28ab4dff-3552-4e36-9a1f-8939ac9efe41
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: The bridge is out so your best bet is to go around <Starlight
+      <Lake. If you follow the road to <Lakeview and head >south when you see water.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 4752, y: -57}
+    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
     <name>k__BackingField: Quest
     <text>k__BackingField: My brother *Oswald in <Lakeview is a builder. He might
@@ -98,30 +129,16 @@ MonoBehaviour:
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 3407, y: -174}
-    <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 28ab4dff-3552-4e36-9a1f-8939ac9efe41
-    <name>k__BackingField: DialogueName
-    <text>k__BackingField: The bridge is out so your best bet is to go around <Starlight
-      <Lake. If you follow the road to <Lakeview and head >south when you see water.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Thank you
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 4114, y: -9}
+    <position>k__BackingField: {x: 4062, y: -161}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - 3
-  - 4
   - Start
   - 2
-  - Quest
+  - 4
+  - 5
   - DialogueName
+  - Quest
   <oldGroupedNodeNames>k__BackingField:
     list: []
