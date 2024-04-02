@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class LookTargetPositioner : MonoBehaviour
 {
+    public Transform lookTransform;
     public Transform targetTransform;
     public bool look;
     public float rotationSpeed;
@@ -14,7 +15,7 @@ public class LookTargetPositioner : MonoBehaviour
     {
         if (look)
         {
-            transform.LookAt(targetTransform);
+            lookTransform.LookAt(targetTransform);
         }
         
     }

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: WB_Default
   m_EditorClassIdentifier: 
   <npcName>k__BackingField: Oliver
+  <npcIcon>k__BackingField: {fileID: 21300000, guid: 92be2b3f8b44ee5428607cf972678cce,
+    type: 3}
   <fileName>k__BackingField: WB_Default
   <dialogueGroups>k__BackingField:
     list: []

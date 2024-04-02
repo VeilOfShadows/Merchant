@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Granny_Fetch
   m_EditorClassIdentifier: 
   <npcName>k__BackingField: Granny
+  <npcIcon>k__BackingField: {fileID: 21300000, guid: d8766f8325c49894aaec73873d5715a7,
+    type: 3}
   <fileName>k__BackingField: Granny_Fetch
   <dialogueGroups>k__BackingField:
     list: []

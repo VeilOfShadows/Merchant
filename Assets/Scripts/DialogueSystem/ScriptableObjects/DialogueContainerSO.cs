@@ -11,6 +11,7 @@ public struct QuestPrerequisites {
 public class DialogueContainerSO : ScriptableObject
 {
     [field: SerializeField]public string npcName { get; set; }
+    [field: SerializeField]public Sprite npcIcon { get; set; }
     [field: SerializeField]public string fileName { get; set; }
     [field: SerializeField]public SerializableDictionary<DialogueGroupSO, List<DialogueSO>> dialogueGroups { get; set; }
     [field: SerializeField]public List<DialogueSO> ungroupedDialogues { get; set; }

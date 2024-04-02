@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class DialogueUIManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class DialogueUIManager : MonoBehaviour
     public DialogueSO currentDialogue;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI npcNameText;
+    public Image npcIcon;
 
     public GameObject dialoguePanel;
     public DialogueChoicePanel dialogueChoicePanel;
@@ -93,6 +95,7 @@ public class DialogueUIManager : MonoBehaviour
         float lastSoundTime = -minTimeBetweenSounds;
 
         npcNameText.text = activeDialogue.dialogue.dialogueContainer.npcName;
+        npcIcon.sprite = activeDialogue.dialogue.dialogueContainer.npcIcon;
 
         //DOTween.Kill(textTween);
         if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
