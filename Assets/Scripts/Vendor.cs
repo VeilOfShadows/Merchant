@@ -57,7 +57,7 @@ public class Vendor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerManager.instance.currentVendor = null;
-            PlayerManager.instance.merchantInventory.inventory = null;
+            PlayerManager.instance.merchantInventory.syncedInventory = null;
             PlayerManager.instance.inRangeOfShop = false;
             PlayerManager.instance.ExitShop();
             DialogueUIManager.instance.EndDialogue();
