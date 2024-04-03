@@ -13,6 +13,7 @@ public class DialogueUIManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI npcNameText;
     public Image npcIcon;
+    public Sprite defaultIcon;
 
     public GameObject dialoguePanel;
     public DialogueChoicePanel dialogueChoicePanel;
@@ -89,13 +90,13 @@ public class DialogueUIManager : MonoBehaviour
 
         activeDialogue.dialogue.SelectDialogues();
         currentDialogue = activeDialogue.FindStartingDialogue();
+        npcNameText.text = activeDialogue.dialogue.dialogueContainer.npcName;
+        npcIcon.sprite = activeDialogue.dialogue.dialogueContainer.npcIcon;
         dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
 
         minTimeBetweenSounds = Random.Range(.08f, .1f);
         float lastSoundTime = -minTimeBetweenSounds;
 
-        npcNameText.text = activeDialogue.dialogue.dialogueContainer.npcName;
-        npcIcon.sprite = activeDialogue.dialogue.dialogueContainer.npcIcon;
 
         //DOTween.Kill(textTween);
         if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
@@ -122,6 +123,7 @@ public class DialogueUIManager : MonoBehaviour
         }
         textAudioSource.Stop();
         dialoguePanel.SetActive(false);
+        npcIcon.sprite = defaultIcon;
     }
 
     public void NextDialogue(DialogueSO nextDialogue)
