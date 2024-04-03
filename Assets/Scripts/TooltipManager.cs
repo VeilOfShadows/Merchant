@@ -41,7 +41,14 @@ public class TooltipManager : MonoBehaviour
         int temp = PriceManager.instance.GetAdjustedPrice(_item);
         if (temp == _item.baseCoinValue) 
         {
-            itemNutritionalValue.text = "-";
+            if (_item.itemType != ItemType.Consumable)
+            {
+                itemNutritionalValue.text = "-";
+            }
+            else
+            {
+                itemNutritionalValue.text = _item.nutritionalValue.ToString();
+            }
             itemCoinValue.text = temp.ToString();
             positioner.offset.x = xoffset;
             tooltip.SetActive(true);
