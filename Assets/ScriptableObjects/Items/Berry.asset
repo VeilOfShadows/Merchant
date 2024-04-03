@@ -16,7 +16,7 @@ MonoBehaviour:
     itemName: Berry
     itemType: 1
     itemID: 4
-    baseCoinValue: 1
+    baseCoinValue: 100
     weight: 0.2
     uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
     stackable: 1

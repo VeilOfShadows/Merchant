@@ -14,8 +14,8 @@ public class PlayerManager : MonoBehaviour
     public PlayerFollow playerFollow;
 
     [Header("Upgrades")]
-    public UpgradeObject priceUpgrade;
-    public UpgradeObject harvestUpgrade;
+    public Upgrade_Price priceUpgrade;
+    public Upgrade_Harvest harvestUpgrade;
 
     [Header("Inventory")]
     public Inventory playerInventory;
@@ -49,6 +49,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        playerInventory.Sync();
+    }
     private void Update()
     {
         if (inRangeOfShop)
@@ -104,6 +108,7 @@ public class PlayerManager : MonoBehaviour
     #region Shop Methods
     public void EnterShop() 
     {
+        Debug.Log("E");
         //merchantInventory.SyncNewInventory();
         inShop = true;
         playerUI.SetActive(true);

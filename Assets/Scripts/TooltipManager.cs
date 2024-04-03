@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TooltipManager : MonoBehaviour
 {
+    public static TooltipManager instance;
     public GameObject tooltip;
     public TooltipPositioner positioner;
     public TextMeshProUGUI itemName;
@@ -15,50 +16,77 @@ public class TooltipManager : MonoBehaviour
     public Color green;
     public Color red;
     public TextMeshProUGUI itemNutritionalValue;
+    public Upgrade_Price playerPriceUpgrade;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this; 
+        }
+    }
 
     public void ShowTooltip(Item _item, float xoffset, bool isPlayer) {
         itemName.text = _item.itemName;
         itemType.text = _item.itemType.ToString();
-        //itemDescription.text = _item.
-
-        if (PriceManager.instance.CheckIfPriceIsModified(_item))
+        
+        if (!_item.tradeable || _item.itemType == ItemType.QuestItem)
         {
-            itemPriceMultiplierValue.gameObject.SetActive(true);
-            itemCoinValue.text = PriceManager.instance.GetAdjustedPrice(_item).ToString();
+            itemNutritionalValue.text = "-";
+            itemCoinValue.text = "-";
+            positioner.offset.x = xoffset;
+            tooltip.SetActive(true);
+            return;
+        }
+        int temp = PriceManager.instance.GetAdjustedPrice(_item);
+        if (temp == _item.baseCoinValue) 
+        {
+            itemNutritionalValue.text = "-";
+            itemCoinValue.text = temp.ToString();
+            positioner.offset.x = xoffset;
+            tooltip.SetActive(true);
+            return;
+        }
 
-            if (PriceManager.instance.CheckHigherOrLower(_item))
+        itemPriceMultiplierValue.gameObject.SetActive(true);
+        itemCoinValue.text = PriceManager.instance.GetAdjustedPrice(_item).ToString();
+
+        if (PriceManager.instance.CheckHigherOrLower(_item))
+        {
+            if (isPlayer)
             {
-                if (isPlayer)
-                {
-                    itemPriceMultiplierValue.color = green;
-                    itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item) + "%");
-                }
-                else
-                {
-                    itemPriceMultiplierValue.color = red;
-                    itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item) + "%");
-                }
+                itemPriceMultiplierValue.color = green;
+                itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item) + "%");
             }
             else
             {
-                if (isPlayer)
-                {
-                    itemPriceMultiplierValue.color = red;
-                    itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item) + "%");
-                }
-                else
-                {
-                    itemPriceMultiplierValue.color = green;
-                    itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item) + "%");
-                }
+                itemPriceMultiplierValue.color = red;
+                itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item) + "%");
             }
         }
         else
         {
-            itemCoinValue.text = _item.baseCoinValue.ToString();
+            if (isPlayer)
+            {
+                itemPriceMultiplierValue.color = red;
+                itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item) + "%");
+            }
+            else
+            {
+                itemPriceMultiplierValue.color = green;
+                itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item) + "%");
+            }
         }
 
-        itemNutritionalValue.text = _item.nutritionalValue.ToString();
+        if (_item.itemType != ItemType.Consumable)
+        {
+            itemNutritionalValue.text = "-";
+        }
+        else
+        {
+            itemNutritionalValue.text = _item.nutritionalValue.ToString();
+        }        
+
         positioner.offset.x = xoffset;
         tooltip.SetActive(true);
     }

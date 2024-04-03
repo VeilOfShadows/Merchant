@@ -8,6 +8,7 @@ public class PriceManager : MonoBehaviour
     public static PriceManager instance;
     public List<ItemPriceMultiplier> modifiedItems = new List<ItemPriceMultiplier>();
     public ItemDatabase itemDatabase;
+    public Upgrade_Price playerPriceUpgrade;
 
     private void Awake()
     {
@@ -33,11 +34,11 @@ public class PriceManager : MonoBehaviour
     //true = higher, false = lower;
     public bool CheckHigherOrLower(Item _item)
     {
-        for (int i = 0; i < modifiedItems.Count; i++)
-        {
-            if (_item.itemID == modifiedItems[i].item.data.itemID)
-            {
-                if (modifiedItems[i].priceMultiplierPercent > 0)
+        //for (int i = 0; i < modifiedItems.Count; i++)
+        //{
+        //    if (_item.itemID == modifiedItems[i].item.data.itemID)
+        //    {
+                if (GetModifier(_item) > 0)
                 {
                     //price is higher
                     return true;
@@ -45,12 +46,20 @@ public class PriceManager : MonoBehaviour
                 else
                 {
                     //price is lower
+                    //if (playerPriceUpgrade != null)
+                    //{
+                    //    float temp = Mathf.RoundToInt(_item.baseCoinValue * ((playerPriceUpgrade.priceMultiplier + 100) / 100));
+                    //    if (temp )
+                    //    {
+
+                    //    }
+                    //}
                     return false;
                 }
-            }
-        }
+        //    }
+        //}
         //false == lower
-        return false;
+        //return false;
     }
 
     public int GetAdjustedPrice(Item _item)
@@ -61,6 +70,17 @@ public class PriceManager : MonoBehaviour
             {
                 return modifiedItems[i].adjustedPrice;
             }
+        }
+        if (playerPriceUpgrade != null)
+        {
+            float temp = Mathf.RoundToInt(_item.baseCoinValue * ((playerPriceUpgrade.priceMultiplier + 100) / 100));
+            int clampedPrice = Mathf.CeilToInt(_item.baseCoinValue * 0.25f);
+
+            if (temp < clampedPrice)
+            {
+                temp = clampedPrice;
+            }
+            return (int)temp;
         }
         return _item.baseCoinValue;
     }
@@ -78,18 +98,30 @@ public class PriceManager : MonoBehaviour
     public void AdjustPrices()
     {
         int price;
-        int ceilPrice;
+        int playerUpgradeAdjustedPrice;
+        int demandAdjustedPrice;
+        int clampedPrice;
+        //playerPriceUpgrade = PlayerManager.instance.priceUpgrade;
 
         for (int i = 0; i < modifiedItems.Count; i++)
         {
-            price = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
-            ceilPrice = Mathf.CeilToInt(modifiedItems[i].item.data.baseCoinValue * 0.25f);
-
-            if(price < ceilPrice)
+            price = modifiedItems[i].item.data.baseCoinValue;
+            if (playerPriceUpgrade != null)
             {
-                price = ceilPrice;
+                playerUpgradeAdjustedPrice = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((-playerPriceUpgrade.priceMultiplier + 100) / 100));
+                demandAdjustedPrice = Mathf.RoundToInt(playerUpgradeAdjustedPrice * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
             }
-            modifiedItems[i].adjustedPrice = price;
+            else
+            {
+                demandAdjustedPrice = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
+            }
+            clampedPrice = Mathf.CeilToInt(modifiedItems[i].item.data.baseCoinValue * 0.25f);
+
+            if(demandAdjustedPrice < clampedPrice)
+            {
+                demandAdjustedPrice = clampedPrice;
+            }
+            modifiedItems[i].adjustedPrice = demandAdjustedPrice;
             //if (_item.itemID == modifiedItems[i].item.data.itemID)
             //{
             //    return Mathf.RoundToInt(_item.baseCoinValue * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
@@ -100,12 +132,21 @@ public class PriceManager : MonoBehaviour
 
     public int GetModifier(Item _item) 
     {
+        float adjustedPrice = GetAdjustedPrice(_item);
         for (int i = 0; i < modifiedItems.Count; i++)
         {
             if (modifiedItems[i].item.data.itemID == _item.itemID)
             {
-                return (int)modifiedItems[i].priceMultiplierPercent;
+                float temp = adjustedPrice - modifiedItems[i].item.data.baseCoinValue;
+                temp /= modifiedItems[i].item.data.baseCoinValue;
+                temp *= 100;
+                return (int)temp;
             }
+        }
+        if (playerPriceUpgrade != null)
+        {
+            return (int)playerPriceUpgrade.priceMultiplier;
+            //return priceMultiplier 
         }
         return 0;
     }
