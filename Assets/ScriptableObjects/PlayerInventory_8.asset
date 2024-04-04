@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a8e94845d8f654d9e4a5e69a8067e3, type: 3}
+  m_Name: PlayerInventory_8
+  m_EditorClassIdentifier: 
+  database: {fileID: 11400000, guid: 46fd6c57ae90bb2468edfb5e4cf290e7, type: 2}
+  container:
+    Slots:
+    - parent: {fileID: 0}
+      item:
+        itemName: Coins
+        itemType: 2
+        itemID: 3
+        baseCoinValue: 1
+        weight: 0.2
+        uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
+        stackable: 1
+        tradeable: 0
+        nutritionalValue: 0
+      slotWeight: 87.200005
+      amount: 436
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Thread
+        itemType: 2
+        itemID: 2
+        baseCoinValue: 200
+        weight: 0.1
+        uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 0
+      slotWeight: 0.3
+      amount: 3
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Berry
+        itemType: 1
+        itemID: 4
+        baseCoinValue: 100
+        weight: 0.2
+        uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 2
+      slotWeight: 1
+      amount: 5
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Fresh Lumber
+        itemType: 3
+        itemID: 1111
+        baseCoinValue: 0
+        weight: 6
+        uiDisplay: {fileID: 21300000, guid: bc51b08db53e8d348929f6786d5145da, type: 3}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: 0
+      slotWeight: 6
+      amount: 1
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Starflower
+        itemType: 2
+        itemID: 5
+        baseCoinValue: 100
+        weight: 0.3
+        uiDisplay: {fileID: 21300000, guid: da609764537e4c14d92fc20d0fa3a8e9, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 0
+      slotWeight: 0.6
+      amount: 2
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Mushroom
+        itemType: 1
+        itemID: 7
+        baseCoinValue: 200
+        weight: 0.4
+        uiDisplay: {fileID: 21300000, guid: 5e103bda7f23ea34dabf0567ff91fcca, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 5
+      slotWeight: 1.2
+      amount: 3
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Bread
+        itemType: 1
+        itemID: 0
+        baseCoinValue: 300
+        weight: 3
+        uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 8
+      slotWeight: 15
+      amount: 5
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: 
+        itemType: 0
+        itemID: -1
+        baseCoinValue: -1
+        weight: -1
+        uiDisplay: {fileID: 0}
+        stackable: 0
+        tradeable: 0
+        nutritionalValue: -1
+      slotWeight: -0
+      amount: 0
+      slotDisplay: {fileID: 0}
+  totalWeight: 111.3
+  coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
+  demandItems: []

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99294e050ab8702499ba7ca446abc2a2, type: 3}
+  m_Name: U_Speed3
+  m_EditorClassIdentifier: 
+  upgradeName: Lighter Load
+  upgradeDescription: Move an additional 15% faster
+  requiredItems:
+  - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
+    requiredAmount: 9
+  speed: 4.8

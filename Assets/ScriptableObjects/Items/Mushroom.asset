@@ -16,7 +16,7 @@ MonoBehaviour:
     itemName: Mushroom
     itemType: 1
     itemID: 7
-    baseCoinValue: 2
+    baseCoinValue: 200
     weight: 0.4
     uiDisplay: {fileID: 21300000, guid: 5e103bda7f23ea34dabf0567ff91fcca, type: 3}
     stackable: 1

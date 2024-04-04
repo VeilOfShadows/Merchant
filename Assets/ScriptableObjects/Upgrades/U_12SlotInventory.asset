@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e58748c14c44fc47a92675cf4b75b0b, type: 3}
   m_Name: U_12SlotInventory
   m_EditorClassIdentifier: 
-  upgradeName: Small Cart
-  upgradeDescription: Extra storage added to your cart. Increases carrying capacity
-    to 12 inventory slots.
+  upgradeName: Saddle Bags
+  upgradeDescription: Increase inventory size to 12 slots
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
     requiredAmount: 1

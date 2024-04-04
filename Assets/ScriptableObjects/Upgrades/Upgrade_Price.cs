@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Upgrade", menuName = "Create/Upgrade/New Price Upgrade")]
 public class Upgrade_Price : UpgradeObject
 {
-    public float priceMultiplier;
+    public float buyPriceMultiplier;
+    public float sellPriceMultiplier;
 
     public override void PerformAction()
     {

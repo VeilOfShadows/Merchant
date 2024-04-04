@@ -38,7 +38,9 @@ public class TooltipManager : MonoBehaviour
             tooltip.SetActive(true);
             return;
         }
-        int temp = PriceManager.instance.GetAdjustedPrice(_item);
+
+        int temp = PriceManager.instance.GetAdjustedPrice(_item, isPlayer? true:false);
+
         if (temp == _item.baseCoinValue) 
         {
             if (_item.itemType != ItemType.Consumable)
@@ -56,7 +58,7 @@ public class TooltipManager : MonoBehaviour
         }
 
         itemPriceMultiplierValue.gameObject.SetActive(true);
-        itemCoinValue.text = PriceManager.instance.GetAdjustedPrice(_item).ToString();
+        itemCoinValue.text = PriceManager.instance.GetAdjustedPrice(_item, isPlayer ? true : false).ToString();
 
         if (PriceManager.instance.CheckHigherOrLower(_item))
         {

@@ -20,6 +20,7 @@ public class UserInterface : MonoBehaviour
     public UserInterface playerInterface;
     public TooltipManager tooltipManager;
     public float tooltipOffset;
+    public bool isPlayer;
 
     public virtual void Awake()
     {
@@ -253,7 +254,7 @@ public class UserInterface : MonoBehaviour
             }
             else
             {
-                int buyPrice = PriceManager.instance.GetAdjustedPrice(slotsOnInterface[obj].item);
+                int buyPrice = PriceManager.instance.GetAdjustedPrice(slotsOnInterface[obj].item, isPlayer ? true : false);
                 //int buyPrice = slotsOnInterface[obj].item.baseCoinValue;
                 if (merchantInterface.syncedInventory.AttemptPurchase(slotsOnInterface[obj].item, buyPrice))
                 {                     

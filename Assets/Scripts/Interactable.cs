@@ -68,7 +68,14 @@ public class Interactable : MonoBehaviour
 
     public void CollectItem(bool singleUse = false) 
     {
-        amount = 1;
+        if (PlayerManager.instance.harvestUpgrade != null)
+        {
+            amount = 1 + PlayerManager.instance.harvestUpgrade.EffectRoll();
+        }
+        else
+        {
+            amount = 1;
+        }
         NotificationManager.instance.DisplayNotification("+ " + item.data.itemName + " x " + amount, false);
 
         collider.enabled = false;

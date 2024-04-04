@@ -18,12 +18,13 @@ public class Upgrade_Harvest : UpgradeObject
     
     }
 
-    public bool EffectRoll() {
+    public int EffectRoll() {
         int roll = Random.Range(0, 100);
+        Debug.Log(roll);
         if (roll <= effectChance)
         {
-            return true;
+            return (int)extraHarvestAmount;
         }
-        return false;
+        return 0;
     }
 }

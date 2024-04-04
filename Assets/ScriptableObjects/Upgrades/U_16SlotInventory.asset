@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e58748c14c44fc47a92675cf4b75b0b, type: 3}
   m_Name: U_16SlotInventory
   m_EditorClassIdentifier: 
-  upgradeName: Medium Cart
-  upgradeDescription: Further increase inventory space to 16 slots.
+  upgradeName: Merchandise Jenga
+  upgradeDescription: Further increase inventory size to 16 slots
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
     requiredAmount: 30
