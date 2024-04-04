@@ -16,6 +16,6 @@ MonoBehaviour:
   upgradeDescription: +5% chance to harvest 1 extra item
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
-    requiredAmount: 6
+    requiredAmount: 300
   effectChance: 5
   extraHarvestAmount: 1

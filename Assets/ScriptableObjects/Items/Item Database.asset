@@ -22,6 +22,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ffd2562a18fad0c43975428c27defda2, type: 2}
   - {fileID: 11400000, guid: 1e12fbc3c8bc59b4588a568b67c00555, type: 2}
   - {fileID: 11400000, guid: 0f9f75836549d4b47aa175d0a1974c61, type: 2}
+  - {fileID: 11400000, guid: 30b395a7e0878774cb6a732a24239d04, type: 2}
+  - {fileID: 11400000, guid: 10ece9cba6deb7949be9369c9f066e44, type: 2}
+  - {fileID: 11400000, guid: 201708957c3f93249a30fe8b58946027, type: 2}
+  - {fileID: 11400000, guid: c0e72233b70ec7b4285c813853d9c525, type: 2}
+  - {fileID: 11400000, guid: 2c767e12def27eb4c9a7fe8c88df80db, type: 2}
   questItems:
   - {fileID: 11400000, guid: 16aa0e3bb9abf854db3ceffc921f8c8c, type: 2}
   - {fileID: 11400000, guid: 6c5a10bacecb11d46bc72ec4d08053ee, type: 2}

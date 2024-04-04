@@ -16,6 +16,6 @@ MonoBehaviour:
   upgradeDescription: Sell items for up to 10% more
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
-    requiredAmount: 1
+    requiredAmount: 600
   buyPriceMultiplier: 1
   sellPriceMultiplier: 0.55

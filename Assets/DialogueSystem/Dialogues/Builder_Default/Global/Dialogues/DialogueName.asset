@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: DialogueName
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: DialogueName
-  <text>k__BackingField: Any building needs doing?
+  <text>k__BackingField: Need materials?
   <choices>k__BackingField:
-  - <text>k__BackingField: Leave
+  - <text>k__BackingField: Open Shop
     <nextDialogue>k__BackingField: {fileID: 0}
-    <action>k__BackingField: 0
+    <action>k__BackingField: 1
     <questStartingPoint>k__BackingField: {fileID: 0}
-    <questHandinPoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
