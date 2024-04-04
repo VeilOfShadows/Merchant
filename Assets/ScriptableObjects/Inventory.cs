@@ -8,7 +8,8 @@ using UnityEngine;
 public class ItemPriceMultiplier
 {
     public ItemObject item;
-    public float priceMultiplierPercent;
+    public Vector2 priceMultiplierRange;
+    public float priceModifier;
     public int adjustedPrice;
 }
 

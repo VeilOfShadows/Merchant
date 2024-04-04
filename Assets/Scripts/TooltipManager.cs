@@ -39,7 +39,7 @@ public class TooltipManager : MonoBehaviour
             return;
         }
 
-        int temp = PriceManager.instance.GetAdjustedPrice(_item, isPlayer? true:false);
+        int temp = PriceManager.instance.GetAdjustedPrice(_item, isPlayer ? true : false);
 
         if (temp == _item.baseCoinValue) 
         {
@@ -57,35 +57,46 @@ public class TooltipManager : MonoBehaviour
             return;
         }
 
-        itemPriceMultiplierValue.gameObject.SetActive(true);
-        itemCoinValue.text = PriceManager.instance.GetAdjustedPrice(_item, isPlayer ? true : false).ToString();
+        itemCoinValue.text = temp.ToString();
+        //itemCoinValue.text = PriceManager.instance.GetAdjustedPrice(_item, isPlayer ? true : false).ToString();
+        int modifier = PriceManager.instance.GetModifier(_item, temp);
+        if (modifier != 0)
+        {
+            itemPriceMultiplierValue.gameObject.SetActive(true);
+            if (modifier > 0)
+            {
+                if (isPlayer)
+                {
+                    itemPriceMultiplierValue.color = green;
+                    itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item, temp) + "%");
+                }
+                else
+                {
+                    itemPriceMultiplierValue.color = red;
+                    itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item, temp) + "%");
+                }
+            }
+            else
+            {
+                if (isPlayer)
+                {
+                    itemPriceMultiplierValue.color = red;
+                    itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item, temp) + "%");
+                }
+                else
+                {
+                    itemPriceMultiplierValue.color = green;
+                    itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item, temp) + "%");
+                }
+            }
+        }
 
-        if (PriceManager.instance.CheckHigherOrLower(_item))
-        {
-            if (isPlayer)
-            {
-                itemPriceMultiplierValue.color = green;
-                itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item) + "%");
-            }
-            else
-            {
-                itemPriceMultiplierValue.color = red;
-                itemPriceMultiplierValue.text = ("+" + PriceManager.instance.GetModifier(_item) + "%");
-            }
-        }
-        else
-        {
-            if (isPlayer)
-            {
-                itemPriceMultiplierValue.color = red;
-                itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item) + "%");
-            }
-            else
-            {
-                itemPriceMultiplierValue.color = green;
-                itemPriceMultiplierValue.text = (PriceManager.instance.GetModifier(_item) + "%");
-            }
-        }
+        //if (PriceManager.instance.CheckHigherOrLower(_item, temp))
+        //{
+        //}
+        //else
+        //{
+        //}
 
         if (_item.itemType != ItemType.Consumable)
         {

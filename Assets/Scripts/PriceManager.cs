@@ -33,13 +33,14 @@ public class PriceManager : MonoBehaviour
     }
 
     //true = higher, false = lower;
-    public bool CheckHigherOrLower(Item _item)
-    {
-        //for (int i = 0; i < modifiedItems.Count; i++)
-        //{
-        //    if (_item.itemID == modifiedItems[i].item.data.itemID)
-        //    {
-                if (GetModifier(_item) > 0)
+    public bool CheckHigherOrLower(Item _item, float price)
+    {       
+
+            //for (int i = 0; i < modifiedItems.Count; i++)
+            //{
+            //    if (_item.itemID == modifiedItems[i].item.data.itemID)
+            //    {
+            if (GetModifier(_item, price) > 0)
                 {
                     //price is higher
                     return true;
@@ -123,11 +124,11 @@ public class PriceManager : MonoBehaviour
             if (playerPriceUpgrade != null)
             {
                 playerUpgradeAdjustedPrice = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((-playerPriceUpgrade.buyPriceMultiplier + 100) / 100));
-                demandAdjustedPrice = Mathf.RoundToInt(playerUpgradeAdjustedPrice * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
+                demandAdjustedPrice = Mathf.RoundToInt(playerUpgradeAdjustedPrice * ((modifiedItems[i].priceModifier + 100) / 100));
             }
             else
             {
-                demandAdjustedPrice = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((modifiedItems[i].priceMultiplierPercent + 100) / 100));
+                demandAdjustedPrice = Mathf.RoundToInt(modifiedItems[i].item.data.baseCoinValue * ((modifiedItems[i].priceModifier + 100) / 100));
             }
             clampedPrice = Mathf.CeilToInt(modifiedItems[i].item.data.baseCoinValue * 0.25f);
 
@@ -144,9 +145,9 @@ public class PriceManager : MonoBehaviour
         //return _item.baseCoinValue;
     }
 
-    public int GetModifier(Item _item) 
+    public int GetModifier(Item _item, float adjustedPrice) 
     {
-        float adjustedPrice = GetAdjustedPrice(_item, false);
+        //float adjustedPrice = GetAdjustedPrice(_item, false);
         for (int i = 0; i < modifiedItems.Count; i++)
         {
             if (modifiedItems[i].item.data.itemID == _item.itemID)

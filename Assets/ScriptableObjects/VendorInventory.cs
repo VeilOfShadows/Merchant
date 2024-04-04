@@ -21,6 +21,12 @@ public class VendorInventory : Inventory
                 AddItem(itemPool.vendorItems[i].item, Random.Range(itemPool.vendorItems[i].amountMin, itemPool.vendorItems[i].amountMax));
             }
         }
+
+        for (int i = 0; i < demandItems.Length; i++)
+        {
+            demandItems[i].priceModifier = Mathf.RoundToInt(Random.Range(demandItems[i].priceMultiplierRange.x, demandItems[i].priceMultiplierRange.y));
+        }
+
         Sync();
     }
 
