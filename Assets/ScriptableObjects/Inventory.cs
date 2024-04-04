@@ -248,6 +248,16 @@ public class Inventory : ScriptableObject
         PlayerManager.instance.playerInventory = this;
         PlayerManager.instance.playerInventoryUI.SyncNew(this);
     }
+
+    public void DebugSync(Inventory newInventory)
+    {
+        Clear();
+        for (int i = 0; i < newInventory.slots.Length; i++)
+        {
+            slots[i].item = newInventory.slots[i].item;
+            slots[i].amount = newInventory.slots[i].amount;
+        }
+    }
 }
 
 [System.Serializable]

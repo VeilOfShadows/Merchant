@@ -12,6 +12,8 @@ public class DebugManager : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public QuestDatabase questDatabase;
     public ItemDatabase itemDatabase;
+    public Inventory startingInventory;
+    public PlayerManager playerManager;
 
     [Header("Tutorial Debug")]
     public SplineContainer tutorialRoad;
@@ -124,6 +126,7 @@ public class DebugManager : MonoBehaviour
         TurnOnTutorial();
         questDatabase.SetIDs();
         //set up player inventory
+        playerManager.playerInventory.DebugSync(startingInventory);
         thistlewoodSideGate.transform.localEulerAngles = new Vector3(0, 0, 0);
         thistlewoodSideGateEast.transform.localEulerAngles = new Vector3(0, 0, 0);
         thistlewoodSideRoad.SetActive(false);
