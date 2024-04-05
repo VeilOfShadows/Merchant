@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     itemName: Linen
-    itemType: 2
+    itemType: 4
     itemID: 6
-    baseCoinValue: 600
+    baseCoinValue: 700
     weight: 1.6
     uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
     stackable: 1

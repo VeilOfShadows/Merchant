@@ -16,5 +16,9 @@ MonoBehaviour:
   upgradeDescription: Increase inventory size to 12 slots
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
-    requiredAmount: 500
+    requiredAmount: 700
+  - requiredItem: {fileID: 11400000, guid: 9a4adc9d8deef6948865b90575423fab, type: 2}
+    requiredAmount: 3
+  - requiredItem: {fileID: 11400000, guid: ffd2562a18fad0c43975428c27defda2, type: 2}
+    requiredAmount: 1
   inventory: {fileID: 11400000, guid: 334802f141e678a428c6ad051196bb03, type: 2}

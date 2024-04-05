@@ -16,7 +16,7 @@ MonoBehaviour:
     itemName: Seared Cod
     itemType: 1
     itemID: 1
-    baseCoinValue: 650
+    baseCoinValue: 600
     weight: 1.2
     uiDisplay: {fileID: 21300000, guid: 02f3e7171edead1438fda14f1d13cf84, type: 3}
     stackable: 1

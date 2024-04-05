@@ -17,4 +17,10 @@ MonoBehaviour:
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
     requiredAmount: 2000
+  - requiredItem: {fileID: 11400000, guid: c0e72233b70ec7b4285c813853d9c525, type: 2}
+    requiredAmount: 2
+  - requiredItem: {fileID: 11400000, guid: 10ece9cba6deb7949be9369c9f066e44, type: 2}
+    requiredAmount: 2
+  - requiredItem: {fileID: 11400000, guid: 2c767e12def27eb4c9a7fe8c88df80db, type: 2}
+    requiredAmount: 4
   speed: 6.5

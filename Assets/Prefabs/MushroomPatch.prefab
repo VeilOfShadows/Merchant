@@ -51,7 +51,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 1e12fbc3c8bc59b4588a568b67c00555, type: 2}
   amount: 0
-  playerInventory: {fileID: 11400000, guid: 1080e7cd4fc833b4885179ed11189f3d, type: 2}
   interactableObject: {fileID: 7303731334239864845}
   vfx: {fileID: 7847103162206420773}
   respawn: 1
@@ -104,8 +103,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 7
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -140,7 +139,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

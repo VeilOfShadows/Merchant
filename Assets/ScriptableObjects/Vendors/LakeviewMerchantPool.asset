@@ -20,62 +20,67 @@ MonoBehaviour:
       itemType: 2
       itemID: 3
       baseCoinValue: 1
+      weight: 0.02
       uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
       stackable: 1
       tradeable: 0
       nutritionalValue: 0
-    amountMin: 12
-    amountMax: 15
-    percentageChance: 110
+    amountMin: 800
+    amountMax: 1200
+    percentageChance: 100
   - itemObject: {fileID: 11400000, guid: 89c2f31ee17bbba4eb513c4556420a8a, type: 2}
     item:
       itemName: Bread
       itemType: 1
       itemID: 0
-      baseCoinValue: 1
+      baseCoinValue: 290
+      weight: 3
       uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
       stackable: 1
       tradeable: 1
-      nutritionalValue: 5
-    amountMin: 6
-    amountMax: 8
-    percentageChance: 70
-  - itemObject: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
+      nutritionalValue: 12
+    amountMin: 3
+    amountMax: 6
+    percentageChance: 80
+  - itemObject: {fileID: 11400000, guid: 30b395a7e0878774cb6a732a24239d04, type: 2}
     item:
-      itemName: Berry
+      itemName: Seared Cod
       itemType: 1
-      itemID: 4
-      baseCoinValue: 1
-      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
+      itemID: 9
+      baseCoinValue: 600
+      weight: 1.2
+      uiDisplay: {fileID: 21300000, guid: 02f3e7171edead1438fda14f1d13cf84, type: 3}
       stackable: 1
       tradeable: 1
-      nutritionalValue: 2
+      nutritionalValue: 18
+    amountMin: 2
+    amountMax: 6
+    percentageChance: 97
+  - itemObject: {fileID: 11400000, guid: 7387210ca915e724787dffdc8597b6f3, type: 2}
+    item:
+      itemName: Spices
+      itemType: 2
+      itemID: 1
+      baseCoinValue: 400
+      weight: 0.2
+      uiDisplay: {fileID: 21300000, guid: ac5a147bfda183d49a12202d584aaaff, type: 3}
+      stackable: 1
+      tradeable: 1
+      nutritionalValue: 0
     amountMin: 2
     amountMax: 4
-    percentageChance: 20
-  - itemObject: {fileID: 11400000, guid: 9a4adc9d8deef6948865b90575423fab, type: 2}
+    percentageChance: 70
+  - itemObject: {fileID: 11400000, guid: f9c20f409b641164f89c7dc09beab849, type: 2}
     item:
-      itemName: Thread
+      itemName: Parchment
       itemType: 2
-      itemID: 2
-      baseCoinValue: 2
-      uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
+      itemID: 14
+      baseCoinValue: 220
+      weight: 0.05
+      uiDisplay: {fileID: 21300000, guid: ddb75717e35a3ee4887f04d87f38efbb, type: 3}
       stackable: 1
       tradeable: 1
       nutritionalValue: 0
-    amountMin: 4
-    amountMax: 5
+    amountMin: 1
+    amountMax: 3
     percentageChance: 60
-  - itemObject: {fileID: 11400000, guid: ffd2562a18fad0c43975428c27defda2, type: 2}
-    item:
-      itemName: Linen
-      itemType: 2
-      itemID: 6
-      baseCoinValue: 6
-      uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 0
-    amountMin: 3
-    amountMax: 5
-    percentageChance: 40

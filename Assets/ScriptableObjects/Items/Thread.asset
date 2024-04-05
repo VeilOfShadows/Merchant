@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     itemName: Thread
-    itemType: 2
+    itemType: 4
     itemID: 2
     baseCoinValue: 200
     weight: 0.1

@@ -16,9 +16,9 @@ MonoBehaviour:
     itemName: Bread
     itemType: 1
     itemID: 0
-    baseCoinValue: 300
+    baseCoinValue: 290
     weight: 3
     uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
     stackable: 1
     tradeable: 1
-    nutritionalValue: 8
+    nutritionalValue: 12

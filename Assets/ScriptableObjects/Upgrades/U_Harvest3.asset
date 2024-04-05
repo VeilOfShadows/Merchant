@@ -17,5 +17,9 @@ MonoBehaviour:
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
     requiredAmount: 900
+  - requiredItem: {fileID: 11400000, guid: 7d85a017f31f24c4e934e7fcc27f6dc2, type: 2}
+    requiredAmount: 8
+  - requiredItem: {fileID: 11400000, guid: 1e12fbc3c8bc59b4588a568b67c00555, type: 2}
+    requiredAmount: 2
   effectChance: 20
   extraHarvestAmount: 2
