@@ -25,65 +25,51 @@ MonoBehaviour:
       stackable: 1
       tradeable: 0
       nutritionalValue: 0
-    amountMin: 300
-    amountMax: 500
+    amountMin: 800
+    amountMax: 1100
     percentageChance: 100
-  - itemObject: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
+  - itemObject: {fileID: 11400000, guid: 47ca401d7803ce64fb06791330fbc082, type: 2}
     item:
-      itemName: Berry
-      itemType: 1
-      itemID: 4
-      baseCoinValue: 50
+      itemName: Sapphire
+      itemType: 2
+      itemID: 15
+      baseCoinValue: 900
       weight: 0.2
-      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 3
-    amountMin: 6
-    amountMax: 9
-    percentageChance: 100
-  - itemObject: {fileID: 11400000, guid: 89c2f31ee17bbba4eb513c4556420a8a, type: 2}
-    item:
-      itemName: Bread
-      itemType: 1
-      itemID: 0
-      baseCoinValue: 290
-      weight: 3
-      uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 12
-    amountMin: 6
-    amountMax: 8
-    percentageChance: 70
-  - itemObject: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
-    item:
-      itemName: Berry
-      itemType: 1
-      itemID: 4
-      baseCoinValue: 50
-      weight: 0.2
-      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
-      stackable: 1
-      tradeable: 1
-      nutritionalValue: 3
-    amountMin: 2
-    amountMax: 5
-    percentageChance: 20
-  - itemObject: {fileID: 11400000, guid: 9a4adc9d8deef6948865b90575423fab, type: 2}
-    item:
-      itemName: Thread
-      itemType: 4
-      itemID: 2
-      baseCoinValue: 200
-      weight: 0.1
-      uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
+      uiDisplay: {fileID: 21300000, guid: d58fe6c402ae49c48913482183a11ba7, type: 3}
       stackable: 1
       tradeable: 1
       nutritionalValue: 0
-    amountMin: 3
-    amountMax: 5
+    amountMin: 1
+    amountMax: 1
     percentageChance: 70
+  - itemObject: {fileID: 11400000, guid: 10ece9cba6deb7949be9369c9f066e44, type: 2}
+    item:
+      itemName: Lumber
+      itemType: 4
+      itemID: 10
+      baseCoinValue: 800
+      weight: 4
+      uiDisplay: {fileID: 21300000, guid: bc51b08db53e8d348929f6786d5145da, type: 3}
+      stackable: 1
+      tradeable: 1
+      nutritionalValue: 0
+    amountMin: 2
+    amountMax: 4
+    percentageChance: 60
+  - itemObject: {fileID: 11400000, guid: 201708957c3f93249a30fe8b58946027, type: 2}
+    item:
+      itemName: Leather
+      itemType: 4
+      itemID: 11
+      baseCoinValue: 1000
+      weight: 1.8
+      uiDisplay: {fileID: 21300000, guid: 24d5e073596670745bf7f15ba225317c, type: 3}
+      stackable: 1
+      tradeable: 1
+      nutritionalValue: 0
+    amountMin: 2
+    amountMax: 4
+    percentageChance: 60
   - itemObject: {fileID: 11400000, guid: ffd2562a18fad0c43975428c27defda2, type: 2}
     item:
       itemName: Linen
@@ -95,20 +81,34 @@ MonoBehaviour:
       stackable: 1
       tradeable: 1
       nutritionalValue: 0
-    amountMin: 2
-    amountMax: 3
-    percentageChance: 40
-  - itemObject: {fileID: 11400000, guid: 15671d65539207c46aa347178e186417, type: 2}
+    amountMin: 1
+    amountMax: 5
+    percentageChance: 45
+  - itemObject: {fileID: 11400000, guid: 1e12fbc3c8bc59b4588a568b67c00555, type: 2}
     item:
-      itemName: Milk
-      itemType: 2
-      itemID: 16
-      baseCoinValue: 350
-      weight: 0.2
-      uiDisplay: {fileID: 21300000, guid: a4d44676bbbf0094fbaec3fadac19de7, type: 3}
+      itemName: Mushroom
+      itemType: 1
+      itemID: 7
+      baseCoinValue: 160
+      weight: 0.4
+      uiDisplay: {fileID: 21300000, guid: 5e103bda7f23ea34dabf0567ff91fcca, type: 3}
       stackable: 1
       tradeable: 1
-      nutritionalValue: 0
-    amountMin: 1
-    amountMax: 3
-    percentageChance: 80
+      nutritionalValue: 7
+    amountMin: 2
+    amountMax: 4
+    percentageChance: 65
+  - itemObject: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
+    item:
+      itemName: Berry
+      itemType: 1
+      itemID: 4
+      baseCoinValue: 50
+      weight: 0.2
+      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
+      stackable: 1
+      tradeable: 1
+      nutritionalValue: 3
+    amountMin: 4
+    amountMax: 7
+    percentageChance: 75

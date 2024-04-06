@@ -84,3 +84,17 @@ MonoBehaviour:
     amountMin: 1
     amountMax: 3
     percentageChance: 60
+  - itemObject: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
+    item:
+      itemName: Berry
+      itemType: 1
+      itemID: 4
+      baseCoinValue: 50
+      weight: 0.2
+      uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
+      stackable: 1
+      tradeable: 1
+      nutritionalValue: 3
+    amountMin: 5
+    amountMax: 7
+    percentageChance: 40
