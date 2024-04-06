@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dc9716ec827e84180b97e086915a11, type: 3}
   m_Name: StarlightMerchantDefault
   m_EditorClassIdentifier: 
-  <npcName>k__BackingField: 
-  <npcIcon>k__BackingField: {fileID: 0}
+  <npcName>k__BackingField: Exotic Merchant
+  <npcIcon>k__BackingField: {fileID: 21300000, guid: 9ae79e9cd7f59504d97fe37f9e5bfccb,
+    type: 3}
   <fileName>k__BackingField: StarlightMerchantDefault
   <dialogueGroups>k__BackingField:
     list: []

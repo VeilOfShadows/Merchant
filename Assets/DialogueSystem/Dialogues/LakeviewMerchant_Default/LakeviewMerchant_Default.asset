@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LakeviewMerchant_Default
   m_EditorClassIdentifier: 
   <npcName>k__BackingField: Asim
-  <npcIcon>k__BackingField: {fileID: 21300000, guid: 9ae79e9cd7f59504d97fe37f9e5bfccb,
+  <npcIcon>k__BackingField: {fileID: 21300000, guid: b7c68bcd16712d84eba6bfa328e45de1,
     type: 3}
   <fileName>k__BackingField: LakeviewMerchant_Default
   <dialogueGroups>k__BackingField:

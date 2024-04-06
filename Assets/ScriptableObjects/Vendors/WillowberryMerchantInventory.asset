@@ -21,41 +21,69 @@ MonoBehaviour:
         itemType: 2
         itemID: 3
         baseCoinValue: 1
-        weight: 0.2
+        weight: 0.02
         uiDisplay: {fileID: 21300000, guid: ac714a995f36d8a46a738e55d9e86776, type: 3}
         stackable: 1
         tradeable: 0
         nutritionalValue: 0
-      slotWeight: 142
-      amount: 710
+      slotWeight: 9.84
+      amount: 492
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
         itemName: Berry
         itemType: 1
         itemID: 4
-        baseCoinValue: 100
+        baseCoinValue: 50
         weight: 0.2
         uiDisplay: {fileID: 21300000, guid: 1617713b48aa3504eba49e8bee4736f4, type: 3}
         stackable: 1
         tradeable: 1
-        nutritionalValue: 2
+        nutritionalValue: 3
       slotWeight: 1.4
       amount: 7
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        weight: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: -1
-      slotWeight: -0
-      amount: 0
+        itemName: Bread
+        itemType: 1
+        itemID: 0
+        baseCoinValue: 290
+        weight: 3
+        uiDisplay: {fileID: 21300000, guid: 92677cb5617591b48bb656c06d978106, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 12
+      slotWeight: 21
+      amount: 7
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Thread
+        itemType: 4
+        itemID: 2
+        baseCoinValue: 200
+        weight: 0.1
+        uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 0
+      slotWeight: 0.4
+      amount: 4
+      slotDisplay: {fileID: 0}
+    - parent: {fileID: 0}
+      item:
+        itemName: Milk
+        itemType: 2
+        itemID: 16
+        baseCoinValue: 350
+        weight: 0.2
+        uiDisplay: {fileID: 21300000, guid: a4d44676bbbf0094fbaec3fadac19de7, type: 3}
+        stackable: 1
+        tradeable: 1
+        nutritionalValue: 0
+      slotWeight: 0.2
+      amount: 1
       slotDisplay: {fileID: 0}
     - parent: {fileID: 0}
       item:
@@ -379,51 +407,67 @@ MonoBehaviour:
       slotWeight: -0
       amount: 0
       slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        weight: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: -1
-      slotWeight: -0
-      amount: 0
-      slotDisplay: {fileID: 0}
-    - parent: {fileID: 0}
-      item:
-        itemName: 
-        itemType: 0
-        itemID: -1
-        baseCoinValue: -1
-        weight: -1
-        uiDisplay: {fileID: 0}
-        stackable: 0
-        tradeable: 0
-        nutritionalValue: -1
-      slotWeight: -0
-      amount: 0
-      slotDisplay: {fileID: 0}
-  totalWeight: 143.4
+  totalWeight: 32.84
   coinItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
   demandItems:
   - item: {fileID: 11400000, guid: 25e05db02fd323c41a032cdc7e4a456e, type: 2}
     priceMultiplierRange: {x: -50, y: -60}
-    priceModifier: -51
-    adjustedPrice: 49
+    priceModifier: -53
+    adjustedPrice: 24
+  - item: {fileID: 11400000, guid: 89c2f31ee17bbba4eb513c4556420a8a, type: 2}
+    priceMultiplierRange: {x: -20, y: -15}
+    priceModifier: -16
+    adjustedPrice: 235
+  - item: {fileID: 11400000, guid: c0e72233b70ec7b4285c813853d9c525, type: 2}
+    priceMultiplierRange: {x: 0, y: 10}
+    priceModifier: 4
+    adjustedPrice: 1296
+  - item: {fileID: 11400000, guid: 201708957c3f93249a30fe8b58946027, type: 2}
+    priceMultiplierRange: {x: -10, y: -5}
+    priceModifier: -9
+    adjustedPrice: 930
+  - item: {fileID: 11400000, guid: ffd2562a18fad0c43975428c27defda2, type: 2}
+    priceMultiplierRange: {x: -20, y: -15}
+    priceModifier: -19
+    adjustedPrice: 574
+  - item: {fileID: 11400000, guid: 10ece9cba6deb7949be9369c9f066e44, type: 2}
+    priceMultiplierRange: {x: 10, y: 20}
+    priceModifier: 15
+    adjustedPrice: 944
+  - item: {fileID: 11400000, guid: 15671d65539207c46aa347178e186417, type: 2}
+    priceMultiplierRange: {x: -35, y: -25}
+    priceModifier: -35
+    adjustedPrice: 262
   - item: {fileID: 11400000, guid: 1e12fbc3c8bc59b4588a568b67c00555, type: 2}
-    priceMultiplierRange: {x: -20, y: -30}
-    priceModifier: -22
-    adjustedPrice: 156
+    priceMultiplierRange: {x: -5, y: 10}
+    priceModifier: 6
+    adjustedPrice: 173
+  - item: {fileID: 11400000, guid: 2c767e12def27eb4c9a7fe8c88df80db, type: 2}
+    priceMultiplierRange: {x: -5, y: 10}
+    priceModifier: -4
+    adjustedPrice: 208
+  - item: {fileID: 11400000, guid: f9c20f409b641164f89c7dc09beab849, type: 2}
+    priceMultiplierRange: {x: -5, y: 15}
+    priceModifier: -4
+    adjustedPrice: 211
+  - item: {fileID: 11400000, guid: 47ca401d7803ce64fb06791330fbc082, type: 2}
+    priceMultiplierRange: {x: -5, y: 5}
+    priceModifier: -3
+    adjustedPrice: 918
+  - item: {fileID: 11400000, guid: 30b395a7e0878774cb6a732a24239d04, type: 2}
+    priceMultiplierRange: {x: 10, y: 20}
+    priceModifier: 15
+    adjustedPrice: 690
+  - item: {fileID: 11400000, guid: 7387210ca915e724787dffdc8597b6f3, type: 2}
+    priceMultiplierRange: {x: -5, y: 10}
+    priceModifier: 1
+    adjustedPrice: 428
   - item: {fileID: 11400000, guid: 7d85a017f31f24c4e934e7fcc27f6dc2, type: 2}
-    priceMultiplierRange: {x: -30, y: -40}
-    priceModifier: -38
-    adjustedPrice: 62
+    priceMultiplierRange: {x: -20, y: -10}
+    priceModifier: -15
+    adjustedPrice: 58
   - item: {fileID: 11400000, guid: 9a4adc9d8deef6948865b90575423fab, type: 2}
-    priceMultiplierRange: {x: 5, y: 15}
-    priceModifier: 5
-    adjustedPrice: 210
+    priceMultiplierRange: {x: -10, y: -15}
+    priceModifier: -15
+    adjustedPrice: 178
   itemPool: {fileID: 11400000, guid: ed404513b7ff9b740b8f078bc6cb93db, type: 2}

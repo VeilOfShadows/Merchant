@@ -18,7 +18,7 @@ MonoBehaviour:
     itemID: 6
     baseCoinValue: 700
     weight: 1.6
-    uiDisplay: {fileID: 21300000, guid: bebcb4add474df043bf16b79596379eb, type: 3}
+    uiDisplay: {fileID: 21300000, guid: 8c3a4c955aeacf643b8a1b2134d5c69a, type: 3}
     stackable: 1
     tradeable: 1
     nutritionalValue: 0

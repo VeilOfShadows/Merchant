@@ -131,7 +131,9 @@ public class PlayerManager : MonoBehaviour
         playerUI.SetActive(false);
         merchantUI.SetActive(false);
         //playerInventoryUI.merchantInterface = null;
+        TooltipManager.instance.HideTooltip();
         playerInventoryUI.inShop = false;
+        PriceManager.instance.modifiedItems.Clear();
         //currentVendor.ExitShop();
     }
 

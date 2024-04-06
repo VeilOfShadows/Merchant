@@ -39,7 +39,7 @@ public class InteractableRespawnManager : MonoBehaviour
             {
                 for (int j = 0; j < onCooldown.Count; j++)
                 {
-                    if (onCooldown[i] == toRemove[i])
+                    if (onCooldown[j] == toRemove[i])
                     {
                         onCooldown.RemoveAt(j);
                     }
