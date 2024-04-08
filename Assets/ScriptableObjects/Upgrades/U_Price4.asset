@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: U_Price4
   m_EditorClassIdentifier: 
   upgradeName: Menacing Gaze
-  upgradeDescription: Sell items for 15% extra
+  upgradeDescription: Sell items for 10% extra
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
     requiredAmount: 2400
@@ -22,4 +22,4 @@ MonoBehaviour:
   - requiredItem: {fileID: 11400000, guid: ffd2562a18fad0c43975428c27defda2, type: 2}
     requiredAmount: 2
   buyPriceMultiplier: 1
-  sellPriceMultiplier: 0.8
+  sellPriceMultiplier: 0.87

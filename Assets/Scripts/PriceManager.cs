@@ -9,7 +9,7 @@ public class PriceManager : MonoBehaviour
     public List<ItemPriceMultiplier> modifiedItems = new List<ItemPriceMultiplier>();
     public ItemDatabase itemDatabase;
     public Upgrade_Price playerPriceUpgrade;
-    float basePriceMultiplier = 0.5f;
+    float basePriceMultiplier = 0.6f;
 
     private void Awake()
     {

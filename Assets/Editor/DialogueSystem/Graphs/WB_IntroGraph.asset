@@ -90,6 +90,12 @@ MonoBehaviour:
         type: 2}
       <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Open Shop
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 1
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 2479, y: -100}

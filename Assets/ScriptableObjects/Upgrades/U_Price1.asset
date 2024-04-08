@@ -20,4 +20,4 @@ MonoBehaviour:
   - requiredItem: {fileID: 11400000, guid: 7387210ca915e724787dffdc8597b6f3, type: 2}
     requiredAmount: 2
   buyPriceMultiplier: 1
-  sellPriceMultiplier: 0.55
+  sellPriceMultiplier: 0.66

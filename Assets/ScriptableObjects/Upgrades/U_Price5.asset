@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: U_Price5
   m_EditorClassIdentifier: 
   upgradeName: Charming Aura
-  upgradeDescription: Sell items for 25% extra
+  upgradeDescription: Sell items for 15% extra
   requiredItems:
   - requiredItem: {fileID: 11400000, guid: e61418e4c13f5fe4aaba94a5b9765dc9, type: 2}
     requiredAmount: 3000

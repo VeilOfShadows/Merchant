@@ -55,7 +55,7 @@ MonoBehaviour:
   vfx: {fileID: 7847103162206420773}
   respawn: 1
   onCooldown: 0
-  cooldownTime: 4
+  cooldownTime: 7
   currentCooldown: 0
   collider: {fileID: 4068348276603071093}
   tweenSpeed: 0.2
