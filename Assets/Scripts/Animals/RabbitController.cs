@@ -5,33 +5,35 @@ using TMPro;
 //using UnityEditor.PackageManager;
 using UnityEngine;
 
+//This script is used to control the location and timing of the rabbit's jumps
 public class RabbitController : MonoBehaviour
 {
+    [SerializeField] Transform parent;
+    [SerializeField] Animator animator;
+    [SerializeField] Vector2 waitRange;
+    [SerializeField] float jumpRange;
+    [SerializeField] float jumpDuration;
+    [SerializeField] float maxDistance;
+    
     Tween rotationTween;
-    public TerrainController terrain;
-    public Transform parent;
-    public Animator animator;
-    public Vector2 waitRange;
     bool isMoving = false;
-    public float jumpRange;
-    public float jumpDuration;
-    Vector3 targetPosition;
-    public float maxDistance;
     float distance;
+    Vector3 targetPosition;
 
-    public void OnEnable()
+    void OnEnable()
     {
         Jump();
     }
 
-    public void OnDisable()
+    void OnDisable()
     {
         rotationTween.Kill();
         StopAllCoroutines();
         isMoving = false;
     }
 
-    public void Jump() {
+    //Assesses how far the rabbit is from their spawn location, jumping towards it if it is too far, and in a random direction otherwise
+    void Jump() {
 
         distance = Vector3.Distance(transform.position, parent.transform.position);
 
@@ -51,14 +53,10 @@ public class RabbitController : MonoBehaviour
                 StartCoroutine(PerformJump());
             });
         }
-
-        //parent.Rotate(new Vector3(parent.eulerAngles.x, Random.Range(0, 360), parent.eulerAngles.z));
-        //animator.SetTrigger("Jump");
-        //targetPosition = parent.position + parent.forward * jumpRange;
-        //targetPosition.y = terrain.FindHeight(targetPosition) - 46.7f;
     }
 
-    public IEnumerator PerformJump() {
+    //used to handle the jump and wait before being able to jump again
+    IEnumerator PerformJump() {
         animator.SetTrigger("Jump");
         isMoving = true;
 

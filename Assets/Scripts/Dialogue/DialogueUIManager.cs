@@ -5,27 +5,33 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.UI;
 
+//This script sets up the dialogue ui with 
 public class DialogueUIManager : MonoBehaviour
 {
+    #region Parameters
     public static DialogueUIManager instance;
+
+    [Header("Dialogue Information")]
     public CharacterDialogueController dialogueController;
-    public DialogueSO currentDialogue;
-    public TextMeshProUGUI dialogueText;
-    public TextMeshProUGUI npcNameText;
-    public Image npcIcon;
-    public Sprite defaultIcon;
-
-    public GameObject dialoguePanel;
-    public DialogueChoicePanel dialogueChoicePanel;
+    [SerializeField] DialogueSO currentDialogue;
+    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI npcNameText;
+    [SerializeField] Image npcIcon;
+    [SerializeField] Sprite defaultIcon;
+    [SerializeField] GameObject dialoguePanel;
+    [SerializeField] DialogueChoicePanel dialogueChoicePanel;
+    
+    [Header("Text Info")]
     Tween textTween;
-    public float textSpeed;
-    public AudioSource textAudioSource;
-    public float minTimeBetweenSounds;
+    [SerializeField] float textSpeed;
+    [SerializeField] AudioSource textAudioSource;
+    [SerializeField] float minTimeBetweenSounds;
 
-    public Color locationColour;
-    public Color npcColour;
-    public Color directionColour;
-
+    [Header("Colours")]
+    [SerializeField] Color locationColour;
+    [SerializeField] Color npcColour;
+    [SerializeField] Color directionColour;
+    #endregion
 
     private void Awake()
     {
@@ -35,19 +41,7 @@ public class DialogueUIManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        //if(Input.GetKeyDown(KeyCode.M)) 
-        //{
-        //    StartDialogue();
-        //}
-    }
-
-    //public void StartDialogueAnimation()
-    //{
-    //    dialoguePanel.SetActive(true);
-    //}
-
+    //finds the first dialogue node from the dialoge scriptable ojbect
     public void StartDialogue(CharacterDialogueController activeDialogue) {
         PlayerManager.instance.DeactivateUI();
 
@@ -55,33 +49,9 @@ public class DialogueUIManager : MonoBehaviour
         dialogueText.text = "";
         npcNameText.text = "";
         StartCoroutine(AnimIntro(activeDialogue));
-        //activeDialogue.dialogue.SelectDialogues();
-        ////dialoguePanel.SetActive(true);
-        //currentDialogue = activeDialogue.FindStartingDialogue();
-        //dialogueChoicePanel.SetupButtons(currentDialogue.choices.Count, currentDialogue);
-
-        //minTimeBetweenSounds = Random.Range(.08f, .1f);
-        //float lastSoundTime = -minTimeBetweenSounds;
-
-        //npcNameText.text = activeDialogue.dialogue.dialogueContainer.npcName;
-
-        ////DOTween.Kill(textTween);
-        //if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
-        //{
-        //    textTween.Kill();
-        //}
-        //string text = "";
-        //textTween = DOTween.To(() => text, x => text = x, currentDialogue.text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
-        //{
-        //    if (Time.time - lastSoundTime >= minTimeBetweenSounds)
-        //    {
-        //        textAudioSource.Play();
-        //        lastSoundTime = Time.time;
-        //    }
-        //    SetDialogueText(text);
-        //});
     }
 
+    //sets up the dialogue panel and fills in the text letter by letter
     public IEnumerator AnimIntro(CharacterDialogueController activeDialogue) {
         dialoguePanel.SetActive(true);
         Animation anim = dialoguePanel.GetComponent<Animation>();
@@ -115,6 +85,7 @@ public class DialogueUIManager : MonoBehaviour
         });
     }
 
+    //Resets the Dialogue Panel to it's inactive state 
     public void EndDialogue()
     {
         if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
@@ -126,6 +97,7 @@ public class DialogueUIManager : MonoBehaviour
         npcIcon.sprite = defaultIcon;
     }
 
+    //Sets up the dialogue panel with the next dialogue node from the dialogeu Scriptable Object
     public void NextDialogue(DialogueSO nextDialogue)
     {
         currentDialogue = nextDialogue;
@@ -134,7 +106,6 @@ public class DialogueUIManager : MonoBehaviour
         minTimeBetweenSounds = Random.Range(.08f, .1f);
         float lastSoundTime = -minTimeBetweenSounds;
 
-        //DOTween.Kill(textTween);
         if (textTween != null && textTween.IsActive() && textTween.IsPlaying())
         {
             textTween.Kill();
@@ -149,9 +120,9 @@ public class DialogueUIManager : MonoBehaviour
             }
             SetDialogueText(text);
         });
-        //SetDialogueText(currentDialogue.text);
     }
 
+    //Sets up the text of the dialogue, colouring words if they contain certain characters before them
     public void SetDialogueText(string text)
     {
         string[] words = text.Split(' ');
@@ -170,7 +141,6 @@ public class DialogueUIManager : MonoBehaviour
             else if (word.StartsWith("<"))
             {
                 color = ColorUtility.ToHtmlStringRGBA(locationColour);
-                //color = locationColour.ToString();
             }
             else if (word.StartsWith(">"))
             {
@@ -185,7 +155,6 @@ public class DialogueUIManager : MonoBehaviour
 
             if (color != "")
             {
-                //formattedText += color + cleanWord + "</color>" + punctuation + " ";
                 formattedText += "<color=#" + color + ">" + cleanWord + "</color>" + punctuation + " ";
             }
             else

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script coontrols the dialogue choice buttons, enabling and setting them up as needed
 public class DialogueChoicePanel : MonoBehaviour
 {
-    public List<DialogueChoiceButton> buttons = new List<DialogueChoiceButton>();
+    [SerializeField] List<DialogueChoiceButton> buttons = new List<DialogueChoiceButton>();
 
+    //reset all buttons to inactive
     public void ClearButtons() {
         for (int i = 0; i < buttons.Count; i++)
         {
@@ -14,6 +16,7 @@ public class DialogueChoicePanel : MonoBehaviour
         }
     }
 
+    //set up the buttons to sync details with the dialogue choices
     public void SetupButtons(int amount, DialogueSO currentDialogue)
     {
         for (int i = 0; i < buttons.Count; i++)
@@ -29,6 +32,7 @@ public class DialogueChoicePanel : MonoBehaviour
         }
     }
 
+    //Check if the dialogue node has any functions to apply to the button
     public bool CheckForFunctions(DialogueSO _currentDialogue, ScriptableObject connector = null) {
         if (connector != null)
         {

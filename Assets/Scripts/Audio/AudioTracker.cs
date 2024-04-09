@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script controls the day and night time audio
 public class AudioTracker : MonoBehaviour
 {
-    public Transform playerLocation;
-    public AudioSourceFollow activeAudioSource;
-    public AudioSourceFollow daytimeAudio;
-    public AudioSourceFollow nighttimeAudio;
+    [SerializeField] Transform playerLocation;
+    [SerializeField] AudioSourceFollow activeAudioSource;
+    [SerializeField] AudioSourceFollow daytimeAudio;
+    [SerializeField] AudioSourceFollow nighttimeAudio;
 
+    //Enables ambient sounds depending on the time of day
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

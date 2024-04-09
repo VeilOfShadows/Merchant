@@ -10,10 +10,11 @@ public enum DialogueActions {
     //HandInQuest
 }
 
+//This script handles functions from dialogue choice buttons
 public class DialogueFunctionManager : MonoBehaviour
 {
     public static DialogueFunctionManager instance;
-    public QuestDatabase questDatabase;
+    [SerializeField] QuestDatabase questDatabase;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class DialogueFunctionManager : MonoBehaviour
         { instance = this; }
     }
 
+    //determine which type of function the dialogue choice has and perform it
     public void Activate(DialogueActions action, QuestSO pickupQuest = null, QuestSO completeQuest = null)
     {
         switch (action)
@@ -55,11 +57,6 @@ public class DialogueFunctionManager : MonoBehaviour
                             default:
                                 break;
                         }
-                        //if (pickupQuest.startActions[i].action == QuestAction.Item)
-                        //{
-                        //    playerInventory.AddItem(pickupQuest.startActions[i].item.data, pickupQuest.startActions[i].itemAmount);
-                        //    NotificationManager.instance.DisplayNotification("+ " + pickupQuest.startActions[i].item.data.itemName + " x " + pickupQuest.startActions[i].itemAmount, false);
-                        //}
                     }
                 }
                 break;
@@ -99,11 +96,6 @@ public class DialogueFunctionManager : MonoBehaviour
                             default:
                                 break;
                         }
-                        //if (completeQuest.completeActions[i].action == QuestAction.Item)
-                        //{
-                        //    playerInventory.AddItem(completeQuest.completeActions[i].item.data, completeQuest.completeActions[i].itemAmount);
-                        //    NotificationManager.instance.DisplayNotification("+ " + completeQuest.completeActions[i].item.data.itemName + " x " + completeQuest.completeActions[i].itemAmount, false);
-                        //}
                     }
                 }
                 break;
@@ -111,15 +103,13 @@ public class DialogueFunctionManager : MonoBehaviour
             case DialogueActions.OpenUpgrades:
                 OpenUpgrades();
                 break;
-            //case DialogueActions.HandInQuest:
-            //    questDatabase.SetQuestStatus(handInQuest.questID, QuestStatus.HandedIn);
-            //    break;
 
             default:
                 break;
         }
     }
 
+    //check if the player has met requirements to hand in the quest
     public bool CanHandIn(QuestSO quest) {
         for (int i = 0; i < quest.itemRequirement.Length; i++)
         {

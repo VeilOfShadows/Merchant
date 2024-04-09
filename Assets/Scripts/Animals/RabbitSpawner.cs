@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script is used to enable and disable the rabbit GameObject, depending on proximity to the player
 public class RabbitSpawner : MonoBehaviour
 {
-    public GameObject rabbitObject;
+    [SerializeField] GameObject rabbitObject;
 
-    private void Start()
+    void Start()
     {
         rabbitObject.SetActive(false);
     }
 
-    public void OnTriggerEnter(Collider other)
+    //enables the rabbit GameObject when player is nearby
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -19,7 +21,9 @@ public class RabbitSpawner : MonoBehaviour
             rabbitObject.SetActive(true);
         }
     }
-    public void OnTriggerExit(Collider other)
+
+    //disables the rabbit GameObject when player is far away
+    void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {

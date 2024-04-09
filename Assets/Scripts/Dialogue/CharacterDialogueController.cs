@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script handles the Dialogues for characters. It tracks the dialogue graph and helps connect the Dialogue Object
 public class CharacterDialogueController : MonoBehaviour
 {
     public CharacterDialogue dialogue;

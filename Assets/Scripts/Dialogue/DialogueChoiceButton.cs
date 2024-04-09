@@ -6,36 +6,42 @@ using DG.Tweening;
 using System;
 using UnityEngine.UI;
 
+//This script handles functionality for the dialog choice buttons
 public class DialogueChoiceButton : MonoBehaviour
 {
-    public DialogueUIManager dialogueUIManager;
-    public DialogueSO nextDialogue;
-    public DialogueSO currentDialogue;
-    public bool isEnd = false;
-    public DialogueActions action;
-    public bool hasQuestHandin = false;
-    public QuestSO pickupQuest;
-    public QuestSO completeQuest;
-    //public QuestSO handinQuest;
-    public DialogueContainerSO dialogueAfterCompletion;
-    public TextMeshProUGUI textObject;
+    #region Parameters
+    [Header("Dialogue")]
+    [SerializeField] DialogueUIManager dialogueUIManager;
+    DialogueSO nextDialogue;
+    DialogueSO currentDialogue;
+    DialogueContainerSO dialogueAfterCompletion;
+    [SerializeField] DialogueActions action;
+
+
+    [Header("Quest Info")]
+    //public bool hasQuestHandin = false;
+    [SerializeField] QuestSO pickupQuest;
+    [SerializeField] QuestSO completeQuest;
+    [SerializeField] QuestDatabase questDatabase;
+
+    [Header("Text")]
     Tween textTween;
-    public float textSpeed;
-    public AudioSource audioSource;
-    public QuestDatabase questDatabase;
-    public Button button;
-    public RectTransform rect;
+    [SerializeField] TextMeshProUGUI textObject;
+    [SerializeField] float textSpeed;
+    [SerializeField] AudioSource audioSource;
 
-    private void Start()
-    {
-        //rect = GetComponent<RectTransform>();
-        //button = GetComponent<Button>();
-    }
+    [Header("Misc")]
+    [SerializeField] Button button;
+    [SerializeField] RectTransform rect;
+    bool isEnd = false;
+    #endregion
 
+    #region Button Setup
     public void Clear() {
         textObject.text = "";
     }
 
+    //sets the button functionality up
     public void Setup(string text, DialogueSO nextDialogueSO, DialogueActions _action, QuestSO _pickupQuest, QuestSO _completeQuest, DialogueContainerSO _dialogueAfterCompletion)
     {
         rect.DOAnchorPosX(0, .1f);
@@ -45,22 +51,14 @@ public class DialogueChoiceButton : MonoBehaviour
         action = _action;
         pickupQuest = _pickupQuest;
         completeQuest = _completeQuest;
-        //handinQuest = _handinQuest;
         dialogueAfterCompletion = _dialogueAfterCompletion;
 
         if (nextDialogue == null)
         {
             isEnd = true;
-            //GetComponentInChildren<TextMeshProUGUI>().text = "End";            
         }
+
         SetDialogueText(text);
-        //DOTween.Complete(textTween);
-        //string newText = "";
-        //textTween = DOTween.To(() => newText, x => newText = x, text, textSpeed).SetEase(Ease.Linear).OnUpdate(() =>
-        //{
-            //SetDialogueText(newText);
-        //}); 
-        //GetComponentInChildren<TextMeshProUGUI>().text = text;
 
         if (pickupQuest != null)
         {
@@ -87,29 +85,19 @@ public class DialogueChoiceButton : MonoBehaviour
                     Debug.Log("Item not found in inventory");
                     return;
                 }
-                //if (!PlayerManager.instance.playerInventory.CheckForItem(completeQuest.questRequiredItem.data, completeQuest.questRequiredItemAmount))
-                //{
-                    //button.interactable = false;
-                //}
             }
         }
-
-        ////hand in quest is available
-        //if (handinQuest != null)
-        //{
-        //    if (!questDatabase.GetQuestStatus(handinQuest.questID, QuestStatus.Completed))
-        //    {
-        //        transform.parent.gameObject.SetActive(false);
-        //        return;
-        //    }
-        //}
     }
 
-    private void SetDialogueText(string newText)
+    //updates the text field
+    void SetDialogueText(string newText)
     {
         textObject.text = newText;
     }
+    #endregion
 
+    #region Button Interactions
+    //perform actions based on the DialogueActions applied to the button
     public void ActivateButton()
     {
         DialogueFunctionManager.instance.Activate(action, pickupQuest,completeQuest);
@@ -154,4 +142,5 @@ public class DialogueChoiceButton : MonoBehaviour
             rect.DOAnchorPosX(0, .3f);
         }
     }
+    #endregion
 }
