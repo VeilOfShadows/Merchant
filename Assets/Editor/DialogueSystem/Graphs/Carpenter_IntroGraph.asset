@@ -93,21 +93,6 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 3385, y: -161}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 28ab4dff-3552-4e36-9a1f-8939ac9efe41
-    <name>k__BackingField: DialogueName
-    <text>k__BackingField: The bridge is out so your best bet is to go around <Starlight
-      <Lake. If you follow the road to <Lakeview and head >south when you see water.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Thank you
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 4752, y: -57}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 9a3492d3-8e6c-47ad-82ee-850fad050ace
     <name>k__BackingField: Quest
     <text>k__BackingField: My brother *Oswald in <Lakeview is a builder. He might
@@ -131,6 +116,22 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 4062, y: -161}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 28ab4dff-3552-4e36-9a1f-8939ac9efe41
+    <name>k__BackingField: DialogueName
+    <text>k__BackingField: The bridge is out so your best bet is to go around <Starlight
+      <Lake. If you follow the road to <Lakeview and head >south when you see water.
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 2
+      <questStartingPoint>k__BackingField: {fileID: 11400000, guid: 8ad04084a7389e040b30b416e00f4e3f,
+        type: 2}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 4753, y: -57}
+    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - 3
@@ -138,7 +139,7 @@ MonoBehaviour:
   - 2
   - 4
   - 5
-  - DialogueName
   - Quest
+  - DialogueName
   <oldGroupedNodeNames>k__BackingField:
     list: []

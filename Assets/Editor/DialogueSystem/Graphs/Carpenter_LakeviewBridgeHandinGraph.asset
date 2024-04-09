@@ -31,21 +31,6 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 2139, y: 50}
     <quest>k__BackingField: {fileID: 0}
-  - <ID>k__BackingField: 1d0f2c83-e246-4842-a555-291346527337
-    <name>k__BackingField: 3
-    <text>k__BackingField: Heres the wood *Oswald asked for. I can run out and quickly
-      open my side gate. Should take you to the bridge much faster.
-    <choices>k__BackingField:
-    - <text>k__BackingField: Thank you
-      <nodeID>k__BackingField: 
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    <groupID>k__BackingField: 
-    <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 2818, y: 50}
-    <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: 99ad27c7-c206-433e-9f84-3dee0adb96fb
     <name>k__BackingField: 1
     <text>k__BackingField: Oh hey it's you. Did you manage to find Oswald?
@@ -56,12 +41,6 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
         type: 2}
-      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
-    - <text>k__BackingField: Yeah about those upgrades...
-      <nodeID>k__BackingField: 90e6ca69-ba68-4d3d-91bb-1a5c6816ee4d
-      <action>k__BackingField: 0
-      <questStartingPoint>k__BackingField: {fileID: 0}
-      <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
@@ -81,11 +60,33 @@ MonoBehaviour:
     <dialogueType>k__BackingField: 1
     <position>k__BackingField: {x: 2218, y: 408}
     <quest>k__BackingField: {fileID: 0}
+  - <ID>k__BackingField: 1d0f2c83-e246-4842-a555-291346527337
+    <name>k__BackingField: 3
+    <text>k__BackingField: Heres the wood *Oswald asked for. I can run out and quickly
+      open my side gate. Should take you to the bridge much faster. I can also upgrade
+      your cart now if you want?
+    <choices>k__BackingField:
+    - <text>k__BackingField: Thank you
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 0
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Open Upgrade Menu
+      <nodeID>k__BackingField: 
+      <action>k__BackingField: 4
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 0}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    <groupID>k__BackingField: 
+    <dialogueType>k__BackingField: 1
+    <position>k__BackingField: {x: 2818, y: 50}
+    <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:
   - 2a
-  - 3
   - 1
   - 2b
+  - 3
   <oldGroupedNodeNames>k__BackingField:
     list: []

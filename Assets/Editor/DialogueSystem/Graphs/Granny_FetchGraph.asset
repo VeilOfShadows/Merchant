@@ -50,7 +50,7 @@ MonoBehaviour:
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1054, y: 340}
+    <position>k__BackingField: {x: 1428, y: 346}
     <quest>k__BackingField: {fileID: 0}
   - <ID>k__BackingField: cba55dc0-a1fa-4b2f-862f-24aff8457640
     <name>k__BackingField: DialogueName
@@ -62,9 +62,16 @@ MonoBehaviour:
       <questStartingPoint>k__BackingField: {fileID: 0}
       <questCompletePoint>k__BackingField: {fileID: 0}
       <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+    - <text>k__BackingField: Oh wait, I think I already have some
+      <nodeID>k__BackingField: 13aaf273-3b2b-4f6c-91fb-a3c6daa729a6
+      <action>k__BackingField: 3
+      <questStartingPoint>k__BackingField: {fileID: 0}
+      <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc,
+        type: 2}
+      <dialogueAfterCompletion>k__BackingField: {fileID: 0}
     <groupID>k__BackingField: 
     <dialogueType>k__BackingField: 1
-    <position>k__BackingField: {x: 1111, y: 635}
+    <position>k__BackingField: {x: 1055, y: 712}
     <quest>k__BackingField: {fileID: 0}
   <oldGroupNames>k__BackingField: []
   <oldUngroupedNodeNames>k__BackingField:

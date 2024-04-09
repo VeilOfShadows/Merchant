@@ -20,9 +20,9 @@ MonoBehaviour:
     list: []
   <ungroupedDialogues>k__BackingField:
   - {fileID: 11400000, guid: af69da1ceae5d7a499f4fac44ef07f5e, type: 2}
-  - {fileID: 11400000, guid: 53ee13d0fcc3d2947afc548d3a2af0b0, type: 2}
   - {fileID: 11400000, guid: 224572cfeeb2fda4eab571c40e45fa38, type: 2}
   - {fileID: 11400000, guid: faa477b32add7a044a2ef4bef6cc9f2a, type: 2}
+  - {fileID: 11400000, guid: 53ee13d0fcc3d2947afc548d3a2af0b0, type: 2}
   <prerequisiteQuests>k__BackingField:
   - <prerequisiteQuest>k__BackingField: {fileID: 11400000, guid: 5713a2cb083321b42957a16e72c31cef,
       type: 2}

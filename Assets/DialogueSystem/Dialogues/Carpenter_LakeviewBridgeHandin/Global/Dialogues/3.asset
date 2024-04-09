@@ -14,11 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <dialogueName>k__BackingField: 3
   <text>k__BackingField: Heres the wood *Oswald asked for. I can run out and quickly
-    open my side gate. Should take you to the bridge much faster.
+    open my side gate. Should take you to the bridge much faster. I can also upgrade
+    your cart now if you want?
   <choices>k__BackingField:
   - <text>k__BackingField: Thank you
     <nextDialogue>k__BackingField: {fileID: 0}
     <action>k__BackingField: 0
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 0}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: Open Upgrade Menu
+    <nextDialogue>k__BackingField: {fileID: 0}
+    <action>k__BackingField: 4
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}

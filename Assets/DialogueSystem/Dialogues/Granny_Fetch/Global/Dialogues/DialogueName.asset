@@ -21,6 +21,14 @@ MonoBehaviour:
     <questStartingPoint>k__BackingField: {fileID: 0}
     <questCompletePoint>k__BackingField: {fileID: 0}
     <dialogueAfterCompletion>k__BackingField: {fileID: 0}
+  - <text>k__BackingField: Oh wait, I think I already have some
+    <nextDialogue>k__BackingField: {fileID: 11400000, guid: cad2ebb45ebc7d04bbcd1d51fc054d68,
+      type: 2}
+    <action>k__BackingField: 3
+    <questStartingPoint>k__BackingField: {fileID: 0}
+    <questCompletePoint>k__BackingField: {fileID: 11400000, guid: 3e7924a67a439654da1b751646a7d6bc,
+      type: 2}
+    <dialogueAfterCompletion>k__BackingField: {fileID: 0}
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0

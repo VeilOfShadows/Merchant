@@ -24,4 +24,4 @@ MonoBehaviour:
   <choiceResults>k__BackingField:
     list: []
   <dialogueType>k__BackingField: 0
-  <isStartingDialogue>k__BackingField: 0
+  <isStartingDialogue>k__BackingField: 1
