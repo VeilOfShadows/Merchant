@@ -112,11 +112,11 @@ public class UpgradeTooltipManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            layout.enabled = !layout.enabled;
+        //if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    layout.enabled = !layout.enabled;
 
-        }
+        //}
         //    Vector3 pos;
         //    pos.x = MouseData.slotHoveredOver.transform.position.x - rect.sizeDelta.x;
 
